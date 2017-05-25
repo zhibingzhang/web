@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>驾驶列表</title>
+		<meta name="viewport" charset="width=device-width,initial-scale=1">
+		<link href="css/common.css" rel="stylesheet"/>
+		<link href="css/index.css" rel="stylesheet"/>
+		<link href="css/paging.css" rel="stylesheet"/>
+		<link href="css/details.css" rel="stylesheet"/>
+		<link>
+		<link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+		<script src="js/jquery-1.9.min.js"></script>
+		<script src="js/mootools-1.3.2.js"></script>
+		<script src="js/divselect.js"></script>
+		<!--[if lte IE 8]>
+		<script src="js/selectivizr.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<!-- <script src="js/css3-mediaqueries.js"></script> -->
+	</head>
+	<body>
+	<header>
+		<div class="container">
+			<div class="overflow-auto">
+				<div class="left">
+					欢迎进入上海游艇O2O平台！
+				</div>
+				<div class="right">
+					<a class="login-btn">登录</a><a class="register-btn">注册</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="list-header-back">
+		<div class="index-tab">
+			<div class="container2">
+				<img src="img/logo.png" class="logo-img"/>
+				<div class="index-tab-list">
+					<div class="overflow-auto">
+						<a href="aboutus0517.html">关于我们</a>
+						<a href="news.html">媒体中心</a>
+						<a href="train.html" class="active">驾驶培训</a>
+						<a href="theme_type.html">主题租赁</a>
+						<a href="yacht_list.html">游艇租赁</a>
+						<a href="home.html">首页</a>
+					</div>
+				</div>
+				<div class="index-input">
+	                <span>
+	                    <form action="" method="post">
+	                        <div id="index-input-select" class="index-input-select">
+	                            <a class="index-input-a">
+	                                <p>游艇</p>
+	                                <img src="img/down.png" class="down"/>
+	                            </a>
+	                            <ul>
+	                                <li>主题</li>
+	                                <li>游艇</li>
+	                            </ul>
+	                            <input name="" type="hidden" value="" id="index-input-select2"/>
+	                        </div>
+	                    </form>
+	                </span>
+	                <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+	                <img src="img/search.png" class="search"/>
+	            </div>
+			</div>
+		</div>
+		<div class="list-header">
+			<div class="list-header-msg-wrapper">
+				<div class="container">
+					<div class="list-header-msg">
+						汇集上海地区及全国各地最完备的游艇租赁资源，保障游艇资质齐全，服务规范，为您提供纯正的游艇驾乘感受。
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="select-wrapper">
+		<div class="container">
+			<div class="now-position">当前位置：首页 > 驾驶培训 > <span>游艇驾驶培训</span></div>
+			<div class="select-name"><img src="img/small/ship2.png" />游艇驾驶培训</div>
+		</div>
+	</div>
+	<div class="sort-wrapper">
+		<div class="container">
+			<div class="border-top-blue">
+				<div class="overflow-auto">
+					<div class="sort-title">排序：</div>
+					<div class="active all" value="allSort">综合</div>
+					<div value="saleSort" class="up-down">
+						<span>销量</span>
+						<div class="price-up"></div>
+						<div class="price-down"></div>
+					</div>
+					<div value="priceSort" class="priceSort">
+						<span>价格</span>
+						<div class="price-up"></div>
+						<div class="price-down"></div>
+					</div>
+					<div value="goodCommentSort" class="comment-sort">
+						<span>好评率</span>
+						<div class="price-up"></div>
+						<div class="price-down"></div>
+					</div>
+					<div class="right">
+						<span class="all-total">共<span class="special_color"> 494 </span>个商品</span>
+						<span class="first-input">
+                            <input type="text" placeholder="在结果内搜索..."/> <img src="img/small/black-search.png" />
+                        </span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+		<div class="theme-list mp30 ">
+			<div class="container">
+				<div class="product-wrapper">
+					<div class="product-each2">
+                        <img src="img/images/theme-photo3.png" class="pic-big"/>
+                        <div class="theme-booking">
+                            <div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+                            <p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
+                            <p class="theme-information">
+                                <span class="price">￥ <span class="font-bold">7800</span>.00</span>
+                                <a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+                                <span class="booked">已有1200人报名</span>
+                            </p>
+                        </div>
+					</div>
+					<div class="product-each2">
+						<img src="img/images/theme-photo3.png" class="pic-big"/>
+						<div class="theme-booking">
+							<div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star2" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+							<p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
+							<p class="theme-information">
+								<span class="price">￥ <span class="font-bold">7800</span>.00</span>
+								<a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+								<span class="booked">已有1200人报名</span>
+							</p>
+						</div>
+					</div>
+					<div class="product-each2">
+						<img src="img/images/theme-photo3.png" class="pic-big"/>
+						<div class="theme-booking">
+							<div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star3" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+							<p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
+							<p class="theme-information">
+								<span class="price">￥ <span class="font-bold">7800</span>.00</span>
+								<a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+								<span class="booked">已有1200人报名</span>
+							</p>
+						</div>
+					</div>
+					<div class="product-each2">
+						<img src="img/images/theme-photo3.png" class="pic-big"/>
+						<div class="theme-booking">
+							<div class="theme-title">上海海事大学 上海港国际客运中心开发有限公司 </div>
+							<div class="rate-num-wrapper">
+								<div id="star4" class="star" ></div><span class="rate-num"><span>9.8分（969评论）</span></span>
+							</div>
+							<div class="clear"></div>
+							<div class="hrgray"></div>
+							<p class="theme-detail-txt2">驾驭白色游艇，驰骋蓝天碧海之间，这不再是梦！上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</p>
+							<p class="theme-information">
+								<span class="price">￥ <span class="font-bold">7800</span>.00</span>
+								<a href="train_apply.html" class="booking"><img src="img/small/reserve.png" />预定</a>
+								<span class="booked">已有1200人报名</span>
+							</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="pageTool" class="pageWrapper"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="bottom-img">
+			<div class="bottom2">
+				<div class="bg-00086"></div>
+				<div class="container">
+					<div class="first-c">
+						<img src="img/small/bottom1.png" class="left" />
+						<div>
+							<span class="bottom-title">权益保障</span>
+							<br/>
+							<span class="bottom-sub-title">平台中立资金安全</span>
+						</div>
+					</div>
+					<div class="first-c">
+						<img src="img/small/bottom2.png" class="left" />
+						<div>
+							<span class="bottom-title">服务专业</span>
+							<br/>
+							<span class="bottom-sub-title">规范行业服务标准</span>
+						</div>
+					</div>
+					<div class="first-c">
+						<img src="img/small/bottom3.png" class="left" />
+						<div>
+							<span class="bottom-title">安全至上</span>
+							<br/>
+							<span class="bottom-sub-title">安全把控保险护航</span>
+						</div>
+					</div>
+					<div>
+						<img src="img/small/bottom3.png" class="left" />
+						<div>
+							<span class="bottom-title">行业权威</span>
+							<br/>
+							<span class="bottom-sub-title">国家“5A”协会主办</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="bg-00060"></div>
+				<div class="container overflow-auto">
+					<div class="call-wrapper">
+						<div class="c-wrapper">
+							<img src="img/small/call.png" class="left" />
+							<div>
+								客服中心电话：<br/><span class="big-c">400-812-1241</span>
+							</div>
+							<div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+						</div>
+					</div>
+					<div class="c-list-wrapper">
+						<div class="first-div">
+							<div>
+								<img src="img/small/bottom01.png" />新手指南
+							</div>
+							<a>注册流程</a><br/>
+							<a>购物流程</a><br/>
+							<a>常见问题</a>
+						</div>
+						<div>
+							<div>
+								<img src="img/small/bottom02.png" />支付方式
+							</div>
+							<a>支付问题</a><br/>
+							<a>支付方式</a><br/>
+							<a>支付限额</a>
+						</div>
+						<div>
+							<div>
+								<img src="img/small/bottom03.png" />售后服务
+							</div>
+							<a>退换货政策</a><br/>
+							<a>退款说明</a><br/>
+							<a>退货流程</a>
+						</div>
+						<div class="code-wrapper">
+							<img src="img/code.png" />
+							<div>扫码关注我们</div>
+						</div>
+					</div>
+					<div class="about-us">
+						<a>关于我们</a> |
+						<a>联系我们</a> |
+						<a>法律声明</a> |
+						<a>隐私与条款</a> |
+						<a>投诉与建议</a>
+					</div>
+					<div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+	</body>
+	<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
+	<script type="text/javascript" src="js/query.js"></script>
+	<script src="js/jquery.raty.js"></script>
+	<script type="text/javascript" src="js/paging.js"></script>
+	<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
+
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+			$('#star').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star2').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star3').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star4').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('.contact-info-wrapper .contact-info-detail').click(function(){
+				if(!$(this).hasClass('add')){
+					$('.contact-info-wrapper .contact-info-detail').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+		});
+		$(document).ready(function() {
+			var mySwiper = new Swiper('.featured', {
+				autoplay: 3000,
+				grabCursor: true,
+				paginationClickable: true,
+				onSlideChangeEnd: function(swiper) {
+					var now = swiper.activeIndex;
+					var all = $('.featured .swiper-slide').length;
+					if(now == 0) {
+						$('.arrow-left').addClass('disabled');
+						$('.arrow-right').removeClass('disabled');
+					} else if(all == now + 1) {
+						$('.arrow-left').removeClass('disabled');
+						$('.arrow-right').addClass('disabled');
+					} else {
+						$('.arrow-left').removeClass('disabled');
+						$('.arrow-right').removeClass('disabled');
+					}
+
+				}
+			});
+			$('.arrow-left').on('click', function(e) {
+				e.preventDefault();
+				mySwiper.swipePrev();
+			});
+			$('.arrow-right').on('click', function(e) {
+				e.preventDefault();
+				mySwiper.swipeNext();
+			});
+			$('.banners-container').each(function() {
+				$(this).swiper({
+					slidesPerView: 'auto',
+					offsetPxBefore: 0,
+					offsetPxAfter: 30
+				})
+			});
+			$('#city span').click(function() {
+				if(!$(this).hasClass('active')) {
+					if($(this).hasClass('all')) {
+						$('#city span').removeClass('active');
+					} else {
+						$('#city .all').removeClass('active');
+					}
+					$(this).addClass('active');
+				} else {
+					$(this).removeClass('active');
+				}
+				var content = '',
+					indexL = 0;
+				for(var i = 0; i < $('#city span').length; i++) {
+					if($($('#city span')[i]).hasClass('active')) {
+						content += '、' + $($('#city span')[i]).html();
+						indexL++;
+					}
+				}
+				content = content.substring(1, content.length);
+				if(!$(this).hasClass('all') && indexL > 0) {
+					$('#has-choosed-city').html('尺寸:' + content + '<img src="img/small/delete.png" onclick="deleteSize()"/>').removeClass('no-border');
+				} else {
+					$('#has-choosed-city').html('').addClass('no-border');
+				}
+			});
+			$('#size span').click(function() {
+				if(!$(this).hasClass('active')) {
+					if($(this).hasClass('all')) {
+						$('#size span').removeClass('active');
+					} else {
+						$('#size .all').removeClass('active');
+					}
+					$(this).addClass('active');
+				} else {
+					$(this).removeClass('active');
+				}
+				var content = '',
+					indexL = 0;
+				for(var i = 0; i < $('#size span').length; i++) {
+					if($($('#size span')[i]).hasClass('active')) {
+						content += '、' + $($('#size span')[i]).html();
+						indexL++;
+					}
+				}
+				content = content.substring(1, content.length);
+				if(!$(this).hasClass('all') && indexL > 0) {
+					$('#has-choosed-size').html('尺寸:' + content + '<img src="img/small/delete.png" onclick="deleteSize()"/>').removeClass('no-border');
+				} else {
+					$('#has-choosed-size').html('').addClass('no-border');
+				}
+			});
+			$('#price span').click(function() {
+				$('#price1').val('');
+				$('#price2').val('');
+				if(!$(this).hasClass('active')) {
+					if($(this).hasClass('all')) {
+						$('#price span').removeClass('active');
+					} else {
+						$('#price .all').removeClass('active');
+					}
+					$(this).addClass('active');
+				} else {
+					$(this).removeClass('active');
+				}
+				var content = '',
+					indexL = 0;
+				for(var i = 0; i < $('#price span').length; i++) {
+					if($($('#price span')[i]).hasClass('active')) {
+						content += '、' + $($('#price span')[i]).html();
+						indexL++;
+					}
+				}
+				content = content.substring(1, content.length);
+				if(!$(this).hasClass('all') && indexL > 0) {
+					$('#has-choosed-price').html('价格:' + content + '<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+				} else {
+					$('#has-choosed-price').html('').addClass('no-border');
+				}
+			});
+			$('#subject span').click(function() {
+				if(!$(this).hasClass('active')) {
+					if($(this).hasClass('all')) {
+						$('#subject span').removeClass('active');
+					} else {
+						$('#subject .all').removeClass('active');
+					}
+					$(this).addClass('active');
+				} else {
+					$(this).removeClass('active');
+				}
+				var content = '',
+					indexL = 0;
+				for(var i = 0; i < $('#subject span').length; i++) {
+					if($($('#subject span')[i]).hasClass('active')) {
+						content += '、' + $($('#subject span')[i]).html();
+						indexL++;
+					}
+				}
+				content = content.substring(1, content.length);
+				if(!$(this).hasClass('all') && indexL > 0) {
+					$('#has-choosed-subject').html('主题:' + content + '<img src="img/small/delete.png" onclick="deleteSubject()"/>').removeClass('no-border');
+				} else {
+					$('#has-choosed-subject').html('').addClass('no-border');
+				}
+			});
+			$('#type span').click(function() {
+				if(!$(this).hasClass('active')) {
+					if($(this).hasClass('all')) {
+						$('#type span').removeClass('active');
+					} else {
+						$('#type .all').removeClass('active');
+					}
+					$(this).addClass('active');
+				} else {
+					$(this).removeClass('active');
+				}
+				var content = '',
+					indexL = 0;
+				for(var i = 0; i < $('#type span').length; i++) {
+					if($($('#type span')[i]).hasClass('active')) {
+						content += '、' + $($('#type span')[i]).html();
+						indexL++;
+					}
+				}
+				content = content.substring(1, content.length);
+				if(!$(this).hasClass('all') && indexL > 0) {
+					$('#has-choosed-type').html('类型:' + content + '<img src="img/small/delete.png" onclick="deleteType()"/>').removeClass('no-border');
+				} else {
+					$('#has-choosed-type').html('').addClass('no-border');
+				}
+			});
+			$('.sort-wrapper .overflow-auto>div').click(function() {
+				var v = $(this).attr('value');
+				if(v == undefined) {
+					return;
+				}
+				if(v != 'allSort') {
+					$('.sort-wrapper .overflow-auto>div').removeClass('active');
+					var up = 0; //向上
+					$(this).addClass('active');
+					if($(this).find('.price-up').hasClass('active')) {
+						up = 1; //向下
+					} else {
+
+					}
+					$('.sort-wrapper .overflow-auto>div .price-up').removeClass('active');
+					$('.sort-wrapper .overflow-auto>div .price-down').removeClass('active');
+					if(up == 0) {
+						$(this).find('.price-down').removeClass('active');
+						$(this).find('.price-up').addClass('active');
+					} else {
+						$(this).find('.price-up').removeClass('active');
+						$(this).find('.price-down').addClass('active');
+					}
+
+				} else {
+					$('.sort-wrapper .overflow-auto>div').removeClass('active');
+					$('.price-up').removeClass('active');
+					$('.price-down').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+			$('#pageTool').Paging({
+				pagesize: 9,
+				count: 210,
+				callback: function(page, size, count) {
+					console.log('当前第 ' + page + '页,每页 ' + size + '条,总页数：' + count + '页')
+				}
+			});
+		});
+
+		function deleteSize() {
+			$('#size .all').click();
+		}
+
+		function deletePrice() {
+			$('#price .all').click();
+			$('#price1').val('');
+			$('#price2').val('');
+		}
+
+		function deleteSubject() {
+			$('#subject .all').click();
+		}
+
+		function deleteType() {
+			$('#type .all').click();
+		}
+
+		function changePrice() {
+			var content = $('#price1').val() + '-' + $('#price2').val();
+			$('#price span').removeClass('active');
+			$('#has-choosed-price').html('价格:' + content + '<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+		}
+
+		function openSubject() {
+			if($('#open').hasClass('opened')) {
+				$('#open').removeClass('opened');
+				$('.subject-wrapper').removeClass('opened');
+			} else {
+				$('#open').addClass('opened');
+				$('.subject-wrapper').addClass('opened');
+			}
+		}
+
+		function openAll() {
+			if($('.each-choose-add').hasClass('show-no')) {
+				$('.each-choose-add').removeClass('show-no');
+				$('.each-choose-add').addClass('show');
+				$('#open-all').html('收起');
+			} else {
+				$('.each-choose-add').removeClass('show');
+				$('.each-choose-add').addClass('show-no');
+				$('#open-all').html('展开');
+			}
+		}
+
+		$(document).ready(function($) {
+			//淡隐淡现选项卡切换
+			$("#yacht-tab").tabso({
+				cntSelect: "#yacht-con",
+				tabEvent: "click",
+				tabStyle: "fade"
+			});
+
+		});
+
+		jQuery('[placeholder]').focus(function() {
+			var input = jQuery(this);
+			if (input.val() == input.attr('placeholder')) {
+				input.val('');
+				input.removeClass('placeholder');
+			}
+		}).blur(function() {
+			var input = jQuery(this);
+			if (input.val() == '' || input.val() == input.attr('placeholder')) {
+				input.addClass('placeholder');
+				input.val(input.attr('placeholder'));
+			}
+		}).blur().parents('form').submit(function() {
+			jQuery(this).find('[placeholder]').each(function() {
+				var input = jQuery(this);
+				if (input.val() == input.attr('placeholder')) {
+					input.val('');
+				}
+			})
+		});
+	</script>
+
+</html>

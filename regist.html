@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册-首页</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body class="login regist">
+		<div class="header">
+			<div class="w">
+				<div class="image"><img src="img/logo.png"/></div>
+				<i class="bar"></i>
+				<span>欢迎注册</span>
+			</div>	
+		</div>
+		<div class="content">
+		<img class="login-bg" src="img/content-bg.png" />
+			<div class="container clearfix">
+				<div class="fl login-left">
+					打造国内领先的O2O游艇主题平台
+				</div>
+				<div class="fr login-box">
+					<p class="clearfix">
+						<span class="title fl">用户注册</span>
+						<span class="link fr">已有账号？<a href="login.html">立即登录</a></span>
+					</p>
+					<div class="lable">
+						<i class="icon"><img src="img/icon-phone.png"/></i>
+						<label>	
+							<input type="tel" name="phone" id="phone"  value="" />
+							<span class="placeholder">请输入您的手机号码</span>
+						</label>
+						<i class="correct" id="corrects"></i>
+					</div>
+					<div class="lable clearfix">
+						<i class="icon"><img src="img/icon-yzm.png"/></i>
+						<label>
+							<input type="text" name="" class="yzm fl" id="yzm" value="" />
+							<span class="placeholder">请输入验证码</span>
+						</label>
+						<img src="img/icon-code.png" class="fl yzm-img"/>
+						<a href="javascript" class="fl hyz">换一张</a>
+					</div>
+					<div class="lable clearfix">
+						<i class="icon"><img src="img/icon-yzm.png"/></i>
+						<label>
+							<input type="text" name="" class="yzm fl" id="sjyzm" value="" />
+						<span class="placeholder">请输入手机验证码</span>
+						</label>
+						
+						<a href="javascript:;" class="fl hqy">免费获取验证码</a>
+					</div>
+					<div class="lable">
+						<i class="icon"><img src="img/lock-open@2x.png"/></i>
+						<label>
+							<input type="password" name="" id="password" value="" />
+						<span class="placeholder">请输入密码</span>
+						</label>
+					</div>
+					<div class="lable">
+						<i class="icon"><img src="img/lock-open@2x.png"/></i>
+						<label>
+							<input type="password" name="" id="aginpassword" value="" />
+						<span class="placeholder">请输入确认密码</span>
+						</label>
+					</div>
+					<div class="clearfix pass">
+						<span class="fl red">*以上均为必填项</span>
+						<span class="fr">
+							<label>
+								<!-- <input type="checkbox" name="" id="checkbox" value="" /> -->
+								<span class="chk"></span>
+								<span>阅读并同意</span>
+								<a href="javascript:;" class="fr">《服务条款》</a>
+							</label>
+						</span>						
+					</div>
+					<a href="javascript:;"  class="submit" id="submit">注&nbsp;册</a>
+				</div>
+			</div>
+			<div class="br"></div>
+			<div class="foot-list">
+				<ul class="clearfix">
+					<li><a href="">关于我们</a><i class="bar12"></i></li>
+					<li><a href="">联系我们</a><i class="bar12"></i></li>
+					<li><a href="">声明法律</a><i class="bar12"></i></li>
+					<li><a href="">隐私与条款</a><i class="bar12"></i></li>
+					<li><a href="">投诉与建议</a><i class="bar12"></i></li>
+				</ul>
+			</div>
+			<div class="footer">
+				<p>2009-2010 Shanghai Port International Cruise Terminal. All Rights Reserved 上海港国际客运中心开发有限公司<span>沪ICP备12044962号-4</span></p>
+			</div>
+			<div class="mask"></div>
+			<div class="silder">
+				<div class="sildertit">温馨提示<a href="javascript:;" class="close">×</a></div>
+				<div class="silderbox">
+					<p><img src="img/button-check@2x.png"/><span>恭喜您，注册成功！</span></p>
+					<p class="silderbtn"><a href="login.html" class="join_login">赶快登录吧~</a></p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.9.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			$('.login-box label input').keyup(function(){
+	            $(this).val() === ""? $(this).next().show():
+	            $(this).next().hide();
+	            $(this).parent().parent().removeClass('error');
+	            $('#corrects').hide();
+	        });
+	        $('.chk').click(function(){
+	        	if(!$(this).hasClass('active')){
+	        		$(this).addClass('active');
+	        	}else{
+	        		$(this).removeClass('active');
+	        	}
+	        });
+		</script>
+	</body>
+</html>

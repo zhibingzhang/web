@@ -1,0 +1,101 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a{text-decoration:none;}
+.clr{clear:both;overflow:hidden;height:0;}
+a.closeBtn{position:absolute;top:10px;right:10px;display:block;width:60px;padding:4px 0;text-align:center;background:#fff;border:1px solid #85B6E2;color:#333;}
+a.closeBtn:hover{color:#fff;border:1px solid #85B6E2;background:#85B6E2;}
+h1{color:#85B6E2;text-align:center;padding-top:20px;font-size:18px;}
+/* example */
+.example{border:1px dashed #ccc;padding:40px;margin-top:10px;zoom:1;}
+.example .description{color:#85B6E2;float:left;padding:10px 20px 0 80px;font-size:14px;}
+.example .tigger{display:block;width:80px;padding:10px;text-align:center;background:#fff;border:1px solid #999;color:#333;cursor:pointer;float:left;}
+.example select{margin-top:10px;}
+/* blk */
+.blk{
+	width:350px;
+	position:relative;}
+.blk .head, .blk .head-right, .blk .foot, .blk .foot-right{background:url(../images/pop_up_bg.png);overflow:hidden;height:4px;}
+.blk .foot{
+	height: auto;
+}
+.blk .head{padding-left:4px;}
+.blk .head-right{background-position:right top;}
+.blk .foot{padding-left:4px;background-position:left bottom; background:#F0F5FB;padding-top:10px;padding-bottom:10px;}
+.foot-left{height: 100%;
+float: left;
+padding-right: 16px;
+line-height: 32px;padding-left: 20px;
+	/*max-width: 200px;*/
+	overflow: hidden;
+}
+.jiantou{ padding-right:5px;padding-left:5px}
+.foot-right{height:100% !important; float:right; margin-right:10px;}
+.foot-right button{padding:8px 16px; background:#fff;color:#FBD956; border:2px solid #FBD956; font-weight:bold; border-radius:3px;}
+.blk .foot-right{background-position:right bottom;}
+
+.blk .main{border:2px solid #E3E1E2;position:relative;background:#fff;}
+.blk .main h2{font:bold 16px "Microsoft YaHei";padding:10px 20px 2px;color:#000;}
+.blk .main ul{padding:20px;zoom:1;overflow:hidden;font-size:12px;}
+.blk .main ul li{float:left;padding-right: 10px;
+min-width: 60px;text-align:center;line-height:30px;margin-bottom:10px;}
+.blk .main ul li a{color:#A19EA9;display:block;}
+.blk .main ul li a:hover{background:#FFCE0E;color:#fff;font-weight:bold;font-size:14px;}
+.blkactive{
+	background:#FFCE0E;color:#fff;font-size:12px;
+}
+
+/* �Զ�����ʽ */
+.t5 .blk{width:700px;}
+.t5 .blk h2{color:#aaa;}
+.t5 .blk .main ul li a{color:#aaa;}
+.t5 .blk .head, .t5 .blk .head-right, .t5 .blk .foot, .t5 .blk .foot-right{background:url(../images/pop_up_bg2.png);}
+/* popup_iframe */
+* html .popup_iframe{width:expression(this.previousSibling.style.width);height:expression(this.previousSibling.style.height);}
+
+
+
+
+
+.tukdetail_2{width:100%}
+.tukdetail_2 span{width:25%; display:inline-block; text-align:left}
+.tukdetail_3{width:100%}
+.tukdetail_3 span{width:25%; display:inline-block; text-align:left}
+.tukdetail_4{width:100%;margin-top:10px}
+.tukdetail_4 span{width:80%; display:inline-block; text-align:left}
+.tukdetail_4 img{width:200px; display:inline-block; text-align:center}
+.lbcontent{color: #000;
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	text-align: center;}
+.lbcontentspan1{ font-size:20px; color:#F9C238}
+.lbcontentspan2{ font-size:20px; color:#4C758D}
+
+.select-dock{overflow: hidden;}
+.select-dock ul li{}
+.select-dock span{
+	height: 35px;
+	line-height: 35px;
+	padding-left: 20px;
+	font-size: 16px;
+	display: block;
+}
+.select-dock cite{
+	display:block;
+	cursor:pointer;
+}
+.select-dock ul{width:158px;border: 1px solid #cccccc;background: #ffffff; position:absolute; z-index:20000;margin-left: -15px; margin-top:-1px; display:none;}
+.select-dock ul li{height:24px; line-height:24px;}
+.select-dock ul li a{display:block; height:24px; color:#d1e1f1; text-decoration:none; padding-left:10px; padding-right:10px;}
+.select-dock ul li a:hover{background-color:#ffffff;}
+.select-dock cite{font-style: normal;}
+.tuktitle{position:absolute; top:50%;left:50%; margin-top:-16px; margin-left:-31px;}
+.tukdiv{text-align:center;position: relative; width:220px; height:149px; display:none}
+
+.tukdetail{text-align:center;position: relative; width:250px; height:295px; background:#fff !important; padding:10px;}
+.tukdetail_1{
+	width:100%;
+	border-bottom:1px solid #ccc;
+	text-align:left;
+	padding:10px 0 10px 0;
+}

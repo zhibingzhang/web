@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>找回密码</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body class="backPw">
+		<div class="header">
+			<div class="image">
+			<a href="index.html">
+				<img src="img/logo.png"/>
+			</a>
+			</div>
+			<i class="bar"></i>
+			<span>找回密码</span>
+		</div>
+		<div class="cont">
+			<div class="pwbox">
+				<div class="pwtit clearfix">
+					<p class="pwone fl">
+						<span class="pwiocn"></span>
+						<span class="pwfont">填写凭证</span>
+					</p>
+					<p class="pwtwo fl">
+						<i class="pwright"></i>
+						<span class="pwiocn"></span>
+						<span class="pwfont">验证身份</span>
+					</p>
+					<p class="pwthere fl">
+						<i class="pwright"></i>
+						<span class="pwiocn"></span>
+						<span class="pwfont">设置新密码</span>
+					</p>
+					<p class="pwfour fl">
+						<i class="pwright"></i>
+						<span class="pwiocn"></span>
+						<span class="pwfont">完成</span>
+					</p>
+				</div>
+				<div class="pwcont pcone">
+					<div class="lable">
+						<p>手机号</p>
+						<i class="iocn"><img src="img/icon-phone.png"/></i>
+						<label>
+							<input type="tel" name="phone" id="phone"  value="" />
+							<span class="placeholder">请输入您的手机号码</span>
+						</label>
+						<i class="correct"></i>
+					</div>
+					<div class="lable clearfix">
+						<p>验证码</p>
+						<i class="icon"><img src="img/icon-yzm.png"/></i>
+						<label>
+							<input type="text" name="" class="yzm" id="yzm" value="" />
+							<span class="placeholder">请输入验证码</span>
+						</label>
+						<i class="correct yzmb"></i>
+						<img src="img/icon-code.png" class="fl yzm-img"/>
+						<a href="javascript" class="fl hyz">换一张</a>
+					</div>
+					<p id="corrects"></p>
+					<p><a href="javascript:;" class="btn btnone">下一步</a></p>
+				</div>
+				<div class="pwcont pctwo" style="display: none;">
+					<p>请点击获取验证码并在手机:&nbsp;<span class="phone">188****5810</span>&nbsp;中查看短信，并填写验证码</p>
+					<p>
+						验证码:&nbsp;
+						<label>
+							<input class="pl" type="num" name="" id="sjyzm" value="" />
+							<span class="placeholder">请输入验证码</span>
+						</label>
+						<input type="button" id="code" value="免费获取验证码" />
+						<i class="correct yc"></i>
+					</p>
+					<p><a href="javascript:;" class="btn btntwo">下一步</a></p>
+				</div>
+				<div class="pwcont pcthere" style="display: none;">
+					<div class="lable">
+						<p>新密码</p>
+						<i class="iocn"><img src="img/lock-open@2x.png"/></i>
+						<label>
+							<input type="password" name="" id="password"  value="" />
+						<span class="placeholder">请输入您的新密码</span>
+						</label>
+						
+						<!-- <i class="correct"></i> -->
+					</div>
+					<div class="lable">
+						<p>确认密码</p>
+						<i class="iocn"><img src="img/lock-open@2x.png"/></i>
+						<label>
+							<input type="password" name="" id="againpassword" value="" />
+						<span class="placeholder">请再次输入您的密码</span>	
+						</label>
+						
+						<i class="correct yzmb"></i>
+					</div>
+					<p><a href="javascript:;" class="btn btnthere">确认</a></p>
+				</div>
+				
+				<div class="pwcont pcfour"  style="display: none;">
+					<img src="img/ture.png"/>
+					<p>新密码设置成功，请您牢记新密码！</p>
+					<p><a href="login.html" class="btn btnfour">立即登录</a></p>
+				</div>
+			</div>
+			<div class="br"></div>
+			<div class="foot-list">
+				<ul class="clearfix">
+					<li><a href="">关于我们</a><i class="bar12"></i></li>
+					<li><a href="">联系我们</a><i class="bar12"></i></li>
+					<li><a href="">声明法律</a><i class="bar12"></i></li>
+					<li><a href="">隐私与条款</a><i class="bar12"></i></li>
+					<li><a href="">投诉与建议</a><i class="bar12"></i></li>
+				</ul>
+			</div>
+			<div class="footer">
+				<p>2009-2010     Shanghai Port International Cruise Terminal. All Rights Reserved 上海港国际客运中心开发有限公司<span>沪ICP备12044962号-4</span></p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.9.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			$('.lable input').keyup(function(){
+				$(this).parent().parent().removeClass('error');
+				$(this).next().hide();
+				$('#corrects').hide();
+
+			});
+			$('.pctwo input').keyup(function(){
+				$(this).parent().parent().removeClass('error');
+				$(this).next().hide();
+				$(this).parent().next().next().hide();
+			});
+		</script>
+	</body>
+</html>

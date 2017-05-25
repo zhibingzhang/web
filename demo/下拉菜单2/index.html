@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>网友涛涛分享原创js实现下拉框菜单插件</title>
+
+    <style type="text/css">
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            list-style-type: none;
+
+        }
+
+        a,
+        img {
+
+            border: 0;
+
+        }
+
+        /* diy_select */
+
+        .diy_select {
+            min-width: 144px;
+            *width: 144px;
+
+            height: 50px;
+            margin-right: 5px;
+            position: relative;
+            color: #000;
+            float: left;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            background-color: #FFFBE8;
+            cursor: pointer;
+        }
+
+        .diy_select_btn,
+        .diy_select_txt {
+
+            float: left;
+
+            height: 100%;
+
+            line-height: 50px;
+
+        }
+
+        .diy_select,
+        .diy_select_list {
+            border: 1px solid #DFDFDF;
+        }
+
+        .select-text {
+
+            padding-left: 20px;
+
+            padding-right: 25px;
+
+            height: 100%;
+
+            width: 100%;
+
+        }
+
+        .diy_select_txt {
+
+            width: 60%;
+
+        }
+
+        .diy_select_txt,
+        .diy_select_list li {
+
+            text-indent: 10px;
+
+            overflow: hidden;
+
+        }
+
+        .diy_select_btn {
+
+            width: 20%;
+
+            background: url(select_log.png) no-repeat center;
+
+        }
+
+        .select-option {
+
+            width: 100%;
+
+        }
+
+        .diy_select_list {
+
+            height: 300px;
+
+            position: absolute;
+
+            top: 51px;
+
+            left: -1px;
+
+            z-index: 88888;
+
+            border-top: none;
+
+            width: 100%;
+
+            display: none;
+
+            background: #fff;
+
+            overflow: auto;
+
+        }
+
+        .diy_select_list li {
+
+            margin: 0 20px;
+
+            list-style: none;
+
+            height: 50px;
+
+            line-height: 50px;
+
+            cursor: default;
+
+            background: #fff;
+
+            border-bottom: 1px solid #b3b3b3;
+
+        }
+
+        .diy_select_list li.focus {
+
+            margin: 0;
+
+            padding: 0 20px;
+
+            cursor: pointer;
+
+            background: #3399FF;
+
+            color: #fff
+
+        }
+
+        section {
+
+            margin-top: 20%;
+
+            margin-left: 20%;
+
+        }
+
+    </style>
+
+    <!-- js引用包 -->
+
+    <script src='js/jquery-1.9.min.js'></script>
+
+</head>
+
+
+<body>
+
+<section>
+
+    <div class='diy_select'>
+
+        <div class="select-text">
+
+            <input type='hidden' name='' id="a" class='diy_select_input'/>
+
+            <div class='diy_select_txt'>城市</div>
+
+            <div class='diy_select_btn'></div>
+
+        </div>
+
+        <div class="select-option">
+
+            <ul class='diy_select_list'>
+
+                <li>--请选择--</li>
+
+                <li>北京</li>
+
+                <li>上海</li>
+
+                <li>广州</li>
+
+                <li>深圳</li>
+
+                <li>香港</li>
+
+                <li>北京</li>
+
+                <li>上海</li>
+
+                <li>广州</li>
+
+                <li>深圳</li>
+
+                <li>香港</li>
+
+                <li>北京</li>
+
+                <li>上海</li>
+
+                <li>广州</li>
+
+                <li>深圳</li>
+
+                <li>香港</li>
+
+                <li>北京</li>
+
+                <li>上海</li>
+
+                <li>广州</li>
+
+                <li>深圳</li>
+
+                <li>香港</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class='diy_select'>
+
+        <div class="select-text">
+
+            <input type='hidden' name='' id="b" class='diy_select_input'/>
+
+            <div class='diy_select_txt'>--请选择--</div>
+
+            <div class='diy_select_btn'></div>
+
+        </div>
+
+        <ul class='diy_select_list'>
+
+            <li>Javascript</li>
+
+            <li>Html</li>
+
+            <li>Css</li>
+
+            <li>Php</li>
+
+            <li>Jquery</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class='diy_select'>
+
+        <div class="select-text">
+
+            <input type='hidden' name='' id="c" class='diy_select_input'/>
+
+            <div class='diy_select_txt'>--请选择--</div>
+
+            <div class='diy_select_btn'></div>
+
+        </div>
+
+        <div class="select-option">
+
+            <ul class='diy_select_list'>
+
+                <li>Javascript</li>
+
+                <li>Html</li>
+
+                <li>Css</li>
+
+                <li>Php</li>
+
+                <li>Jquery</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!--此JS需先加载页面HTML代码-->
+
+    <script src="js/demo.js"></script>
+
+</section>
+
+</body>
+
+
+</html>

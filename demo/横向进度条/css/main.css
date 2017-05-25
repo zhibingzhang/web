@@ -1,0 +1,8 @@
+body{background:#f1f4fa;font-family:Verdana, Helvetica, Arial, sans-serif;margin:0;padding:0}
+
+.example{float: left; background:none;width:400px;margin:20px auto;-moz-border-radius: 3px;-webkit-border-radius: 3px}
+#progress1,#progress2,#progress3 {height: 30px;line-height: 30px;display: block;}
+.pbar .ui-progressbar-value {display:block !important}
+.pbar {float:left;overflow: hidden; margin-top: 10px;background: #e0e4e8;}
+.ptext{float: left;width:50px;font-size: 13px;line-height: 30px;}
+.percent {float:left;margin-left:5px;font-weight:normal;height: 30px;line-height:30px;color: #ffcc00;font-size: 14px;}

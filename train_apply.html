@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>驾驶申请</title>
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/paging.css" rel="stylesheet"/>
+    <link href="css/details.css" rel="stylesheet">
+    <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+    <script src="js/jquery-1.9.min.js"></script>
+    <script src="js/mootools-1.3.2.js"></script>
+    <script src="js/divselect.js"></script>
+    <script type="text/javascript" src="js/num-alignment.js"></script>
+    <!--[if lte IE 8]>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="overflow-auto">
+            <div class="left">
+                欢迎进入上海游艇O2O平台！
+            </div>
+            <div class="right">
+                <a class="login-btn">登录</a><a class="register-btn">注册</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="list-header-back">
+    <div class="index-tab">
+        <div class="container2">
+            <img src="img/logo.png" class="logo-img"/>
+            <div class="index-tab-list">
+                <div class="overflow-auto">
+                    <a href="aboutus0517.html">关于我们</a>
+                    <a href="news.html" >媒体中心</a>
+                    <a href="train.html" class="active">驾驶培训</a>
+                    <a href="theme_type.html">主题租赁</a>
+                    <a href="yacht_list.html">游艇租赁</a>
+                    <a href="home.html">首页</a>
+                </div>
+            </div>
+            <div class="index-input">
+                <span>
+                    <form action="" method="post">
+                        <div id="index-input-select" class="index-input-select">
+                            <a class="index-input-a">
+                                <p>游艇</p>
+                                <img src="img/down.png" class="down"/>
+                            </a>
+                            <ul>
+                                <li>主题</li>
+                                <li>游艇</li>
+                            </ul>
+                            <input name="" type="hidden" value="" id="index-input-select2"/>
+                        </div>
+                    </form>
+                </span>
+                <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                <img src="img/search.png" class="search"/>
+            </div>
+        </div>
+    </div>
+    <div class="list-header">
+        <div class="list-header-msg-wrapper">
+            <div class="container">
+                <div class="list-header-msg">
+                    国内航运界领军院校，被誉为“中国航海家的摇篮”，为游艇驾驶员培训提供专业保障。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="select-wrapper">
+    <div class="container">
+    <div class="now-position">当前位置：首页 > <span>驾驶培训</span></div>
+    </div>
+</div>
+
+<div class="order-detail-wrapper">
+    <div class="container">
+        <div class=" train-detail-bgcolor">
+            <div class="train-detail-w770">
+                <div class="train-detail2 overflow-auto">
+                    <div class="order-s-detail2">
+                        <div class="order-s-detail-title2"><span>游艇驾驶员</span></div>
+                        <div class="rate-num-wrapper">
+                            <div id="star" class="star"></div>
+                            <span class="rate-num">9.8分<span>（969评论）</span></span>
+                        </div>
+                        <div class="train-detail">
+                            <span>上海港国际客运中心，创建并经营上港集团旗下首个游艇服务品牌“百艇汇”，旨在整合相关产业资源，建设长三角首个游艇产业综合服务体系。</span>
+                        </div>
+                        <div class="train-information mb40">
+                            <span class="price">￥ <span class="font-bold">7800</span>.00元/人</span>
+                            <span class="booked">已有1200人预订</span>
+                        </div>
+                        <div class="train-handle">
+                            <a href="#"><img src="img/small/options.png" />分享</a>
+                            <img src="img/small/social-pic.png"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="train-tab">
+                    <ul id="fadetab">
+                        <li class="current"><a class="yacht-nav2">培训介绍</a></li>
+                        <li><a class="yacht-nav3">费用说明</a></li>
+                        <li><a class="yacht-nav5">用户评论</a></li>
+                    </ul>
+                </div>
+                <div class="tabcon" id="fadecon" style="min-height: 420px;">
+                    <div class="sublist">
+                        <div class="overflow-auto left w-max">
+                            <p class="train-info-title">一、培训目标：</p>
+                            <div>
+                                <p class="train-info-txt">普及游艇知识和文化，培养合格游艇驾驶人才</p>
+                            </div>
+                            <p class="train-info-title">二、报名条件：</p>
+                            <div>
+                                <p class="train-info-txt">年龄在18周岁至65周岁，体检合格</p>
+                            </div>
+                            <p class="train-info-title">三、报名手续：</p>
+                            <div>
+                                <p class="train-info-txt">
+                                    所需材料：<br/>
+                                    <span class="txtstyle1">
+                        身份证及复印件2份，近期2寸白底彩色证件照4张及电子版照片（照片格式：不可佩戴眼镜，白底，jpg格式，高宽比
+                    4:3，大小不得小于354X472像素）
+                    </span>
+                                </p>
+                                <div class="train-info-div ml16">
+                                    <p class="title">1、海事局信息预录</p>
+                                    <p class="txt">
+                                        携带本人身份证、照片电子版和有效的海船船长、操作人员或引航员证书等（如有）到上海海事局指定地点（现有上海海事大学）统一进行基础信息采集。
+                                    </p>
+                                    <ul class="train-info-div-ul ">
+                                        <li>
+                                            <img src="img/small/ic_pin.png">
+                                            办理地址：上海港国际客运中心 上海东大名路500号
+                                        </li>
+                                        <li>
+                                            <img src="img/small/menu.png">
+                                            办理内容：预录身份信息、采集指纹、提交电子照片。
+                                        </li>
+                                        <li>
+                                            <img src="img/small/clock.png">
+                                            办理时间：开班报到第一天上午
+                                        </li>
+                                        <li>
+                                            <img src="img/small/tell.png">
+                                            咨询电话： 021-61818016
+                                        </li>
+                                    </ul>
+                                    <p class="txt">注：如港澳台或外籍人士，请前往浦东新区丰和路1号港务大厦办理。</p>
+                                </div>
+                                <div class="train-info-div ml16">
+                                    <p class="title">2、体检</p>
+                                    <p class="txt">
+                                        携带本人身份证和2寸白底彩色证件照2张到海事局指定医院体检，如上海海员医院。体检需空腹。体检后取得《游艇操作人员身体条件证明》
+                                    </p>
+                                    <ul class="train-info-div-ul">
+                                        <li><img src="img/small/ic_pin.png">地址：虹口区东长治路505号，靠近新建路。</li>
+                                        <li><img src="img/small/clock.png">体检时间：周一至周五上午0800至1000。</li>
+                                        <li><img src="img/small/card.png">体检费用：40岁及以下人员，377元/人；40岁以上，457元/人</li>
+                                    </ul>
+                                </div>
+                                <div class="train-info-div ml16">
+                                    <p class="title">3、驾校报名</p>
+                                    <p class="txt">
+                                        携带本人身份证复印件两份、照片2张及电子版照片、身体条件证明、有效的海船船长、操作人员或引航员证书（如有）等，到本驾校报名。提前或当场缴足费用，填写《学员登记表》、《游艇驾驶员考试、评估、发证申请表》。
+                                    </p>
+
+                                </div>
+                                <div class="train-info-div ml16">
+                                    <p class="title">4、账户信息</p>
+                                    <p class="txt">
+                                        银行名称：招商银行外滩支行在<br/>
+                                        开户名称：上海港国际客运中心开发有限公司<br/>
+                                        银行账号：2100 8515 6910 001<br/>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="train-info-title">四、课程内容：</p>
+                            <div>
+                                <p class="train-info-txt">
+                                    包括航行规则及相关安全管理法规、游艇航行基本知识、游艇操纵基本知识、游艇避碰技术、游艇机械推进动力装置基本知识、游艇基本安全知识和水上生存技能和游艇实际操作。
+                                    <br/>
+                                    （严格按照海事局对游艇驾驶培训的规定设置课程，保质保量，培育合格游艇驾驶人才）
+                                </p>
+                            </div>
+                            <p class="train-info-title">五、游艇驾照类型及使用范围：</p>
+                            <div>
+                                <p class="train-info-txt">考试合格者获得由中华人民共和国海事局颁发、全国通用的海上游艇驾驶证（黄浦江、长江流域同样适用）。</p>
+                            </div>
+                            <p class="train-info-title">六、培训时间：</p>
+                            <div>
+                                <p class="train-info-txt">
+                                    双休日开课，每期约1-2个月；（可根据师资和学员情况，增加工作日课时，缩短教学周期）<br/>
+                                    理论课程3天半，上课地点：上海港国际客运中心，虹口区东大名路500号<br/>
+                                    模拟器操作课程半天，上课地点：临港新城上海海事大学商船学院；（于上海港国际客运中心集中，由驾校统一组织
+                                    交通。）<br/>
+                                    实操课程4天，上课地点：上海港国际客运中心，虹口区东大名路800号（高阳路最南端）<br/>
+                                    考试1天（理论+实操）
+                                </p>
+                            </div>
+                            <p class="train-info-title">七、考试形式：</p>
+                            <div>
+                                <p class="train-info-txt">统一报名参加上海海事局组织的理论考试和实操考试</p>
+                            </div>
+                            <p class="train-info-title">八、计划开班时间：</p>
+                            <div>
+                                <p class="train-info-txt">
+                                    第一期：2017年3月21日～4月28日<br/>
+                                    第二期：2017年5月9日 ～6月9日<br/>
+                                    第三期：2017年6月20日～7月21日<br/>
+                                    （亦或视报名人数择日开班。如单期单一级别累计报名人数不足海事局规定的最低开班人数，本驾校将有权采取延期开班或降级开班等措
+                                    施）
+                                </p>
+                            </div>
+                            <p class="train-info-title">九、报名地址及联系人：</p>
+                            <div class="overflow-auto">
+                                <p class="train-info-txt">
+                                    <img src="img/small/ic_pin.png"/>上海市虹口区东大名路500号3号门，上海港国际客运中心
+                                </p>
+                                <div></div>
+                                <div class="train-info-div ml16 w245 mr5">
+                                    <p class="title">陆小姐</p>
+                                    <ul class="train-info-div-ul">
+                                        <li><img src="img/small/tell.png">021-6181 8028</li>
+                                        <li><img src="img/small/phone.png">139 1729 5436</li>
+                                        <li><img src="img/small/ic_mail.png">luyj@shgk.com.cn</li>
+                                        <li><img src="img/small/printer.png">021-6181 8061</li>
+                                    </ul>
+                                </div>
+                                <div class="train-info-div w245 mr5">
+                                    <p class="title">陆小姐</p>
+                                    <ul class="train-info-div-ul">
+                                        <li><img src="img/small/tell.png">021-6181 8028</li>
+                                        <li><img src="img/small/phone.png">139 1729 5436</li>
+                                        <li><img src="img/small/ic_mail.png">luyj@shgk.com.cn</li>
+                                        <li><img src="img/small/printer.png">021-6181 8061</li>
+                                    </ul>
+                                </div>
+                                <div class="train-info-div w245">
+                                    <p class="title">陆小姐</p>
+                                    <ul class="train-info-div-ul">
+                                        <li><img src="img/small/tell.png">021-6181 8028</li>
+                                        <li><img src="img/small/phone.png">139 1729 5436</li>
+                                        <li><img src="img/small/ic_mail.png">luyj@shgk.com.cn</li>
+                                        <li><img src="img/small/printer.png">021-6181 8061</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="train-info-title2">此外，本驾校提供帆船驾驶证照培训，欢迎来电咨询！</p>
+                            <p class="train-info-txt mb40">上海游艇O2O平台拥有最终解释权！</p>
+                        </div>
+                    </div>
+                    <div class="sublist" >2</div>
+                    <div class="sublist" >3</div>
+                </div>
+            </div>
+            <div class="train-detail-w400">
+                <form class="overflow-auto p30" method="post" action="" onsubmit="return false"/>
+
+                    <p class="apply-title">
+                        <img src="img/small/house.png"/>主办单位
+                    </p>
+
+                    <p class="train-info-txt ml0 pl0">上海海事大学、上海港国际客运中心开发有限公司</p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tb-logo">
+                        <tr>
+                            <th valign="middle"><img src="img/logo1.png"></th>
+                            <th valign="middle"><img src="img/logo2.png"></th>
+                        </tr>
+                    </table>
+
+                    <p class="apply-title"><img src="img/small/write.png">驾驶申请</p>
+
+                    <div class="contact-info">
+                        <p class="remark-title">申请人姓名</p>
+                    </div>
+                    <input type="text" placeholder="请输入申请人姓名" class="apply-input placeholder" id="name">
+
+                    <p class="bill-title">申请人性别</p>
+                    <div class="overflow-auto">
+                        <div>
+                            <div class="contact-info-btn active">
+                                男
+                                <img src="img/small/active2.png" class="active-img"/>
+                            </div>
+                            <div class="contact-info-btn">
+                                女
+                                <img src="img/small/active2.png" class="active-img"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="remark-title">身份证号</p>
+                    </div>
+                    <input placeholder="请输入身份证号" type="text" class="apply-input placeholder" id="idnum">
+
+                    <div class="contact-info">
+                        <p class="remark-title">手机号</p>
+                    </div>
+                    <input placeholder="请输入手机号" type="text" class="apply-input placeholder" id="phone">
+                    <div class="clear" id="errors"></div>
+                    <button class="apply-button" value="Submit" type="button">立即申请</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="bottom-img">
+    <div class="bottom2">
+        <div class="bg-00086"></div>
+        <div class="container">
+            <div class="first-c">
+                <img src="img/small/bottom1.png" class="left"/>
+                <div>
+                    <span class="bottom-title">权益保障</span>
+                    <br/>
+                    <span class="bottom-sub-title">平台中立资金安全</span>
+                </div>
+            </div>
+            <div class="first-c">
+                <img src="img/small/bottom2.png" class="left"/>
+                <div>
+                    <span class="bottom-title">服务专业</span>
+                    <br/>
+                    <span class="bottom-sub-title">规范行业服务标准</span>
+                </div>
+            </div>
+            <div class="first-c">
+                <img src="img/small/bottom3.png" class="left"/>
+                <div>
+                    <span class="bottom-title">安全至上</span>
+                    <br/>
+                    <span class="bottom-sub-title">安全把控保险护航</span>
+                </div>
+            </div>
+            <div>
+                <img src="img/small/bottom3.png" class="left"/>
+                <div>
+                    <span class="bottom-title">行业权威</span>
+                    <br/>
+                    <span class="bottom-sub-title">国家“5A”协会主办</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bg-00060"></div>
+        <div class="container overflow-auto">
+            <div class="call-wrapper">
+                <div class="c-wrapper">
+                    <img src="img/small/call.png" class="left"/>
+                    <div>
+                        客服中心电话：<br/><span class="big-c">400-812-1241</span>
+                    </div>
+                    <div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+                </div>
+            </div>
+            <div class="c-list-wrapper">
+                <div class="first-div">
+                    <div>
+                        <img src="img/small/bottom01.png"/>新手指南
+                    </div>
+                    <a>注册流程</a><br/>
+                    <a>购物流程</a><br/>
+                    <a>常见问题</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/small/bottom02.png"/>支付方式
+                    </div>
+                    <a>支付问题</a><br/>
+                    <a>支付方式</a><br/>
+                    <a>支付限额</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/small/bottom03.png"/>售后服务
+                    </div>
+                    <a>退换货政策</a><br/>
+                    <a>退款说明</a><br/>
+                    <a>退货流程</a>
+                </div>
+                <div class="code-wrapper">
+                    <img src="img/code.png"/>
+                    <div>扫码关注我们</div>
+                </div>
+            </div>
+            <div class="about-us">
+                <a>关于我们</a> | <a>联系我们</a> | <a>法律声明</a> | <a>隐私与条款</a> | <a>投诉与建议</a>
+            </div>
+            <div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
+<script src="js/jquery.raty.js"></script>
+<script type="text/javascript" src="js/paging.js"></script>
+<script type="text/javascript" src="js/query.js"></script>
+<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $('#star').raty({
+            halfShow: false,
+            score: 4.9,
+            readOnly: true
+        });
+        $('.contact-info-wrapper .contact-info-detail').click(function () {
+            if (!$(this).hasClass('add')) {
+                $('.contact-info-wrapper .contact-info-detail').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    });
+
+    //淡隐淡现选项卡切换
+    $(document).ready(function($){
+        $("#fadetab").tabso({
+            cntSelect:"#fadecon",
+            tabEvent:"click",
+            tabStyle:"fade"
+        });
+
+    });
+    // 性别
+    $('.contact-info-btn').click(function(){
+        $(this).removeClass('active').addClass('active').siblings().removeClass('active');
+    });
+    $(function(){
+        $('.overflow-auto input').keyup(function(){
+            $(this).removeClass('error');
+            $('#errors').hide();
+        });
+        $('.apply-button').click(function(){
+            var inp =$('.overflow-auto input');
+            var regSFZ15 = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+            var regSFZ18 = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+            var name = $('#name');
+            var idnum = $('#idnum');
+            var phone = $('#phone');
+            var corrects = $('#errors');
+            var sex = $('.contact-info-btn.active').text();
+
+
+            if(name.val() === "请输入申请人姓名"){
+                name.addClass('error');
+                corrects.text(name.attr('placeholder')).show();
+                return false;
+            }
+
+            if(idnum.val() === "请输入身份证号"){
+                idnum.addClass('error');
+                corrects.text(idnum.attr('placeholder')).show();
+                return false;
+            }else if(!regSFZ15.test(idnum.val()) && !regSFZ18.test(idnum.val())){
+                idnum.addClass('error');
+                corrects.text('您输入的身份证号有误').show();
+                return false;
+            }
+
+            if(phone.val() === "请输入手机号"){
+                phone.addClass('error');
+                corrects.text(phone.attr('placeholder')).show();
+                return false;
+            }else if(!regPhone.test(phone.val())){
+                phone.addClass('error');
+                corrects.text('您输入的手机号有误').show();
+                return false;
+            }
+
+            /*
+                验证通过
+            */
+            // console.log('通过');
+            // window.location.href = 'index.html';
+                
+        });
+    });
+</script>
+</html>

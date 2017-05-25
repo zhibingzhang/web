@@ -1,0 +1,58 @@
+@charset "utf-8"; 
+*,body {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+/* demo */
+.demo {
+	width:686px;
+	margin:40px auto;
+	position:relative;
+}
+/* tabbtn */
+.tabbtn {height:20px;}
+.tittle_dk {
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #006699;
+	font-size: 14px;
+	font-family:"宋体";
+	margin:0 2px;
+}
+.tabbtn ul {float:left;}
+.tabbtn li {float:left;}
+.tabbtn li a {
+	display: block;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	width: 60px;
+	text-align: center;
+	font-size:12px;
+	font-family:"宋体";
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0 5px;
+	padding: 0 2px;
+	border:1px solid #3399cc;
+	color:#3399cc;
+}
+.tabbtn li.current a {
+	background-color:#3399cc;
+	color:#ffffff;
+	font-weight:bold;
+}
+/* tabcon */
+.tabcon {
+	border:1px solid #dddddd;
+	position:relative;/*必要元素*/
+	height:200px;
+	width:666px;
+	overflow:hidden;
+}
+/* sublist */
+.sublist {float:left;padding:5px 10px;}

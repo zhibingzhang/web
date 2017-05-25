@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>婚纱拍摄</title>
+		<!--<meta http-equiv="x-ua-compatible" content="IE=edge">-->
+		<meta name="viewport" charset="width=device-width,initial-scale=1">
+		<link href="css/common.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
+		<link href="css/details.css" rel="stylesheet">
+		<script src="js/jquery-1.9.min.js"></script>
+		<script src="js/mootools-1.3.2.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script src="js/divselect.js"></script>
+		<link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+		<link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+		<!--[if lte IE 8]>
+		<script src="js/selectivizr.js"></script>
+		<![endif]-->
+			<!--[if lt IE 9]>
+		<script src="js/css3-mediaqueries.js"></script>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+			window.onload = function(){
+
+				var obj = document.getElementsByClassName('box')
+				function loadImg (data,k){
+					var i = 0;
+					setInterval(function(){
+						object=obj[k];
+						i++
+						if(i>data){
+							i=data
+						}
+						var imgLeft = -(i*44+(i*10))+'px'
+						object.style.backgroundPosition = imgLeft+'\t'+'0px'
+						object.innerHTML = i+'%';
+
+
+					},50)
+
+				}
+				//第一个参数代表百分比,第二个参数代表评论项目的次序
+				loadImg(88,0)
+				loadImg(28,1)
+				loadImg(68,2)
+				loadImg(78,3)
+			}
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container">
+				<div class="overflow-auto">
+					<div class="left">
+						欢迎进入上海游艇O2O平台！
+					</div>
+					<div class="right">
+						<a class="login-btn">登录</a>
+						<a class="register-btn">注册</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-back">
+			<div class="index-tab">
+				<div class="container2">
+					<img src="img/logo.png" class="logo-img"/>
+					<div class="index-tab-list">
+						<div class="overflow-auto">
+							<a href="aboutus0517.html">关于我们</a>
+							<a href="news.html"  >媒体中心</a>
+							<a href="train.html">驾驶培训</a>
+							<a href="theme_type.html" class="active">主题租赁</a>
+							<a href="yacht_list.html">游艇租赁</a>
+							<a href="home.html">首页</a>
+						</div>
+					</div>
+					<div class="index-input">
+                    <span>
+                        <form action="" method="post">
+                            <div id="index-input-select" class="index-input-select">
+                                <a class="index-input-a">游艇
+                                	<img src="img/down.png" class="down"/>
+                                </a>
+                                <ul>
+                                    <li>主题</li>
+                                    <li>游艇</li>
+                                </ul>
+                                <input name="" type="hidden" value="" id="index-input-select2"/>
+                            </div>
+                        </form>
+                    </span>
+						<input type="text" placeholder="请输入查询的内容"/>
+						<img src="img/search.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="txtmap">当前位置：首页 >
+				<a href="#">游艇租赁</a>
+			</div>
+			<div class="hrgray"></div>
+			<div class="yacht-detail">
+				<div id="slider">
+					<div id="slider_name" class="slider_box">
+						<div id="movie_tip" class="silder_tip">Ӱ</div>
+						<ul class="silder_con">
+							<li class="silder_panel clearfix">
+								<a class="f_l" href="#"><img src="img/t.png"></a>
+							</li>
+							<li class="silder_panel clearfix">
+								<a class="f_l" href="#"><img src="img/t.png"></a>
+							</li>
+							<li class="silder_panel clearfix">
+								<a class="f_l" href="#"><img src="img/t.png"></a>
+							</li>
+							<li class="silder_panel clearfix">
+								<a class="f_l" href="#"><img src="img/t.png"></a>
+							</li>
+							<li class="silder_panel clearfix">
+								<a class="f_l" href="#"><img src="img/t.png"></a>
+							</li>
+						</ul>
+						<ul class="silder_nav clearfix">
+							<li>
+								<a href="#"><img src="img/a1.png"></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/a1.png"></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/a1.png"></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/a1.png"></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/a1.png"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="silderBox"></div>
+				</div>
+				<script type="text/javascript" src="js/jquery.slides.js"></script>
+				<div class="yacht-name">
+					<p class="theme-title2"><img src="img/small/shoot.png">婚纱拍摄</p>
+					<div class="rate-num-wrapper">
+						<div id="star" class="star" ></div><span class="rate-num">9.8分<span>（969评论）</span></span>
+					</div>
+					<div class="clear"></div>
+					<div class="hrgray"></div>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="theme-time">
+						<tr>
+							<td ><img src="img/small/calendar.png"/></td>
+							<th >主题周期：2017/05/01 ~ 2017/06/30</th>
+						</tr>
+						<tr>
+							<td ><img src="img/small/clock.png"/></td>
+							<th >主题时间：4小时</th>
+						</tr>
+					</table>
+					<div class="hrgray"></div>
+
+					<p class="yacht-detail-title">详细描述</p>
+					<p class="yacht-detail-txt">豪华是Ocean Alexander游艇最基本的要求。每艘游艇不但经由至少300名人工以手工打造，其售后服务及保养更是创业界之先驱。Ocean Alexander提供一系列的游艇船型，全面配合任何尊客的需要。最高规格的制造过程、极致的奢华享受，以及卓越的技术革新绝对是世界级的标杆。</p>
+					<p class="yacht-price"><span class="price-yellow">¥<span>1500</span>.00元／小时</span>起</p>
+					<p class="theme-information">
+						<span class="old-price">原价：¥12，000</span>
+						<span class="booked">已有1200人预订</span>
+					</p>
+					<div class="yacht-handle">
+						<a href="#"><img src="img/small/options.png" />分享</a>
+						<img src="img/small/social-pic.png"/>
+					</div>
+				</div>
+			</div>
+			<div class="theme-include">
+				<p class="include-title">包含套餐</p>
+				<div class="include-div">
+					<ul class="include-list">
+						<li>
+							<img src="img/images/theme-photo1.png"/>
+							<div class="include-list-div">
+								<p class="first">花式水果拼盘</p>
+								<p>3种水果</p>
+								<p>数量：1份</p>
+								<s class="old-price">原价：羊380.00</s>
+							</div>
+						</li>
+						<li>
+							<img src="img/images/theme-photo1.png"/>
+							<div class="include-list-div">
+								<p class="first">花式水果拼盘</p>
+								<p>3种水果</p>
+								<p>数量：1份</p>
+								<s class="old-price">原价：羊380.00</s>
+							</div>
+						</li>
+						<li>
+							<img src="img/images/theme-photo1.png"/>
+							<div class="include-list-div">
+								<p class="first">花式水果拼盘</p>
+								<p>3种水果</p>
+								<p>数量：1份</p>
+								<s class="old-price">原价：羊380.00</s>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div class="yacht-tab">
+				<ul id="fadetab">
+					<li class="current"><a class="yacht-nav1">主题预定</a></li>
+					<li><a class="yacht-nav2">主题介绍</a></li>
+					<li><a class="yacht-nav3">费用说明</a></li>
+					<li><a class="yacht-nav4">预定须知</a></li>
+					<li><a class="yacht-nav5">用户评论</a></li>
+				</ul>
+			</div>
+
+			<div class="tabcon" id="fadecon">
+				<div class="sublist">
+					<div class="yacht-detail-book">
+						<div class="choose-time">
+							<div class="choose-time-left">
+								<p class="title-yacht2">
+									选择预定时间
+									<span class="theme-remind">主题时间限制为4小时，只需要选择开始时间即可。</span>
+								</p>
+								<div>
+									<div class="choose-time-cells">
+										<p class="cell-little">
+											<a class="cell-grey-little"></a><span>不可预定</span>
+											<a class="cell-blue-little"></a><span>可预定</span>
+											<a class="cell-white-little"></a><span>当前选中</span>
+										</p>
+										<ul class="time-cells">
+											<a href="#" class="cell-grey">00:00</a>
+											<a href="#" class="cell-grey">00:30</a>
+											<a href="#" class="cell-grey">01:00</a>
+											<a href="#" class="cell-grey">01:30</a>
+											<a href="#" class="cell-grey">02:00</a>
+											<a href="#" class="cell-grey">02:30</a>
+											<a href="#" class="cell-grey">03:00</a>
+											<a href="#" class="cell-grey">03:30</a>
+											<a href="#" class="cell-grey">04:00</a>
+											<a href="#" class="cell-grey">04:30</a>
+											<a href="#" class="cell-grey">05:00</a>
+											<a href="#" class="cell-grey">05:30</a>
+											<a href="#" class="cell-grey">06:00</a>
+											<a href="#" class="cell-grey">06:30</a>
+											<a href="#" class="cell-grey">07:00</a>
+											<a href="#" class="cell-blue">07:30</a>
+											<a href="#" class="cell-blue">08:00</a>
+											<a href="#" class="cell-blue">08:30</a>
+											<a href="#" class="cell-white">09:00</a>
+											<a href="#" class="cell-white">09:30</a>
+											<a href="#" class="cell-white">10:00</a>
+											<a href="#" class="cell-white">10:30</a>
+											<a href="#" class="cell-white">11:00</a>
+											<a href="#" class="cell-white">11:30</a>
+											<a href="#" class="cell-white">12:00</a>
+											<a href="#" class="cell-white">12:30</a>
+											<a href="#" class="cell-white">13:00</a>
+											<a href="#" class="cell-white">13:30</a>
+											<a href="#" class="cell-white">14:00</a>
+											<a href="#" class="cell-white">14:30</a>
+											<a href="#" class="cell-white">15:00</a>
+											<a href="#" class="cell-white">15:30</a>
+											<a href="#" class="cell-white">16:00</a>
+											<a href="#" class="cell-white">16:30</a>
+											<a href="#" class="cell-white">17:00</a>
+											<a href="#" class="cell-white">17:30</a>
+											<a href="#" class="cell-white">18:00</a>
+											<a href="#" class="cell-white">18:30</a>
+											<a href="#" class="cell-white">19:00</a>
+											<a href="#" class="cell-white">19:30</a>
+											<a href="#" class="cell-white">20:00</a>
+											<a href="#" class="cell-white">20:30</a>
+											<a href="#" class="cell-white">21:00</a>
+											<a href="#" class="cell-white">21:30</a>
+											<a href="#" class="cell-white">22:00</a>
+											<a href="#" class="cell-white">22:30</a>
+											<a href="#" class="cell-white">23:00</a>
+											<a href="#" class="cell-white">23:30</a>
+											</tr>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="choose-time-right">
+								<p class="yacht-detail-txt">已选择内容如下：</p>
+								<div class="theme-date">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td colspan="2"><img src="img/small/date.png">预定日期</td>
+										</tr>
+										<tr>
+											<th>开始时间：2017/05/09  11：00</th>
+											<th>结束时间：2017/05/09  15：00</th>
+										</tr>
+									</table>
+								</div>
+								<p class="theme-price">总计：<span class="price-yellow">¥<span>6000</span>.00元／小时</span></p>
+								<div class="yacht-rent-notice">
+									<p class="title">游艇租赁相关事项：</p>
+									<p class="list">
+										1、游艇根据海事局规定，乘客不得超过10人；<br/>
+										2、预订后1小时全额支付费用，订单生成有效；<br/>
+										3、提前24小时取消订单的，扣除25%租赁费用作为手续费，返还剩余费用；<br/>
+										4、提前6个小时（夜间时段2100-0800不计入内）不足24小时者，收取50%的租赁费用，返还剩余费用；不足6个小时（夜间时段2100-0800不计入内）者不得取消；<br/>
+										5、两档租赁业务之间需至少间隔半个小时；
+									</p>
+								</div>
+								<p class="yacht-detail-txt"><input type="checkbox"/>我已阅读并同意<a href="#">《游艇租赁协议》</a></p>
+								<a href="purchase_service05170.html" class="yacht-booking"></a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sublist">
+					2
+				</div>
+				<div class="sublist">3</div>
+				<div class="sublist">4</div>
+				<div class="sublist">
+					5
+				</div>
+			</div>
+
+			<div class="hrblue"></div>
+			<p class="hot-yacht">热门主题</p>
+			<div class="product-wrapper">
+				<div class="product-each-r">
+					<div class="time-remind">4小时</div>
+					<img src="img/smallpic.png"/>
+					<div class="product-title">
+						<img src="img/small/bag.png">
+						<span>商务宴请</span>
+						<span class="booked">已有12人预订</span>
+					</div>
+					<div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
+				</div>
+				<div class="product-each-r">
+					<div class="time-remind">4小时</div>
+					<img src="img/smallpic.png"/>
+					<div class="product-title">
+						<img src="img/small/part.png">
+						<span>派对轰趴</span>
+						<span class="booked">已有12人预订</span>
+					</div>
+					<div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
+				</div>
+				<div class="product-each0">
+					<div class="time-remind">4小时</div>
+					<img src="img/smallpic.png"/>
+					<div class="product-title">
+						<img src="img/small/cofe.png">
+						<span>朋友聚会</span>
+						<span class="booked">已有12人预订</span>
+					</div>
+					<div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png" />预定</a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		<div class="bottom-img">
+			<div class="bottom2">
+				<div class="bg-00086"></div>
+				<div class="container">
+					<div class="first-c">
+						<img src="img/small/bottom1.png" class="left" />
+						<div>
+							<span class="bottom-title">权益保障</span>
+							<br/>
+							<span class="bottom-sub-title">平台中立资金安全</span>
+						</div>
+					</div>
+					<div class="first-c">
+						<img src="img/small/bottom2.png" class="left" />
+						<div>
+							<span class="bottom-title">服务专业</span>
+							<br/>
+							<span class="bottom-sub-title">规范行业服务标准</span>
+						</div>
+					</div>
+					<div class="first-c">
+						<img src="img/small/bottom3.png" class="left" />
+						<div>
+							<span class="bottom-title">安全至上</span>
+							<br/>
+							<span class="bottom-sub-title">安全把控保险护航</span>
+						</div>
+					</div>
+					<div>
+						<img src="img/small/bottom3.png" class="left" />
+						<div>
+							<span class="bottom-title">行业权威</span>
+							<br/>
+							<span class="bottom-sub-title">国家“5A”协会主办</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="bg-00060"></div>
+				<div class="container overflow-auto">
+					<div class="call-wrapper">
+						<div class="c-wrapper">
+							<img src="img/small/call.png" class="left" />
+							<div>
+								客服中心电话：<br/><span class="big-c">400-812-1241</span>
+							</div>
+							<div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+						</div>
+					</div>
+					<div class="c-list-wrapper">
+						<div class="first-div">
+							<div>
+								<img src="img/small/bottom01.png" />新手指南
+							</div>
+							<a>注册流程</a><br/>
+							<a>购物流程</a><br/>
+							<a>常见问题</a>
+						</div>
+						<div>
+							<div>
+								<img src="img/small/bottom02.png" />支付方式
+							</div>
+							<a>支付问题</a><br/>
+							<a>支付方式</a><br/>
+							<a>支付限额</a>
+						</div>
+						<div>
+							<div>
+								<img src="img/small/bottom03.png" />售后服务
+							</div>
+							<a>退换货政策</a><br/>
+							<a>退款说明</a><br/>
+							<a>退货流程</a>
+						</div>
+						<div class="code-wrapper">
+							<img src="img/code.png" />
+							<div>扫码关注我们</div>
+						</div>
+					</div>
+					<div class="about-us">
+						<a>关于我们</a> |
+						<a>联系我们</a> |
+						<a>法律声明</a> |
+						<a>隐私与条款</a> |
+						<a>投诉与建议</a>
+					</div>
+					<div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
+	<script src="js/jquery.raty.js"></script>
+	<script type="text/javascript" src="js/query.js"></script>
+	<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
+	<script type="text/javascript" language="javascript">
+		/*星星打分*/
+		$(document).ready(function(){
+			$('#star').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star2').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star3').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('#star4').raty({
+				halfShow: false,
+				score: 4.9,
+				readOnly: true
+			});
+			$('.contact-info-wrapper .contact-info-detail').click(function(){
+				if(!$(this).hasClass('add')){
+					$('.contact-info-wrapper .contact-info-detail').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+		});
+
+		//淡隐淡现选项卡切换
+		$(document).ready(function($){
+			$("#fadetab").tabso({
+				cntSelect:"#fadecon",
+				tabEvent:"click",
+				tabStyle:"fade"
+			});
+			
+		});
+
+		//图片轮播
+		$(document).ready(function() {
+			var mySwiper = new Swiper('.featured', {
+				autoplay: 3000,
+				grabCursor: true,
+				paginationClickable: true,
+				onSlideChangeEnd: function(swiper) {
+					var now = swiper.activeIndex;
+					var all = $('.featured .swiper-slide').length;
+					if(now == 0) {
+						$('.arrow-left').addClass('disabled');
+						$('.arrow-right').removeClass('disabled');
+					} else if(all == now + 1) {
+						$('.arrow-left').removeClass('disabled');
+						$('.arrow-right').addClass('disabled');
+					} else {
+						$('.arrow-left').removeClass('disabled');
+						$('.arrow-right').removeClass('disabled');
+					}
+
+				}
+			});
+			$('.arrow-left').on('click', function(e) {
+				e.preventDefault();
+				mySwiper.swipePrev();
+			});
+			$('.arrow-right').on('click', function(e) {
+				e.preventDefault();
+				mySwiper.swipeNext();
+			});
+			$('.banners-container').each(function() {
+				$(this).swiper({
+					slidesPerView: 'auto',
+					offsetPxBefore: 0,
+					offsetPxAfter: 30
+				})
+			})
+		})
+
+		jQuery('[placeholder]').focus(function() {
+			var input = jQuery(this);
+			if (input.val() == input.attr('placeholder')) {
+				input.val('');
+				input.removeClass('placeholder');
+			}
+		}).blur(function() {
+			var input = jQuery(this);
+			if (input.val() == '' || input.val() == input.attr('placeholder')) {
+				input.addClass('placeholder');
+				input.val(input.attr('placeholder'));
+			}
+		}).blur().parents('form').submit(function() {
+			jQuery(this).find('[placeholder]').each(function() {
+				var input = jQuery(this);
+				if (input.val() == input.attr('placeholder')) {
+					input.val('');
+				}
+			})
+		});
+	</script>
+
+</html>

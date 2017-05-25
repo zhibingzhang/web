@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>右侧网页浮动框</title>
+
+    <script type="text/javascript" src="js/jquery-1.9.min.js"></script>
+
+
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        a, img {
+            border: 0;
+        }
+
+        body {
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+            background: #ddd;
+        }
+
+        /* leftsead */
+
+        #leftsead {
+            width: 230px;
+            height: 143px;
+            position: fixed;
+            top: 258px;
+            right: 0px;
+        }
+
+        * html #leftsead {
+            margin-top: 258px;
+            position: absolute;
+            top: expression(eval(document.documentElement.scrollTop));
+        }
+
+        #leftsead li {
+            width: 230px;
+            height: 64px;
+            margin-bottom: 3px;
+        }
+
+        #leftsead li img {
+            float: right;
+        }
+
+        #leftsead li a {
+            height: 64px;
+            float: right;
+            display: block;
+            min-width: 64px;
+            max-width: 230px;
+        }
+
+        #leftsead li a .shows {
+            display: block;
+        }
+
+        #leftsead li a .hides {
+            margin-right: -230px;
+            cursor: pointer;
+            cursor: hand;
+            display: none;
+        }
+
+        #leftsead li a.qrcode .hides {
+            display: none;
+            position: absolute;
+            right: 299px;
+            top: 115px;
+        }
+
+        #leftsead li a span {
+            display: block;
+            width: 150px;
+            height: 64px;
+            line-height: 64px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            padding-left: 12px;
+            margin-right: 5px;
+            background: #0873b6;
+            color: #ffffff;
+        }
+
+    </style>
+
+
+</head>
+
+
+<body style="height:1600px;">
+
+
+<div id="leftsead">
+
+    <ul>
+
+        <li>
+            <a href="#">
+                <div class="hides">
+                    <img src="images/foot03/ll01.png" width="64" height="64"/>
+                    <span>400-878-6707</span>
+                </div>
+                <div class="shows">
+                    <img src="images/foot03/l01.png" width="64" height="64"/>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="hides">
+                    <img src="images/foot03/ll03.png" width="131" height="64"/>
+                </div>
+                <div class="shows">
+                    <img src="images/foot03/l03.png" width="64" height="64"/>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a class="qrcode">
+                <div class="shows">
+                    <img src="images/foot03/l02.png" width="64" height="64"/>
+                </div>
+                <div class="hides">
+                    <img src="images/foot03/qrcode.png" width="100" height="100" usemap="#taklhtml"/>
+                </div>
+
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="hides">
+                    <img src="images/foot03/ll04.png" width="131" height="64"/>
+                </div>
+                <div class="shows">
+                    <img src="images/foot03/l04.png" width="64" height="64"/>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="hides">
+                    <img src="images/foot03/ll05.png" width="131" height="64"/>
+                </div>
+                <div class="shows">
+                    <img src="images/foot03/l05.png" width="64" height="64"/>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a id="top_btn">
+                <div class="hides">
+                    <img src="images/foot03/ll06.png" width="131" height="64"/>
+                </div>
+                <div class="shows">
+                    <img src="images/foot03/l06.png" width="64" height="64"/>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+</div><!--leftsead end-->
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+
+        $("#leftsead a").hover(function () {
+
+            if ($(this).prop("className") == "qrcode") {
+
+                $(this).children("div.hides").show();
+
+            } else {
+
+                $(this).children("div.hides").show();
+
+                $(this).children("div.shows").hide();
+
+                $(this).children("div.hides").animate({marginRight: '0px'}, 'slow');
+
+            }
+
+        }, function () {
+
+            if ($(this).prop("className") == "qrcode") {
+
+                $(this).children("div.hides").hide('slow');
+
+            } else {
+
+                $(this).children("div.hides").animate({marginRight: '-143px'}, 'slow', function () {
+                    $(this).hide();
+                    $(this).next("div.shows").show();
+                });
+
+            }
+
+        });
+
+
+        $("#top_btn").click(function () {
+            if (scroll == "off") return;
+            $("html,body").animate({scrollTop: 0}, 600);
+        });
+
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

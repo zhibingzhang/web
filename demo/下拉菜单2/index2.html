@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .selectdiv {
+            width: 200px;
+            line-height: 25px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .selectdiv span {
+            display: block;
+            cursor: pointer;
+        }
+
+        .selectdiv ul, .selectdiv li {
+            padding: 0;
+            margin: 0
+        }
+
+        .selectdiv li {
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            background-color: #378ec4;
+            border-top: 1px solid #9fc3e3;
+            display: block;
+            color: #d1e1f1;
+            padding-left: 10px;
+        }
+
+        .selectdiv li:hover {
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        .selectdiv li:last-child {
+            border-bottom: 0
+        }
+
+        .selectdiv ul {
+            width: 100%;
+            position: absolute;
+            z-index: 20000;
+            margin-left: -15px;
+            margin-top: -1px;
+            border: 1px solid #9fc3e3;
+            border-radius: 4px;
+            display: none;
+        }
+
+
+    </style>
+    <script src="js/jquery-1.9.min.js"></script>
+    <script>
+        $(function () {
+            $(".checkspan").bind("click", function () {
+                var ul = $(this).siblings('ul')
+                if (ul.is(":hidden")) {
+                    ul.slideDown('400', function () {
+                        $(this).find("li").bind("click", function () {
+                            var selectLi = $(this).text();
+                            $("#select1 span").text(selectLi);
+                            $("#select1 ul").slideUp(40);
+                        })
+                        ul.mouseleave(function () {
+                            $('#select1 ul').slideUp(40)
+                        });
+                    });
+                } else {
+                    $(this).siblings('ul').slideUp(40)
+                }
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div id="select1" class="selectdiv">
+    <span class="checkspan">请选择品牌</span>
+    <ul>
+        <li>品牌1</li>
+        <li>品牌2</li>
+        <li>品牌3</li>
+        <li>品牌4</li>
+        <li>品牌5</li>
+        <li>品牌6</li>
+        <li>品牌7</li>
+    </ul>
+</div>
+</body>
+</html>

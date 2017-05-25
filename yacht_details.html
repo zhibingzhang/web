@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>游艇租赁</title>
+    <!--<meta http-equiv="x-ua-compatible" content="IE=edge">-->
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/details.css" rel="stylesheet">
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script src="js/mootools-1.3.2.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+    <link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+    <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.9.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script src="js/divselect.js" type="text/javascript"></script>
+    <!--[if lte IE 8]>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="overflow-auto">
+            <div class="left">
+                欢迎进入上海游艇O2O平台！
+            </div>
+            <div class="right">
+                <a class="login-btn">登录</a>
+                <a class="register-btn">注册</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-back">
+    <div class="index-tab">
+        <div class="container2">
+            <img src="img/logo.png" class="logo-img"/>
+            <div class="index-tab-list">
+                <div class="overflow-auto">
+                    <a href="aboutus0517.html">关于我们</a>
+                    <a href="news.html">媒体中心</a>
+                    <a href="train.html">驾驶培训</a>
+                    <a href="theme_type.html">主题租赁</a>
+                    <a href="yacht_list.html" class="active">游艇租赁</a>
+                    <a href="home.html">首页</a>
+                </div>
+            </div>
+            <div class="index-input">
+                <span>
+                    <form action="" method="post">
+                        <div id="index-input-select" class="index-input-select">
+                            <a class="index-input-a">
+                                <p>游艇</p>
+                                <img src="img/down.png" class="down"/>
+                            </a>
+                            <ul>
+                                <li>主题</li>
+                                <li>游艇</li>
+                            </ul>
+                            <input name="" type="hidden" value="" id="index-input-select2"/>
+                        </div>
+                    </form>
+                </span>
+                <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                <img src="img/search.png" class="search"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="txtmap">当前位置：首页 >
+        <a href="#">游艇租赁</a>
+    </div>
+    <div class="hrgray"></div>
+    <div class="yacht-detail">
+        <div class="yacht-name">
+            <p>海神号<span>Sea-stella46</span></p>
+            <div class="rate-num-wrapper">
+                <div id="star" class="star"></div>
+                <span class="rate-num">9.8分<span>（969评论）</span></span>
+            </div>
+            <div class="clear"></div>
+            <div class="hrgray"></div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tbstyle">
+                <tr>
+                    <th class="bdright">所属城市</th>
+                    <th class="bdright">乘坐人数</th>
+                    <th class="bdright">游艇长度</th>
+                    <th>游艇产品</th>
+                </tr>
+                <tr>
+                    <td class="bdright">上海</td>
+                    <td class="bdright">10人</td>
+                    <td class="bdright">30英尺</td>
+                    <td>商务艇</td>
+                </tr>
+            </table>
+            <div class="hrgray"></div>
+
+            <p class="yacht-detail-title">详细描述</p>
+            <p class="yacht-detail-txt">豪华是Ocean Alexander游艇最基本的要求。每艘游艇不但经由至少300名人工以手工打造，其售后服务及保养更是创业界之先驱。Ocean
+                Alexander提供一系列的游艇船型，全面配合任何尊客的需要。最高规格的制造过程、极致的奢华享受，以及卓越的技术革新绝对是世界级的标杆。</p>
+            <p class="yacht-price"><span class="price-yellow">¥<span>1500</span>.00元／小时</span>起</p>
+            <div class="yacht-handle">
+                <a href="#"><img src="img/small/collect.png"/>收藏</a>
+                <a href="#"><img src="img/small/options.png"/>分享</a>
+                <img src="img/small/social-pic.png"/>
+            </div>
+        </div>
+        <div id="tFocus">
+            <div class="ban" id="demo1">
+                <div class="ban2" id="ban_pic1">
+                    <ul>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span >
+                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="prev1" id="prev1"><img src="images/index_tab_l.png" width="28" height="51" alt=""/>
+                    </div>
+                    <div class="next1" id="next1"><img src="images/index_tab_r.png" width="28" height="51" alt=""/>
+                    </div>
+                </div>
+                <div class="min_pic">
+                    <div class="prev_btn1" id="prev_btn1"><img src="images/feel3.png" width="9" height="18" alt=""/>
+                    </div>
+                    <div class="num clearfix" id="ban_num1">
+                        <ul>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
+                        </ul>
+                    </div>
+                    <div class="next_btn1" id="next_btn1"><img src="images/feel4.png" width="9" height="18" alt=""/>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/pic_tab.js"></script>
+            <!--上面的js插件使用和tab发生冲突-->
+            <script type="text/javascript">
+                jq('#demo1').banqh({
+                    box: "#demo1",//总框架
+                    pic: "#ban_pic1",//大图框架
+                    pnum: "#ban_num1",//小图框架
+                    prev_btn: "#prev_btn1",//小图左箭头
+                    next_btn: "#next_btn1",//小图右箭头
+                    pop_prev: "#prev2",//弹出框左箭头
+                    pop_next: "#next2",//弹出框右箭头
+                    prev: "#prev1",//大图左箭头
+                    next: "#next1",//大图右箭头
+                    pop_div: "#demo2",//弹出框框架
+                    pop_pic: "#ban_pic2",//弹出框图片框架
+                    pop_xx: ".pop_up_xx",//关闭弹出框按钮
+                    mhc: ".mhc",//朦灰层
+                    autoplay: true,//是否自动播放
+                    interTime: 5000,//图片自动切换间隔
+                    delayTime: 400,//切换一张图片时间
+                    pop_delayTime: 400,//弹出框切换一张图片时间
+                    order: 0,//当前显示的图片（从0开始）
+                    picdire: true,//大图滚动方向（true为水平方向滚动）
+                    mindire: true,//小图滚动方向（true为水平方向滚动）
+                    min_picnum: 5,//小图显示数量
+                    pop_up: true//大图是否有弹出框
+                })
+            </script>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="yacht-tab" id="wraps">
+        <ul id="diyas">
+            <li class="current"><a class="yacht-nav1">游艇预定</a></li>
+            <li><a class="yacht-nav2">游艇介绍</a></li>
+            <li><a class="yacht-nav3">费用说明</a></li>
+            <li><a class="yacht-nav4">预定须知</a></li>
+            <li><a class="yacht-nav5">用户评论</a></li>
+        </ul>
+        <br clear="all" />
+        <div class="block" id="yacht-nav1">
+            <div class="yacht-detail-book">
+                <p class="title-yacht">价格列表</p>
+                <table border="0" cellspacing="0" cellpadding="0" class="tb-price">
+                    <tr>
+                        <th class="bdbottom bdright">时间段</th>
+                        <th class="bdbottom bdright">价格</th>
+                        <th class="bdbottom ">优惠</th>
+                    </tr>
+                    <tr>
+                        <td class="bdbottom bdright">00:00～08:00</td>
+                        <td class="bdbottom bdright">¥2500.00</td>
+                        <td class="bdbottom">--</td>
+                    </tr>
+                    <tr>
+                        <td class="bdbottom bdright">08:00～12:00</td>
+                        <td class="bdbottom bdright">¥3000.00</td>
+                        <td class="bdbottom">--</td>
+                    </tr>
+                    <td class="bdbottom bdright">13:00～00:00</td>
+                    <td class="bdbottom bdright">¥4000.00</td>
+                    <td class="bdbottom">--</td>
+                    </tr>
+                </table>
+                <div class="hrgray"></div>
+                <div class="choose-time">
+                    <div class="choose-time-left">
+                        <p class="title-yacht2">选择预定日期</p>
+                        <div>
+                            <p class="title-choose"><img src="img/small/date.png"/>选择日期</p>
+                            <input type="datetime" class="input-time" value="2017/09/09(周二)"/>
+                            <p class="title-choose"><img src="img/small/time.png"/>选择时间</p>
+                            <div class="choose-time-cells">
+                                <p class="cell-little">
+                                    <a class="cell-grey-little"></a><span>不可预定</span>
+                                    <a class="cell-blue-little"></a><span>可预定</span>
+                                    <a class="cell-white-little"></a><span>当前选中</span>
+                                </p>
+                                <ul class="time-cells">
+                                    <a href="#" class="cell-grey">00:00</a>
+                                    <a href="#" class="cell-grey">00:30</a>
+                                    <a href="#" class="cell-grey">01:00</a>
+                                    <a href="#" class="cell-grey">01:30</a>
+                                    <a href="#" class="cell-grey">02:00</a>
+                                    <a href="#" class="cell-grey">02:30</a>
+                                    <a href="#" class="cell-grey">03:00</a>
+                                    <a href="#" class="cell-grey">03:30</a>
+                                    <a href="#" class="cell-grey">04:00</a>
+                                    <a href="#" class="cell-grey">04:30</a>
+                                    <a href="#" class="cell-grey">05:00</a>
+                                    <a href="#" class="cell-grey">05:30</a>
+                                    <a href="#" class="cell-grey">06:00</a>
+                                    <a href="#" class="cell-grey">06:30</a>
+                                    <a href="#" class="cell-grey">07:00</a>
+                                    <a href="#" class="cell-blue">07:30</a>
+                                    <a href="#" class="cell-blue">08:00</a>
+                                    <a href="#" class="cell-blue">08:30</a>
+                                    <a href="#" class="cell-white">09:00</a>
+                                    <a href="#" class="cell-white">09:30</a>
+                                    <a href="#" class="cell-white">10:00</a>
+                                    <a href="#" class="cell-white">10:30</a>
+                                    <a href="#" class="cell-white">11:00</a>
+                                    <a href="#" class="cell-white">11:30</a>
+                                    <a href="#" class="cell-white">12:00</a>
+                                    <a href="#" class="cell-white">12:30</a>
+                                    <a href="#" class="cell-white">13:00</a>
+                                    <a href="#" class="cell-white">13:30</a>
+                                    <a href="#" class="cell-white">14:00</a>
+                                    <a href="#" class="cell-white">14:30</a>
+                                    <a href="#" class="cell-white">15:00</a>
+                                    <a href="#" class="cell-white">15:30</a>
+                                    <a href="#" class="cell-white">16:00</a>
+                                    <a href="#" class="cell-white">16:30</a>
+                                    <a href="#" class="cell-white">17:00</a>
+                                    <a href="#" class="cell-white">17:30</a>
+                                    <a href="#" class="cell-white">18:00</a>
+                                    <a href="#" class="cell-white">18:30</a>
+                                    <a href="#" class="cell-white">19:00</a>
+                                    <a href="#" class="cell-white">19:30</a>
+                                    <a href="#" class="cell-white">20:00</a>
+                                    <a href="#" class="cell-white">20:30</a>
+                                    <a href="#" class="cell-white">21:00</a>
+                                    <a href="#" class="cell-white">21:30</a>
+                                    <a href="#" class="cell-white">22:00</a>
+                                    <a href="#" class="cell-white">22:30</a>
+                                    <a href="#" class="cell-white">23:00</a>
+                                    <a href="#" class="cell-white">23:30</a>
+                                    </tr>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose-time-right">
+                        <p class="yacht-detail-txt">已选择内容如下：</p>
+                        <div class="yacht-date">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <th>预定日期</th>
+                                    <th>预定时间</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" class="input-time"/></td>
+                                    <td><input type="time" class="input-time"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p class="yacht-detail-txt">已选择预定2017年09月09日<span>1.5</span>小时</p>
+                        <p class="yacht-price">预计：<span class="price-yellow">¥<span>6000</span>.00元／小时</span></p>
+                        <div class="yacht-rent-notice">
+                            <p class="title">游艇租赁相关事项：</p>
+                            <p class="list">
+                                1、游艇根据海事局规定，乘客不得超过10人；<br/>
+                                2、预订后1小时全额支付费用，订单生成有效；<br/>
+                                3、提前24小时取消订单的，扣除25%租赁费用作为手续费，返还剩余费用；<br/>
+                                4、提前6个小时（夜间时段2100-0800不计入内）不足24小时者，收取50%的租赁费用，返还剩余费用；不足6个小时（夜间时段2100-0800不计入内）者不得取消；<br/>
+                                5、两档租赁业务之间需至少间隔半个小时；
+                            </p>
+                        </div>
+                        <p class="yacht-detail-txt"><input type="checkbox"/>我已阅读并同意<a href="#">《游艇租赁协议》</a></p>
+                        <a type="submit" class="yacht-booking" href="purchase_service05170.html"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="none" id="yacht-nav2">
+            <div class="yacht-detail-introduce">
+                <div class="intrduce-yacht">
+                    <div class="intrduce-txt">
+                        <p class="intrduce-title">整体介绍</p>
+                        <p class="intrduce-word">豪华商务艇，国产游艇高品质的典范。流线型的船体，结构与设计符合国际标准。内饰精美，空间感十足，真正将舒适性带入海上休闲生活体验。</p>
+                        <p class="intrduce-word">豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱</p>
+                        <p class="intrduce-word">
+                            游艇全长20.93米，宽度5.45米。游艇分为上中下三层，下层休闲区，设有大型KTV沙龙区，海上K歌尽情放松。棋牌室带有自动麻将桌，尽享棋牌娱乐。大空间主卧配主卧卫生间，舒适享受。配置全面的厨房（带冰箱），满足您美味需求；中层为沙龙区及后甲板，沙龙区配备高清电视，以及室内驾驶台；船头日光浴沙龙区，满足尽情享受日光浴的需求。后甲板红酒沙龙区，尽享海风微醺的感觉。前甲板带游泳梯，尽情戏水玩耍；上层飞桥视野开阔，设置驾驶区及餐桌、沙龙。</p>
+                        <p class="intrduce-title">豪华商务艇，满足高品位、热爱海洋生活的您！</p>
+                    </div>
+                    <img src="img/t.png" class="intrduce-img ">
+                </div>
+                <div class="yacht-photos">
+                    <div class="photo1"></div>
+                    <div class="photo2">
+                        <div class="photo-txt">
+                            <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
+                                <tr>
+                                    <th>设计独特</th>
+                                </tr>
+                                <tr>
+                                    <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="photo3"></div>
+                    <div class="photo4"></div>
+                    <div class="photo5">
+                        <div class="photo-txt">
+                            <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
+                                <tr>
+                                    <th>设计独特</th>
+                                </tr>
+                                <tr>
+                                    <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="photo6"></div>
+                    <div class="photo7">
+                        <div class="photo-txt">
+                            <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
+                                <tr>
+                                    <th>设计独特</th>
+                                </tr>
+                                <tr>
+                                    <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="none" id="yacht-nav3">费用说明</div>
+        <div class="none" id="yacht-nav4">预定须知</div>
+        <div class="none" id="yacht-nav5">
+            <div class="yacht-detail-discus">
+                <!--<p class="title-yacht">用户评论</p>-->
+                <!--<div class="discus-textarea"><textarea></textarea></div>-->
+                <!--<button class="btn-discus"></button>-->
+                <div class="yacht-review">
+                    <p>用户评论</p>
+                    <div class="percent-col">
+                        <p class="satisfaction"><span>98%</span>的人认为此邮轮令人满意</p>
+                        <ul class="example">
+                            <li id="progress1">
+                                <span class="ptext">满意</span>
+                                <div class="pbar">
+                                    <div style="width: 98%;background: #ffcc00;height: 8px;float: left;">
+                                    </div>
+                                </div>
+                                <div class="percent">98%</div>
+                            </li>
+                            <li id="progress2">
+                                <span class="ptext">一般</span>
+                                <div class="pbar">
+                                    <div style="width: 5.9%;background: #ffcc00;height: 8px;float: left;">
+                                    </div>
+                                </div>
+                                <div class="percent">5.9%</div>
+                            </li>
+                            <li id="progress3">
+                                <span class="ptext">不满意</span>
+                                <div class="pbar">
+                                    <div style="width: 1.3%;background: #ffcc00;height: 8px;float: left;">
+                                    </div>
+                                </div>
+                                <div class="percent">1.3%</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <table border="0" cellspacing="0" cellpadding="0" class="percent-circle">
+                        <tr>
+                            <th>
+                                <div class="box" id="box1"></div>
+                            </th>
+                            <th>
+                                <div class="box" id="box2"></div>
+                            </th>
+                            <th>
+                                <div class="box" id="box3"></div>
+                            </th>
+                            <th>
+                                <div class="box" id="box4"></div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>游艇品质</td>
+                            <td>艇上服务</td>
+                            <td>附加套餐</td>
+                            <td>港口环境</td>
+                        </tr>
+                    </table>
+                    <script type="text/javascript">
+//                        			window.onload = function(){
+//
+//                        				var object = document.getElementById('box1')
+//                        				function loadImg (data){
+//                        					var i = 0;
+//                        					setInterval(function(){
+//                        						i++
+//                        						if(i>data){
+//                        							i=data
+//                        						}
+//                        						var imgLeft = -(i*44+(i*10))+'px'
+//                        						object.style.backgroundPosition = imgLeft+'\t'+'0px'
+//                        						object.innerHTML = i+'%';
+//                        					},50)
+//
+//                        				}
+//                        				loadImg(88)
+//                        			}
+                        window.onload = function () {
+
+                            var obj = document.getElementsByClassName('box')
+
+                            function loadImg(data, k) {
+                                var i = 0;
+                                setInterval(function () {
+                                    object = obj[k];
+                                    i++
+                                    if (i > data) {
+                                        i = data
+                                    }
+                                    var imgLeft = -(i * 44 + (i * 10)) + 'px'
+                                    object.style.backgroundPosition = imgLeft + '\t' + '0px'
+                                    object.innerHTML = i + '%';
+
+
+                                }, 50)
+
+                            }
+
+                            //第一个参数代表百分比,第二个参数代表评论项目的次序
+                            loadImg(88, 0)
+                            loadImg(28, 1)
+                            loadImg(68, 2)
+                            loadImg(78, 3)
+                        }
+                    </script>
+                </div>
+                <p class="all-discus-title">全部评论（<span>3</span>）</p>
+                <ul class="discus-list">
+                    <span class="discus-li">
+                        <a href="#" class="discus-user">
+                            <img src="img/avatars/avatarhover.png" class="avatar-h"/>
+                            <img src="img/avatars/avatar1.png"/>
+                        </a>
+
+                        <div class="discus-s">
+                            <div id="star2" class="star"></div>
+                            <span class="rate-num"><span>5分</span></span>
+                            <p class="discus-p">
+                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+
+                            <div class="ban-p" id="demo1-p">
+                                <div class="num-p" id="ban_num1-p">
+                                    <ul>
+                                        <li><img src="images/b1.jpg"/></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                        <li><img src="images/b4.jpg"/></a></li>
+                                        <li><img src="images/b5.jpg"/></a></li>
+                                        <li><img src="images/b1.jpg"/></a></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="pop_up-p" id="demo2-p">
+                                <div class="pop_up_xx-p"><img src="images/chacha3.png" width="40" height="40" alt=""/>
+                                </div>
+                                <div class="pop_up2-p" id="ban_pic2-p">
+                                    <div class="prev1-p" id="prev2-p"><img src="images/index_tab_l.png" width="28"
+                                                                           height="51" alt=""/></div>
+                                    <div class="next1-p" id="next2-p"><img src="images/index_tab_r.png" width="28"
+                                                                           height="51" alt=""/></div>
+                                    <ul>
+                                        <li><img src="images/b1.jpg"/></a></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                        <li><img src="images/b4.jpg"/></a></li>
+                                        <li><img src="images/b5.jpg"/></a></li>
+                                        <li><img src="images/b1.jpg"/></a></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                jq('#demo1-p').banqh({
+                                    box: "#demo1-p",//总框架
+                                    pic: "#ban_num1-p",//大图框架
+                                    pop_prev: "#prev2-p",//弹出框左箭头
+                                    pop_next: "#next2-p",//弹出框右箭头
+                                    pop_div: "#demo2-p",//弹出框框架
+                                    pop_pic: "#ban_pic2-p",//弹出框图片框架
+                                    pop_xx: ".pop_up_xx-p",//关闭弹出框按钮
+                                    pop_delayTime: 400,//弹出框切换一张图片时间
+                                    pop_up: true,//大图是否有弹出框
+                                })
+                            </script>
+
+                            <p class="discus-handle">
+                                <span class="time">2017/09/09 11:00</span>
+                                <span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
+                            </p>
+                        </div>
+                    </span>
+                    <span class="discus-li">
+                        <a href="#" class="discus-user">
+                            <img src="img/avatars/avatarhover.png" class="avatar-h"/>
+                            <img src="img/avatars/avatar1.png"/>
+                        </a>
+                        <div class="discus-s">
+                            <div id="star3" class="star"></div>
+                            <span class="rate-num"><span>5分</span></span>
+                            <p class="discus-p">
+                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+                            <p class="discus-handle">
+                                <span class="time">2017/09/09 11:00</span>
+                                <span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
+                            </p>
+                            <div class="triangle"></div>
+                            <div class="discus-reply">
+                                <p class="discus-reply-p">非常感谢您的支持！</p>
+                                <p class="discus-handle">
+                                    <span class="time">2017/09/09 11:00</span>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="discus-li" style="border: none;">
+                        <a href="#" class="discus-user">
+                            <img src="img/avatars/avatarhover.png" class="avatar-h"/>
+                            <img src="img/avatars/avatar1.png"/>
+                        </a>
+                        <div class="discus-s">
+                            <div id="star4" class="star"></div>
+                            <span class="rate-num"><span>5分</span></span>
+                            <p class="discus-p">
+                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+                            <p class="discus-handle">
+                                <span class="time">2017/09/09 11:00</span>
+                                <span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
+                            </p>
+                        </div>
+                    </span>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="hrblue"></div>
+    <p class="hot-yacht">热门游艇</p>
+    <div class="product-wrapper">
+        <div class="product-each-r">
+            <img src="img/smallpic.png"/>
+            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
+                    src="img/small/reserve.png"/>预定</a></div>
+        </div>
+        <div class="product-each-r">
+            <img src="img/smallpic.png"/>
+            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
+                    src="img/small/reserve.png"/>预定</a></div>
+        </div>
+        <div class="product-each0">
+            <img src="img/smallpic.png"/>
+            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
+                    src="img/small/reserve.png"/>预定</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+<div class="bottom-img">
+    <div class="bottom2">
+        <div class="bg-00086"></div>
+        <div class="container">
+            <div class="first-c">
+                <img src="img/small/bottom1.png" class="left"/>
+                <div>
+                    <span class="bottom-title">权益保障</span>
+                    <br/>
+                    <span class="bottom-sub-title">平台中立资金安全</span>
+                </div>
+            </div>
+            <div class="first-c">
+                <img src="img/small/bottom2.png" class="left"/>
+                <div>
+                    <span class="bottom-title">服务专业</span>
+                    <br/>
+                    <span class="bottom-sub-title">规范行业服务标准</span>
+                </div>
+            </div>
+            <div class="first-c">
+                <img src="img/small/bottom3.png" class="left"/>
+                <div>
+                    <span class="bottom-title">安全至上</span>
+                    <br/>
+                    <span class="bottom-sub-title">安全把控保险护航</span>
+                </div>
+            </div>
+            <div>
+                <img src="img/small/bottom3.png" class="left"/>
+                <div>
+                    <span class="bottom-title">行业权威</span>
+                    <br/>
+                    <span class="bottom-sub-title">国家“5A”协会主办</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bg-00060"></div>
+        <div class="container overflow-auto">
+            <div class="call-wrapper">
+                <div class="c-wrapper">
+                    <img src="img/small/call.png" class="left"/>
+                    <div>
+                        客服中心电话：<br/><span class="big-c">400-812-1241</span>
+                    </div>
+                    <div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+                </div>
+            </div>
+            <div class="c-list-wrapper">
+                <div class="first-div">
+                    <div>
+                        <img src="img/small/bottom01.png"/>新手指南
+                    </div>
+                    <a>注册流程</a><br/>
+                    <a>购物流程</a><br/>
+                    <a>常见问题</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/small/bottom02.png"/>支付方式
+                    </div>
+                    <a>支付问题</a><br/>
+                    <a>支付方式</a><br/>
+                    <a>支付限额</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/small/bottom03.png"/>售后服务
+                    </div>
+                    <a>退换货政策</a><br/>
+                    <a>退款说明</a><br/>
+                    <a>退货流程</a>
+                </div>
+                <div class="code-wrapper">
+                    <img src="img/code.png"/>
+                    <div>扫码关注我们</div>
+                </div>
+            </div>
+            <div class="about-us">
+                <a>关于我们</a> |
+                <a>联系我们</a> |
+                <a>法律声明</a> |
+                <a>隐私与条款</a> |
+                <a>投诉与建议</a>
+            </div>
+            <div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
+<!--<script src="js/jquery.raty.js"></script>-->
+<script type="text/javascript" src="js/query.js"></script>
+<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
+
+<script type="text/javascript" language="javascript">
+    /*星星打分*/
+    $(document).ready(function () {
+        $('#diyas li').click(function(){
+            $('#diyas li').removeClass('current');
+            $(this).addClass('current');
+            var cr = $(this).find('a').attr('class');
+            $('#yacht-nav1').removeClass('block').addClass('none');
+            $('#yacht-nav2').removeClass('block').addClass('none');
+            $('#yacht-nav3').removeClass('block').addClass('none');
+            $('#yacht-nav4').removeClass('block').addClass('none');
+            $('#yacht-nav5').removeClass('block').addClass('none');
+            $('#'+cr).removeClass('none').addClass('block');
+        });
+//        $('#star').raty({
+//            halfShow: false,
+//            score: 4.9,
+//            readOnly: true
+//        });
+//        $('#star2').raty({
+//            halfShow: false,
+//            score: 4.9,
+//            readOnly: true
+//        });
+//        $('#star3').raty({
+//            halfShow: false,
+//            score: 4.9,
+//            readOnly: true
+//        });
+//        $('#star4').raty({
+//            halfShow: false,
+//            score: 4.9,
+//            readOnly: true
+//        });
+        $('.contact-info-wrapper .contact-info-detail').click(function () {
+            if (!$(this).hasClass('add')) {
+                $('.contact-info-wrapper .contact-info-detail').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    });
+
+
+    //图片轮播
+    $(document).ready(function () {
+        var mySwiper = new Swiper('.featured', {
+            autoplay: 3000,
+            grabCursor: true,
+            paginationClickable: true,
+            onSlideChangeEnd: function (swiper) {
+                var now = swiper.activeIndex;
+                var all = $('.featured .swiper-slide').length;
+                if (now == 0) {
+                    $('.arrow-left').addClass('disabled');
+                    $('.arrow-right').removeClass('disabled');
+                } else if (all == now + 1) {
+                    $('.arrow-left').removeClass('disabled');
+                    $('.arrow-right').addClass('disabled');
+                } else {
+                    $('.arrow-left').removeClass('disabled');
+                    $('.arrow-right').removeClass('disabled');
+                }
+
+            }
+        });
+        $('.arrow-left').on('click', function (e) {
+            e.preventDefault();
+            mySwiper.swipePrev();
+        });
+        $('.arrow-right').on('click', function (e) {
+            e.preventDefault();
+            mySwiper.swipeNext();
+        });
+        $('.banners-container').each(function () {
+            $(this).swiper({
+                slidesPerView: 'auto',
+                offsetPxBefore: 0,
+                offsetPxAfter: 30
+            })
+        })
+    })
+
+    jQuery('[placeholder]').focus(function () {
+        var input = jQuery(this);
+        if (input.val() == input.attr('placeholder')) {
+            input.val('');
+            input.removeClass('placeholder');
+        }
+    }).blur(function () {
+        var input = jQuery(this);
+        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+            input.addClass('placeholder');
+            input.val(input.attr('placeholder'));
+        }
+    }).blur().parents('form').submit(function () {
+        jQuery(this).find('[placeholder]').each(function () {
+            var input = jQuery(this);
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+            }
+        })
+    });
+
+
+</script>
+<script type="text/javascript">
+    tab("wraps","diyas")
+    function tab(wrap,navul,eve){
+//tab效果封装，目前只有两种变换方式，一种为点击事件click（也是默认事件），另外一种为鼠标移过事件mouseover
+        var divs=document.getElementById(wrap).getElementsByTagName("div");
+        var lis=document.getElementById(navul).getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            lis[i].indx=i;
+            if(eve=="click" || eve==null){
+                lis[i].onclick=function(){
+                    for(i=0;i<lis.length;i++){
+
+                        lis[i].className="";
+                        divs[i].className="none"
+
+                        this.className="current";
+                        divs[this.indx].className="block";
+                    }
+                }
+            }else if(eve=="mouseover"){
+                lis[i].onmouseover=function(){
+                    for(i=0;i<lis.length;i++){
+                        lis[i].className="";
+                        divs[i].className="none";
+
+                        this.className="current";
+                        divs[this.indx].className="block";
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>驾驶订单</title>
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/paging.css" rel="stylesheet"/>
+    <link href="css/details.css" rel="stylesheet">
+    <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+    <script src="js/jquery-1.9.min.js"></script>
+    <script src="js/mootools-1.3.2.js"></script>
+    <script src="js/divselect.js"></script>
+    <script type="text/javascript" src="js/num-alignment.js"></script>
+    <!--[if lte IE 8]>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="overflow-auto">
+            <div class="left">
+                欢迎进入上海游艇O2O平台！
+            </div>
+            <div class="right">
+                您好，张三！ <a class="login-out">退出</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="">
+    <div class="index-tab">
+        <div class="container2">
+            <img src="img/logo.png" class="logo-img"/>
+            <div class="index-tab-list">
+                <div class="overflow-auto">
+                    <a href="aboutus0517.html">关于我们</a>
+                    <a href="news.html">媒体中心</a>
+                    <a href="train.html" class="active">驾驶培训</a>
+                    <a href="theme_type.html">主题租赁</a>
+                    <a href="yacht_list.html">游艇租赁</a>
+                    <a href="home.html">首页</a>
+                </div>
+            </div>
+            <div class="index-input">
+                <input class="input" type="text" placeholder="请输入查询的内容"/>
+                <img src="img/search.png"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="select-wrapper">
+    <div class="container">
+        <div class="now-position">当前位置：首页 > 游艇租赁 > <span>填写并核对订单信息</span></div>
+    </div>
+</div>
+<div class="order-detail-wrapper">
+    <div class="container">
+        <div class="order-title">填写并核对订单信息</div>
+        <div class="order-detail2 overflow-auto">
+            <div class="order-s-detail2">
+                <div class="order-s-detail-title2"><span>游艇驾驶员</span></div>
+                <div class="rate-num-wrapper">
+                    <div id="star" class="star"></div>
+                    <span class="rate-num">9.8分<span>（969评论）</span></span>
+                </div>
+                <div class="product-detail2">
+                    <span>上海港国际客运中心，创建并经营上港集团旗下首个游艇服务品牌“百艇汇”，旨在整合相关产业资源，建设长三角首个游艇产业综合服务体系。</span>
+                </div>
+                <div class="sponsor">
+                    <img src="img/small/house.png">
+                    主办单位：上海海事大学、上海港国际客运中心开发有限公司
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contact-info">
+    <div class="container">
+        <div class="contact-title">
+            <img src="img/small/user.png"/>联系人信息
+        </div>
+        <div class="contact-info-wrapper">
+            <div class="overflow-auto">
+                <div class="contact-info-detail active">
+                    <p>联系人：王丽</p>
+                    <p>联系方式：180 0176 1217</p>
+                    <p>身份证号：342************345</p>
+                    <img src="img/small/active.png" class="active-img"/>
+                </div>
+                <div class="contact-info-detail">
+                    <p>联系人：王丽</p>
+                    <p>联系方式：180 0176 1217</p>
+                    <p>身份证号：342************345</p>
+                    <img src="img/small/active.png" class="active-img"/>
+                </div>
+                <div class="contact-info-detail add">
+                    <div>+ 添加新信息</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-title">
+            <img src="img/small/bill.png"/>发票信息
+        </div>
+        <p class="bill-title">是否需要开发票：</p>
+        <div class="overflow-auto">
+            <div>
+                <div class="contact-info-btn active">
+                    需要
+                    <img src="img/small/active2.png" class="active-img"/>
+                </div>
+                <div class="contact-info-btn">
+                    不需要
+                    <img src="img/small/active2.png" class="active-img"/>
+                </div>
+            </div>
+        </div>
+        <p class="bill-title">
+            选择发票抬头：
+            <button type="button" class="addbill"><img src="img/small/add.png">添加</button>
+        </p>
+        <div class="overflow-auto">
+            <div class="contact-info-detail2 active">
+                <p>个人</p>
+                <p class="detail">普通发票</p>
+                <a href="#">编辑</a>|<a href="#">删除</a>
+                <img src="img/small/active.png" class="active-img"/>
+            </div>
+            <div class="contact-info-detail2">
+                <p>伽然信息科技（上海）有限公司</p>
+                <p class="detail">普通发票</p>
+                <a href="#">编辑</a>|<a href="#">删除</a>
+                <img src="img/small/active.png" class="active-img"/>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="contact-title mp30">
+            <img src="img/small/discount.png"/>订单优惠
+        </div>
+        <p class="discount"><img src="img/small/-.png">使用优惠券</p>
+        <p class="discounts ">
+            <span class="left">优惠券：</span>
+            <select class="select-discount left">
+                <option>无优惠</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="hrgray mp35"></div>
+        <div class="contact-info">
+            <p class="remark-title">添加订单备注</p>
+        </div>
+        <input type="text" class="remark-input">
+        <div class="remark-div">
+            <div>
+                <table border="0" cellpadding="0" cellspacing="0" class="remark-tb">
+                    <tr>
+                        <th>预订金额：</th>
+                        <td>￥7800.00</td>
+                    </tr>
+                    <tr>
+                        <th>预订金额：</th>
+                        <td>￥1680.00</td>
+                    </tr>
+                    <tr>
+                        <th style="line-height: 60px;">总金额：</th>
+                        <td style="line-height: 60px;"><span class="price">￥1680.00</span></td>
+                    </tr>
+                </table>
+            </div>
+            <button type="button">提交订单</button>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+</div>
+<div class="bottom-img">
+    <div class="bottom2">
+        <div class="bg-00086"></div>
+        <div class="container">
+            <div class="first-c">
+                <img src="img/small/bottom1.png" class="left"/>
+                <div>
+                    <span class="bottom-title">权益保障</span>
+                    <br/>
+                    <span class="bottom-sub-title">平台中立资金安全</span>
+                </div>
+            </div>
+            <div class="first-c">
+                <img src="img/small/bottom2.png" class="left"/>
+                <div>
+                    <span class="bottom-title">服务专业</span>
+                    <br/>
+                    <span class="bottom-sub-title">规范行业服务标准</span>
+                </div>
+            </div>
+            <div class="first-c">
+                <img src="img/small/bottom3.png" class="left"/>
+                <div>
+                    <span class="bottom-title">安全至上</span>
+                    <br/>
+                    <span class="bottom-sub-title">安全把控保险护航</span>
+                </div>
+            </div>
+            <div>
+                <img src="img/small/bottom3.png" class="left"/>
+                <div>
+                    <span class="bottom-title">行业权威</span>
+                    <br/>
+                    <span class="bottom-sub-title">国家“5A”协会主办</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bg-00060"></div>
+        <div class="container overflow-auto">
+            <div class="call-wrapper">
+                <div class="c-wrapper">
+                    <img src="img/small/call.png" class="left"/>
+                    <div>
+                        客服中心电话：<br/><span class="big-c">400-812-1241</span>
+                    </div>
+                    <div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+                </div>
+            </div>
+            <div class="c-list-wrapper">
+                <div class="first-div">
+                    <div>
+                        <img src="img/small/bottom01.png"/>新手指南
+                    </div>
+                    <a>注册流程</a><br/>
+                    <a>购物流程</a><br/>
+                    <a>常见问题</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/small/bottom02.png"/>支付方式
+                    </div>
+                    <a>支付问题</a><br/>
+                    <a>支付方式</a><br/>
+                    <a>支付限额</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/small/bottom03.png"/>售后服务
+                    </div>
+                    <a>退换货政策</a><br/>
+                    <a>退款说明</a><br/>
+                    <a>退货流程</a>
+                </div>
+                <div class="code-wrapper">
+                    <img src="img/code.png"/>
+                    <div>扫码关注我们</div>
+                </div>
+            </div>
+            <div class="about-us">
+                <a>关于我们</a> | <a>联系我们</a> | <a>法律声明</a> | <a>隐私与条款</a> | <a>投诉与建议</a>
+            </div>
+            <div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
+<script src="js/jquery.raty.js"></script>
+<script type="text/javascript" src="js/query.js"></script>
+<script type="text/javascript" src="js/paging.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $('#star').raty({
+            halfShow: false,
+            score: 4.9,
+            readOnly: true
+        });
+        $('.contact-info-wrapper .contact-info-detail').click(function () {
+            if (!$(this).hasClass('add')) {
+                $('.contact-info-wrapper .contact-info-detail').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    });
+
+    jQuery('[placeholder]').focus(function() {
+        var input = jQuery(this);
+        if (input.val() == input.attr('placeholder')) {
+            input.val('');
+            input.removeClass('placeholder');
+        }
+    }).blur(function() {
+        var input = jQuery(this);
+        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+            input.addClass('placeholder');
+            input.val(input.attr('placeholder'));
+        }
+    }).blur().parents('form').submit(function() {
+        jQuery(this).find('[placeholder]').each(function() {
+            var input = jQuery(this);
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+            }
+        })
+    });
+</script>
+</html>

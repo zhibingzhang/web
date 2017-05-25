@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIV模拟下拉选择</title>
+
+    <style>
+        *{margin:0;padding: 0;}
+        body{font-size: 14px;font-family: "微软雅黑",sans-serif}
+        .div-li{margin: 50px 20px;}
+        .div-li ul{list-style: none;}
+
+        .div-li label{display: inline-block;height: 30px;line-height: 30px;float: left;margin-right: 5px;}
+
+        #divselect1{float: left;}
+        /*选择框效果*/
+        #divselect1{width:160px; position:relative; z-index:3003;/*float: left;*/background: #fff;}
+        #divselect1 cite{/*width:224px;*/ height:28px;line-height:28px; display:block; color:#575757; cursor:pointer;font-style:normal;
+            padding-left:4px; padding-right:30px; border:1px solid #E4E4E4;border-left: 1px solid #ccc;border-top: 1px solid #ccc; background:url(../image/xjt.png) no-repeat right center;}
+        #divselect1 ul{width:158px;border:1px solid #E4E4E4; background-color:#ffffff; position:absolute; z-index:30000; margin-top:-1px; display:none;}
+        #divselect1 ul li{height:24px; line-height:24px;}
+        #divselect1 ul li a{display:block; height:24px; color:#333333; text-decoration:none; padding-left:10px; padding-right:10px;}
+        #divselect1 ul li a:hover{background-color:#1277D3;}
+    </style>
+</head>
+<body>
+<div class="div-li">
+    <label>对象类型:</label>
+    <div id="divselect1" class="divselect">
+        <cite>请选择</cite>
+        <ul>
+            <li><a href="javascript:;" selectid="增量">增量</a></li>
+            <li><a href="javascript:;" selectid="2">2</a></li>
+            <li><a href="javascript:;" selectid="3">3</a></li>
+            <li><a href="javascript:;" selectid="4">4</a></li>
+            <li><a href="javascript:;" selectid="5">5</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script>
+    function divselect(){
+        $("#divselect1 cite").click(function(){
+            $("#divselect1 ul").slideToggle("fast");
+        })
+        $("#divselect1 ul li a").click(function(){
+            var bb = $(this).text();
+            $("#divselect1 cite").html();
+            $("#divselect1 ul").css("display","none");
+        })
+    }
+
+    <!-- 选择框begin -->
+
+    $(function(){
+        divselect();
+    });
+
+    <!-- end -->
+</script>
+</html>

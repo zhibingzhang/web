@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery选项卡插件多种tab标签切换效果</title>
+<script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<link href="css/bluetab.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="demo">	
+    <span class="tittle_dk">地块：</span>
+	<ul class="tabbtn" id="fadetab">
+		<li class="current"><a>所有</a></li>
+		<li><a>有</a></li>
+		<li><a>无</a></li>
+	</ul><!--tabbtn end-->
+	<div class="tabcon" id="fadecon">
+		<div class="sublist">0</div>
+		<div class="sublist">1</div>
+		<div class="sublist">2</div>
+	</div><!--tabcon end-->
+</div><!--tabbox end-->
+<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
+<script type="text/javascript">
+$(document).ready(function($){
+	//淡隐淡现选项卡切换
+	$("#fadetab").tabso({
+		cntSelect:"#fadecon",
+		tabEvent:"click",
+		tabStyle:"fade"
+	});
+	
+});
+</script>
+</body>
+</html>

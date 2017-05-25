@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游艇租赁--列表</title>
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/paging.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/details.css" rel="stylesheet"/>
+    <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+    <script src="js/jquery-1.9.min.js"></script>
+    <script src="js/mootools-1.3.2.js"></script>
+    <script src="js/divselect.js"></script>
+    <script src="js/popup_layer.js"></script>
+    <script src="js/select.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=W1a6ywZFkybedSCHadpRbkz4w5HYfG4R" type="text/javascript" charset="utf-8"></script>
+    <!--[if lte IE 8]>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="overflow-auto">
+            <div class="left">
+                欢迎进入上海游艇O2O平台！
+            </div>
+            <div class="right">
+                <a class="login-btn">登录</a><a class="register-btn">注册</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="list-header-back">
+    <div class="index-tab">
+        <div class="container2">
+            <img src="img/logo.png" class="logo-img"/>
+            <div class="index-tab-list">
+                <div class="overflow-auto">
+                    <a href="aboutus0517.html">关于我们</a>
+                    <a href="news.html" >媒体中心</a>
+                    <a href="train.html">驾驶培训</a>
+                    <a href="theme_type.html">主题租赁</a>
+                    <a href="yacht_list.html" class="active">游艇租赁</a>
+                    <a href="home.html">首页</a>
+                </div>
+            </div>
+            <div class="index-input">
+                <span>
+                    <form action="" method="post">
+                        <div id="index-input-select" class="index-input-select">
+                            <a class="index-input-a">
+                                <p>游艇</p>
+                                <img src="img/down.png" class="down"/>
+                            </a>
+                            <ul>
+                                <li>主题</li>
+                                <li>游艇</li>
+                            </ul>
+                            <input name="" type="hidden" value="" id="index-input-select2"/>
+                        </div>
+                    </form>
+                </span>
+                <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                <img src="img/search.png" class="search"/>
+            </div>
+        </div>
+    </div>
+    <div class="list-header">
+        <div class="list-header-msg-wrapper">
+            <div class="container">
+                <div class="list-header-msg">
+                    汇集上海地区及全国各地最完备的游艇租赁资源，保障游艇资质齐全，服务规范，为您提供纯正的游艇驾乘感受。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="select-wrapper">
+        <div class="container">
+            <div class="now-position">当前位置：首页 > <span>游艇租赁</span></div>
+            <div class="select-name"><img src="img/small/ship.png" />游艇筛选</div>
+            <div class="choose-wrapper">
+                <div class="has-choosed">
+                    您已选择：
+                    <span id="has-choosed-size" class="no-border"></span>
+                    <span id="has-choosed-price" class="no-border"></span>
+                    <span id="has-choosed-subject" class="no-border"></span>
+                    <span id="has-choosed-type" class="no-border"></span>
+                    <span id="has-choosed-type2" class="no-border"></span>
+                </div>
+                <div class="choose-items">
+                    <div class="each-choose" id="size">
+                        <a>尺寸：</a>
+                        <span class="all active">全部</span>
+                        <span>0-30英尺</span>
+                        <span>30-60英尺</span>
+                        <span>60英尺以上</span>
+                    </div>
+                    <div class="each-choose" id="price">
+                        <a>价格：</a>
+                        <span class="all active">全部</span>
+                        <span>0-3000</span>
+                        <span>3000-6000</span>
+                        <span>6000以上</span>
+                        <input type="text" placeholder="输入最低价" id="price1"/> <a>~</a> <input type="text" placeholder="输入最高价" id="price2"/>
+                        <a id="sure-price" class="sure-price" onclick="changePrice()">确定</a>
+                    </div>
+                    <div class="subject-wrapper">
+                        <div class="each-choose" id="subject">
+                            <a>主题：</a>
+                            <span class="all active">全部</span>
+                            <span>婚纱拍摄</span>
+                            <span>商务宴请</span>
+                            <span>朋友聚会</span>
+                            <span>求婚表白</span>
+                            <span>商务洽谈</span>
+                            <span>家庭/亲子游览</span>
+                            <span>轰趴派对</span>
+                            <span>品牌活动</span>
+                            <span>下午茶/就餐</span>
+                            <span>test1</span>
+                            <span>test2</span>
+                            <span>test3</span>
+                        </div>
+                        <a id="open" class="open-subject" onclick="openSubject()">展开<img src="img/small/down.png" /></a>
+
+                    </div>
+                    <div class="each-choose" id="type">
+                        <a>类型：</a>
+                        <span class="all active">全部</span>
+                        <span>机动艇</span>
+                        <span>帆艇</span>
+                        <span>钓鱼艇</span>
+                        <span>运动艇</span>
+                        <span>商务艇</span>
+                        <span>其它</span>
+                    </div>
+                    <div class="each-choose each-choose-add show-no" id="type2">
+                        <a>新增：</a>
+                        <span class="all active">全部</span>
+                        <span>机动艇</span>
+                        <span>帆艇</span>
+                        <span>钓鱼艇</span>
+                        <span>运动艇</span>
+                        <span>商务艇</span>
+                        <span>其它</span>
+                    </div>
+                </div>
+            </div>
+            <div id="open-all" class="open-all" onclick="openAll()">展开<img src="img/small/down.png" /></div>
+
+        </div>
+    </div>
+    <div class="sort-wrapper">
+        <div class="container">
+            <div class="border-top-blue">
+                <div class="overflow-auto">
+                    <div class="sort-title">排序：</div>
+                    <div class="active all" value="allSort">综合</div>
+                    <div value="saleSort" class="up-down">
+                        <span>销量</span>
+                        <div class="price-up"></div>
+                        <div class="price-down"></div>
+                    </div>
+                    <div value="priceSort" class="priceSort">
+                        <span>价格</span>
+                        <div class="price-up"></div>
+                        <div class="price-down"></div>
+                    </div>
+                    <div value="goodCommentSort" class="comment-sort">
+                        <span>好评率</span>
+                        <div class="price-up"></div>
+                        <div class="price-down"></div>
+                    </div>
+                    <div class="right">
+                        <!--<span class="all-total">共<span class="special_color"> 494 </span>个商品</span>-->
+                        <!--<span><img src="img/small/small_map.png"/>地图</span>-->
+                        <!--<span class="active"><img src="img/small/big.png"/>大图</span>-->
+                        <!--<span class="first-img"><img src="img/small/city.png"/>城市</span>-->
+                        <!--<span class="first-input">-->
+                            <!--<input type="text" placeholder="在结果内搜索..."/> <img src="img/small/black-search.png" />-->
+                        <!--</span>-->
+                        <span class="all-total">共<span class="special_color"> 494 </span>个商品</span>
+                        <span class="changeMap"><img src="img/small/small_map.png"/>地图</span>
+                        <span class="active big"><img src="img/small/big.png"/>大图</span>
+                        <span class="first-img" id="ele1"><img src="img/small/city.png"/>城市<div>弹出层</div></span>
+                        <span class="first-input">
+                            <input type="text" placeholder="在结果内搜索..."/> <img src="img/small/black-search.png" />
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="product-list">
+        <div class="container">
+            <div class="product-wrapper">
+                <div class="product-each no-margin-left">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each no-margin-left">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each no-margin-left">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="product-each">
+                    <img src="img/smallpic.png"/>
+                    <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                    <div class="product-price">
+                        <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起
+                        <a href="yacht_details.html"><img src="img/small/reserve.png" />预定</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="pageTool" class="pageWrapper"></div>
+        </div>
+    </div>
+<div class="baidumap hide">
+    <div id="allmap"></div>
+    <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+    <script type="text/javascript">
+        var icondata=[
+            {
+                name:"A码头",
+                num:20,
+                x:121.384306,
+                y:31.237422
+            },
+            {
+                name:"B码头",
+                num:30,
+                x:121.584306,
+                y:31.237422
+            }
+        ];
+
+        var icondata1=[
+            {
+                name:"A码头-子码头1",
+                num:20,
+                x:121.384306,
+                y:31.237422
+            },
+            {
+                name:"A码头-子码2",
+                num:30,
+                x:121.584306,
+                y:31.237422
+            },
+            {
+                name:"A码头-大码头2",
+                num:30,
+                x:121.584306,
+                y:31.267422
+            }
+        ];
+        var map = new BMap.Map("allmap");
+        map.centerAndZoom("上海", 10); // 初始化地图,设置中心点坐标和地图级别
+        map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+        map.setCurrentCity("上海"); // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+        function G(id) {
+            return document.getElementById(id);
+        }
+
+        map.addEventListener("zoomend",function(){
+
+            if(this.getZoom()<12)
+            {
+                map.clearOverlays();
+                createmarker(icondata);
+            }
+        });
+        var sContent ="<div class='tukdiv' ><img src='img/small/map-msg.png' /><div class='tuktitle'>{name}<br>有{num}个游艇</div></div>";
+        sContent=sContent+'<div class="tukdetail"><div><img src="img/t.png" width="100%" /></div>'+
+                '<div class="tukdetail_1">莱悦9号 &nbsp;&nbsp;Sea-stella63</div>'+
+                '<div class="tukdetail_2"><span>所属城市</span><span>乘坐人数</span><span>游艇长度</span><span>产地</span></div>'+
+                '<div class="tukdetail_3"><span>上海</span><span>10人</span><span>30-60英尺</span><span>意大利</span></div>'+
+                '<div class="tukdetail_4"><span><img src="img/booking.png" /></span></div>'+
+                '</div>';
+        var lb ="<div class='lbcontent' ><span class='lbcontentspan1'>{name}</span><br>有<span class='lbcontentspan2'>{num}</span>个游艇</div>";
+        function createmarker(tempitem){
+            for(var i=0;i<tempitem.length;i++)
+            {
+                var cname=lb.replace("{name}",tempitem[i].name).replace("{num}",tempitem[i].num);
+                var myIcon= new BMap.Icon("img/small/map-msg.png",new BMap.Size(300,157));
+                var marker = new BMap.Marker(new BMap.Point(tempitem[i].x, tempitem[i].y),{icon:myIcon});
+                map.addOverlay(marker);
+                var _infoWindow = new BMap.InfoWindow(sContent.replace("{name}",tempitem[i].name).replace("{num}",tempitem[i].num));
+                marker.setLabel(new BMap.Label(cname))
+                //marker.openInfoWindow(_infoWindow);
+                marker.info=_infoWindow;
+                marker.addEventListener("click", function(){
+                    map.clearOverlays(); //清除地图上所有覆盖物
+                    map.centerAndZoom("上海", 12); // 初始化地图,设置中心点坐标和地图级别
+                    createmarker2(icondata1);
+                    //  this.openInfoWindow(this.info);
+                    // $(".BMap_pop").css({opacity:0});
+                    /*window.setTimeout(function(){
+                     $(".BMap_pop").find("*").css({background:"transparent",border:"none"});
+                     $(".tukdiv").parent().parent().css({top:"57px",left:"-2px",width:"auto",height:"auto"});
+                     //$(".tukdiv").parent().parent().prev().remove();
+                     //$(".BMap_pop").show();
+                     $(".BMap_pop").css({opacity:1});
+                     $(".tukdiv").click(function(){
+                     $(".tukdiv").hide();
+                     $(".tukdiv").parent().parent().css({top:"-68px",left:"-20px"});
+                     $(".tukdetail").show();
+                     });
+                     },100);*/
+                });
+
+
+
+            }
+            /*window.setTimeout(function(){
+             $(".BMap_pop").find("*").css({background:"transparent",border:"none"});
+             $(".tukdiv").parent().parent().css({top:"57px",left:"-2px"});
+             $(".tukdiv").parent().parent().prev().remove();
+             },1000);*/
+        }
+        function createmarker2(tempitem){
+            for(var i=0;i<tempitem.length;i++)
+            {
+                var marker = new BMap.Marker(new BMap.Point(tempitem[i].x, tempitem[i].y));
+                map.addOverlay(marker);
+                var _infoWindow = new BMap.InfoWindow(sContent.replace("{name}",tempitem[i].name).replace("{num}",tempitem[i].num));
+                //marker.openInfoWindow(_infoWindow);
+                marker.info=_infoWindow;
+                marker.addEventListener("click", function(){
+                    this.openInfoWindow(this.info);
+                    $(".BMap_pop").css({opacity:0});
+                    window.setTimeout(function(){
+                        $(".BMap_pop").find("*").css({background:"transparent",border:"none"});
+                        $(".tukdiv").parent().parent().css({top:"57px",left:"-2px",width:"auto",height:"auto"});
+                        //$(".tukdiv").parent().parent().prev().remove();
+                        //$(".BMap_pop").show();
+                        $(".BMap_pop").css({opacity:1});
+                        /* $(".tukdiv").click(function(){
+                         $(".tukdiv").hide();
+                         $(".tukdiv").parent().parent().css({top:"-68px",left:"-20px"});
+                         $(".tukdetail").show();
+                         });*/
+                    },100);
+                });
+
+
+
+            }
+            window.setTimeout(function(){
+                $(".BMap_pop").find("*").css({background:"transparent",border:"none"});
+                $(".tukdiv").parent().parent().css({top:"57px",left:"-2px"});
+                $(".tukdiv").parent().parent().prev().remove();
+            },1000);
+        }
+        createmarker(icondata)
+
+    </script>
+
+    <div class="clear"></div>
+    <div class="bottom-img">
+        <div class="bottom2">
+            <div class="bg-00086"></div>
+            <div class="container">
+                <div class="first-c">
+                    <img src="img/small/bottom1.png" class="left" />
+                    <div>
+                        <span class="bottom-title">权益保障</span>
+                        <br/>
+                        <span class="bottom-sub-title">平台中立资金安全</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom2.png" class="left" />
+                    <div>
+                        <span class="bottom-title">服务专业</span>
+                        <br/>
+                        <span class="bottom-sub-title">规范行业服务标准</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom3.png" class="left" />
+                    <div>
+                        <span class="bottom-title">安全至上</span>
+                        <br/>
+                        <span class="bottom-sub-title">安全把控保险护航</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/small/bottom3.png" class="left" />
+                    <div>
+                        <span class="bottom-title">行业权威</span>
+                        <br/>
+                        <span class="bottom-sub-title">国家“5A”协会主办</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bg-00060"></div>
+            <div class="container overflow-auto">
+                <div class="call-wrapper">
+                    <div class="c-wrapper">
+                        <img src="img/small/call.png" class="left" />
+                        <div>
+                            客服中心电话：<br/><span class="big-c">400-812-1241</span>
+                        </div>
+                        <div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+                    </div>
+                </div>
+                <div class="c-list-wrapper">
+                    <div class="first-div">
+                        <div>
+                            <img src="img/small/bottom01.png" />新手指南
+                        </div>
+                        <a>注册流程</a><br/>
+                        <a>购物流程</a><br/>
+                        <a>常见问题</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom02.png" />支付方式
+                        </div>
+                        <a>支付问题</a><br/>
+                        <a>支付方式</a><br/>
+                        <a>支付限额</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom03.png" />售后服务
+                        </div>
+                        <a>退换货政策</a><br/>
+                        <a>退款说明</a><br/>
+                        <a>退货流程</a>
+                    </div>
+                    <div class="code-wrapper">
+                        <img src="img/code.png" />
+                        <div>扫码关注我们</div>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <a>关于我们</a> |
+                    <a>联系我们</a> |
+                    <a>法律声明</a> |
+                    <a>隐私与条款</a> |
+                    <a>投诉与建议</a>
+                </div>
+                <div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="popupLayer" style="position: absolute; z-index: 2; width: 500px; height: 201px; display: none;"><div id="blk1" class="blk" style="opacity: 1;">
+        <div class="head"><div class="head-right"></div></div>
+        <div class="main">
+            <h2 class="cityletitle">选择省</h2>
+            <a href="javascript:void(0)" id="close1" class="closeBtn">关闭</a>
+            <ul id="citylist">
+                <li>项目1</li>
+                <li><a href="#">项目2</a></li>
+                <li><a href="#">项目3</a></li>
+                <li><a href="#">项目4</a></li>
+                <li><a href="#">项目5</a></li>
+                <li><a href="#">项目6</a></li>
+                <li><a href="#">项目7</a></li>
+                <li><a href="#">项目8</a></li>
+                <li><a href="#">项目9</a></li>
+                <li><a href="#">项目10</a></li>
+                <li><a href="#">项目11</a></li>
+                <li><a href="#">项目12</a></li>
+                <li><a href="#">项目1</a></li>
+                <li><a href="#">项目2</a></li>
+                <li><a href="#">项目3</a></li>
+                <li><a href="#">项目4</a></li>
+                <li><a href="#">项目5</a></li>
+                <li><a href="#">项目6</a></li>
+                <li><a href="#">项目7</a></li>
+                <li><a href="#">项目8</a></li>
+                <li><a href="#">项目9</a></li>
+                <li><a href="#">项目10</a></li>
+                <li><a href="#">项目11</a></li>
+                <li><a href="#">项目12</a></li>
+            </ul>
+            <div class="foot"><span class="foot-left">上海</span><span class="foot-right"><button>确定</button></span></div>
+        </div>
+
+    </div><iframe border="0" frameborder="0" style="position: absolute; z-index: -1; left: 0px; top: 0px; opacity: 0; width: 500px; height: 201px;"></iframe></div>
+</body>
+<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="js/query.js"></script>
+<script type="text/javascript" src="js/paging.js"></script>
+<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
+
+<script type="text/javascript" language="javascript">
+    var cityValues=[];
+    var data=[
+        {
+            key:"shanghai",
+            value:"上海",
+            children:[
+                {
+                    key:"pudong",
+                    value:"浦东"
+                },
+                {
+                    key:"puxi",
+                    value:"浦西"
+                }
+            ]
+        },
+        {
+            key:"nj",
+            value:"南京",
+            children:[
+                {
+                    key:"xuanwu",
+                    value:"玄武区"
+                },
+                {
+                    key:"yuhuaqu",
+                    value:"雨花区",
+                    children:[
+                        {
+                            key:"码头A",
+                            value:"码头A"
+                        },
+                        {
+                            key:"码头B",
+                            value:"码头B"
+                        }
+                    ]
+                }
+            ]
+        }
+    ];
+    $("#ele1").click(function(){
+        cityValues=[];
+        $(".foot").hide();
+        $(".foot-left").html("");
+        $(".cityletitle").html("选择省");
+
+        createCityDom(provinceList);
+    });
+    $(".foot-right").click(function(){
+        $(".popupLayer").hide();
+    });
+    /*点击城市回调*/
+    function cityCallBack(values){
+
+    }
+    function createCityDom(_Data){
+        $("#citylist").empty();
+        for(var i=0;i<_Data.length;i++)
+        {
+            if(typeof(_Data[i])!="object")
+            {
+                var tempobj=new Object();
+                tempobj.name=_Data[i];
+                if(tempobj.name.indexOf("码头")>-1)
+                {
+                    tempobj.areaList=[];
+                }else{
+                    tempobj.areaList=["码头A","码头B","码头C","码头D","码头E","码头F","码头H","码头K","码头N"];
+                }
+                _Data[i]=tempobj;
+            }
+            var $cityItem=$("<li>");
+            $($cityItem).data("item",_Data[i]);
+            $($cityItem).html(_Data[i].name);
+            $($cityItem).click(function(){
+                if($(".cityletitle").html()=="选择省")
+                {
+                    $(".cityletitle").html("选择市(区)")
+                }else if($(".cityletitle").html()=="选择市(区)")
+                {
+                    $(".cityletitle").html("选择区")
+                }
+                else if($(".cityletitle").html()=="选择区")
+                {
+                    $(".cityletitle").html("选择码头")
+                }
+                var tempdata=$(this).data("item");
+
+
+                if(	tempdata.areaList!=undefined&&tempdata.areaList.length>0)
+                {
+                    cityValues.push(tempdata.name);
+                    $(this).addClass("blkactive");
+                    createCityDom(tempdata.areaList);
+                }else{
+                    var delitem=$(".blkactive");
+                    if(delitem.length>0)
+                    {
+                        var delkey=$(".blkactive").data("item").name;
+                        cityValues.splice(cityValues.indexOf(delkey),1);
+                        $(".blkactive").removeClass("blkactive");
+                    }
+                    $(this).addClass("blkactive");
+                    cityValues.push(tempdata.name);
+
+                }
+                $(".foot").show();
+                $(".foot-left").html(cityValues.join("<span class='jiantou'>></span>"));
+                cityCallBack(cityValues);
+            });
+            $("#citylist").append($cityItem);
+        }
+    }
+    $(document).ready(function(){
+        //示例1，默认弹出层
+        new PopupLayer({
+            trigger:"#ele1",
+            popupBlk:"#blk1",
+            closeBtn:"#close1",
+            offsets:{
+                x:-152,
+                y:0
+            }
+        });
+        var mySwiper = new Swiper('.featured',{
+            autoplay: 3000,
+            grabCursor: true,
+            paginationClickable: true,
+            onSlideChangeEnd: function(swiper){
+               var now = swiper.activeIndex;
+               var all = $('.featured .swiper-slide').length;
+               if(now == 0){
+                   $('.arrow-left').addClass('disabled');
+                   $('.arrow-right').removeClass('disabled');
+               } else if(all == now+1){
+                   $('.arrow-left').removeClass('disabled');
+                   $('.arrow-right').addClass('disabled');
+               } else{
+                   $('.arrow-left').removeClass('disabled');
+                   $('.arrow-right').removeClass('disabled');
+               }
+
+            }
+        });
+        $('.arrow-left').on('click', function(e){
+            e.preventDefault();
+            mySwiper.swipePrev();
+        });
+        $('.arrow-right').on('click', function(e){
+            e.preventDefault();
+            mySwiper.swipeNext();
+        });
+        $('.banners-container').each(function(){
+            $(this).swiper({
+                slidesPerView:'auto',
+                offsetPxBefore:0,
+                offsetPxAfter:30
+            })
+        });
+        $('#size span').click(function(){
+            if(!$(this).hasClass('active')){
+                if($(this).hasClass('all')){
+                    $('#size span').removeClass('active');
+                }else{
+                    $('#size .all').removeClass('active');
+                }
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+            var content = '', indexL = 0;
+            for(var i = 0; i < $('#size span').length;i++){
+                if($($('#size span')[i]).hasClass('active')){
+                    content += '、'+$($('#size span')[i]).html();
+                    indexL++;
+                }
+            }
+            content = content.substring(1,content.length);
+            if(!$(this).hasClass('all') && indexL>0){
+                $('#has-choosed-size').html('尺寸:'+content+'<img src="img/small/delete.png" onclick="deleteSize()"/>').removeClass('no-border');
+            }else{
+                $('#has-choosed-size').html('').addClass('no-border');
+            }
+        });
+        $('#price span').click(function(){
+            $('#price1').val('');
+            $('#price2').val('');
+            if(!$(this).hasClass('active')){
+                if($(this).hasClass('all')){
+                    $('#price span').removeClass('active');
+                }else{
+                    $('#price .all').removeClass('active');
+                }
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+            var content = '', indexL = 0;
+            for(var i = 0; i < $('#price span').length;i++){
+                if($($('#price span')[i]).hasClass('active')){
+                    content += '、'+$($('#price span')[i]).html();
+                    indexL++;
+                }
+            }
+            content = content.substring(1,content.length);
+            if(!$(this).hasClass('all') && indexL>0){
+                $('#has-choosed-price').html('价格:'+content+'<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+            }else{
+                $('#has-choosed-price').html('').addClass('no-border');
+            }
+        });
+        $('#subject span').click(function(){
+            if(!$(this).hasClass('active')){
+                if($(this).hasClass('all')){
+                    $('#subject span').removeClass('active');
+                }else{
+                    $('#subject .all').removeClass('active');
+                }
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+            var content = '', indexL = 0;
+            for(var i = 0; i < $('#subject span').length;i++){
+                if($($('#subject span')[i]).hasClass('active')){
+                    content += '、'+$($('#subject span')[i]).html();
+                    indexL++;
+                }
+            }
+            content = content.substring(1,content.length);
+            if(!$(this).hasClass('all') && indexL>0){
+                $('#has-choosed-subject').html('主题:'+content+'<img src="img/small/delete.png" onclick="deleteSubject()"/>').removeClass('no-border');
+            }else{
+                $('#has-choosed-subject').html('').addClass('no-border');
+            }
+        });
+        $('#type span').click(function(){
+            if(!$(this).hasClass('active')){
+                if($(this).hasClass('all')){
+                    $('#type span').removeClass('active');
+                }else{
+                    $('#type .all').removeClass('active');
+                }
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+            var content = '', indexL = 0;
+            for(var i = 0; i < $('#type span').length;i++){
+                if($($('#type span')[i]).hasClass('active')){
+                    content += '、'+$($('#type span')[i]).html();
+                    indexL++;
+                }
+            }
+            content = content.substring(1,content.length);
+            if(!$(this).hasClass('all') && indexL>0){
+                $('#has-choosed-type').html('类型:'+content+'<img src="img/small/delete.png" onclick="deleteType()"/>').removeClass('no-border');
+            }else{
+                $('#has-choosed-type').html('').addClass('no-border');
+            }
+        });
+        $('#type2 span').click(function(){
+            if(!$(this).hasClass('active')){
+                if($(this).hasClass('all')){
+                    $('#type2 span').removeClass('active');
+                }else{
+                    $('#type2 .all').removeClass('active');
+                }
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+            var content = '', indexL = 0;
+            for(var i = 0; i < $('#type2 span').length;i++){
+                if($($('#type2 span')[i]).hasClass('active')){
+                    content += '、'+$($('#type2 span')[i]).html();
+                    indexL++;
+                }
+            }
+            content = content.substring(1,content.length);
+            if(!$(this).hasClass('all') && indexL>0){
+                $('#has-choosed-type2').html('新增:'+content+'<img src="img/small/delete.png" onclick="deleteType2()"/>').removeClass('no-border');
+            }else{
+                $('#has-choosed-type2').html('').addClass('no-border');
+            }
+        });
+        $('.sort-wrapper .overflow-auto>div').click(function() {
+            var v = $(this).attr('value');
+            if(v==undefined){
+                return;
+            }
+            if(v!='allSort'){
+                $('.sort-wrapper .overflow-auto>div').removeClass('active');
+                var up = 0;//向上
+                $(this).addClass('active');
+                if($(this).find('.price-up').hasClass('active')){
+                    up = 1;//向下
+                }else{
+
+                }
+                $('.sort-wrapper .overflow-auto>div .price-up').removeClass('active');
+                $('.sort-wrapper .overflow-auto>div .price-down').removeClass('active');
+                if(up == 0){
+                    $(this).find('.price-down').removeClass('active');
+                    $(this).find('.price-up').addClass('active');
+                }else{
+                    $(this).find('.price-up').removeClass('active');
+                    $(this).find('.price-down').addClass('active');
+                }
+
+            }else{
+                $('.sort-wrapper .overflow-auto>div').removeClass('active');
+                $('.price-up').removeClass('active');
+                $('.price-down').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+        $('#pageTool').Paging({pagesize:9,count:210,callback:function(page,size,count){
+        
+        }});
+    });
+    function deleteSize(){
+        $('#size .all').click();
+    }
+    function deletePrice(){
+        $('#price .all').click();
+        $('#price1').val('');
+        $('#price2').val('');
+    }
+    function deleteSubject(){
+        $('#subject .all').click();
+    }
+    function deleteType(){
+        $('#type .all').click();
+    }
+    function deleteType2(){
+        $('#type2 .all').click();
+    }
+    function changePrice(){
+        if($('#price1').val() == '输入最低价' && $('#price2').val() == '输入最高价'){
+            var content = $('#price1').val()+'-'+$('#price2').val();
+            $('#price span').removeClass('active');
+            $('#has-choosed-price').html('价格:'+content+'<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+            return false;
+        }else if($('#price1').val() >= $('#price2').val()){
+            $('#price span').removeClass('active');
+            $('#has-choosed-price').html('最低价不能大于输入最高价<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+            return false;
+        }else{
+            var content = $('#price1').val()+'-'+$('#price2').val();
+            $('#price span').removeClass('active');
+            $('#has-choosed-price').html('价格:'+content+'<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+        }
+        
+    }
+    function openSubject(){
+        if($('#open').hasClass('opened')){
+            $('#open').removeClass('opened');
+            $('.subject-wrapper').removeClass('opened');
+        }else{
+            $('#open').addClass('opened');
+            $('.subject-wrapper').addClass('opened');
+        }
+    }
+
+
+    jQuery('[placeholder]').focus(function() {
+        var input = jQuery(this);
+        if (input.val() == input.attr('placeholder')) {
+            input.val('');
+            input.removeClass('placeholder');
+        }
+    }).blur(function() {
+        var input = jQuery(this);
+        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+            input.addClass('placeholder');
+            input.val(input.attr('placeholder'));
+        }
+    }).blur().parents('form').submit(function() {
+        jQuery(this).find('[placeholder]').each(function() {
+            var input = jQuery(this);
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+            }
+        })
+    });
+
+
+    function openAll(){
+        if($('.each-choose-add').hasClass('show-no')){
+            $('.each-choose-add').removeClass('show-no');
+            $('.each-choose-add').addClass('show');
+            $('#open-all').html('收起');
+        }else{
+            $('.each-choose-add').removeClass('show');
+            $('.each-choose-add').addClass('show-no');
+            $('#open-all').html('展开');
+        }
+    }
+
+    $(document).ready(function($){
+        //淡隐淡现选项卡切换
+        $("#yacht-tab").tabso({
+            cntSelect:"#yacht-con",
+            tabEvent:"click",
+            tabStyle:"fade"
+        });
+    });
+
+    $('.changeMap').click(function(){
+        $('.baidumap').removeClass('hide');
+        $('.product-list').addClass('hide');
+        $('.changeMap').addClass('active');
+        $('.big').removeClass('active');
+    });
+    $('.big').click(function(){
+        $('.baidumap').addClass('hide');
+        $('.product-list').removeClass('hide');
+        $('.changeMap').removeClass('active');
+        $('.big').addClass('active');
+    })
+</script>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!--<meta http-equiv="x-ua-compatible" content="IE=edge">-->
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <!-- <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/idangerous.swiper2.7.6.css">
+    <script src="js/jquery-1.9.min.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="js/mootools-1.3.2.js"></script>
+    <script src="js/divselect.js"></script>
+    <!--[if lte IE 8]>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <![endif]-->
+   <!-- <script src="js/css3-mediaqueries.js"></script> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="overflow-auto">
+                <div class="left">
+                    欢迎进入上海游艇O2O平台！
+                </div>
+                <div class="right">
+                    <a class="login-btn" href="login.html">登录</a><a class="register-btn" href="regist.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-back">
+        <div class="index-tab index-tab2">
+            <div class="container2">
+                <img src="img/logo.png" class="logo-img"/>
+                <div class="index-tab-list">
+                    <div class="overflow-auto">
+                        <a href="aboutus0517.html">关于我们</a>
+                        <a href="news.html">媒体中心</a>
+                        <a href="train.html">驾驶培训</a>
+                        <a href="theme_type.html">主题租赁</a>
+                        <a href="yacht_list.html">游艇租赁</a>
+                        <a href="home.html" class="active">首页</a>
+                    </div>
+                </div>
+                <div class="index-input">
+                    <span>
+                        <form action="" method="post">
+                            <div id="index-input-select" class="index-input-select">
+                                <a class="index-input-a">
+                                    <p>游艇</p>
+                                    <img src="img/down.png" class="down"/>
+                                </a>
+                                <ul>
+                                    <li>主题</li>
+                                    <li>游艇</li>
+                                </ul>
+                                <input name="" type="hidden" value="" id="index-input-select2"/>
+                            </div>
+                        </form>
+                    </span>
+                    <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                    <img src="img/search.png" class="search"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-container featured" style="z-index: 9999;">
+            <div class="back-img">
+                <div class="container2" style="z-index: 2000;">
+                    <div class="back-msg"><div class="bannerbg2">
+                        <img src="img/back-small.png" class="left"/>
+                        <div class="back-wrapper ">
+                            <div class="back-title">打造国内领先的O2O 游艇主题平台</div>
+                            <div class="back-hr"></div>
+                            <div class="back-content">旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O发展俱乐部会员，开发百艇汇O2O发展俱乐部会员，开发百艇汇O2O发展俱乐部会员，开发百艇汇O2O</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div></div>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/back.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/back.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/back.png" />
+                </div>
+            </div>
+            <div class="arrow-wrapper" style="z-index: 999999;">
+                <div class="content3">
+                    <div style="position: relative">
+                        <a class="arrow-left"></a>
+                        <a class="arrow-right"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-wrapper" style="z-index: 9999">
+        <img src="img/search-btn.png" class="search-btn"/>
+        <div class="search-title">寻找游艇</div>
+        <div class="container2 search-div">
+            <div class="first-div">
+                <span>城市区域</span>
+                <form action="" method="post">
+                    <div id="select1" class="selectdiv">
+                        <a class="checkspan">请选择</a>
+                        <ul>
+                            <li>上海</li>
+                            <li>北京</li>
+                            <li>广州</li>
+
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="second-div">
+                <span>游艇品牌</span>
+                <div id="select2" class="selectdiv">
+                    <a class="checkspan2">请选择品牌</a>
+                    <ul>
+                        <li>品牌1</li>
+                        <li>品牌2</li>
+                        <li>品牌3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="price-div">
+                <span>价格区间</span>
+                <div>
+                    <input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" id="select3-1" placeholder="输入最低价"/>
+                    -
+                    <input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" id="select3-2" placeholder="输入最高价"/>
+                </div>
+            </div>
+            <a href="yacht_list.html" class="search-yacht"></a>
+        </div>
+    </div>
+    <div id="recommend_l" class="recommend container" style="z-index: 0;">
+        <div class="recommend-title">推荐游艇<img src="img/triangle.png" class="triangle-img"/></div>
+    </div>
+    <div class="overflow-auto" style="z-index: 0;">
+        <div class="arrow-wrapper">
+            <div class="content4">
+                <div style="position: relative">
+                    <a class="arrow-left2 disabled"></a>
+                    <a class="arrow-right2"></a>
+                </div>
+            </div>
+        </div><div class="swiper-container banners-container" style="width: 1200px;">
+        <div class="swiper-wrapper" >
+            <div class="swiper-slide">
+                <div class="banner" style="background-image:url(img/r1.png)">
+                    <a class="recommend-name">海神号</a>
+                    <div class="bannerbg">
+                        <div class="recommend-div">
+                            <table border="0" cellpadding="0" cellspacing="0" >
+                                <caption >海神号</caption>
+                                <tr><td>所属城市</td><td>游艇长度</td></tr>
+                                <tr><th>上海</th><th>30-60英尺</th></tr>
+                                <tr><td></td><td></td></tr>
+                                <tr><td>乘坐人数</td><td>游艇产地</td></tr>
+                                <tr><th>10人</th><th>意大利</th></tr>
+                            </table>
+                            <a href="yacht_details.html">
+                                相关游艇<br/>信息
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="banner" style="background-image:url(img/r2.png)">
+                    <a class="recommend-name">海神号1</a>
+                    <div class="bannerbg">
+                        <div class="recommend-div">
+                            <table border="0" cellpadding="0" cellspacing="0" >
+                                <caption >海神号</caption>
+                                <tr><td>所属城市</td><td>游艇长度</td></tr>
+                                <tr><th>上海</th><th>30-60英尺</th></tr>
+                                <tr><td></td><td></td></tr>
+                                <tr><td>乘坐人数</td><td>游艇产地</td></tr>
+                                <tr><th>10人</th><th>意大利</th></tr>
+                            </table>
+                            <a href="yacht_details.html">
+                                相关游艇<br/>信息
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="banner" style="background-image:url(img/r3.png)">
+                    <a class="recommend-name">海神号2</a>
+                    <div class="bannerbg">
+                        <div class="recommend-div">
+                            <table border="0" cellpadding="0" cellspacing="0" >
+                                <caption >海神号</caption>
+                                <tr><td>所属城市</td><td>游艇长度</td></tr>
+                                <tr><th>上海</th><th>30-60英尺</th></tr>
+                                <tr><td></td><td></td></tr>
+                                <tr><td>乘坐人数</td><td>游艇产地</td></tr>
+                                <tr><th>10人</th><th>意大利</th></tr>
+                            </table>
+                            <a href="yacht_details.html">
+                                相关游艇<br/>信息
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="banner" style="background-image:url(img/r2.png)">
+                    <a class="recommend-name">海神号3</a>
+                    <div class="bannerbg">
+                        <div class="recommend-div">
+                            <table border="0" cellpadding="0" cellspacing="0" >
+                                <caption >海神号</caption>
+                                <tr><td>所属城市</td><td>游艇长度</td></tr>
+                                <tr><th>上海</th><th>30-60英尺</th></tr>
+                                <tr><td></td><td></td></tr>
+                                <tr><td>乘坐人数</td><td>游艇产地</td></tr>
+                                <tr><th>10人</th><th>意大利</th></tr>
+                            </table>
+                            <a href="yacht_details.html">
+                                相关游艇<br/>信息
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="banner" style="background-image:url(img/r2.png)">
+                    <a class="recommend-name">海神号3</a>
+                    <div class="bannerbg">
+                        <div class="recommend-div">
+                            <table border="0" cellpadding="0" cellspacing="0" >
+                                <caption >海神号</caption>
+                                <tr><td>所属城市</td><td>游艇长度</td></tr>
+                                <tr><th>上海</th><th>30-60英尺</th></tr>
+                                <tr><td></td><td></td></tr>
+                                <tr><td>乘坐人数</td><td>游艇产地</td></tr>
+                                <tr><th>10人</th><th>意大利</th></tr>
+                            </table>
+                            <a href="yacht_details.html">
+                                相关游艇<br/>信息
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="banner" style="background-image:url(img/r2.png)">
+                    <a class="recommend-name">海神号3</a>
+                    <div class="bannerbg">
+                        <div class="recommend-div">
+                            <table border="0" cellpadding="0" cellspacing="0" >
+                                <caption >海神号</caption>
+                                <tr><td>所属城市</td><td>游艇长度</td></tr>
+                                <tr><th>上海</th><th>30-60英尺</th></tr>
+                                <tr><td></td><td></td></tr>
+                                <tr><td>乘坐人数</td><td>游艇产地</td></tr>
+                                <tr><th>10人</th><th>意大利</th></tr>
+                            </table>
+                            <a href="yacht_details.html">
+                                相关游艇<br/>信息
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="subject container">
+        <div class="recommend-title">主题租赁<img src="img/triangle.png" class="triangle-img"/></div>
+        <div>
+            <div class="banner2" style="background-image:url(img/s1.png)">
+                <a class="recommend-name3">
+                    <div class="recommend-name-text">
+                        <span style="color: #ffffff;">商务宴请</span>
+                        <p style="color: #ffffff;">
+                            及时获取超值航班优惠、独家攻略以及近期最热活动信息。
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="banner3" style="background-image:url(img/s2.png)">
+                <a href="theme_list.html" class="recommend-name2">派对活动</a>
+            </div>
+            <div class="banner3" style="background-image:url(img/s3.png)">
+                <a href="theme_list.html" class="recommend-name2">朋友聚会</a>
+            </div>
+            <div class="banner3" style="background-image:url(img/s4.png)">
+                <a href="theme_list.html" class="recommend-name2">婚纱拍摄</a>
+            </div>
+            <div class="banner3" style="background-image:url(img/s5.png)">
+                <a href="theme_list.html" class="recommend-name2">品牌活动</a>
+            </div>
+        </div>
+    </div>
+    <div class="drive container">
+        <div class="recommend-title">驾驶培训<img src="img/triangle.png" class="triangle-img"/></div>
+        <div class="banner4 first" style="background-image:url(img/d1.png)">
+            <div class="d-wrapper">
+                <div class="d-title text-left"><img src="img/small/d1.png" />游船驾驶</div>
+                <div class="d-content text-left">上海港国际客运中心与上海海事大学强强合作，为您提供专业全面的游艇驾驶员培训服务，为您游艇出行保驾护航。</div>
+                <a href="train_apply.html" class="text-center">游船驾驶申请 ></a>
+            </div>
+        </div>
+        <div class="banner4" style="background-image:url(img/d2.png)">
+            <div class="d-wrapper">
+                <div class="d-title text-left"><img src="img/small/d2.png" />帆船驾驶</div>
+                <div class="d-content text-left">上海海事大学，百年历史，师资雄厚，国内航运界领军院校，被誉为“中国航海家的摇篮”，为游艇驾驶员培训提供专业保障。</div>
+                <a href="train_apply.html" class="text-center">帆船驾驶申请 ></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="recommend-title">地图找艇<img src="img/triangle.png" class="triangle-img"/></div>
+    </div>
+    <div class="content2">
+        <div class="map">
+            <div>
+                <img src="img/map.png" class="map-img" style="width:1200px;min-height: 609px;"/>
+                <div class="position1">
+                    <img src="img/small/map-msg.png" class="s-2"/>
+                    <img src="img/small/map.png" class="s-1"/>
+                    <div class="p-s-content">
+                        <div class="bigyellow">
+                            A码头
+                        </div>
+                        <div class="yacht-number">有<span>&nbsp;20&nbsp;</span>个游艇</div>
+                    </div>
+                </div>
+                <div class="position2">
+                    <img src="img/small/map-msg.png" class="s-2"/>
+                    <img src="img/small/map.png" class="s-1"/>
+                    <div class="p-s-content">
+                        <div class="bigyellow">
+                            B码头
+                        </div>
+                        <div class="yacht-number">有<span>&nbsp;20&nbsp;</span>个游艇</div>
+                    </div>
+                </div>
+                <div class="position3">
+                    <img src="img/small/map-msg.png" class="s-2"/>
+                    <img src="img/small/map.png" class="s-1"/>
+                    <div class="p-s-content">
+                        <div class="bigyellow">
+                            C码头
+                        </div>
+                        <div class="yacht-number">有<span>&nbsp;20&nbsp;</span>个游艇</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-img">
+        <div class="bottom2">
+            <div class="bg-00086"></div>
+            <div class="container">
+                <div class="first-c">
+                    <img src="img/small/bottom1.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">权益保障</span>
+                        <br/>
+                        <span class="bottom-sub-title">平台中立资金安全</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom2.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">服务专业</span>
+                        <br/>
+                        <span class="bottom-sub-title">规范行业服务标准</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom3.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">安全至上</span>
+                        <br/>
+                        <span class="bottom-sub-title">安全把控保险护航</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/small/bottom3.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">行业权威</span>
+                        <br/>
+                        <span class="bottom-sub-title">国家“5A”协会主办</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bg-00060"></div>
+            <div class="container overflow-auto">
+                <div class="call-wrapper">
+                    <div class="c-wrapper">
+                        <img src="img/small/call.png" class="left"/>
+                        <div>
+                            客服中心电话：<br/><span class="big-c">400-812-1241</span>
+                        </div>
+                        <div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+                    </div>
+                </div>
+                <div class="c-list-wrapper">
+                    <div class="first-div">
+                        <div>
+                            <img src="img/small/bottom01.png"/>新手指南
+                        </div>
+                        <a>注册流程</a><br/>
+                        <a>购物流程</a><br/>
+                        <a>常见问题</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom02.png"/>支付方式
+                        </div>
+                        <a>支付问题</a><br/>
+                        <a>支付方式</a><br/>
+                        <a>支付限额</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom03.png"/>售后服务
+                        </div>
+                        <a>退换货政策</a><br/>
+                        <a>退款说明</a><br/>
+                        <a>退货流程</a>
+                    </div>
+                    <div class="code-wrapper">
+                        <img src="img/code.png" />
+                        <div>扫码关注我们</div>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <a>关于我们</a>  |  <a>联系我们</a>  |  <a>法律声明</a>  |  <a>隐私与条款</a>  |  <a>投诉与建议</a>
+                </div>
+                <div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+            </div>
+
+        </div>
+    </div>
+    <!--右侧导航栏-->
+    <div id="leftsead">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="hides">
+                        <img  src="images/foot03/rr01.png" width="64" height="64"/>
+                        <span>400-878-6707</span>
+                    </div>
+                    <div class="shows">
+                        <img class="imghover" src="images/foot03/r01.png" width="64" height="64"/>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="hides">
+                        <img src="images/foot03/rr02.png" width="64" height="64"/>
+                        <span>4008786707</span>
+                    </div>
+                    <div class="shows">
+                        <img class="imghover" src="images/foot03/r02.png" width="64" height="64"/>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a >
+                    <div class="hides">
+                        <img src="images/foot03/rr03.png" width="64" height="64"/>
+                        <img class="qrcode" src="images/foot03/qrcode.png" width="100" height="100" usemap="#taklhtml"/>
+                    </div>
+                    <div class="shows">
+                        <img class="imghover" src="images/foot03/r03.png" width="64" height="64"/>
+                    </div>
+
+                </a>
+            </li>
+            <li>
+                <a id="top_btn">
+                    <div class="hides">
+                        <img src="images/foot03/r04.png" width="64" height="64"/>
+                    </div>
+                    <div class="shows">
+                        <img class="imghover" src="images/foot03/r04.png" width="64" height="64"/>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+              $(window).scroll(function () {
+                var scrollTop = $(this).scrollTop();
+                var top = $('#recommend_l').offset().top;
+                scrollTop >= top? $('#leftsead').show():$('#leftsead').hide();
+              });
+            $("#leftsead a").hover(function () {
+                if ($().prop("className") == "qrcode") {
+                    $(this).children("div.hides").show();
+                }else{
+                    $(this).children("div.hides").show();
+
+                    $(this).children("div.shows").hide();
+
+                    $(this).children("div.hides").animate({marginRight: '0'}, '100ms');
+                }
+            }, function () {
+                if ($(this).prop("className") == "qrcode") {
+                    $(this).children("div.hides").hide('slow');
+                } else {
+                        $(this).children('div:first-child').hide();
+                        $(this).children('div:last-child').show();
+                }
+            });
+            $("#top_btn").click(function () {
+                if (scroll == "off") return;
+                $("html,body").animate({scrollTop: 0}, 600);
+            });
+        });
+    </script>
+
+</body>
+<!-- <script src="basic/swiper/js/idangerous.swiper.min.js"></script> -->
+<script type="text/javascript" src="js/idangerous.swiper2.7.6.min.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+        var mySwiper = new Swiper('.featured',{
+            autoplay: 3000,
+            grabCursor: true,
+            paginationClickable: true,
+            loop:true,
+            onSlideChangeEnd: function(swiper){
+               var now = swiper.activeIndex;
+               var all = $('.featured .swiper-slide').length;
+               if(now == 0){
+                   $('.arrow-left').addClass('disabled');
+                   $('.arrow-right').removeClass('disabled');
+               } else if(all == now+1){
+                   $('.arrow-left').removeClass('disabled');
+                   $('.arrow-right').addClass('disabled');
+               } else{
+                   $('.arrow-left').removeClass('disabled');
+                   $('.arrow-right').removeClass('disabled');
+               }
+
+            }
+        });
+        $('.arrow-left').on('click', function(e){
+            e.preventDefault();
+            mySwiper.swipePrev();
+        });
+        $('.arrow-right').on('click', function(e){
+            e.preventDefault();
+            mySwiper.swipeNext();
+        });
+        var mySwiper2 = new Swiper('.banners-container',{
+            slidesPerView:'auto',
+            offsetPxBefore:0,
+            offsetPxAfter:30,
+            onSlideChangeEnd: function(swiper){
+                var now = swiper.activeIndex;
+                var all = $('.banners-container .swiper-slide').length;
+                if(now == 0){
+                    $('.arrow-left2').addClass('disabled');
+                    $('.arrow-right2').removeClass('disabled');
+                }
+                if(now >= 1){
+                    $('.arrow-left2').removeClass('disabled');
+                }
+                if(all <= 4){
+                    $('.arrow-right2').addClass('disabled');
+                }
+                if(all <= now+4){
+                    $('.arrow-right2').addClass('disabled');
+                }else{
+                    $('.arrow-right2').removeClass('disabled');
+                }
+            }
+        });
+        $(function(){
+            var all = $('.banners-container .swiper-slide').length;
+            if(all <= 4){
+                $('.arrow-right2').addClass('disabled');
+            }
+        })
+        $('.arrow-left2').on('click', function(e){
+            if(!$(this).hasClass('disabled')) {
+                e.preventDefault();
+                mySwiper2.swipePrev();
+            }
+        });
+        $('.arrow-right2').on('click', function(e){
+            if(!$(this).hasClass('disabled')) {
+                e.preventDefault();
+                mySwiper2.swipeNext();
+            }
+        });
+
+    });
+
+</script>
+</html>

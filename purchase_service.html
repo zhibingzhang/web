@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>填写订单</title>
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/paging.css" rel="stylesheet"/>
+    <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main_new.css">
+    <script src="js/jquery-1.9.min.js"></script>
+    <script src="js/mootools-1.3.2.js"></script>
+    <!--[if lte IE 8]>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="overflow-auto">
+                <div class="left">
+                    欢迎进入上海游艇O2O平台！
+                </div>
+                <div class="right">
+                    您好，张三！   <a class="login-out">退出</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="select-wrapper">
+        <div class="container">
+            <div class="now-position">当前位置：首页 > 游艇租赁 > <span>填写并核对订单信息</span></div>
+        </div>
+    </div>
+    <div class="order-detail-wrapper">
+        <div class="container">
+            <ul class="nav_bar_rt">
+                <li>
+                    <img src="img/y3.png" />
+                    <p>3.预定成功</p>
+                </li>
+                <li>
+                    <img src="img/y2.png" />
+                    <p>2.支付</p>
+                </li>
+                <li>
+                    <img src="img/y1.png" />
+                    <p class="active">1.填写并核对订单信息</p>
+                </li>
+            </ul>
+            <div class="order-title">填写并核对订单信息</div>
+            <div class="order-detail overflow-auto">
+                <img src="img/smallpic.png" class="order-product"/>
+                <div class="order-s-detail">
+                    <div class="order-s-detail-title"><span>育青号</span> Alexander48</div>
+                    <div class="rate-num-wrapper">
+                        <div id="star" class="star"></div><span class="rate-num">9.8分<span>（969评论）</span></span>
+                    </div>
+                    <div class="product-detail">
+                        <span><span>所属城市</span><br/>上海</span>
+                        <span><span>乘坐人数</span><br/>10人</span>
+                        <span><span>游艇长度</span><br/>30-60英尺</span>
+                        <span class="last-span"><span>产地</span><br/>意大利</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="container">
+            <div class="contact-title">
+                <img src="img/small/user.png" />联系人信息
+            </div>
+            <div class="contact-info-wrapper">
+                <div class="overflow-auto">
+                    <div class="contact-info-detail_box">
+                            <div class="contact-info-detail active">
+                            <p>联系人：王丽</p>
+                            <p>联系方式：180 0176 1217</p>
+                            <p>身份证号：342************345</p>
+                            <img src="img/small/active.png" class="active-img"/>
+                        </div>
+                        <div class="contact-info-detail">
+                            <p>联系人：王丽</p>
+                            <p>联系方式：180 0176 1217</p>
+                            <p>身份证号：342************345</p>
+                            <img src="img/small/active.png" class="active-img"/>
+                        </div>
+                    </div>
+                    <div class="contact-info-detail add" id='add_info'>
+                       <div>+ 添加新信息</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-info">
+        <div class="container">
+            <div class="contact-title">
+                <img src="img/small/info.png" />游艇预订信息
+            </div>
+            <div class="contact-info-wrapper">
+                <div class="overflow-auto overflow-txt">
+                    <div class="left">
+                        <p>预订日期：</p>
+                        <p>开始时间：2017/05/09  09：00     结束时间：2017/05/09  10：00</p>
+                        <div class="sel">
+                            <p>
+                                <span>上客码头</span>
+                                <select>
+                                    <option>浦东码头</option>
+                                </select>
+                            </p>
+                            <p>
+                                <span>下客码头</span>
+                                <select>
+                                    <option>浦东码头</option>
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            <span>出航人数:</span>
+                            <select>
+                                <option>4</option>
+                            </select>
+                        </p>
+                        <p>
+                            <span>免费服务:</span>
+                            <span>船长：1名（免费）</span>
+                            <span>水手：1名（免费）</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-title">
+                <img src="img/mian_ioc.png" />免费服务
+            </div>
+            <div class="contact_m">
+                <dl>
+                    <dd>
+                        <img src="img/mian_img.png" />
+                    </dd>
+                    <dt>
+                       <h3>2012 法国红葡萄酒</h3> 
+                       <p>容量：150ml</p>
+                       <p>数量：1瓶</p>
+                    </dt>
+                </dl>
+            </div>
+            <div class="contact-title">
+                <img src="img/fj.png" />附加服务
+            </div>
+            <div class="contact-fj">
+                <h2>茶点套餐</h2>
+                <div>
+                    <dl>
+                        <dt>
+                            <p>红酒</p>
+                            <img src="img/mian_img.png" />
+                        </dt>
+                        <dd>
+                            <h3>法国红葡萄酒</h3>
+                            <p>容量：150ml</p>
+                            <p>
+                                <span class="money">￥3800</span>
+                                <span class="money_btn">
+                                    <a href="javascript:;">-</a><i>1</i><a href="javascript:;">+</a>
+                                </span>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <p></p>
+                            <img src="img/mian_img.png" />
+                        </dt>
+                        <dd>
+                            <h3>法国红葡萄酒</h3>
+                            <p>容量：150ml</p>
+                            <p>
+                                <span class="money">￥3800</span>
+                                <span class="money_btn">
+                                    <a href="javascript:;">-</a><i>1</i><a href="javascript:;">+</a>
+                                </span>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <p></p>
+                            <img src="img/mian_img.png" />
+                        </dt>
+                        <dd>
+                            <h3>法国红葡萄酒</h3>
+                            <p>容量：150ml</p>
+                            <p>
+                                <span class="money">￥3800</span>
+                                <span class="money_btn">
+                                    <a href="javascript:;">-</a><i>1</i><a href="javascript:;">+</a>
+                                </span>
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt>
+                            <p>水果拼盘</p>
+                            <img src="img/mian_img.png" />
+                        </dt>
+                        <dd>
+                            <h3>法国红葡萄酒</h3>
+                            <p>容量：150ml</p>
+                            <p>
+                                <span class="money">￥3800</span>
+                                <span class="money_btn">
+                                    <a href="javascript:;">-</a><i>1</i><a href="javascript:;">+</a>
+                                </span>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <p></p>
+                            <img src="img/mian_img.png" />
+                        </dt>
+                        <dd>
+                            <h3>法国红葡萄酒</h3>
+                            <p>容量：150ml</p>
+                            <p>
+                                <span class="money">￥3800</span>
+                                <span class="money_btn">
+                                    <a href="javascript:;">-</a><i>1</i><a href="javascript:;">+</a>
+                                </span>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <p></p>
+                            <img src="img/mian_img.png" />
+                        </dt>
+                        <dd>
+                            <h3>法国红葡萄酒</h3>
+                            <p>容量：150ml</p>
+                            <p>
+                                <span class="money">￥3800</span>
+                                <span class="money_btn">
+                                    <a href="javascript:;">-</a><i>1</i><a href="javascript:;">+</a>
+                                </span>
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="line"></div>
+                <h2>晚宴套餐：<span>280元/人</span><span>（6人份起订）</span></h2>
+                <p>
+                    <select>
+                        <option>6</option>
+                    </select>
+                    人
+                    <span>
+                        共<i>6</i>人，计费：<i>￥1680.00</i>
+                    </span>
+                </p>
+            </div>
+            <div class="contact-title">
+                <img src="img/fp.png" />发票信息
+            </div>
+            <div class="contact-fp">
+                <h2>是否需要开发票</h2>
+                <p class="fp_tab_btn">
+                    <a href="javascript:;" class="active">不需要<img src="img/jiao.png" /></a>
+                    <a href="javascript:;">需要<img src="img/jiao.png" /></a>
+                </p>
+                <div class="fp_tabpc">
+                    <h2 class="fp_tit">
+                        选择发票抬头：
+                        <a href="javascript:;">
+                            <img src="img/add_ioc1.png" />
+                            <span>新增</span>
+                        </a>
+                    </h2>
+                    <div class="fp_cont">
+                        <div class="active">
+                            <p>个人</p>
+                            <p>普通发票</p>
+                            <p>
+                                <a href="javascript:;">编辑</a> |
+                                <a href="javascript:;" class="delete">删除</a>
+                            </p>
+                            <img src="img/jiao2.png" />
+                        </div>
+                        <div>
+                            <p>北京安瑞</p>
+                            <p>普通发票</p>
+                            <p>
+                                <a href="javascript:;">编辑</a> |
+                                <a href="javascript:;" class="delete">删除</a>
+                            </p>
+                            <img src="img/jiao2.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-title">
+                <img src="img/dd.png" />订单优惠
+            </div>
+            <div class="contact-dd">
+                <p><i>-</i><span>使用优惠券</span></p>
+                <p>
+                    <span>优惠券：</span>
+                    <select>
+                        <option>5元优惠券</option>
+                    </select>
+                </p>
+                <div class="add_cont">
+                    <p>添加订单备注</p>
+                    <div class="add_cont_box">
+                        <div>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <div class="box_c">
+                                <p>预定金额：￥6000</p>
+                                <p>附加金额：￥6222</p>
+                                <p>优惠券：-￥55</p>
+                                <p>积分：-￥88</p>
+                                <p class="sum">总金额：<span>￥8888888</span></p>
+                            </div>
+                            <a href="order_payment.html">提交订单</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-img">
+        <div class="bottom2">
+            <div class="container">
+                <div class="first-c">
+                    <img src="img/small/bottom1.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">权益保障</span>
+                        <br/>
+                        <span class="bottom-sub-title">平台中立资金安全</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom2.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">服务专业</span>
+                        <br/>
+                        <span class="bottom-sub-title">规范行业服务标准</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom3.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">安全至上</span>
+                        <br/>
+                        <span class="bottom-sub-title">安全把控保险护航</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/small/bottom3.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">行业权威</span>
+                        <br/>
+                        <span class="bottom-sub-title">国家“5A”协会主办</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="container overflow-auto">
+                <div class="call-wrapper">
+                    <div class="c-wrapper">
+                        <img src="img/small/call.png" class="left"/>
+                        <div>
+                            客服中心电话：<br/><span class="big-c">400-812-1241</span>
+                        </div>
+                        <div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+                    </div>
+                </div>
+                <div class="c-list-wrapper">
+                    <div class="first-div">
+                        <div>
+                            <img src="img/small/bottom01.png"/>新手指南
+                        </div>
+                        <a>注册流程</a><br/>
+                        <a>购物流程</a><br/>
+                        <a>常见问题</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom02.png"/>支付方式
+                        </div>
+                        <a>支付问题</a><br/>
+                        <a>支付方式</a><br/>
+                        <a>支付限额</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom03.png"/>售后服务
+                        </div>
+                        <a>退换货政策</a><br/>
+                        <a>退款说明</a><br/>
+                        <a>退货流程</a>
+                    </div>
+                    <div class="code-wrapper">
+                        <img src="img/code.png" />
+                        <div>扫码关注我们</div>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <a>关于我们</a>  |  <a>联系我们</a>  |  <a>法律声明</a>  |  <a>隐私与条款</a>  |  <a>投诉与建议</a>
+                </div>
+                <div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 新增弹框 -->
+    <div class="add_mak">
+        <div class="add_box">
+            <h3>新增联系人</h3>
+            <i id="close"><img src="img/X.png" /></i>
+            <div class="group">
+                <span>
+                    <i>*</i>联系人姓名
+                </span>
+                <div>
+                    <label>
+                       <input type="text" name="uname" />
+                       <span>请输入联系人的姓名</span>  
+                    </label>
+                </div>
+            </div>
+            <div class="group">
+                <span>
+                    <i>*</i>手机号码
+                </span>
+                <div>
+                   <label>
+                        <input type="text" name="Phone" data-error='输入手机号码的格式有误！' />
+                        <span>请输入联系人的手机号码</span>
+                   </label> 
+                </div>
+            </div>
+            <div class="group">
+                <span>
+                    <i>*</i>身份证号
+                </span>
+                <div>
+                   <label>
+                        <input type="text" name="ID" data-error="输入身份证号码的格式有误！" />
+                        <span>请输入联系人的身份证号码</span> 
+                   </label>
+                </div>
+            </div>
+            <p class="error"></p>
+            <p class="btns">
+                <a href="javascript:;" class="active" id="add_btn_determine">确定</a>
+                <a href="javascript:;" id="add_btn_cancel">取消</a>
+            </p>
+        </div>
+    </div>
+    <!-- 提醒信息弹框 -->
+    <div class="info_mak">
+        <div class="info_box">
+            <h3>温馨提示</h3>
+            <i id="info_close"><img src="img/X.png" /></i>
+            <p class="info_txt"><img src="img/exclamation-circle-frame@2x.png"><span>您确定要删除此信息吗？</span></p>
+            <p class="btns">
+                <a href="javascript:;" class="active" id="info_btn_determine">确定</a>
+                <a href="javascript:;" id="info_btn_cancel">取消</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
+<script src="js/jquery.raty.js"></script>
+<script type="text/javascript" src="js/query.js"></script>
+<script type="text/javascript" src="js/paging.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+        $('#star').raty({
+            halfShow: false,
+            score: 4.9,
+            readOnly: true
+        });
+        $(document).on('click','.contact-info-detail_box .contact-info-detail',function(){
+
+                $('.contact-info-wrapper .contact-info-detail').removeClass('active');
+                $(this).addClass('active');
+        });
+        // 添加新信息
+        $('#add_info').click(function(){
+            $('.add_mak').show();
+        });
+        // 关闭弹框
+        $('#close').click(function(){
+            $('.add_mak').hide();
+        });
+        $('#info_close').click(function(){
+            $('.info_mak').hide();
+        });
+        //取消
+        $("#add_btn_cancel").click(function(){
+            $('.add_mak').hide();
+        });
+        $("#info_btn_cancel").click(function(){
+            $('.info_mak').hide();
+        });
+        //确定
+        $("#add_btn_determine").click(function(){
+            var inp = $('.add_box .group input');
+            var error = [];
+            var err = $('.add_box .error');
+            var regEmail = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+            var regSFZ15 = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+            var regSFZ18 = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+
+            for(var i=0; i<inp.length; i++){
+                var t_val = inp.eq(i).val();
+                var t_name = inp.eq(i).attr('name');
+                if(t_val === ""){
+                    error.push(inp.eq(i).next().text());
+                }else{
+
+                    if(t_val !== "" && t_name === 'Phone'){
+                        if(!regPhone.test(t_val)){
+                            error.push(inp.eq(i).attr('data-error'));
+                        }
+                    }else if(t_val !== "" && t_name === 'ID'){
+                        if(!regSFZ15.test(t_val) && !regSFZ18.test(t_val)){
+                            error.push(inp.eq(i).attr('data-error'));
+                        }
+                    }
+                }
+            }
+            if(!error.length){
+                var uname = $('.add_box .group input[name="uname"]').val();
+                var phone = $('.add_box .group input[name="Phone"]').val();
+                var Id = $('.add_box .group input[name="ID"]').val();
+                var html = '<div class="contact-info-detail"><p>联系人：'+uname+'</p><p>联系方式：'+phone+'</p><p>身份证号：'+Id+'</p><img src="img/small/active.png" class="active-img"/></div>';
+                $('.contact-info-detail_box').append(html);
+
+
+                $('.add_mak').hide();
+                for(var i = 0; i<inp.length; i++){
+                    inp.eq(i).val('').next().show();
+                }
+            }else{
+                for(var i = 0,str=''; i<error.length; i++){
+                    err.text(error[i]).show();
+                    return false;
+                }
+            }
+        });
+        $("#info_btn_determine").click(function(){
+
+        });
+        //监听输入
+        $('.add_box .group input').keyup(function(){
+            $(this).val() === ""? $(this).next().show():
+            $(this).next().hide();
+            $('.add_box .error').hide();
+        });
+        //离开判断
+        $('.add_box .group input').blur(function(){
+            var err = $('.add_box .error');
+            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+            var regSFZ15 = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+            var regSFZ18 = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+            var t_val = $(this).val();
+
+            if(t_val !== "" && $(this).attr('name') === 'Phone'){
+                if(!regPhone.test(t_val)){
+                    err.text($(this).attr('data-error')).show();
+                }
+            }else if(t_val !== "" && $(this).attr('name') === 'ID'){
+                if(!regSFZ15.test(t_val) && !regSFZ18.test(t_val)){
+                    err.text($(this).attr('data-error')).show();
+                }
+            }
+        });
+
+        //发票切换
+        $('.fp_tab_btn a').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+
+            if($(this).text() === "需要"){
+                $('.fp_tabpc').show();
+            }else{
+                $('.fp_tabpc').hide();
+            }
+        });
+
+        //- +
+        $(document).on('click','.contact-fj dd a',function(){
+            var t = $(this);
+
+            if(t.text() ==='-'){
+                if(t.next().text() > 0) t.next().text(parseInt(t.next().text()-1)) 
+            }else if(t.text() === '+'){
+                t.prev().text(parseInt(t.prev().text())+1)
+            }
+        });
+
+        //删除
+        $(document).on('click','.delete',function(){
+            $('.info_mak').show();
+        });
+
+        //发票title样式切换
+        $(document).on('click','.fp_cont div',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    });
+</script>
+</html>

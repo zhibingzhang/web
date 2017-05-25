@@ -1,0 +1,24 @@
+/***分页***/
+.ui-paging-container{color:#666;font-size: 12px;}
+.ui-paging-container ul{float:left;margin-bottom:30px;overflow: hidden;text-align: center;position: relative;right: 50%;}
+.ui-paging-container ul,.ui-paging-container li{list-style: none;}
+.ui-paging-container li{display: block;float:left;min-width: 30px;height:34px;line-height:34px;padding:0 2px;margin-left: 8px;color:#333;font-size: 14px;}
+.ui-paging-container li.js-page-prev,.ui-paging-container li.js-page-next{
+    width: 74px;
+}
+.ui-paging-container li.ui-pager{cursor: pointer; border:1px solid #ddd;border-radius: 2px;display: inline;}
+.ui-paging-container li.ui-pager:hover,.ui-paging-container li.focus{background-color: #0873b6;color:#FFFFFF;}
+.ui-paging-container li.ui-paging-ellipse{border:none;display: inline;}
+.ui-paging-container li.ui-paging-toolbar{padding:0;}
+.ui-paging-container li.ui-paging-toolbar select{height:22px;border:1px solid #ddd;color: #666;}
+.ui-paging-container li.ui-paging-toolbar input{line-height: 20px; height:20px;padding:0;border:1px solid #ddd;text-align: center;width: 30px;margin:0 0 0 5px;vertical-align: middle;}
+.ui-paging-container li.ui-paging-toolbar a{vertical-align: middle; text-decoration: none;display: inline-block;height:20px;border:1px solid #ddd;vertical-align: top;border-radius: 2px;line-height: 20px;padding:0 3px;cursor: pointer;margin-left: 5px;color: #666;}
+.ui-paging-container li.ui-pager-disabled,.ui-paging-container li.ui-pager-disabled:hover{background-color: #f6f6f6;;cursor: default;border:none;color:#ddd;}
+.js-page-first,.js-page-last{
+    display: none!important;
+}
+.pageWrapper{
+    float: left;
+    position: relative;
+    left: 50%;
+}

@@ -1,0 +1,1647 @@
+/*游艇租赁详情*/
+
+.yacht-detail {
+    margin: 20px 0;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+}
+
+.yacht-name {
+    float: right;
+    padding: 20px;
+    height: 580px;
+    width: 477px;
+    font-size: 30px;
+    background: #ffffff;
+}
+
+.yacht-title img {
+    margin-top: -5px;
+}
+
+.yacht-title span {
+    font-size: 26px;
+    margin-left: 20px;
+}
+
+.tbstyle {
+    margin: 20px 0;
+    height: 50px;
+    overflow: hidden;
+}
+
+.tbstyle tr th {
+    font-size: 16px;
+    color: #999999;
+    font-weight: normal;
+}
+
+.tbstyle tr td {
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+}
+
+.bdright {
+    border-right: 1px solid #e5e6e8;
+}
+
+.yacht-detail-title {
+    margin-top: 40px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.yacht-detail-txt {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #333333;
+}
+
+.yacht-detail-txt input {
+    margin-right: 5px;
+}
+
+.yacht-price {
+    margin: 40px 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.price-yellow {
+    color: #ffcc01;
+    font-size: 20px;
+}
+
+.price-yellow span {
+    margin-left: 10px;
+    color: #ffcc01;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.yacht-handle {
+    position: absolute;
+    top: 520px;
+    font-size: 13px;
+}
+
+.yacht-handle img {
+    margin-right: 5px;
+}
+
+.yacht-handle a {
+    color: #333333;
+    display: block;
+    float: left;
+    margin: 0 10px;
+    margin-top: 7px;
+}
+
+.yacht-handle a:hover {
+    color: #0a73b5;
+}
+
+/*轮播图 start*/
+
+/* tFocus 大的幻灯 */
+#tFocus{width:683px;height:580px;overflow:hidden;float: right;}
+.ban{background: #f1f4fa; width:683px; height:580px; position:relative; overflow:hidden;}
+.ban2{width:683px; height:480px; position:relative; overflow:hidden;}
+.ban2 ul{ position:absolute; left:0; top:0;}
+.ban2 ul li{ width:683px; height:480px;}
+.ban2 ul li a img{ width:683px; height:480px;}
+.prev{ float:left; cursor:pointer;}
+.num{ height:106px;overflow:hidden; width:683px; position:relative;float:left;}
+.min_pic{ padding-top:8px; width:683px;}
+.num ul{ position:absolute; left:0; top:0;}
+.num ul li{width:129px; height:92px; margin-right:8px; padding:0px;}
+.num ul li img{width:129px; height:92px;}
+.num ul li.on{ border:3px solid #0066cc;height:86px; padding:0;}
+.num ul li.on img{height:86px;}
+.prev_btn1{display: none; width:16px; text-align:center; height:18px; margin-top:40px; margin-right:20px; cursor:pointer; float:left;}
+.next_btn1{ display: none; width:16px; text-align:center; height:18px; margin-top:40px;cursor:pointer;float:right;}
+.prev1{ position:absolute; top:220px; left:20px; width:28px; height:51px;z-index:9999;cursor:pointer;}
+.next1{ position:absolute; top:220px; right:20px; width:28px; height:51px;z-index:9999;cursor:pointer;}
+.mhc{ background:#000; width:100%;opacity:0.5;-moz-opacity:0.5;filter:alpha(Opacity=50); position:absolute; left:0; top:0; display:none;}
+.pop_up{ width:500px; height:500px; padding:10px; background:#fff; position:fixed; -position:absolute; left:50%; top:50%; margin-left:-255px; margin-top:-255px; display:none; z-index:99;}
+.pop_up_xx{ width:40px; height:40px; position:absolute; top:-40px; right:0; cursor:pointer;}
+.pop_up2{ width:500px; height:500px; position:relative; overflow:hidden;}
+.pop_up2{ width:500px; height:500px; position:relative; overflow:hidden; float:left;}
+.pop_up2 ul{ position:absolute; left:0; top:0;}
+.pop_up2 ul li{ width:500px; height:500px; float:left;}
+/*图片放大镜样式*/
+.jqzoom{float:left;border:none;position:relative;padding:0px;cursor:pointer;margin:0px;display:block;overflow:hidden;}
+.zoomdiv{z-index:9999;position:fixed;top:0px;left:0px;width:517px;height:580px;background:#ffffff;border:1px solid #cccccc;display:none;overflow: hidden;}
+.jqZoomPup{overflow:hidden;z-index:10;visibility:hidden;position:absolute;top:0;left:0;width:200px!important;height:200px!important;border:1px solid #aaaaaa;background:#ffffff /*url(../images/zoom.png) 50% center no-repeat*/;opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;filter: alpha(Opacity=50);}
+
+/*评论区图片*/
+.ban-p{width: 1125px;margin-bottom:20px;overflow: hidden;float: left;}
+.num-p{ height:70px;overflow:hidden; width:100%; position:relative;float:left;}
+.num-p ul{ float: left;height: 70px;  overflow: hidden;}
+.num-p ul li{float: left;  width: 60px;  height: 60px;  padding: 5px;  background: #ffffff;}
+.num-p ul li img{float: left; display: block;  width: 60px;  height: 60px; }
+.prev_btn1-p{display: none; width:16px; text-align:center; height:18px; margin-top:40px; margin-right:20px; cursor:pointer; float:left;}
+.next_btn1-p{ display: none; width:16px; text-align:center; height:18px; margin-top:40px;cursor:pointer;float:right;}
+.prev1-p{ position:absolute; top:220px; left:20px; width:28px; height:51px;z-index:9;cursor:pointer;}
+.next1-p{ position:absolute; top:220px; right:20px; width:28px; height:51px;z-index:9;cursor:pointer;}
+.pop_up-p{float: left; width:480px; height:480px;position:relative; left:0; top:0px; display:none;margin-bottom: 20px; }
+.pop_up_xx-p{ width:40px; height:40px; position:absolute; top:0px; right:0; cursor:pointer;z-index: 9999;}
+.pop_up2-p{ width:480px; height:480px; position:relative; overflow:hidden; float:left;}
+.pop_up2-p ul{ position:absolute; left:0; top:0;}
+.pop_up2-p ul li{ width:480px; height:480px; float:left;}
+.pop_up2-p ul li img{ width:480px; height:480px;}
+
+
+/*轮播图 end*/
+
+/*评论图 start*/
+
+.Exhibitor{ width:720px; overflow:auto;}
+.hl_main5_content{width:715px; height:155px; border:1px solid #999; float:left; margin-top:20px;}
+.h1_main5_title{ height:30px; background:#999; line-height:30px; padding-left:10px; font-size:14px; font-weight:bold;}
+.hl_main5_content1{width:620px; overflow:hidden; float:left; margin-left:20px;}
+.hl_main5_content1 ul{width:1600px; overflow:hidden; margin-top:20px;}
+.hl_main5_content1 ul li{ float:left; width:90px; display:inline; margin-right:15px;}
+.hl_main5_content1 ul li img{ width:90px; }
+.hl_scrool_leftbtn{width:14px; height:38px; background:url(images1/hl_scroll_left.jpg) no-repeat; float:left; margin-left:10px; margin-top:50px; cursor:pointer;}
+.hl_scrool_rightbtn{width:14px; height:38px; background:url(images1/hl_scroll_right.jpg) no-repeat; float:right; margin-right:12px; margin-top:50px; cursor:pointer;}
+
+.demoList { width:1229px; overflow:hidden;}
+.demoList li { float:left; width:275px; border:1px solid #ccc; padding:5px; background:#fff; margin:10px; _display:inline; position:relative; z-index:0; overflow:hidden;}
+.demoList li a { display:block; width:275px; overflow:hidden; cursor:pointer; }
+.demoList li samp,.demoList li div { height:150px; width:275px; position:absolute; left:5px; top:5px; z-index:1; }
+.demoList li samp { background:url(images1/zoom.png) no-repeat center center; }
+.demoList li div { background:#000; }
+.demoList li span,.demoList li b {  display:block; position:absolute; left:5px; bottom:5px; width:90px; z-index:1; height:20px; text-align:center; line-height:20px; font-size:12px; color:#fff; text-shadow:1px 1px 0 #000; font-weight:normal; }
+.demoList li span { background:#000; }
+
+.tag_item{
+    width: 144px;
+    height: 90px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.curr{
+    z-index: 100;
+    box-shadow: 0 0 5px #000;
+    background: rgba(37, 37, 37, 0.65);
+    background: #666 9;
+}
+.curr img{
+    opacity: 1;
+    filter: alpha(opacity = 100);
+}
+.not_curr{
+    opacity: .5;
+    filter: alpha(opacity = 45);
+}
+.taglist{
+    height: 21px;
+    width: 46px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 11px 11px 0;
+    background: rgba(37,37,37,0.5);
+}
+.taglist .tags{
+    display: block;
+    list-style: none;
+    color: #f7f7f7;
+    font-size: 12px;
+    height: 21px;
+    width: 300px;
+}
+.tag{
+    display: block;
+    float: left;
+    height: 21px;
+    line-height: 21px;
+    text-align: left;
+    line-height: 22px	9;
+}
+.tag a {
+    color: #f7f7f7;
+    text-decoration: none;
+    display: block;
+    padding: 0 3px;
+}
+.tag1{
+    width: 65px;
+}
+.tag1 a {
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+}
+.tag2 {
+    width: 42px;
+    text-align: center;
+}
+/*评论图 end*/
+
+/*详情页tab切换开始*/
+
+.block{ display:block;}
+.none{ display:none;}
+.yacht-tab {
+    width: 1200px;
+    height: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.yacht-tab ul{
+    overflow: hidden;
+}
+.yacht-tab ul li {
+    height: auto;
+    float: left;
+}
+
+.yacht-tab ul li a {
+    padding-left: 30px;
+    display: block;
+    height: 54px;
+    width: 209px;
+    text-align: center;
+    line-height: 54px;
+    color: #333333;
+    font-size: 18px;
+}
+.train-tab {
+    width: 100%;
+    height: 54px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.train-tab ul li {
+    float: left;
+}
+
+.train-tab ul li a {
+    padding-left: 30px;
+    display: block;
+    height: 54px;
+    width: 240px;
+    text-align: center;
+    line-height: 54px;
+    color: #333333;
+    font-size: 18px;
+}
+
+.yacht-nav1 {
+    background: #ffffff url(../img/small/yacht-nav-book.png) 60px center no-repeat;
+    border-right: 1px solid #f1f4fa;
+}
+
+.yacht-nav1:hover {
+    background: #0874b5 url(../img/small/yacht-nav-book2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.current .yacht-nav1 {
+    background: #0874b5 url(../img/small/yacht-nav-book2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.yacht-nav2 {
+    background: #ffffff url(../img/small/yacht-nav-detail.png) 60px center no-repeat;
+    border-right: 1px solid #f1f4fa;
+}
+
+.yacht-nav2:hover {
+    background: #0874b5 url(../img/small/yacht-nav-detail2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.current .yacht-nav2 {
+    background: #0874b5 url(../img/small/yacht-nav-detail2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.yacht-nav3 {
+    background: #ffffff url(../img/small/yacht-nav-reminders.png) 60px center no-repeat;
+    border-right: 1px solid #f1f4fa;
+}
+
+.yacht-nav3:hover {
+    background: #0874b5 url(../img/small/yacht-nav-reminders2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.current .yacht-nav3 {
+    background: #0874b5 url(../img/small/yacht-nav-reminders2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.yacht-nav4 {
+    background: #ffffff url(../img/small/yacht-nav-notice.png) 60px center no-repeat;
+    border-right: 1px solid #f1f4fa;
+}
+
+.yacht-nav4:hover {
+    background: #0874b5 url(../img/small/yacht-nav-notice2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.current .yacht-nav4 {
+    background: #0874b5 url(../img/small/yacht-nav-notice2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.yacht-nav5 {
+    background: #ffffff url(../img/small/yacht-nav-discus.png) 60px center no-repeat;
+    width: 210px;
+    border-right: 1px solid #ffffff;
+}
+
+.yacht-nav5:hover {
+    background: #0874b5 url(../img/small/yacht-nav-discus2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+.current .yacht-nav5 {
+    background: #0874b5 url(../img/small/yacht-nav-discus2.png) 60px center no-repeat;
+    color: #ffffff;
+}
+
+/*预定模块*/
+
+.yacht-detail-book {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.title-yacht {
+    margin: 20px 0;
+    padding-left: 12px;
+    border-left: 4px solid #0673b4;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    color: #333333;
+    overflow: hidden;
+}
+
+.title-yacht2 {
+    margin: 0 0 20px 0;
+    padding-left: 12px;
+    border-left: 4px solid #0673b4;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    color: #333333;
+    overflow: hidden;
+}
+
+.tb-price {
+    margin: 0 0 40px 16px;
+    width: 1184px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.tb-price tr th {
+    height: 40px;
+    line-height: 40px;
+    background: #e8f5fb;
+}
+
+.tb-price tr td {
+    height: 40px;
+    line-height: 40px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.tb-price .bdright {
+    border-right: 1px solid #f2f2f2;
+}
+
+.tb-price .bdbottom {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.title-choose {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.title-choose img {
+    margin: -3px 10px 0 0;
+}
+
+.choose-time {
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.choose-time-left {
+    border-right: 1px solid #e5e6e8;
+    width: 600px;
+    float: left;
+    padding-right: 30px;
+}
+
+.choose-time-left > div {
+    margin-left: 16px;
+}
+
+.choose-time-cells {
+    margin: 0;
+    padding: 10px;
+    background: #ffffff;
+    width: 552px;
+}
+
+.choose-time-cells > p {
+    margin-left: 5px;
+    width: 540px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cell-little a {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-bottom: -7px;
+    margin-right: 10px;
+}
+
+.cell-little span {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.cell-grey-little {
+    border: 1px solid #eeeeee;
+    background: #eeeeee;
+}
+
+.cell-blue-little {
+    border: 1px solid #0774b5;
+    background: #ffffff;
+}
+
+.cell-white-little {
+    border: 1px solid #cccccc;
+    background: #ffffff;
+}
+
+.time-cells {
+    margin: 0;
+    width: 552px;
+    overflow: hidden;
+}
+
+.time-cells a {
+    display: block;
+    float: left;
+    margin: 5px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.cell-grey {
+    border: 1px solid #eeeeee;
+    background: #eeeeee;
+    color: #999999;
+}
+
+.cell-blue {
+    border: 1px solid #0774b5;
+    background: #ffffff;
+    color: #0774b5;
+}
+
+.cell-white {
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #333333;
+}
+
+.input-time {
+    width: 200px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ececee;
+    border-radius: 3px;
+    padding-left: 16px;
+}
+
+.choose-time-right {
+    float: left;
+    margin-left: 40px;
+    width: 519px;
+}
+
+.yacht-date {
+    width: 495px;
+    height: 108px;
+    padding: 30px 0 0 30px;
+    border: 1px solid #d1d9f0;
+    background: #fafbff;
+}
+
+.yacht-date table tr td {
+    height: 30px;
+}
+
+.yacht-date table tr th {
+    text-align: left;
+    height: 30px;
+}
+
+.yacht-rent-notice {
+    width: 480px;
+    height: 138px;
+    padding: 20px;
+    border: 1px solid #dbdee5;
+    overflow: auto;
+}
+
+.yacht-rent-notice .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.yacht-rent-notice .list {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.yacht-booking {
+    background: url(../img/booking.png);
+    width: 250px;
+    height: 54px;
+    border: none;
+    display: block;
+    margin: 10px auto;
+}
+
+.hot-yacht {
+    height: 64px;
+    line-height: 64px;
+    font-size: 20px;
+    color: #0474b4;
+    padding-left: 30px;
+    background: url("../img/small/hot.png") left center no-repeat;
+}
+
+/*介绍模块*/
+
+.yacht-detail-introduce {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.intrduce-yacht {
+    overflow: hidden;
+    height: 346px;
+}
+
+.intrduce-txt {
+    height: 346px;
+    width: 655px;
+    float: left;
+}
+
+.intrduce-img {
+    width: 470px;
+    height: 346px;
+    float: left;
+    margin-left: 75px;
+    border: none;
+}
+
+.intrduce-title {
+    font-size: 18px;
+    color: #333333;
+    margin: 20px 0;
+}
+
+.intrduce-word {
+    font-size: 14px;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.yacht-photos {
+    margin-top: 15px;
+}
+
+.yacht-photos div {
+    float: left;
+    position: relative;
+}
+
+.photo1 {
+    width: 398px;
+    height: 248px;
+    margin: 0 1px 1px 0;
+    background: url(../img/images/yacht-photo1.png);
+}
+
+.photo2 {
+    width: 250px;
+    height: 248px;
+    margin: 0 1px 1px 0;
+    background: url(../img/images/yacht-photo2.png);
+}
+
+.photo3 {
+    width: 249px;
+    height: 248px;
+    margin: 0 1px 1px 0;
+    background: url(../img/images/yacht-photo3.png);
+}
+
+.photo4 {
+    width: 300px;
+    height: 248px;
+    margin: 0 0 1px 0;
+    background: url(../img/images/yacht-photo4.png);
+}
+
+.photo5 {
+    width: 398px;
+    height: 248px;
+    margin: 0 1px 0 0;
+    background: url(../img/images/yacht-photo5.png);
+}
+
+.photo6 {
+    width: 500px;
+    height: 248px;
+    margin: 0 1px 0 0;
+    background: url(../img/images/yacht-photo6.png);
+}
+
+.photo7 {
+    width: 300px;
+    height: 248px;
+    background: url(../img/images/yacht-photo7.png);
+}
+
+.tb-photo {
+    display: block;
+    margin: 40px auto;
+    width: 70%;
+    z-index: 1;
+}
+
+.tb-photo tr th {
+    color: #ffffff;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    height: 50px;
+}
+
+.tb-photo tr td {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/*讨论模块*/
+
+.yacht-detail-discus {
+    margin: 20px 0;
+}
+
+.yacht-review {
+    margin-top: 20px;
+    height: 210px;
+    border-bottom: 2px solid #e5e6e8;
+}
+
+.yacht-review p {
+    font-size: 18px;
+    color: #333333;
+}
+
+.percent-col {
+    margin: 20px 0 0 16px;
+}
+
+.satisfaction {
+    font-size: 14px;
+    color: #666666;
+}
+
+.satisfaction span {
+    font-size: 20px;
+    color: #fbcb09;
+}
+
+.example {
+    float: left;
+    background: none;
+    width: 400px;
+    margin: 20px auto;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px
+}
+
+#progress1,
+#progress2,
+#progress3 {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+}
+
+.pbar .ui-progressbar-value {
+    display: block !important
+}
+
+.pbar {
+    float: left;
+    overflow: hidden;
+    margin-top: 10px;
+    background: #fff;
+    width: 280px;
+    height: 8px;
+}
+
+.ptext {
+    float: left;
+    width: 50px;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.percent {
+    float: left;
+    margin-left: 15px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    color: #ffcc00;
+    font-size: 14px;
+}
+
+.line {
+    float: left;
+    margin-top: -30px;
+    margin-left: 30px;
+    width: 1px;
+    height: 150px;
+    background: #e5e6e8;
+}
+
+.percent-circle {
+    float: left;
+    margin-left: 50px;
+    width: 700px;
+}
+
+.percent-circle div {
+    display: block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #ffcc00;
+    font-size: 15px;
+    font-weight: bold;
+    background: url(../img/investjd.png);
+    overflow: hidden;
+}
+
+.percent-circle tr td {
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.btn-discus {
+    background: url(../img/btn-discus.png);
+    width: 250px;
+    height: 54px;
+    border: none;
+    display: block;
+    margin-top: 20px;
+    float: right;
+}
+
+.discus-textarea {
+    width: 1182px;
+    height: 118px;
+    border: 1px solid #d1d9ec;
+    margin-left: 16px;
+}
+
+.discus-textarea textarea {
+    width: 100%;
+    height: 98px;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #999999;
+    line-height: 24px;
+}
+
+.all-discus-title {
+    margin-top: 20px;
+    padding-left: 16px;
+    font-size: 16px;
+}
+
+.discus-list {
+    margin-left: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.discus-list > li {
+    margin-left: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e6e8;
+    overflow: hidden;
+}
+
+.discus-user {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+.discus-user img {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+}
+
+.avatar-h {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+}
+
+.discus-s {
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    width: 1122px;
+}
+
+.discus-p {
+    margin: 10px 0;
+    line-height: 20px;
+    font-size: 13px;
+    color: #666666;
+}
+
+
+.discus-handle {
+    width: 100%;
+    color: #999999;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.discus-handle .time {
+    float: left;
+}
+
+.discus-handle .like {
+    float: right;
+    margin-left: 20px;
+}
+
+.discus-handle img {
+    display: inline;
+}
+
+.discus-handle a {
+    color: #999999;
+    margin: 0 5px;
+}
+
+.discus-handle a:hover {
+    color: #0777b6;
+}
+
+.discus-reply {
+    padding: 10px;
+    width: 100%;
+    background: #efeff0;
+}
+
+.discus-reply-p {
+    line-height: 26px;
+    color: #666666;
+    font-size: 13px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    margin: 5px 0 0 30px;
+    border-bottom: 8px solid #efeff0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.replydiv {
+    margin: 10px 0;
+    width: 1110px;
+    border: 1px solid #d1d8f2;
+    background: #ffffff;
+}
+
+.replydiv textarea {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 13px;
+    color: #666666;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+/*主题详情*/
+
+.yachat-title img {
+    margin-right: 10px;
+}
+
+.theme-title2 {
+    font-size: 24px;
+    color: #333333;
+    overflow: hidden;
+}
+
+.theme-title2 img {
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+.theme-brief-title {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.theme-brief-title img {
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+.theme-brief-txt {
+    font-size: 14px;
+    color: #666666;
+    line-height: 24px;
+    margin: 20px 0;
+    height: 100px;
+    overflow-y: hidden;
+}
+
+.theme-brief-num {
+    font-size: 14px;
+    color: #666666;
+    overflow: hidden;
+    height: 38px;
+    line-height: 38px;
+}
+
+.theme-brief-num img {
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.theme-brief-num .num {
+    display: block;
+    float: left;
+     color: #666666;
+ }
+.theme-brief-num .num span {
+    color: #0865c5;
+}
+.theme-brief-num .booking {
+    float: right;
+    display: block;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+    line-height: 35px;
+}
+
+.theme-time {
+    margin: 10px 0;
+}
+
+.theme-time tr td {
+    text-align: left;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.theme-time tr td img {
+    margin-top: -5px;
+}
+
+.theme-time tr th {
+    font-size: 13px;
+    color: #555555;
+    text-align: left;
+    height: 30px;
+    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+
+.old-price {
+    text-decoration: line-through;
+    float: left;
+    font-size: 14px;
+    color: #999999;
+}
+
+.theme-remind {
+    position: absolute;
+    right: 0;
+    float: right;
+    font-size: 13px;
+    color: #333333;
+    padding-left: 20px;
+    background: url("../img/small/info 2.png") 0 center no-repeat;
+}
+
+.theme-date {
+    width: 495px;
+    height: 70px;
+    padding: 20px 0 0 20px;
+    border: 1px solid #d1d9f0;
+    background: #fafbff;
+}
+
+.theme-date table tr td {
+    height: 30px;
+    font-size: 16px;
+}
+
+.theme-date table tr td img {
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.theme-date table tr th {
+    text-align: left;
+    height: 30px;
+    font-size: 14px;
+}
+
+.theme-price {
+    margin: 40px 0 10px 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.time-remind {
+    z-index: 999;
+    padding-left: 40px;
+    color: #ffffff;
+    font-size: 16px;
+    width: 50px;
+    height: 34px;
+    line-height: 34px;
+    position: absolute;
+    right: 1px;
+    top: 4px;
+    background: url("../img/small/arrowbg.png") no-repeat;
+}
+
+.booked {
+    font-size: 14px !important;
+    color: #999999 !important;;
+    float: right;
+    margin-right: 0px;
+    padding-left: 20px;
+    background: url("../img/small/ic_users.png") 0 center no-repeat;
+}
+
+.theme-include {
+    border-top: 2px solid #0865c5;
+}
+
+.include-title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #0474b4;
+    padding-left: 30px;
+    background: url("../img/small/present.png") left center no-repeat;
+}
+
+.include-div {
+    width: 100%;
+    height: 132px;
+    background: #f8fafd;
+    margin-bottom: 20px;
+}
+
+.include-list li {
+    margin: 25px;
+    float: left;
+}
+
+.include-list li img {
+    float: left;
+}
+
+.include-list-div {
+    float: left;
+    margin-left: 10px;
+}
+
+.include-list-div .first {
+    font-size: 15px;
+    color: #333333;
+}
+
+.include-list-div p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 21px;
+}
+
+.include-list-div .old-price {
+    font-size: 15px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+/*主题列表*/
+.theme-type {
+    margin-top: 20px;
+    height: 266px;
+    background: #ffffff;
+}
+
+.theme-brief {
+    margin: 20px 40px 20px 0;
+    width: 741px;
+    float: left;
+}
+
+.theme-list {
+    padding: 0;
+    margin-bottom: 30px\9;
+}
+
+.product-each2 {
+    width: 1200px;
+    float: left;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.pic-big {
+    float: left;
+    width: 379px;
+    height: 266px;
+    margin-right: 40px;
+}
+
+.theme-title {
+    font-size: 20px;
+    color: #333;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+.theme-booking {
+    float: left;
+    width: 780px;
+    margin: 20px 20px 0 -20px;
+    height: 246px;
+    position: relative;
+}
+
+.theme-cycles {
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.theme-cycles span {
+    font-size: 13px;
+    color: #0f6cb2;
+}
+
+.theme-price {
+    font-size: 16px;
+    color: #333;
+    line-height: 30px;
+    padding: 10px 16px;
+    position: relative;
+}
+
+.theme-price span {
+    display: inline-block;
+    color: #ffcc00;
+}
+
+.theme-detail-txt {
+    margin: 20px 0;
+    line-height: 24px;
+    font-size: 13px;
+    color: #333333;
+}
+
+.theme-detail-txt2 {
+    height: 50px;
+    margin: 20px 0;
+    line-height: 24px;
+    font-size: 13px;
+    color: #333333;
+}
+
+.theme-include-tag {
+    margin: 10px 0 15px 0;
+    overflow: hidden;
+}
+
+.theme-include-tag span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    border: 1px solid #e5e6e8;
+    background: #ffffff;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.theme-information {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+.theme-information .price {
+    color: #ffcc01;
+    font-size: 18px;
+    float: left;
+}
+
+.theme-information .price span {
+    font-size: 22px;
+}
+
+.theme-information .old-price {
+    text-decoration: line-through;
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #999999;
+}
+
+.theme-information .booking {
+    float: right;
+    right: 0px;
+    display: block;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+    line-height: 35px;
+}
+
+.theme-information .booking img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.theme-information .booked {
+    font-size: 14px !important;
+    color: #999999 !important;
+    margin-left: 120px;
+    float: left;
+    padding-left: 20px;
+    background: url("../img/small/ic_users.png") 0 center no-repeat;
+}
+
+/*订单模块*/
+.order-title {
+    font-size: 20px;
+    color: #333333;
+}
+
+.order-brief {
+    width: 100%;
+    overflow: hidden;
+}
+
+/*驾驶培训模块*/
+.train-div {
+    height: 400px;
+    width: 1200px;
+    background: #fbfcfe;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.train-div .photo {
+    width: 830px;
+    height: 400px;
+    float: left;
+}
+
+.train-div-brief {
+    /*position: absolute\9;*/
+    margin: 20px 40px 0 40px;
+    width: 290px;
+    float: left;
+    overflow: hidden;
+}
+
+.train-div-brief .title {
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    color: #0873b6;
+    border-bottom: 2px solid #0873b6;
+}
+
+.train-div-brief img {
+    margin:-5px 15px 0 0;
+}
+
+.train-div-brief .booked {
+    float: left;
+    margin-left: 0;
+    height: 45px;
+    line-height: 45px;
+}
+
+.train-div-brief .txt {
+    float: left;
+    font-size: 16px;
+    color: #333333;
+    line-height: 31px;
+    width: 290px;
+    height: 160px;
+    margin: 10px 0;
+    overflow: auto;
+}
+.train-div-brief a {
+    float: left;
+    display: block;
+    margin-left: 44px;
+     width: 200px;
+     background: #ffcf00;
+     height: 50px;
+     line-height: 48px;
+     text-align: center;
+     font-size: 18px;
+     color: #000000;
+     border: none;
+ }
+
+.train-detail-w770{
+    width: 770px;
+    float: left;
+    overflow: hidden;
+    background: #f1f4fa;
+    padding-right: 30px;
+}
+.train-detail-w400{
+    height: 100%;
+    width: 400px;
+    float: left;
+    overflow: hidden;
+    margin: 30px 0 0 0;
+    background: #fbfcfe;
+}
+.train-detail-bgcolor{
+    margin-top: 30px;
+    background: #fbfcfe;
+    overflow: hidden;
+    text-align: left;
+}
+.train-detail {
+    width: 720px;
+    height: 60px;
+    border-top: 1px solid #e6e6e6;
+    overflow: hidden;
+    padding: 10px 0;
+    float: left;
+}
+.train-detail span {
+    font-size: 13px;
+    color: #666666;
+    line-height: 24px;
+}
+.train-information {
+    width: 720px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    overflow: hidden;
+}
+
+.train-information .price {
+    color: #ffcc01;
+    font-size: 18px;
+    float: left;
+}
+
+.train-information .price span {
+    font-size: 22px;
+}
+
+.train-information .booked {
+    font-size: 14px !important;
+    color: #999999 !important;
+    margin-right: 0;
+    float: right;
+    background: url("../img/small/ic_users.png") 0 center no-repeat;
+}
+
+.train-detail2 {
+    padding-top: 20px ;
+    background: #fbfcfe;
+    margin:0 0 30px 0;
+}
+.train-tab ul li {
+    float: left;
+}
+
+.train-tab ul li a {
+    padding-left: 30px;
+    display: block;
+    height: 54px;
+    width: 225px;
+    text-align: center;
+    line-height: 54px;
+    color: #333333;
+    font-size: 18px;
+}
+
+.train-info-title{
+    margin: 30px 0 10px 0px;
+    padding-left: 12px;
+    border-left: 4px solid #0865c5;
+    font-size: 16px;
+    color: #333333;
+    height: 20px;
+    line-height: 20px;
+}
+.train-info-title2{
+    margin: 20px 0 20px 0px;
+    padding-left: 16px;
+    font-size: 20px;
+    color: #333333;
+    height: 20px;
+}
+.train-info-txt{
+    text-align: left;
+    max-width: 770px;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 28px;
+    word-wrap: break-word;
+}
+.train-info-txt .txtstyle1{
+    color: #666666;
+}
+.w245{width: 187px!important;float: left;overflow: hidden;}
+.train-info-div{
+    width: 690px;
+    padding: 10px 30px 20px 30px;
+    background: #f8fafd;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.train-info-div .title{
+    font-size: 14px;
+    color: #0873b6;
+    line-height: 40px;
+}
+.train-info-div .txt{
+    font-size: 13px;
+    color: #666666;
+    line-height: 20px;
+}
+.train-info-div-ul{margin: 20px 0;}
+.train-info-div-ul li{
+    font-size: 13px;
+    color: #333333;
+    line-height: 30px;
+}
+.train-info-div-ul li img{width: 16px;height: 16px;margin-right: 10px;margin-top: -3px;}
+.train-info-txt img{margin-right: 5px;margin-top: -3px;}
+
+.tb-logo{
+    height: 150px;
+    line-height: 150px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e6e8;
+}
+.tb-logo img{margin: 20px}
+.apply-title {
+    font-size: 18px;
+    color: #333333;
+    line-height: 50px;
+}
+
+.apply-title img {
+    vertical-align: -1px;
+    margin-right: 10px;
+}
+.apply-input {
+    width: 315px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #cccccc;
+    float: left;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.apply-input.error{
+    border: 1px solid red;
+}
+.apply-button {
+     display: block;
+     margin: 40px 0 0 100px;
+     width: 130px;
+     background: #ffcf00;
+     height: 40px;
+     line-height: 38px;
+     text-align: center;
+     font-size: 14px;
+     color: #000000;
+     border: none;
+     top: 30px;
+ }
+.train-handle {
+    position: absolute;
+    right: 50px;
+    top: 2px;
+    font-size: 13px;
+}
+
+.train-handle img {
+    margin-right: 5px;
+}
+
+.train-handle a {
+    color: #333333;
+    display: block;
+    float: left;
+    margin: 0 10px;
+    margin-top: 7px;
+}
+
+.train-handle a:hover {
+    color: #0a73b5;
+}
+#errors{
+    display: none;
+    top: 24px;
+    left: 12px;
+    padding: 0px 0px 5px 22px;
+    font-style: normal;
+    color: #FF0000;
+    background-image: url(../img/icon-error.png);
+    background-repeat: no-repeat;
+}
+.contact-info{
+    position: initial;
+}

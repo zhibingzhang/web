@@ -1,0 +1,600 @@
+.clearfix:after{clear: both;content: '';display: table;}  
+.fr{float: right;}
+.fl{float: left;}
+.placeholder{
+    position: absolute;
+    top: 14px;
+    left: 31px;
+    color: #888;
+    line-height: 100%;
+}
+html,body{
+	height: 100%;
+	background-color: transparent;
+}
+.login-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+}
+.login .header{
+	margin: 0 auto;
+	height: 78px;
+	background: #171e26;
+	color: #f0f5fb;
+}
+.login .header img{
+	margin: 10px 0px 15px 0;
+	width: 130px;
+	height: 55px;
+	vertical-align: inherit;
+}
+.login .header span{
+	vertical-align: top;
+}
+.login .bar{
+	display: inline-block;
+	background: #f0f5fb;
+	width: 1px;
+	height: 26px;
+	margin: 0px 30px;
+}
+.login .image{
+	display: inline-block;
+}
+.login .header .bar{
+	margin: 26px 30px;
+}
+.login .header span{
+	display: inline-block;
+	font-size: 20px;
+	margin: 28px 0px;
+}
+.login .content{
+	width: 100%;
+	/*height: 100%;*/
+	/*background-image: url(../img/content-bg.png);*/
+	background-repeat: no-repeat;
+}
+.login .container{
+	height: 726px;
+	padding-top: 56px;
+}
+.login .container .login-left{
+	width: 282px;
+	height: 92px;
+	padding: 24px 64px;
+	background: transparent url(../img/personal/rgba.png);
+	color: #FFFFFF;
+	font-size: 24px;
+	margin-top: 226px;
+	line-height: 45px;
+}
+.login .container .login-box{
+	width: 345px;
+	height: 325px;
+	padding: 50px;
+	border-radius: 8px;
+	background-image: url(../img/personal/bw.png);
+	margin: 90px 0px;
+}
+.login-box .title{
+	font-size: 18px;
+	margin-bottom: 44px;
+}
+.login-box .link{
+	color: #9c9897;
+}
+.login-box .link a{
+	color: #0272ba;
+}
+.login-box .lable{
+	width: 100%;
+	height: 38px;
+	margin-bottom: 14px;
+	position: relative;
+}
+.login-box .lable i{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 10;
+}
+.login-box .lable.error input{
+	border: 1px solid #ff0000;
+}
+.login-box .lable .correct{
+	display: none;
+	height: 21px;
+	top: -28px;
+	padding: 0px 0px 5px 22px;
+	font-style: normal;
+	color: #FF0000;
+	background-image: url(../img/icon-error.png);
+	background-repeat: no-repeat;
+}
+.login-box .lable.error .correct{
+	display: block;
+}
+.login-box .lable input{
+	display: inline-block;
+	width: 312px;
+	height: 38px;
+	line-height: 38px;
+	padding-left: 30px;
+	border: 1px solid #e5e6e8;
+}
+.login-box .lable label{
+	display:block;
+	height: 40px;
+}
+.login-box .lable .yzm{
+	width: 132px;
+	height: 38px;
+}
+.login-box .lable .yzm-img{
+	width: 104px;
+	height: 38px;
+	line-height: 38px;
+	margin: 0px 16px;
+}
+.login-box .lable .hyz{
+	display: inline-block;
+	line-height: 38px;
+}
+.login-box .pass{
+	margin: 25px 0px 35px;
+}
+.login-box .pass .checkbox{
+	margin-right: 8px;
+}
+.login-box .pass #checkbox{
+	
+}
+.login-box .submit{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	color: #000000;
+	background: #ffcf00;
+}
+.login .br{
+	width: 100%;
+	height: 1px;
+	background: #a0b6cb;
+}
+.login .foot-list{
+	width: 1200px;
+	margin: 0px auto;
+	padding: 13px 0px;
+	border-bottom: 1px solid #a0b6cb;
+	text-align: center;
+}
+.login .foot-list ul{
+	margin: 0 auto;
+	display: inline-block;
+}
+.login .foot-list ul li{
+	text-align: center;
+	float: left;
+}
+.login .foot-list ul li a{
+	color: #c7d4dd;
+}
+.login .bar12{
+	display: inline-block;
+	width: 1px;
+	height: 12px;
+	background-color: #a0b6cb;
+	margin: 0px 17px;
+}
+.login .footer{
+	text-align: center;
+	color: #c7d4dd;
+	padding: 13px 0px;
+	font-family: arial;
+}
+.footer span{
+	margin-left: 35px;
+}
+/*注册*/
+.regist .container .login-box{
+	height: 410px;
+	margin-top: 44px;
+	margin-bottom: 0px;
+}
+.regist #msyzm{
+	width: 148px;
+}
+.regist .hqy{
+	width: 150px;
+	text-align: center;
+	border: 1px solid #e5e6e8;
+	height: 38px;
+	line-height: 38px;
+	background: #FFFFFF;
+	margin-left: 12px;
+}
+.red{
+	color:#e6030c;
+}
+.mask{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/personal/mak_bg.png);
+	z-index: 99;
+	display: none;
+}
+.silder{
+	width: 420px;
+	height: 270px;
+	background: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -210px;
+	margin-top: -135px;
+	z-index: 100;
+	display: none;
+}
+.sildertit{
+	height: 62px;
+	line-height: 62px;
+	border: 1px solid #efefef;
+	text-align: center;
+	position: relative;
+	font-size: 16px;
+}
+.sildertit .close{
+	position: absolute;
+	right: 8px;
+	top: -9px;
+	font-size: 40px;
+	color: #cfcfcf;
+}
+.silderbox p{
+	margin-top: 40px;
+	font-size: 16px;
+	color: #000;
+	text-align: center;
+}
+.silderbox p img{
+	margin-right: 18px;
+}
+.silderbox .silderbtn{
+	margin-top: 30px;
+}
+.silderbtn a{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	text-align: center;
+	background: #ffcf00;
+	color: #000;
+	font-size: 12px;
+}
+/*找回密码*/
+.backPw{
+	background: #FFFFFF;
+}
+.backPw .header{
+	margin: 0 auto;
+	height: 78px;
+	background: #FFFFFF;
+	color: #000000;
+	border-bottom: 1px solid #e5e5e5;
+}
+.backPw .header img{
+	margin: 10px 0px 15px 150px;
+	width: 130px;
+	height: 55px;
+	vertical-align: inherit;
+}
+.backPw .header span{
+	vertical-align: top;
+}
+.backPw .bar{
+	display: inline-block;
+	background: #f0f5fb;
+	width: 1px;
+	height: 26px;
+	margin: 0px 30px;
+}
+.backPw .image{
+	display: inline-block;
+}
+.backPw .header .bar{
+	margin: 26px 30px;
+}
+.backPw .header span{
+	display: inline-block;
+	font-size: 20px;
+	margin: 28px 0px;
+}
+.backPw .br{
+	width: 100%;
+	height: 1px;
+	background: #e5e5e5;
+}
+.backPw .foot-list{
+	width: 1200px;
+	margin: 0px auto;
+	padding: 13px 0px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+}
+.backPw .foot-list ul{
+	margin: 0 auto;
+	display: inline-block;
+}
+.backPw .foot-list ul li{
+	text-align: center;
+	float: left;
+}
+.backPw .foot-list ul li a{
+	color: #000;
+}
+.backPw .bar12{
+	display: inline-block;
+	width: 1px;
+	height: 12px;
+	background-color: #979797;
+	margin: 0px 17px;
+}
+.footer{
+	text-align: center;
+	color: #000;
+	padding: 13px 0px;
+	font-family: arial;
+}
+.footer span{
+	margin-left: 35px;
+}
+.pwbox{
+	width: 600px;
+	margin: 70px auto 0px;
+	height: 560px;
+}
+.pwbox .pwiocn{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: url(../img/data@2x.png);
+	background-repeat: no-repeat;
+	margin-right: 15px;
+}
+.pwbox .pwone{
+	color: #0874b5;
+}
+.pwbox .pwtwo .pwiocn{
+	background: url(../img/drafts.png);
+	background-repeat: no-repeat;
+}
+.pwbox .pwthere .pwiocn{
+	background: url(../img/account.png);
+	background-repeat: no-repeat;
+}
+.pwbox .pwfour .pwiocn{
+	background: url(../img/exit.png);
+	background-repeat: no-repeat;
+}
+.pwbox .cur.pwtwo .pwiocn{
+	background: url(../img/drafts1.png);
+	background-repeat: no-repeat;
+}
+.pwbox .cur.pwthere .pwiocn{
+	background: url(../img/account1.png);
+	background-repeat: no-repeat;
+}
+.pwbox .cur.pwfour .pwiocn{
+	background: url(../img/exit1.png);
+	background-repeat: no-repeat;
+}
+.pwbox .pwright{
+	display: inline-block;
+	width: 13px;
+	height: 24px;
+	background: url(../img/jiantou.png);
+	background-repeat: no-repeat;
+}
+.pwbox .cur .pwright{
+	background: url(../img/jiantou1.png);
+	background-repeat: no-repeat;
+}
+.pwbox p{
+	color: #afafaf;
+}
+.pwbox p.cur{
+	color: #0874b5;
+}
+.pwbox .pwfont{
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	vertical-align: top;
+}
+.pwbox .pwright{
+	font-size: 20px;
+	margin: 9px 22px 0px 16px;
+	vertical-align: top;
+}
+.pwbox .pwcont{
+	margin-top: 70px;
+}
+.pcone{
+	width: 350px;
+	height: 250px;
+	margin: 0 auto;
+}
+.pwcont .lable{
+	position: relative;
+	margin-bottom: 18px;
+}
+.pwcont .lable input{
+	width: 308px;
+	height: 38px;
+	line-height: 38px;
+	padding-left: 30px;
+	border: 1px solid #e5e6e8;
+}
+.pwcont label{
+	display: inline-block;
+}
+.pwcont .error input{
+	border: 1px solid #ff0000;
+}
+.pwcont .error input#code{
+	border-color: #e5e6e8;
+}
+.pwcont .lable p{
+	color: #000;
+	margin-bottom: 10px;
+}
+.pwcont .lable i{
+	position: absolute;
+	top: 35px;
+	left: 10px;
+	z-index: 10;
+	height: 21px;
+}
+.pwcont .lable i.correct{
+	top: 170px;
+	color: red;
+	background: url(../img/icon-error.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	display: none;
+	font-style: normal;
+}
+a{color:#0272ba;}
+.pwcont .lable i.yzmb{
+	top: 84px;
+}
+.pwcont .lable.error i{
+	display: block;
+}
+.pwcont .lable .yzm{
+	width: 132px;
+}
+.pwcont .lable .yzm-img{
+	width: 109px;
+	margin: 0px 16px;
+}
+.pwcont .lable a{
+	margin-top: 10px;
+	color: #0874b5;
+}
+.pwcont .btn{
+	background: #0874b5;
+	color: #FFFFFF;
+	display: inline-block;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: 30px 100px 0px;
+}
+.pctwo p{
+	text-align: center;
+	color: #000;
+	margin-bottom: 30px;
+}
+.pctwo p i{
+	display: none;
+}
+.pctwo p.error i{
+	display: block;
+	top: 60px;
+    left: 182px;
+    height: 32px;
+    position: absolute;
+    color: red;
+    background: url(../img/icon-error.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    font-style: normal;
+}
+.pctwo input{
+	border: 1px solid #e6e6e6;
+	background: #fff;
+	display: inline-block;
+	height: 38px;
+	line-height: 38px;
+	width: 143px;
+}
+.pctwo #code{
+	width: 114px;
+	margin-left: 8px;
+	color: #0874b5;
+}
+.pcthere{
+	width: 345px;
+}
+.pcfour{
+	width: 330px;
+	text-align: center;
+}
+.pcfour p{
+	font-size: 20px;
+	margin-top: 24px;
+	color: #000;
+}
+.pcfour .btnfour{
+	font-size: 12px;
+}
+.login-box .clearfix label,.clearfix img,.clearfix a{
+		display: inline-block;
+		vertical-align: middle;
+		float: inherit;	
+}
+.login-box .pass a{
+	float: right;
+}
+input,span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.pl{
+	padding-left: 6px;
+}
+.timeactive{
+	pointer-events: none;
+}
+.chk{
+	width:12px;
+	height:12px;
+	display:inline-block;
+	vertical-align:middle;
+	background:transparent url(../img/personal/checkbox1.png)
+}
+.chk.active{
+	background-image:url(../img/personal/checkbox2.png)
+}
+.login-box .pass label span,.login-box .pass label a{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#corrects{
+	display: none;
+	color: red;
+    padding-left: 33px;
+    height: 24px;
+    line-height: 23px;
+}
+
+.pctwo .placeholder{
+	left: 12px;
+}
+.w{
+	width: 1200px;
+	marign: 0 auto;
+}
