@@ -176,7 +176,7 @@ body{
 #showbox span { background:url(../images/whitebg.png) repeat;}
 #showsum {margin-top:10px;margin-left: 18px;}
 #showsum span { border:1px solid #ddd;}
-#showsum span.sel { border:1px solid #f60;}
+#showsum span.sel { border:1px solid #428bca;}
 
 .showpage { width:680px; position:relative;}
 .showpage a { display:block; width:15px; border:1px solid #ddd; height:85px; line-height:85px; background:#eee; text-align:center; font-size:18px; position:absolute; left:0; top:-87px; text-decoration:none; color:#999;}

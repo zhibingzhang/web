@@ -11,7 +11,7 @@ jQuery.ljsGlasses = {
 		var _length = _imgarr.length;
 		var _index = 0;
 		var _arr = new Array();
-		_sum.append("<p style='position:absolute;left:0;top:0;'></p>");
+		_sum.append("<p style='background-color:#FFF;position:absolute;left:0;top:0;'></p>");
 		var _sumbox = _sum.find("p");
 		
 		for(var i=0;i<_length;i++){
@@ -87,7 +87,7 @@ jQuery.ljsGlasses = {
 			"position":"relative"
 			});
 		
-		_box.append("<div style='position:relative;'><b style='display:block;'><img style='display:block;' src='' /></b><span style='position:absolute;left:0;top:0;display:none;z-index:5;'></span></div><p style='position:absolute;overflow:hidden;top:0;display:none;'><img style='max-width:none;max-height:none;position:relative;left:0;top:0;' src='' /></p>");
+		_box.append("<div style='position:relative;'><b style='display:block;'><img style='display:block;' src='' /></b><span style='position:absolute;left:0;top:0;display:none;z-index:5;'></span></div><p style='position:absolute;overflow:hidden;top:0;display:none;background-color:#fff;border:1px solid #DDD;'><img style='max-width:none;max-height:none;position:relative;left:0;top:0;' src='' /></p>");
 		var _glass = _box.find("span");
 		var _boximg = _box.find("b img");
 		var _imgout = _box.find("div");
