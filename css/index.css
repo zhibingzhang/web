@@ -6,7 +6,14 @@ header {
     font-size: 12px;
     width: auto;
 }
-
+.header {
+    height: 40px;
+    background: #060c13;
+    color: #fff;
+    line-height: 40px;
+    font-size: 12px;
+    width: auto;
+}
 .index-tab {
     background-image: url(../img/personal/banner_bg80.png);
     height: 129px;
@@ -738,7 +745,7 @@ header {
 }
 
 .bottom-img {
-    overflow: auto;
+
     font-size: 16px;
     color: #0873b6;
     height: 360px;
@@ -1482,10 +1489,13 @@ header {
     font-size: 16px;
     color: #666;
     line-height: 22px;
+    top:3px;
+    margin-left: 10px;
 }
 
 .rate-num span {
     font-size: 12px;
+    // bottom: -4px;
 }
 
 .rate-num-wrapper {

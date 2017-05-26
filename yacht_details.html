@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>游艇租赁</title>
     <!--<meta http-equiv="x-ua-compatible" content="IE=edge">-->
     <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
     <link href="css/common.css" rel="stylesheet"/>
     <link href="css/index.css" rel="stylesheet"/>
     <link href="css/details.css" rel="stylesheet">
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/jquery-1.9.min.js"></script>
-    <script type="text/javascript" src="js/base.js"></script>
-    <script src="js/mootools-1.3.2.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
     <link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
-    <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/idangerous.swiper2.7.6.css" />
     <script type="text/javascript" src="js/jquery-1.9.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/idangerous.swiper2.7.6.min.js"></script>
+    <script type="text/javascript" src="js/fd.js"></script>
+    <script src="js/mootools-1.3.2.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script> -->
     <script type="text/javascript" src="js/base.js"></script>
-    <script src="js/divselect.js" type="text/javascript"></script>
     <!--[if lte IE 8]>
     <script src="js/selectivizr.js"></script>
     <![endif]-->
@@ -31,19 +32,19 @@
 
 <body>
 
-<header>
+<div class="header">
     <div class="container">
         <div class="overflow-auto">
             <div class="left">
                 欢迎进入上海游艇O2O平台！
             </div>
             <div class="right">
-                <a class="login-btn">登录</a>
-                <a class="register-btn">注册</a>
+                <a class="login-btn" href="login.html">登录</a>
+                <a class="register-btn" href="regist.html">注册</a>
             </div>
         </div>
     </div>
-</header>
+</div>
 <div class="header-back">
     <div class="index-tab">
         <div class="container2">
@@ -59,23 +60,8 @@
                 </div>
             </div>
             <div class="index-input">
-                <span>
-                    <form action="" method="post">
-                        <div id="index-input-select" class="index-input-select">
-                            <a class="index-input-a">
-                                <p>游艇</p>
-                                <img src="img/down.png" class="down"/>
-                            </a>
-                            <ul>
-                                <li>主题</li>
-                                <li>游艇</li>
-                            </ul>
-                            <input name="" type="hidden" value="" id="index-input-select2"/>
-                        </div>
-                    </form>
-                </span>
-                <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
-                <img src="img/search.png" class="search"/>
+                <input class="input" type="text" placeholder="请输入查询的内容"/>
+                <img src="img/search.png"/>
             </div>
         </div>
     </div>
@@ -91,7 +77,7 @@
             <p>海神号<span>Sea-stella46</span></p>
             <div class="rate-num-wrapper">
                 <div id="star" class="star"></div>
-                <span class="rate-num">9.8分<span>（969评论）</span></span>
+                <span class="rate-num" style="top: -2px;">9.8分<span>（969评论）</span></span>
             </div>
             <div class="clear"></div>
             <div class="hrgray"></div>
@@ -122,128 +108,25 @@
             </div>
         </div>
         <div id="tFocus">
-            <div class="ban" id="demo1">
-                <div class="ban2" id="ban_pic1">
-                    <ul>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span >
-                                    <img jqimg="img/images/yacht-details1.png" src="img/images/yacht-details1.png"/>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="prev1" id="prev1"><img src="images/index_tab_l.png" width="28" height="51" alt=""/>
-                    </div>
-                    <div class="next1" id="next1"><img src="images/index_tab_r.png" width="28" height="51" alt=""/>
-                    </div>
-                </div>
-                <div class="min_pic">
-                    <div class="prev_btn1" id="prev_btn1"><img src="images/feel3.png" width="9" height="18" alt=""/>
-                    </div>
-                    <div class="num clearfix" id="ban_num1">
-                        <ul>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                            <li><a href="javascript:;"><img src="img/images/yacht-details1.png"/></a></li>
-                        </ul>
-                    </div>
-                    <div class="next_btn1" id="next_btn1"><img src="images/feel4.png" width="9" height="18" alt=""/>
-                    </div>
-                </div>
+            <div class="fd">
+            <!--页面必要代码,img标签上请务必带上图片真实尺寸px-->
+                <div id="showbox">
+                  <img src="images/photos/img01.png" width="270" height="180" />
+                  <img src="images/photos/img02.png" width="320" height="735" />
+                  <img src="images/photos/img03.png" width="430" height="430" />
+                  <img src="images/photos/img04.png" width="290" height="290" />
+                  <img src="images/photos/img05.png" width="786" height="525" />
+                  <img src="images/photos/img06.png" width="300" height="300" />
+                  <img src="images/photos/img07.png" width="200" height="200" />
+                  <img src="images/photos/img08.png" width="810" height="582" />
+                  <img src="images/photos/img09.png" width="1920" height="900" />
+                </div><!--展示图片盒子-->
+                <div id="showsum"></div><!--展示图片里边-->
+                <p class="showpage">
+                  <a href="javascript:void(0);" id="showlast"> < </a>
+                  <a href="javascript:void(0);" id="shownext"> > </a>
+                </p>
             </div>
-
-            <script src="js/pic_tab.js"></script>
-            <!--上面的js插件使用和tab发生冲突-->
-            <script type="text/javascript">
-                jq('#demo1').banqh({
-                    box: "#demo1",//总框架
-                    pic: "#ban_pic1",//大图框架
-                    pnum: "#ban_num1",//小图框架
-                    prev_btn: "#prev_btn1",//小图左箭头
-                    next_btn: "#next_btn1",//小图右箭头
-                    pop_prev: "#prev2",//弹出框左箭头
-                    pop_next: "#next2",//弹出框右箭头
-                    prev: "#prev1",//大图左箭头
-                    next: "#next1",//大图右箭头
-                    pop_div: "#demo2",//弹出框框架
-                    pop_pic: "#ban_pic2",//弹出框图片框架
-                    pop_xx: ".pop_up_xx",//关闭弹出框按钮
-                    mhc: ".mhc",//朦灰层
-                    autoplay: true,//是否自动播放
-                    interTime: 5000,//图片自动切换间隔
-                    delayTime: 400,//切换一张图片时间
-                    pop_delayTime: 400,//弹出框切换一张图片时间
-                    order: 0,//当前显示的图片（从0开始）
-                    picdire: true,//大图滚动方向（true为水平方向滚动）
-                    mindire: true,//小图滚动方向（true为水平方向滚动）
-                    min_picnum: 5,//小图显示数量
-                    pop_up: true//大图是否有弹出框
-                })
-            </script>
         </div>
     </div>
     <div class="clear"></div>
@@ -256,8 +139,9 @@
             <li><a class="yacht-nav4">预定须知</a></li>
             <li><a class="yacht-nav5">用户评论</a></li>
         </ul>
-        <br clear="all" />
-        <div class="block" id="yacht-nav1">
+        
+        <div class="tab_all">
+            <div class="block" id="yacht-nav1">
             <div class="yacht-detail-book">
                 <p class="title-yacht">价格列表</p>
                 <table border="0" cellspacing="0" cellpadding="0" class="tb-price">
@@ -287,7 +171,10 @@
                         <p class="title-yacht2">选择预定日期</p>
                         <div>
                             <p class="title-choose"><img src="img/small/date.png"/>选择日期</p>
-                            <input type="datetime" class="input-time" value="2017/09/09(周二)"/>
+                            <label>
+                                <input type="datetime" class="input-time" id="date2"/>
+                                <span style="left: -136px"></span>
+                            </label>
                             <p class="title-choose"><img src="img/small/time.png"/>选择时间</p>
                             <div class="choose-time-cells">
                                 <p class="cell-little">
@@ -358,8 +245,8 @@
                                     <th>预定时间</th>
                                 </tr>
                                 <tr>
-                                    <td><input type="date" class="input-time"/></td>
-                                    <td><input type="time" class="input-time"/></td>
+                                    <td><input type="text" class="input-time" id="dateym"/></td>
+                                    <td><input type="text" class="input-time" id="datehs" /></td>
                                 </tr>
                             </table>
                         </div>
@@ -375,74 +262,79 @@
                                 5、两档租赁业务之间需至少间隔半个小时；
                             </p>
                         </div>
-                        <p class="yacht-detail-txt"><input type="checkbox"/>我已阅读并同意<a href="#">《游艇租赁协议》</a></p>
+                        <p class="yacht-detail-txt">
+                        <div class="chk"></div>
+                        <span>我已阅读并同意</span>
+                        <a href="#">《游艇租赁协议》</a>
+                        </p>
                         <a type="submit" class="yacht-booking" href="purchase_service05170.html"></a>
 
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="none" id="yacht-nav2">
-            <div class="yacht-detail-introduce">
-                <div class="intrduce-yacht">
-                    <div class="intrduce-txt">
-                        <p class="intrduce-title">整体介绍</p>
-                        <p class="intrduce-word">豪华商务艇，国产游艇高品质的典范。流线型的船体，结构与设计符合国际标准。内饰精美，空间感十足，真正将舒适性带入海上休闲生活体验。</p>
-                        <p class="intrduce-word">豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱</p>
-                        <p class="intrduce-word">
-                            游艇全长20.93米，宽度5.45米。游艇分为上中下三层，下层休闲区，设有大型KTV沙龙区，海上K歌尽情放松。棋牌室带有自动麻将桌，尽享棋牌娱乐。大空间主卧配主卧卫生间，舒适享受。配置全面的厨房（带冰箱），满足您美味需求；中层为沙龙区及后甲板，沙龙区配备高清电视，以及室内驾驶台；船头日光浴沙龙区，满足尽情享受日光浴的需求。后甲板红酒沙龙区，尽享海风微醺的感觉。前甲板带游泳梯，尽情戏水玩耍；上层飞桥视野开阔，设置驾驶区及餐桌、沙龙。</p>
-                        <p class="intrduce-title">豪华商务艇，满足高品位、热爱海洋生活的您！</p>
-                    </div>
-                    <img src="img/t.png" class="intrduce-img ">
-                </div>
-                <div class="yacht-photos">
-                    <div class="photo1"></div>
-                    <div class="photo2">
-                        <div class="photo-txt">
-                            <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
-                                <tr>
-                                    <th>设计独特</th>
-                                </tr>
-                                <tr>
-                                    <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
-                                </tr>
-                            </table>
+            </div>
+            <div class="none" id="yacht-nav2">
+                <div class="yacht-detail-introduce">
+                    <div class="intrduce-yacht">
+                        <div class="intrduce-txt">
+                            <p class="intrduce-title">整体介绍</p>
+                            <p class="intrduce-word">豪华商务艇，国产游艇高品质的典范。流线型的船体，结构与设计符合国际标准。内饰精美，空间感十足，真正将舒适性带入海上休闲生活体验。</p>
+                            <p class="intrduce-word">豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱豪华商务舱</p>
+                            <p class="intrduce-word">
+                                游艇全长20.93米，宽度5.45米。游艇分为上中下三层，下层休闲区，设有大型KTV沙龙区，海上K歌尽情放松。棋牌室带有自动麻将桌，尽享棋牌娱乐。大空间主卧配主卧卫生间，舒适享受。配置全面的厨房（带冰箱），满足您美味需求；中层为沙龙区及后甲板，沙龙区配备高清电视，以及室内驾驶台；船头日光浴沙龙区，满足尽情享受日光浴的需求。后甲板红酒沙龙区，尽享海风微醺的感觉。前甲板带游泳梯，尽情戏水玩耍；上层飞桥视野开阔，设置驾驶区及餐桌、沙龙。</p>
+                            <p class="intrduce-title">豪华商务艇，满足高品位、热爱海洋生活的您！</p>
                         </div>
+                        <img src="img/t.png" class="intrduce-img ">
                     </div>
-                    <div class="photo3"></div>
-                    <div class="photo4"></div>
-                    <div class="photo5">
-                        <div class="photo-txt">
-                            <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
-                                <tr>
-                                    <th>设计独特</th>
-                                </tr>
-                                <tr>
-                                    <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
-                                </tr>
-                            </table>
+                    <div class="yacht-photos">
+                        <div class="photo1"></div>
+                        <div class="photo2">
+                            <div class="photo-txt">
+                                <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
+                                    <tr>
+                                        <th>设计独特</th>
+                                    </tr>
+                                    <tr>
+                                        <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
-                    </div>
-                    <div class="photo6"></div>
-                    <div class="photo7">
-                        <div class="photo-txt">
-                            <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
-                                <tr>
-                                    <th>设计独特</th>
-                                </tr>
-                                <tr>
-                                    <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
-                                </tr>
-                            </table>
+                        <div class="photo3"></div>
+                        <div class="photo4"></div>
+                        <div class="photo5">
+                            <div class="photo-txt">
+                                <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
+                                    <tr>
+                                        <th>设计独特</th>
+                                    </tr>
+                                    <tr>
+                                        <td>设计独特设计独特设计独特设计独特设计独特设计独特
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="photo6"></div>
+                        <div class="photo7">
+                            <div class="photo-txt">
+                                <table border="0" cellspacing="0" cellpadding="0" class="tb-photo">
+                                    <tr>
+                                        <th>设计独特</th>
+                                    </tr>
+                                    <tr>
+                                        <td>设计独特设计独特设计独特设计独特设计独特设计独特</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="none" id="yacht-nav3">费用说明</div>
-        <div class="none" id="yacht-nav4">预定须知</div>
-        <div class="none" id="yacht-nav5">
-            <div class="yacht-detail-discus">
+            <div class="none" id="yacht-nav3">费用说明</div>
+            <div class="none" id="yacht-nav4">预定须知</div>
+            <div class="none" id="yacht-nav5">
+                <div class="yacht-detail-discus">
                 <!--<p class="title-yacht">用户评论</p>-->
                 <!--<div class="discus-textarea"><textarea></textarea></div>-->
                 <!--<button class="btn-discus"></button>-->
@@ -501,24 +393,6 @@
                         </tr>
                     </table>
                     <script type="text/javascript">
-//                        			window.onload = function(){
-//
-//                        				var object = document.getElementById('box1')
-//                        				function loadImg (data){
-//                        					var i = 0;
-//                        					setInterval(function(){
-//                        						i++
-//                        						if(i>data){
-//                        							i=data
-//                        						}
-//                        						var imgLeft = -(i*44+(i*10))+'px'
-//                        						object.style.backgroundPosition = imgLeft+'\t'+'0px'
-//                        						object.innerHTML = i+'%';
-//                        					},50)
-//
-//                        				}
-//                        				loadImg(88)
-//                        			}
                         window.onload = function () {
 
                             var obj = document.getElementsByClassName('box')
@@ -582,33 +456,74 @@
                                 <div class="pop_up_xx-p"><img src="images/chacha3.png" width="40" height="40" alt=""/>
                                 </div>
                                 <div class="pop_up2-p" id="ban_pic2-p">
-                                    <div class="prev1-p" id="prev2-p"><img src="images/index_tab_l.png" width="28"
-                                                                           height="51" alt=""/></div>
-                                    <div class="next1-p" id="next2-p"><img src="images/index_tab_r.png" width="28"
-                                                                           height="51" alt=""/></div>
-                                    <ul>
-                                        <li><img src="images/b1.jpg"/></a></li>
-                                        <li><img src="images/b2.jpg"/></a></li>
-                                        <li><img src="images/b3.jpg"/></a></li>
-                                        <li><img src="images/b4.jpg"/></a></li>
-                                        <li><img src="images/b5.jpg"/></a></li>
-                                        <li><img src="images/b1.jpg"/></a></li>
-                                        <li><img src="images/b2.jpg"/></a></li>
-                                        <li><img src="images/b3.jpg"/></a></li>
-                                    </ul>
+                                    <div class="prev1-p" id="prev2-p">
+                                        <img src="images/index_tab_l.png" width="28" height="51" alt=""/>
+                                    </div>
+                                    <div class="next1-p" id="next2-p">
+                                        <img src="images/index_tab_r.png" width="28" height="51" alt=""/>
+                                    </div>
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="images/b1.jpg"/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/b2.jpg"/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/b3.jpg"/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/b4.jpg"/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/b5.jpg"/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/b1.jpg"/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/b2.jpg"/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="images/b3.jpg"/>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <script type="text/javascript">
-                                jq('#demo1-p').banqh({
-                                    box: "#demo1-p",//总框架
-                                    pic: "#ban_num1-p",//大图框架
-                                    pop_prev: "#prev2-p",//弹出框左箭头
-                                    pop_next: "#next2-p",//弹出框右箭头
-                                    pop_div: "#demo2-p",//弹出框框架
-                                    pop_pic: "#ban_pic2-p",//弹出框图片框架
-                                    pop_xx: ".pop_up_xx-p",//关闭弹出框按钮
-                                    pop_delayTime: 400,//弹出框切换一张图片时间
-                                    pop_up: true,//大图是否有弹出框
+                                $(function(){
+                                    //关闭
+                                    $('.pop_up_xx-p').click(function(){
+                                        $(this).parent().hide();
+                                        $('.ban-p li').removeClass('active');
+                                    });
+                                    var _index;
+                                    var mySwiper;
+
+                                    $('.ban-p li').click(function(e){
+                                        e.preventDefault();
+                                        $(this).addClass('active').siblings().removeClass('active');
+                                        _index = $(this).index();
+                                        console.log(_index)
+                                        $('.pop_up-p').show()
+                                        mySwiper = new Swiper ('.swiper-container', {
+                                            initialSlide : _index,
+                                            onSlideChangeEnd: function(swiper){
+                                              var _index = swiper.activeIndex;
+                                              $('.ban-p li').eq(_index).addClass('active').siblings().removeClass('active');
+                                            }
+                                        }) 
+                                    })
+
+                                    //按钮
+                                    $('.prev1-p').click(function(){
+                                        mySwiper.swipePrev();
+                                    });
+                                    $('.next1-p').click(function(){
+                                        mySwiper.swipeNext();
+                                    });
                                 })
                             </script>
 
@@ -661,6 +576,7 @@
                     </span>
                 </ul>
             </div>
+            </div>
         </div>
     </div>
 
@@ -681,13 +597,14 @@
         </div>
         <div class="product-each0">
             <img src="img/smallpic.png"/>
-            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
-                    src="img/small/reserve.png"/>预定</a></div>
+            <div class="product-title">莱悦9号 
+                <span>Sea-stella63</span>
+            </div>
+            <div class="product-price">
+                <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png"/>预定</a></div>
         </div>
     </div>
 </div>
-
 <div class="clear"></div>
 <div class="bottom-img">
     <div class="bottom2">
@@ -782,93 +699,81 @@
     </div>
 </div>
 </body>
-<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
-<!--<script src="js/jquery.raty.js"></script>-->
-<script type="text/javascript" src="js/query.js"></script>
-<script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
+<!-- <script src="basic/swiper/js/idangerous.swiper.min.js"></script> -->
+<script src="js/jquery.raty.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.tabso_yeso.js"></script> -->
 
 <script type="text/javascript" language="javascript">
-    /*星星打分*/
     $(document).ready(function () {
-        $('#diyas li').click(function(){
-            $('#diyas li').removeClass('current');
-            $(this).addClass('current');
-            var cr = $(this).find('a').attr('class');
-            $('#yacht-nav1').removeClass('block').addClass('none');
-            $('#yacht-nav2').removeClass('block').addClass('none');
-            $('#yacht-nav3').removeClass('block').addClass('none');
-            $('#yacht-nav4').removeClass('block').addClass('none');
-            $('#yacht-nav5').removeClass('block').addClass('none');
-            $('#'+cr).removeClass('none').addClass('block');
+        /*星星打分*/
+        $('.star').raty({ score: 3 });
+        // 日期控件
+        $("#date2").datetimepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            todayBtn: true,
+            minView: "month", //设置只显示到月份
+            initialDate: new Date() //初始化当前日期
+        }).on("changeDate",function(){
+            var _date = $(this).context.value;
+            var myday = whichDay(_date);
+            $(this).next().text(myday);
+           
         });
-//        $('#star').raty({
-//            halfShow: false,
-//            score: 4.9,
-//            readOnly: true
-//        });
-//        $('#star2').raty({
-//            halfShow: false,
-//            score: 4.9,
-//            readOnly: true
-//        });
-//        $('#star3').raty({
-//            halfShow: false,
-//            score: 4.9,
-//            readOnly: true
-//        });
-//        $('#star4').raty({
-//            halfShow: false,
-//            score: 4.9,
-//            readOnly: true
-//        });
-        $('.contact-info-wrapper .contact-info-detail').click(function () {
-            if (!$(this).hasClass('add')) {
-                $('.contact-info-wrapper .contact-info-detail').removeClass('active');
+
+        $("#dateym").datetimepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            todayBtn: true,
+            minView: 2, //设置只显示到月份
+            initialDate: new Date() //初始化当前日期
+        }).on("changeDate",function(){
+            console.log($(this).context.value = 'dddd')
+        });
+
+        $("#datehs").datetimepicker({
+            format: 'hh:ii',
+            autoclose: true,
+            todayBtn: true,
+            minView: 0, //设置只显示到月份
+            initialDate: new Date() //初始化当前日期
+        }).on("changeDate",function(){
+           
+        });
+        // 板块切换
+        $('#diyas li').click(function(){
+            var _index = $(this).index()+1;
+            console.log(_index)
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.tab_all #yacht-nav'+_index).show().siblings().hide();
+        });
+
+        //勾选协议
+        $('.chk').click(function(){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+            }else{
                 $(this).addClass('active');
             }
         });
+
+        //放大轮播图
+          var showproduct = {
+              "boxid":"showbox",
+              "sumid":"showsum",
+              "boxw":680,//宽度,该版本中请把宽高填写成一样
+              "boxh":480,//高度,该版本中请把宽高填写成一样
+              "sumw":85,//列表每个宽度,该版本中请把宽高填写成一样
+              "sumh":85,//列表每个高度,该版本中请把宽高填写成一样
+              "sumi":17,//列表间隔
+              "sums":6,//列表显示个数
+              "sumsel":"sel",
+              "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+              "lastid":"showlast",
+              "nextid":"shownext"
+              };//参数定义    
+         $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
     });
-
-
-    //图片轮播
-    $(document).ready(function () {
-        var mySwiper = new Swiper('.featured', {
-            autoplay: 3000,
-            grabCursor: true,
-            paginationClickable: true,
-            onSlideChangeEnd: function (swiper) {
-                var now = swiper.activeIndex;
-                var all = $('.featured .swiper-slide').length;
-                if (now == 0) {
-                    $('.arrow-left').addClass('disabled');
-                    $('.arrow-right').removeClass('disabled');
-                } else if (all == now + 1) {
-                    $('.arrow-left').removeClass('disabled');
-                    $('.arrow-right').addClass('disabled');
-                } else {
-                    $('.arrow-left').removeClass('disabled');
-                    $('.arrow-right').removeClass('disabled');
-                }
-
-            }
-        });
-        $('.arrow-left').on('click', function (e) {
-            e.preventDefault();
-            mySwiper.swipePrev();
-        });
-        $('.arrow-right').on('click', function (e) {
-            e.preventDefault();
-            mySwiper.swipeNext();
-        });
-        $('.banners-container').each(function () {
-            $(this).swiper({
-                slidesPerView: 'auto',
-                offsetPxBefore: 0,
-                offsetPxAfter: 30
-            })
-        })
-    })
-
     jQuery('[placeholder]').focus(function () {
         var input = jQuery(this);
         if (input.val() == input.attr('placeholder')) {
@@ -889,41 +794,19 @@
             }
         })
     });
-
-
-</script>
-<script type="text/javascript">
-    tab("wraps","diyas")
-    function tab(wrap,navul,eve){
-//tab效果封装，目前只有两种变换方式，一种为点击事件click（也是默认事件），另外一种为鼠标移过事件mouseover
-        var divs=document.getElementById(wrap).getElementsByTagName("div");
-        var lis=document.getElementById(navul).getElementsByTagName("li");
-        for(var i=0;i<lis.length;i++){
-            lis[i].indx=i;
-            if(eve=="click" || eve==null){
-                lis[i].onclick=function(){
-                    for(i=0;i<lis.length;i++){
-
-                        lis[i].className="";
-                        divs[i].className="none"
-
-                        this.className="current";
-                        divs[this.indx].className="block";
-                    }
-                }
-            }else if(eve=="mouseover"){
-                lis[i].onmouseover=function(){
-                    for(i=0;i<lis.length;i++){
-                        lis[i].className="";
-                        divs[i].className="none";
-
-                        this.className="current";
-                        divs[this.indx].className="block";
-                    }
-                }
-            }
-        }
+    var whichDay = function (date){
+        var oneday =
+        {
+            date : date,
+            day : [
+                '周日', '周一', '周二', '周三', '周四', '周五', '周六'
+        ]
+        };
+        var t = oneday.date.replace(/-/g,'/');
+        var specialDay = new Date(t).getDay();
+        var result =oneday.day[specialDay];
+        return result;
     }
 </script>
-
+<script type="text/javascript" src="js/script.js"></script>
 </html>

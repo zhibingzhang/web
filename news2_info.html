@@ -9,24 +9,33 @@
     <link href="css/index.css" rel="stylesheet"/>
     <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/main_new.css" />
-    <link type="text/css" href="css/paging.css" rel="stylesheet"/>
     <script src="js/jquery-1.9.min.js"></script>
-    <script src="js/divselect.js"></script>
     <script src="js/mootools-1.3.2.js"></script>
+    <!--[if lte IE 8]>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.js" ></script>
+    <script src="js/divselect.js"></script>
 </head>
 <body>
-    <div class="header">
+    <header>
         <div class="container">
             <div class="overflow-auto">
                 <div class="left">
                     欢迎进入上海游艇O2O平台！
                 </div>
                 <div class="right">
-                    <a class="login-btn" href="login.html">登录</a><a class="register-btn" href="regist.html">注册</a>
+                    <a class="login-btn" href="login.html">登录</a>
+                    <a class="register-btn" href="regist.html">注册</a>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <div class="header-back">
         <div class="index-tab index-tab2">
             <div class="container">
@@ -36,7 +45,7 @@
                 <div class="index-tab-list">
                     <div class="overflow-auto">
                         <a href="aboutus0517.html">关于我们</a>
-                        <a href="news.html"  class="active" >媒体中心</a>
+                        <a href="news.html" class="active">媒体中心</a>
                         <a href="train.html">驾驶培训</a>
                         <a href="theme_type.html">主题租赁</a>
                         <a href="yacht_list.html">游艇租赁</a>
@@ -66,105 +75,66 @@
         </div>
     </div>
     <div class="content public_main">
-        <p class="nav_list">当前位置：首页 > 媒体中心 > <span>行业新闻</span></p>
-        <ul class="nav_bar">
-            <li>
-                <a href="news3.html">政策公告</a>
-            </li>
-            <li class="active">
-                <a href="news.html">行业新闻</a>
-            </li>
-            <li>
-                <a href="news2.html">游记分享</a>
-            </li>
-        </ul>
-        <ul class="txt_item">
-            <li>
+        <p class="nav_list">当前位置：首页 > 媒体中心 > <span>游记分享</span></p>
+        <div class="share_item_info">
+            <div class="user_info">
                 <div>
                     <p>
-                        <span>AUG</span>
-                        <span>24</span>
+                       <img src="img/user_head.png" /> 
                     </p>
-                    <p>2016</p>
-                </div>
-                <div>
-                    <h4 class="tit_active">讲好美丽的故事，汇聚各路神仙</h4>
-                    <p>上海靠海却无知名,旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O。旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O...</p>
-                    <a href="news_info.html">查看更多></a>
-                </div>
-            </li>
-            <li>
-                <div>
+                    <p>密思杨小妞</p>
                     <p>
-                        <span>AUG</span>
-                        <span>24</span>
+                        <img src="img/eye.png" />
+                        <span>浏览人数：1156</span>
                     </p>
-                    <p>2016</p>
-                </div>
-                <div>
-                    <h4 class="tit_active">讲好美丽的故事，汇聚各路神仙</h4>
-                    <p>上海靠海却无知名,旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O。旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O...</p>
-                    <a href="news_info.html">查看更多></a>
-                </div>
-            </li>
-            <li>
-                <div>
                     <p>
-                        <span>AUG</span>
-                        <span>24</span>
+                        <img src="img/like.png" />
+                        <span>点赞人数：1156</span>
                     </p>
-                    <p>2016</p>
-                </div>
-                <div>
-                    <h4 class="tit_active">讲好美丽的故事，汇聚各路神仙</h4>
-                    <p>上海靠海却无知名,旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O。旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O...</p>
-                    <a href="news_info.html">查看更多></a>
-                </div>
-            </li>
-            <li>
-                <div>
                     <p>
-                        <span>AUG</span>
-                        <span>24</span>
+                        <img src="img/Clock.png" />
+                        <span>发表时间：1156</span>
                     </p>
-                    <p>2016</p>
                 </div>
-                <div>
-                    <h4 class="tit_active">讲好美丽的故事，汇聚各路神仙</h4>
-                    <p>上海靠海却无知名,旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O。旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O...</p>
-                    <a href="news_info.html">查看更多></a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <p>
-                        <span>AUG</span>
-                        <span>24</span>
-                    </p>
-                    <p>2016</p>
-                </div>
-                <div>
-                    <h4 class="tit_active">讲好美丽的故事，汇聚各路神仙</h4>
-                    <p>上海靠海却无知名,旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O。旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O...</p>
-                    <a href="news_info.html">查看更多></a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <p>
-                        <span>AUG</span>
-                        <span>24</span>
-                    </p>
-                    <p>2016</p>
-                </div>
-                <div>
-                    <h4 class="tit_active">讲好美丽的故事，汇聚各路神仙</h4>
-                    <p>上海靠海却无知名,旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O。旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O...</p>
-                    <a href="news_info.html">查看更多></a>
-                </div>
-            </li>
-        </ul>
-        <div id="pageTool" class="pageWrapper"></div>
+                <p class="fx_box">
+                    <img src="img/head_fx.png" />
+                    <span>分享：</span>
+                    <a href="#">
+                        <img src="img/fx_ioc.png" />
+                    </a>
+                    <a href="#">
+                        <img src="img/fx_ioc.png" />
+                    </a>
+                    <a href="#">
+                        <img src="img/fx_ioc.png" />
+                    </a>
+                    <a href="#">
+                        <img src="img/fx_ioc.png" />
+                    </a>
+                </p>   
+            </div>
+            <div class="share_con">
+                <h2>大上海的魅力</h2>
+                <h4>关于行程</h4>
+                <ul>
+                    <li>D1-17:00 海湾码头</li>
+                    <li>D1-17:00 海湾码头</li>
+                    <li>D1-17:00 海湾码头</li>
+                    <li>D1-17:00 海湾码头</li>
+                    <li>D1-17:00 海湾码头</li>
+                    <li>D1-17:00 海湾码头</li>
+                </ul>
+                <h4>关于交通</h4>
+                <p class="txt1">上海靠海却无知名,旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O。旨在整合全国游艇及相关行业资源、开拓包括商业旅游、金融、地产、健康等各行业领域的众多客户市场，发展俱乐部会员，开发百艇汇O2O
+                </p>
+                <p class="txt_img">
+                    <img src="img/txt_img1.png" />
+                </p>
+                <a href="#">
+                    <span>150</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="bottom-img">
@@ -256,14 +226,10 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="js/query.js"></script>
-<script type="text/javascript" src="js/paging.js"></script>
+<script src="basic/swiper/js/idangerous.swiper.min.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
         
-        $('#pageTool').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-    });
+    })
 </script>
 </html>

@@ -30,7 +30,8 @@
                 欢迎进入上海游艇O2O平台！
             </div>
             <div class="right">
-                <a class="login-btn">登录</a><a class="register-btn">注册</a>
+                <a class="login-btn" href="login.html">登录</a>
+                <a class="register-btn" href="regist.html">注册</a>
             </div>
         </div>
     </div>
@@ -95,7 +96,7 @@
                     <div class="order-s-detail2">
                         <div class="order-s-detail-title2"><span>游艇驾驶员</span></div>
                         <div class="rate-num-wrapper">
-                            <div id="star" class="star"></div>
+                            <div class="star"></div>
                             <span class="rate-num">9.8分<span>（969评论）</span></span>
                         </div>
                         <div class="train-detail">
@@ -135,9 +136,9 @@
                                 <p class="train-info-txt">
                                     所需材料：<br/>
                                     <span class="txtstyle1">
-                        身份证及复印件2份，近期2寸白底彩色证件照4张及电子版照片（照片格式：不可佩戴眼镜，白底，jpg格式，高宽比
-                    4:3，大小不得小于354X472像素）
-                    </span>
+                                    身份证及复印件2份，近期2寸白底彩色证件照4张及电子版照片（照片格式：不可佩戴眼镜，白底，jpg格式，高宽比
+                                    4:3，大小不得小于354X472像素）
+                                    </span>
                                 </p>
                                 <div class="train-info-div ml16">
                                     <p class="title">1、海事局信息预录</p>
@@ -201,7 +202,8 @@
                             </div>
                             <p class="train-info-title">五、游艇驾照类型及使用范围：</p>
                             <div>
-                                <p class="train-info-txt">考试合格者获得由中华人民共和国海事局颁发、全国通用的海上游艇驾驶证（黄浦江、长江流域同样适用）。</p>
+                                <p class="train-info-txt">考试合格者获得由中华人民共和国海事局颁发、全国通用的海上游艇驾驶证（黄浦江、长江流域同样适用）。
+                                </p>
                             </div>
                             <p class="train-info-title">六、培训时间：</p>
                             <div>
@@ -267,7 +269,209 @@
                         </div>
                     </div>
                     <div class="sublist" >2</div>
-                    <div class="sublist" >3</div>
+                    <div class="sublist" id="pl">
+                        <div class="yacht-detail-discus">
+                <!--<p class="title-yacht">用户评论</p>-->
+                <!--<div class="discus-textarea"><textarea></textarea></div>-->
+                <!--<button class="btn-discus"></button>-->
+                <div class="yacht-review">
+                    <p>用户评论</p>
+                    <div class="percent-col">
+                        <p class="satisfaction"><span>98%</span>的人认为此邮轮令人满意</p>
+                        <ul class="example">
+                            <li id="progress1">
+                                <span class="ptext">满意</span>
+                                <div class="pbar">
+                                    <div style="width: 98%;background: #ffcc00;height: 8px;float: left;">
+                                    </div>
+                                </div>
+                                <div class="percent">98%</div>
+                            </li>
+                            <li id="progress2">
+                                <span class="ptext">一般</span>
+                                <div class="pbar">
+                                    <div style="width: 5.9%;background: #ffcc00;height: 8px;float: left;">
+                                    </div>
+                                </div>
+                                <div class="percent">5.9%</div>
+                            </li>
+                            <li id="progress3">
+                                <span class="ptext">不满意</span>
+                                <div class="pbar">
+                                    <div style="width: 1.3%;background: #ffcc00;height: 8px;float: left;">
+                                    </div>
+                                </div>
+                                <div class="percent">1.3%</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <table border="0" cellspacing="0" cellpadding="0" class="percent-circle">
+                        <tr>
+                            <th>
+                                <div class="box" id="box1"></div>
+                            </th>
+                            <th>
+                                <div class="box" id="box2"></div>
+                            </th>
+                            <th>
+                                <div class="box" id="box3"></div>
+                            </th>
+                            <th>
+                                <div class="box" id="box4"></div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>游艇品质</td>
+                            <td>艇上服务</td>
+                            <td>附加套餐</td>
+                            <td>港口环境</td>
+                        </tr>
+                    </table>
+                    <script type="text/javascript">
+                        window.onload = function () {
+
+                            var obj = document.getElementsByClassName('box')
+
+                            function loadImg(data, k) {
+                                var i = 0;
+                                setInterval(function () {
+                                    object = obj[k];
+                                    i++
+                                    if (i > data) {
+                                        i = data
+                                    }
+                                    var imgLeft = -(i * 44 + (i * 10)) + 'px'
+                                    object.style.backgroundPosition = imgLeft + '\t' + '0px'
+                                    object.innerHTML = i + '%';
+
+
+                                }, 50)
+
+                            }
+
+                            //第一个参数代表百分比,第二个参数代表评论项目的次序
+                            loadImg(88, 0)
+                            loadImg(28, 1)
+                            loadImg(68, 2)
+                            loadImg(78, 3)
+                        }
+                    </script>
+                </div>
+                <p class="all-discus-title">全部评论（<span>3</span>）</p>
+                <ul class="discus-list">
+                    <span class="discus-li">
+                        <a href="#" class="discus-user">
+                            <img src="img/avatars/avatarhover.png" class="avatar-h"/>
+                            <img src="img/avatars/avatar1.png"/>
+                        </a>
+
+                        <div class="discus-s">
+                            <div id="star2" class="star"></div>
+                            <span class="rate-num"><span>5分</span></span>
+                            <p class="discus-p">
+                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+
+                            <div class="ban-p" id="demo1-p">
+                                <div class="num-p" id="ban_num1-p">
+                                    <ul>
+                                        <li><img src="images/b1.jpg"/></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                        <li><img src="images/b4.jpg"/></a></li>
+                                        <li><img src="images/b5.jpg"/></a></li>
+                                        <li><img src="images/b1.jpg"/></a></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="pop_up-p" id="demo2-p">
+                                <div class="pop_up_xx-p"><img src="images/chacha3.png" width="40" height="40" alt=""/>
+                                </div>
+                                <div class="pop_up2-p" id="ban_pic2-p">
+                                    <div class="prev1-p" id="prev2-p"><img src="images/index_tab_l.png" width="28"
+                                                                           height="51" alt=""/></div>
+                                    <div class="next1-p" id="next2-p"><img src="images/index_tab_r.png" width="28"
+                                                                           height="51" alt=""/></div>
+                                    <ul>
+                                        <li><img src="images/b1.jpg"/></a></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                        <li><img src="images/b4.jpg"/></a></li>
+                                        <li><img src="images/b5.jpg"/></a></li>
+                                        <li><img src="images/b1.jpg"/></a></li>
+                                        <li><img src="images/b2.jpg"/></a></li>
+                                        <li><img src="images/b3.jpg"/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                jq('#demo1-p').banqh({
+                                    box: "#demo1-p",//总框架
+                                    pic: "#ban_num1-p",//大图框架
+                                    pop_prev: "#prev2-p",//弹出框左箭头
+                                    pop_next: "#next2-p",//弹出框右箭头
+                                    pop_div: "#demo2-p",//弹出框框架
+                                    pop_pic: "#ban_pic2-p",//弹出框图片框架
+                                    pop_xx: ".pop_up_xx-p",//关闭弹出框按钮
+                                    pop_delayTime: 400,//弹出框切换一张图片时间
+                                    pop_up: true,//大图是否有弹出框
+                                })
+                            </script>
+
+                            <p class="discus-handle">
+                                <span class="time">2017/09/09 11:00</span>
+                                <span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
+                            </p>
+                        </div>
+                    </span>
+                    <span class="discus-li">
+                        <a href="#" class="discus-user">
+                            <img src="img/avatars/avatarhover.png" class="avatar-h"/>
+                            <img src="img/avatars/avatar1.png"/>
+                        </a>
+                        <div class="discus-s">
+                            <div id="star3" class="star"></div>
+                            <span class="rate-num"><span>5分</span></span>
+                            <p class="discus-p">
+                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+                            <p class="discus-handle">
+                                <span class="time">2017/09/09 11:00</span>
+                                <span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
+                            </p>
+                            <div class="triangle"></div>
+                            <div class="discus-reply">
+                                <p class="discus-reply-p">非常感谢您的支持！</p>
+                                <p class="discus-handle">
+                                    <span class="time">2017/09/09 11:00</span>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="discus-li" style="border: none;">
+                        <a href="#" class="discus-user">
+                            <img src="img/avatars/avatarhover.png" class="avatar-h"/>
+                            <img src="img/avatars/avatar1.png"/>
+                        </a>
+                        <div class="discus-s">
+                            <div id="star4" class="star"></div>
+                            <span class="rate-num"><span>5分</span></span>
+                            <p class="discus-p">
+                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
+                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+                            <p class="discus-handle">
+                                <span class="time">2017/09/09 11:00</span>
+                                <span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
+                            </p>
+                        </div>
+                    </span>
+                </ul>
+            </div>
+                    </div>
                 </div>
             </div>
             <div class="train-detail-w400">
@@ -420,11 +624,7 @@
 <script type="text/javascript" src="js/jquery.tabso_yeso.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
-        $('#star').raty({
-            halfShow: false,
-            score: 4.9,
-            readOnly: true
-        });
+        $('.star').raty();
         $('.contact-info-wrapper .contact-info-detail').click(function () {
             if (!$(this).hasClass('add')) {
                 $('.contact-info-wrapper .contact-info-detail').removeClass('active');

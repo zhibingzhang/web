@@ -35,6 +35,7 @@
     font-size: 16px;
     color: #999999;
     font-weight: normal;
+    text-align: center;
 }
 
 .tbstyle tr td {
@@ -58,7 +59,10 @@
     font-size: 14px;
     color: #333333;
 }
-
+.yacht-detail-txt span ,.yacht-detail-txt a{
+    display: inline-block;
+    vertical-align: middle;
+}
 .yacht-detail-txt input {
     margin-right: 5px;
 }
@@ -106,7 +110,7 @@
 /*轮播图 start*/
 
 /* tFocus 大的幻灯 */
-#tFocus{width:683px;height:580px;overflow:hidden;float: right;}
+#tFocus{width:683px;height:580px;float: right;}
 .ban{background: #f1f4fa; width:683px; height:580px; position:relative; overflow:hidden;}
 .ban2{width:683px; height:480px; position:relative; overflow:hidden;}
 .ban2 ul{ position:absolute; left:0; top:0;}
@@ -140,7 +144,7 @@
 .ban-p{width: 1125px;margin-bottom:20px;overflow: hidden;float: left;}
 .num-p{ height:70px;overflow:hidden; width:100%; position:relative;float:left;}
 .num-p ul{ float: left;height: 70px;  overflow: hidden;}
-.num-p ul li{float: left;  width: 60px;  height: 60px;  padding: 5px;  background: #ffffff;}
+.num-p ul li{float: left;  width: 60px;  height: 60px;  padding: 4px;  background: #ffffff; cursor: pointer;}
 .num-p ul li img{float: left; display: block;  width: 60px;  height: 60px; }
 .prev_btn1-p{display: none; width:16px; text-align:center; height:18px; margin-top:40px; margin-right:20px; cursor:pointer; float:left;}
 .next_btn1-p{ display: none; width:16px; text-align:center; height:18px; margin-top:40px;cursor:pointer;float:right;}
@@ -859,7 +863,8 @@
 
 .all-discus-title {
     margin-top: 20px;
-    padding-left: 16px;
+    margin-bottom: 20px;
+    // padding-left: 16px;
     font-size: 16px;
 }
 
@@ -1609,6 +1614,8 @@
      color: #000000;
      border: none;
      top: 30px;
+     outline: none;
+     cursor: pointer;
  }
 .train-handle {
     position: absolute;
@@ -1644,4 +1651,17 @@
 }
 .contact-info{
     position: initial;
+}
+#pl .percent-circle{
+    width: 273px;
+}
+#pl .discus-s{
+    width: 708px;
+}
+#pl .all-discus-title{
+    margin-bottom: 20px;
+}
+
+.num-p ul li.active{
+    border: 1px solid #0873b6;
 }

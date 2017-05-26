@@ -1,4 +1,4 @@
-
+(function(){
 var jq = $.noConflict();
 //ban_qh
 jq.fn.banqh = function(can){
@@ -180,3 +180,4 @@ if(can.pop_up==true){
 		};					
 				
 }
+})()

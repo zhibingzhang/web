@@ -32,7 +32,8 @@
 					欢迎进入上海游艇O2O平台！
 				</div>
 				<div class="right">
-					<a class="login-btn">登录</a><a class="register-btn">注册</a>
+					<a class="login-btn" href="login.html">登录</a>
+					<a class="register-btn" href="regist.html">注册</a>
 				</div>
 			</div>
 		</div>
@@ -286,7 +287,6 @@
 					</div>
 					<div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
 				</div>
-
 			</div>
 		</div>
 		</div>
@@ -299,26 +299,27 @@
 
 	<script type="text/javascript" language="javascript">
 		$(document).ready(function(){
-			$('#star').raty({
-				halfShow: false,
-				score: 4.9,
-				readOnly: true
-			});
-			$('#star2').raty({
-				halfShow: false,
-				score: 4.9,
-				readOnly: true
-			});
-			$('#star3').raty({
-				halfShow: false,
-				score: 4.9,
-				readOnly: true
-			});
-			$('#star4').raty({
-				halfShow: false,
-				score: 4.9,
-				readOnly: true
-			});
+			$('.star').raty();
+			// $('#star').raty({
+			// 	halfShow: false,
+			// 	score: 4.9,
+			// 	readOnly: true
+			// });
+			// $('#star2').raty({
+			// 	halfShow: false,
+			// 	score: 4.9,
+			// 	readOnly: true
+			// });
+			// $('#star3').raty({
+			// 	halfShow: false,
+			// 	score: 4.9,
+			// 	readOnly: true
+			// });
+			// $('#star4').raty({
+			// 	halfShow: false,
+			// 	score: 4.9,
+			// 	readOnly: true
+			// });
 			$('.contact-info-wrapper .contact-info-detail').click(function(){
 				if(!$(this).hasClass('add')){
 					$('.contact-info-wrapper .contact-info-detail').removeClass('active');

@@ -39,7 +39,7 @@ body, input, button, textarea
     font-size:12px;
 }
 a{ text-decoration:none;outline:none;}
-a:hover{ cursor:pointer;}
+a:hover{ cursor:pointer; text-decoration: none;}
 th, td{vertical-align:top;}
 .text-center{
     text-align: center;
@@ -162,3 +162,23 @@ body{
 .BMap_noprint.anchorTR{
     display: none!important;
 }
+.chk{width:12px;height:12px;display:inline-block;vertical-align:middle;background:transparent url(../img/personal/checkbox1.png)}.chk.active{background-image:url(../img/personal/checkbox2.png)}
+
+.fd{
+    width: 480px;
+}
+.fd,.fd p,.fd a,.fd span{
+    padding: 0;
+    margin: 0;
+    position: inherit;
+}
+#showbox { background:#eee;}
+#showbox span { background:url(../images/whitebg.png) repeat;}
+#showsum {margin-top:10px;margin-left: 18px;}
+#showsum span { border:1px solid #ddd;}
+#showsum span.sel { border:1px solid #f60;}
+
+.showpage { width:680px; position:relative;}
+.showpage a { display:block; width:15px; border:1px solid #ddd; height:85px; line-height:85px; background:#eee; text-align:center; font-size:18px; position:absolute; left:0; top:-87px; text-decoration:none; color:#999;}
+.showpage a#shownext { left:auto; right:0;}
+.showpage a:hover { background:#ccc; color:#777;}

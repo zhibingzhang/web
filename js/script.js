@@ -52,13 +52,13 @@ $(document).ready(function(){
     }
 
     // default mode
-    $('#progress1').anim_progressbar();
+    // $('#progress1').anim_progressbar();
 
     // from second #5 till 15
     var iNow = new Date().setTime(new Date().getTime() + 5 * 1000); // now plus 5 secs
     var iEnd = new Date().setTime(new Date().getTime() + 15 * 1000); // now plus 15 secs
-    $('#progress2').anim_progressbar({start: iNow, finish: iEnd, interval: 100});
+    // $('#progress2').anim_progressbar({start: iNow, finish: iEnd, interval: 100});
 
     // we will just set interval of updating to 1 sec
-    $('#progress3').anim_progressbar({interval: 1000});
+    // $('#progress3').anim_progressbar({interval: 1000});
 });
