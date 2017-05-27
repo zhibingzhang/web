@@ -165,7 +165,7 @@ body{
 .chk{width:12px;height:12px;display:inline-block;vertical-align:middle;background:transparent url(../img/personal/checkbox1.png)}.chk.active{background-image:url(../img/personal/checkbox2.png)}
 
 .fd{
-    width: 480px;
+    width: 583px;
 }
 .fd,.fd p,.fd a,.fd span{
     padding: 0;
@@ -174,11 +174,11 @@ body{
 }
 #showbox { background:#eee;}
 #showbox span { background:url(../images/whitebg.png) repeat;}
-#showsum {margin-top:10px;margin-left: 18px;}
+#showsum {margin-top:10px;margin-left: 23px;}
 #showsum span { border:1px solid #ddd;}
 #showsum span.sel { border:1px solid #428bca;}
 
-.showpage { width:680px; position:relative;}
+.showpage { width:583px; position:relative;}
 .showpage a { display:block; width:15px; border:1px solid #ddd; height:85px; line-height:85px; background:#eee; text-align:center; font-size:18px; position:absolute; left:0; top:-87px; text-decoration:none; color:#999;}
 .showpage a#shownext { left:auto; right:0;}
 .showpage a:hover { background:#ccc; color:#777;}
