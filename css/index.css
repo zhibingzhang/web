@@ -1465,6 +1465,7 @@ header {
 
 .order-s-detail-title span {
     font-size: 20px;
+    margin-right: 20px;
 }
 
 .order-s-detail-title2 {
@@ -1534,7 +1535,7 @@ header {
 
 .contact-info-detail {
     float: left;
-    width: 209px;
+    width: 216px;
     background: #f8fafd;
     padding: 32px 33px;
     line-height: 24px;
@@ -1543,6 +1544,7 @@ header {
     border: 1px solid #e6e6e6;
     margin-left: 10px;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .contact-info-detail.add {
