@@ -117,7 +117,7 @@
 .ban2 ul li{ width:683px; height:480px;}
 .ban2 ul li a img{ width:683px; height:480px;}
 .prev{ float:left; cursor:pointer;}
-.num{ height:106px;overflow:hidden; width:683px; position:relative;float:left;}
+.num{overflow:hidden; width:auto; position:relative;float:left;}
 .min_pic{ padding-top:8px; width:683px;}
 .num ul{ position:absolute; left:0; top:0;}
 .num ul li{width:129px; height:92px; margin-right:8px; padding:0px;}
@@ -1664,4 +1664,7 @@
 
 .num-p ul li.active{
     border: 1px solid #0873b6;
+}
+.num-w{
+    width: auto;
 }

@@ -738,6 +738,7 @@
                 var uname = $('.add_box .group input[name="uname"]').val();
                 var phone = $('.add_box .group input[name="Phone"]').val();
                 var Id = $('.add_box .group input[name="ID"]').val();
+                    Id = Id.substring(0,3)+'************'+Id.substring(Id.length-3);
                 var html = '<div class="contact-info-detail"><p>联系人：'+uname+'</p><p>联系方式：'+phone+'</p><p>身份证号：'+Id+'</p><img src="img/small/active.png" class="active-img"/></div>';
                 $('.contact-info-detail_box').append(html);
 
@@ -827,11 +828,9 @@
         });
         //编辑
         $(document).on('click','.fp_bj',function(){
-            console.log(11)
             $(this).parent().parent().children().children('input').removeAttr('disabled');
         });
         $(document).on('click','.fp_bjz',function(){
-            console.log(11)
             $('.fp_group input').removeAttr('disabled');
         });
         
@@ -933,8 +932,9 @@ function error(obj){
         var province = $('#province').val();
         var city = $('#city').val();
         var district = $('#district').val();
-        
-
+        obg_val.province = province;
+        obg_val.city = city;
+        obg_val.district = district;
     }
     
     if(!error.length){
@@ -957,14 +957,14 @@ function error(obj){
 }
 function upage(up_page,obg_val,fp_type){
     var html;
-    console.log(obg_val)
     if(fp_type === '普通发票'){
         html='<div class="active"><p><input type="text" value="'+obg_val.tit+'"disabled></p><p class="type">普通发票</p><p><a href="javascript:;" class="fp_bj">编辑</a> | <a href="javascript:;" class="delete">删除</a></p><img src="img/jiao2.png" /></div>';
     }else if(fp_type === '增值税发票'){
-        html = '<div class="fp_group"><p><span class="tit">上海自由贸易有限公司</span><span><a href="javascript:;" class="fp_bjz">编辑</a><i>|</i><a href="javascript:;" class="del_fpzz">删除</a></span></p><h3></h3><ul><li><span>单位名称：</span><input type="text" disabled value="上海自由贸易有限公司"/></li><li><span>纳税人识别码：</span><input type="text" disabled value="15625485458"/></li><li><span>注册地址：</span><input type="text" disabled value="上海市徐汇区"/></li><li><span>注册电话：</span><input type="text" disabled value="徐汇地铁1出口"/></li><li><span>开户银行：</span><input type="text" disabled value="徐汇地铁1出口"/></li><li><span>银行账户：</span><input type="text" disabled value="徐汇地铁1出口"/></li></ul><h3>售票地址</h3><ul><li><span>收票人姓名：</span></li><li><span>收票人手机号：</span><input type="text" disabled value="15625485458"/></li><li><span>收票人省份：</span><input type="text" disabled value="上海市徐汇区"/></li><li><span>收票人地址：</span><input type="text" disabled value="徐汇地铁1出口"/></li></ul></div>';
+        html = '<div class="fp_group"><p><span class="tit">上海自由贸易有限公司</span><span><a href="javascript:;" class="fp_bjz">编辑</a><i>|</i><a href="javascript:;" class="del_fpzz">删除</a></span></p><h3></h3><ul><li><span>单位名称：</span><input type="text" disabled value="'+obg_val.dwmc+'"/></li><li><span>纳税人识别码：</span><input type="text" disabled value="'
+        +obg_val.ns+'"/></li><li><span>注册地址：</span><input type="text" disabled value="'+obg_val.zc+'"/></li><li><span>注册电话：</span><input type="text" disabled value="'+obg_val.zc_Phone+'"/></li><li><span>开户银行：</span><input type="text" disabled value="'+obg_val.khyh+'"/></li><li><span>银行账户：</span><input type="text" disabled value="'+obg_val.yyzh+'"/></li></ul><h3>售票地址</h3><ul><li><span>收票人姓名：</span><input type="text" value="'+obg_val.uname+'"></li><li><span>收票人手机号：</span><input type="text" disabled value="'+obg_val.Phone+'"/></li><li><span>收票人省份：</span><input type="text" disabled value="'+obg_val.province+'"/></li><li><span>收票人地址：</span><input type="text" disabled value="'+obg_val.yxdz+'"/></li></ul></div>';
         
     }else{
-        html = '<div><span><a href="javascript:;" class="bianji">编辑</a><a href="javascript:;" class="delete">删除</a></span><p><span>联系人：</span><input readonly="true" type="text" value="'+obg_val.uname+'" /></p><p><span>联系方式：</span><input readonly="true" type="text" value="'+obg_val.Phone+'" /></p><p><span>身份证号：</span><input readonly="true" type="text" value="'+obg_val.ID+'"></p></div>';
+        // html = '<div><span><a href="javascript:;" class="bianji">编辑</a><a href="javascript:;" class="delete">删除</a></span><p><span>联系人：</span><input readonly="true" type="text" value="'+obg_val.uname+'" /></p><p><span>联系方式：</span><input readonly="true" type="text" value="'+obg_val.Phone+'" /></p><p><span>身份证号：</span><input readonly="true" type="text" value="'+obg_val.ID+'"></p></div>';
     }
     
     up_page.html(html);
