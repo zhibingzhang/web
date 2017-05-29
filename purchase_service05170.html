@@ -754,9 +754,6 @@
                 }
             }
         });
-        $("#info_btn_determine").click(function(){
-
-        });
         //监听输入
         $('.add_box .group input').keyup(function(){
             $(this).val() === ""? $(this).next().show():
@@ -824,20 +821,37 @@
             $('.info_mak').show();
         });
         $(document).on('click','.del_fpzz',function(){
+            $(this).parent().parent().parent().attr('data-star','true');
             $('.info_mak').show();
         });
         //编辑
         $(document).on('click','.fp_bj',function(){
-            $(this).parent().parent().children().children('input').removeAttr('disabled').css('border','1px solid #CCC');
+            var inp = $(this).parent().parent().children().children('input');
+            $(this).parent().parent().attr('data-type','1');
+            var _inp = $('#add_fq .fp_tab0 input');
+            for(var i=0; i<_inp.length; i++){
+                _inp.eq(i).val(inp.eq(i).val()).next().hide();
+            }
+            $('.fp_tab a').eq(0).trigger("click");
+            $('#paddfp_btn').attr('id','uppaddfp_btn');
+            $('#add_fq').show();
         });
         $(document).on('click','.fp_bjz',function(){
-            $('.fp_group input').removeAttr('disabled');
+            var inp = $(this).parent().parent().parent().children().children().children('input');
+            $(this).parent().parent().parent().attr('data-type','1');
+
+            var _inp = $('#add_fq .fp_tab1 input');
+            for(var i=0; i<_inp.length; i++){
+                _inp.eq(i).val(inp.eq(i).val()).next().hide();
+            }
+            $('.fp_tab a').eq(1).trigger("click");
+            $('#zaddfp_btn').attr('id','upzaddfp_btn');
+            $('#add_fq').show();
         });
         
         //确定
         $('#info_btn_determine').click(function(){
             $('.fp_cont div[data-star=true]').remove();
-            $('.fp_group').remove();
             $('.info_mak').hide();
         });
         //发票title样式切换
@@ -853,9 +867,10 @@
         });
         $('#fq_add').click(function(){
             $('#add_fq').show();
+            $('#add_fq input').val('').next().show();
         });
         //新增普通发票
-        $('#paddfp_btn').click(function(){
+        $(document).on('click','#paddfp_btn',function(){
             var inp = $('.fp_tab0 label input');
             var err = $('.fp_tab0 .error');
             var up_page = $('.fp_cont');
@@ -869,10 +884,16 @@
                 fp_type:fp_type
             }); 
         });
-        //新增普通发票
-        $('#zaddfp_btn').click(function(){
+        $(document).on('click','#uppaddfp_btn',function(){
+            var inp = $('.fp_tab0 label input');
+            $('[data-type=1] input').val($('.fp_tab0 label input').val());
+            $('[data-type=1]').removeAttr('data-type');
+            $('#add_fq').hide();
+            $(this).attr('id','paddfp_btn');
+        });
+        //新增增值发票
+        $(document).on('click','#zaddfp_btn',function(){
             var inp = $('.fp_tab1 label input');
-            console.log(inp.length)
             var err = $('.fp_tab1 .error');
             var up_page = $('.fp_cont');
             var me_mak = $('#add_fq');
@@ -884,6 +905,17 @@
                 me_mak:me_mak,
                 fp_type:fp_type
             }); 
+        });
+        $(document).on('click','#upzaddfp_btn',function(){
+            var inp = $('.fp_tab1 label input');
+            var _inp = $('[data-type=1] input');
+            console.log(inp.length+':'+_inp.length)
+            for(var i=0; i<_inp.length; i++){
+                _inp.eq(i).val(inp.eq(i).val()).next().hide();
+            }
+            $('[data-type=1]').removeAttr('data-type');
+            $('#add_fq').hide();
+            $(this).attr('id','zaddfp_btn');
         });
         $('#target').distpicker({
           province: '---- 所在省 ----',
@@ -958,7 +990,7 @@ function error(obj){
 function upage(up_page,obg_val,fp_type){
     var html;
     if(fp_type === '普通发票'){
-        html='<div class="active"><p><input type="text" value="'+obg_val.tit+'"disabled></p><p class="type">普通发票</p><p><a href="javascript:;" class="fp_bj">编辑</a> | <a href="javascript:;" class="delete">删除</a></p><img src="img/jiao2.png" /></div>';
+        html='<div><p><input type="text" value="'+obg_val.tit+'"disabled></p><p class="type">普通发票</p><p><a href="javascript:;" class="fp_bj">编辑</a> | <a href="javascript:;" class="delete">删除</a></p><img src="img/jiao2.png" /></div>';
     }else if(fp_type === '增值税发票'){
         html = '<div class="fp_group"><p><span class="tit">上海自由贸易有限公司</span><span><a href="javascript:;" class="fp_bjz">编辑</a><i>|</i><a href="javascript:;" class="del_fpzz">删除</a></span></p><h3></h3><ul><li><span>单位名称：</span><input type="text" disabled value="'+obg_val.dwmc+'"/></li><li><span>纳税人识别码：</span><input type="text" disabled value="'
         +obg_val.ns+'"/></li><li><span>注册地址：</span><input type="text" disabled value="'+obg_val.zc+'"/></li><li><span>注册电话：</span><input type="text" disabled value="'+obg_val.zc_Phone+'"/></li><li><span>开户银行：</span><input type="text" disabled value="'+obg_val.khyh+'"/></li><li><span>银行账户：</span><input type="text" disabled value="'+obg_val.yyzh+'"/></li></ul><h3>售票地址</h3><ul><li><span>收票人姓名：</span><input type="text" value="'+obg_val.uname+'"></li><li><span>收票人手机号：</span><input type="text" disabled value="'+obg_val.Phone+'"/></li><li><span>收票人省份：</span><input type="text" disabled value="'+obg_val.province+'"/></li><li><span>收票人地址：</span><input type="text" disabled value="'+obg_val.yxdz+'"/></li></ul></div>';
@@ -967,7 +999,7 @@ function upage(up_page,obg_val,fp_type){
         // html = '<div><span><a href="javascript:;" class="bianji">编辑</a><a href="javascript:;" class="delete">删除</a></span><p><span>联系人：</span><input readonly="true" type="text" value="'+obg_val.uname+'" /></p><p><span>联系方式：</span><input readonly="true" type="text" value="'+obg_val.Phone+'" /></p><p><span>身份证号：</span><input readonly="true" type="text" value="'+obg_val.ID+'"></p></div>';
     }
     
-    up_page.html(html);
+    up_page.append(html);
 }
 
 
