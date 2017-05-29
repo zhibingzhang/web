@@ -3,21 +3,47 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>通过原生js延迟加载图片</title>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
-<script type="text/javascript" src="js/jquery-1.9.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
-</head>
-<body>
-<input type="text" id="date2" name="">
-<script type="text/javascript">
-	$('#date2').datetimepicker(
-            {
-                format: "dd MM yyyy",
-                autoclose: true
-            }
-        );
-</script>
+<style type="text/css"> 
+body {background-color:#6C6;} 
+.select_border{ 
+width:59px; 
+height:29px; 
+*background:#fff; 
+background:#fff; 
+*border:1px solid #09f; 
+*padding:4px; 
+*height:20px; 
+} 
+.container{ 
+*border:0; 
+*position:relative; 
+*height:18px; 
+*overflow:hidden; 
+} 
+.select{ 
+border:1px solid #09f; 
+padding:4px 3px; 
+font-size:12px; 
+height:30px; 
+width:60px; 
+*width:52px; 
+margin:-1px; 
+} 
+.select_border,.container {*width:50px;} 
+</style> 
+</head> 
+<body> 
+<p>宽高：93px-28px</p> 
+<div class="select_border"> 
+<div class="container"> 
+<select name="" class="select"> 
+<option>北京</option> 
+<option>天津</option> 
+<option>上海</option> 
+<option>重庆</option> 
+</select> 
+</div> 
+</div> 
+</body> 
 </body>
 </html>

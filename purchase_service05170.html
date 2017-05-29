@@ -828,7 +828,7 @@
         });
         //编辑
         $(document).on('click','.fp_bj',function(){
-            $(this).parent().parent().children().children('input').removeAttr('disabled');
+            $(this).parent().parent().children().children('input').removeAttr('disabled').css('border','1px solid #CCC');
         });
         $(document).on('click','.fp_bjz',function(){
             $('.fp_group input').removeAttr('disabled');
