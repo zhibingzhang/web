@@ -1356,7 +1356,7 @@
     font-size: 14px !important;
     color: #999999 !important;
     margin-left: 120px;
-    float: left;
+    float: right;
     padding-left: 20px;
     background: url("../img/small/ic_users.png") 0 center no-repeat;
 }
@@ -1667,4 +1667,24 @@
 }
 .num-w{
     width: auto;
+}
+
+.new .hs-tit{
+    font-size: 24px;
+}
+.hs-tit img,.hs-tit span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.hs-tit img{
+    margin-right: 10px;
+}
+.new .date{
+    font-size: 14px;
+}
+.new .date img{
+    margin-right: 16px;
+}
+.new .date p{
+    margin-top: 16px;
 }
