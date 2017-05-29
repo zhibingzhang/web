@@ -20,6 +20,7 @@
     <script src="js/mootools-1.3.2.js"></script>
     <!-- <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script> -->
     <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/divselect.js"></script>
     <!--[if lte IE 8]>
     <script src="js/selectivizr.js"></script>
     <![endif]-->
@@ -45,14 +46,14 @@
         </div>
     </div>
 </div>
-<div class="header-back">
-    <div class="index-tab index-tab2">
+<div class="list-header-back">
+    <div class="index-tab">
         <div class="container2">
             <img src="img/logo.png" class="logo-img"/>
             <div class="index-tab-list">
                 <div class="overflow-auto">
-                    <a href="aboutus0517.html">关于我们</a>
-                    <a href="news.html">媒体中心</a>
+                    <a href="aboutus.html">关于我们</a>
+                    <a href="news.html" >媒体中心</a>
                     <a href="train.html">驾驶培训</a>
                     <a href="theme_type.html">主题租赁</a>
                     <a href="yacht_list.html" class="active">游艇租赁</a>
@@ -60,8 +61,32 @@
                 </div>
             </div>
             <div class="index-input">
-                <input class="input" type="text" placeholder="请输入查询的内容"/>
-                <img src="img/search.png"/>
+                <span>
+                    <form action="" method="post">
+                        <div id="index-input-select" class="index-input-select">
+                            <a class="index-input-a">
+                                <p>游艇</p>
+                                <img src="img/down.png" class="down"/>
+                            </a>
+                            <ul>
+                                <li>主题</li>
+                                <li>游艇</li>
+                            </ul>
+                            <input name="" type="hidden" value="" id="index-input-select2"/>
+                        </div>
+                    </form>
+                </span>
+                <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                <img src="img/search.png" class="search"/>
+            </div>
+        </div>
+    </div>
+    <div class="list-header">
+        <div class="list-header-msg-wrapper">
+            <div class="container">
+                <div class="list-header-msg">
+                    汇集上海地区及全国各地最完备的游艇租赁资源，保障游艇资质齐全，服务规范，为您提供纯正的游艇驾乘感受。
+                </div>
             </div>
         </div>
     </div>
@@ -266,7 +291,7 @@
                         <span>我已阅读并同意</span>
                         <a href="#">《游艇租赁协议》</a>
                         </p>
-                        <a type="submit" class="yacht-booking" href="purchase_service05170.html"></a>
+                        <a type="submit" class="yacht-booking" href="purchase_service051.html"></a>
 
                     </div>
                 </div>
@@ -705,7 +730,7 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
         /*星星打分*/
-        $('.star').raty({ score: 3 });
+        $('.star').raty({ readOnly: true, score: 3 });
         // 日期控件
         $("#date2").datetimepicker({
             format: 'yyyy-mm-dd',

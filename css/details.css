@@ -1037,7 +1037,7 @@
 .theme-brief-num img {
     float: left;
     margin-right: 5px;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .theme-brief-num .num {
@@ -1356,7 +1356,7 @@
     font-size: 14px !important;
     color: #999999 !important;
     margin-left: 120px;
-    float: right;
+    float: left;
     padding-left: 20px;
     background: url("../img/small/ic_users.png") 0 center no-repeat;
 }

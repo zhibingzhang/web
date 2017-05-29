@@ -23,7 +23,7 @@ $(function () {
     /*头部收索*/
         
     $('.search').click(function(){
-        if($('.index-input-a').html()=='主题'){
+        if($('.index-input-a>p').html()=='主题'){
             window.location.href='theme_list.html';
         }else{
             window.location.href='yacht_list.html';

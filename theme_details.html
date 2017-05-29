@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>游艇租赁</title>
+    <title>主题租赁</title>
     <!--<meta http-equiv="x-ua-compatible" content="IE=edge">-->
     <meta name="viewport" charset="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -20,6 +20,7 @@
     <script src="js/mootools-1.3.2.js"></script>
     <!-- <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script> -->
     <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/divselect.js"></script>
     <!--[if lte IE 8]>
     <script src="js/selectivizr.js"></script>
     <![endif]-->
@@ -51,7 +52,7 @@
             <img src="img/logo.png" class="logo-img"/>
             <div class="index-tab-list">
                 <div class="overflow-auto">
-                    <a href="aboutus0517.html">关于我们</a>
+                    <a href="aboutus.html">关于我们</a>
                     <a href="news.html">媒体中心</a>
                     <a href="train.html">驾驶培训</a>
                     <a href="theme_type.html" class="active">主题租赁</a>
@@ -60,9 +61,24 @@
                 </div>
             </div>
             <div class="index-input">
-                <input class="input" type="text" placeholder="请输入查询的内容"/>
-                <img src="img/search.png"/>
-            </div>
+                        <span>
+                            <form action="" method="post">
+                                <div id="index-input-select" class="index-input-select">
+                                    <a class="index-input-a">
+                                        <p>游艇</p>
+                                        <img src="img/down.png" class="down"/>
+                                    </a>
+                                    <ul>
+                                        <li>主题</li>
+                                        <li>游艇</li>
+                                    </ul>
+                                    <input name="" type="hidden" value="" id="index-input-select2"/>
+                                </div>
+                            </form>
+                        </span>
+                        <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                        <img src="img/search.png" class="search"/>
+                    </div>
         </div>
     </div>
 </div>
@@ -246,8 +262,8 @@
                                             <td colspan="2"><img src="img/small/date.png">预定日期</td>
                                         </tr>
                                         <tr>
-                                            <th>开始时间：2017/05/09  11：00</th>
-                                            <th>结束时间：2017/05/09  15：00</th>
+                                            <th>开始时间：2017/05/09  <span id="date_hs"></span></th>
+                                            <th>结束时间：2017/05/09  <span id="date_end"></span></th>
                                         </tr>
                                     </tbody></table>
                                 </div>
@@ -268,7 +284,7 @@
                         <span>我已阅读并同意</span>
                         <a href="#">《游艇租赁协议》</a>
                         </p>
-                        <a type="submit" class="yacht-booking" href="purchase_service05170.html"></a>
+                        <a type="submit" class="yacht-booking" href="purchase_service.html"></a>
 
                     </div>
                 </div>
@@ -707,7 +723,7 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
         /*星星打分*/
-        $('.star').raty({ score: 3 });
+        $('.star').raty({ readOnly: true, score: 3 });
         // 日期控件
         $("#date2").datetimepicker({
             format: 'yyyy-mm-dd',
@@ -756,7 +772,8 @@
                 $('.cell-blue').addClass('cell-white').removeClass('cell-blue');
                 me.addClass('cell-blue').removeClass('cell-white');
                 var _date = me.text().split(':')[0];
-                alert(parseInt(_date)+3)
+                $('#date_hs').text(me.text())
+                $('#date_end').text(parseInt(_date)+4+':'+me.text().split(':')[1])
             }
         });
         //放大轮播图
