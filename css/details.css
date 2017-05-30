@@ -10,7 +10,6 @@
 .yacht-name {
     float: right;
     padding: 20px;
-    height: 640px;
     width: 577px;
     font-size: 30px;
     background: #ffffff;
@@ -26,7 +25,7 @@
 }
 
 .tbstyle {
-    margin: 20px 0;
+    margin: 18px 0;
     height: 50px;
     overflow: hidden;
 }
@@ -39,7 +38,7 @@
 }
 
 .tbstyle tr td {
-    font-size: 16px;
+    font-size: 14px;
     color: #333333;
     text-align: center;
 }
@@ -53,9 +52,28 @@
     font-size: 18px;
     color: #000000;
 }
-
+.date-title{
+    font-size: 16px;
+    line-height: 20px;
+}
+.date-title img{
+    margin-right: 8px;
+    vertical-align: -3px;
+}
 .yacht-detail-txt {
-    margin: 15px 0;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #333333;
+    /*height: 80px;*/
+    overflow: hidden;
+}
+.yacht-detail-txt.limit-height{
+    height: 80px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.yacht-detail-txt2{
+    margin: 12px 0;
     font-size: 14px;
     color: #333333;
 }
@@ -68,14 +86,14 @@
 }
 
 .yacht-price {
-    margin: 40px 0;
+    margin: 23px 0;
     font-size: 18px;
     color: #333333;
 }
 
 .price-yellow {
     color: #ffcc01;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .price-yellow span {
@@ -86,8 +104,6 @@
 }
 
 .yacht-handle {
-    position: absolute;
-    top: 520px;
     font-size: 13px;
 }
 
@@ -144,14 +160,27 @@
 .ban-p{width: 1125px;margin-bottom:20px;overflow: hidden;float: left;}
 .num-p{ height:70px;overflow:hidden; width:100%; position:relative;float:left;}
 .num-p ul{ float: left;height: 70px;  overflow: hidden;}
-.num-p ul li{float: left;  width: 60px;  height: 60px;  padding: 4px;  background: #ffffff; cursor: pointer;}
+.num-p ul li{float: left;  width: 60px;  height: 60px;  margin: 4px;  background: #ffffff; cursor: pointer;}
 .num-p ul li img{float: left; display: block;  width: 60px;  height: 60px; }
+.num-p ul li.active img{
+    width: 58px;  height: 58px;
+}
+.num-p ul li.active{
+    width: 58px;
+}
 .prev_btn1-p{display: none; width:16px; text-align:center; height:18px; margin-top:40px; margin-right:20px; cursor:pointer; float:left;}
 .next_btn1-p{ display: none; width:16px; text-align:center; height:18px; margin-top:40px;cursor:pointer;float:right;}
-.prev1-p{ position:absolute; top:220px; left:20px; width:28px; height:51px;z-index:9;cursor:pointer;}
-.next1-p{ position:absolute; top:220px; right:20px; width:28px; height:51px;z-index:9;cursor:pointer;}
+.prev1-p{ position:absolute; top:220px; left:10px; width:28px; height:44px;z-index:9;cursor:pointer;}
+.next1-p{ position:absolute; top:220px; right:10px; width:28px; height:44px;z-index:9;cursor:pointer;}
 .pop_up-p{float: left; width:480px; height:480px;position:relative; left:0; top:0px; display:none;margin-bottom: 20px; }
-.pop_up_xx-p{ width:40px; height:40px; position:absolute; top:0px; right:0; cursor:pointer;z-index: 9999;}
+.pop_up_xx-p{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 12px;
+    right: -3px;
+    cursor: pointer;
+    z-index: 9999;}
 .pop_up2-p{ width:480px; height:480px; position:relative; overflow:hidden; float:left;}
 .pop_up2-p ul{ position:absolute; left:0; top:0;}
 .pop_up2-p ul li{ width:480px; height:480px; float:left;}
@@ -260,6 +289,9 @@
 }
 .yacht-tab ul{
     overflow: hidden;
+}
+#ban_num1-p ul{
+    background: #fff;
 }
 .yacht-tab ul li {
     height: auto;
@@ -413,7 +445,9 @@
 .tb-price tr th {
     height: 40px;
     line-height: 40px;
-    background: #e8f5fb;
+    background: #f3f4f7;
+    text-align: center;
+    font-size: 13px;
 }
 
 .tb-price tr td {
@@ -475,8 +509,8 @@
 }
 
 .cell-little a {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     margin-bottom: -7px;
     margin-right: 10px;
@@ -553,8 +587,8 @@
 
 .yacht-date {
     width: 495px;
-    height: 108px;
-    padding: 30px 0 0 30px;
+    height: 105px;
+    padding: 15px 0 0 30px;
     border: 1px solid #d1d9f0;
     background: #fafbff;
 }
@@ -565,7 +599,9 @@
 
 .yacht-date table tr th {
     text-align: left;
-    height: 30px;
+    height: 35px;
+    vertical-align: bottom;
+    font-size: 14px;
 }
 
 .yacht-rent-notice {
@@ -592,7 +628,7 @@
     height: 54px;
     border: none;
     display: block;
-    margin: 10px auto;
+    margin: 40px auto 10px auto;
 }
 
 .hot-yacht {
@@ -779,6 +815,11 @@
     background: #fff;
     width: 280px;
     height: 8px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .ptext {
@@ -916,9 +957,11 @@
     margin: 10px 0;
     line-height: 20px;
     font-size: 13px;
-    color: #666666;
+    color: #333;
 }
-
+.star{
+    width: 82px!important;
+}
 
 .discus-handle {
     width: 100%;
@@ -1687,4 +1730,16 @@
 }
 .new .date p{
     margin-top: 16px;
+}
+.font-20{
+    font-size: 20px;
+}
+
+.date2{
+    position: absolute;
+    top: 12.5px;
+    left: 189px;
+}
+.chk{
+    vertical-align: -2px;
 }

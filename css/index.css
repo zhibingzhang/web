@@ -1,3 +1,4 @@
+*{margin: 0;padding: 0;}
 header {
     height: 40px;
     background: #060c13;
@@ -924,6 +925,13 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     height: 368px !important;
+    background-position: top center;
+}
+.list-header-back2{
+    background-image: url('../img/list-header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 129px !important;
     background-position: bottom center;
 }
 
@@ -1213,6 +1221,7 @@ header {
 
 .sort-wrapper .overflow-auto > div.right > span.active {
     background: #fff;
+    color: #0873b6;
 }
 
 .sort-wrapper .overflow-auto > div.right > span img {
@@ -1305,6 +1314,7 @@ header {
     line-height: 50px;
     overflow: hidden;
     padding: 0 20px;
+    display: inline-block;
 }
 
 .product-title span {
@@ -1487,11 +1497,12 @@ header {
 }
 
 .rate-num {
-    font-size: 16px;
-    color: #666;
-    line-height: 22px;
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
     top:3px;
     margin-left: 10px;
+    line-height: 24px;
 }
 
 .rate-num span {

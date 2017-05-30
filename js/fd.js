@@ -55,13 +55,14 @@ jQuery.ljsGlasses = {
 				_sumbox.append("<span><img src='"+_imgarr.eq(i).attr("src")+"' height='"+_obj.sumh+"' style='left:"+_place+"px;' /></span>");
 				}
 		}
+		console.log(_arr);
 		_imgarr.remove();
 		
 		_sum.append("<div style='clear:both;width:100%;'></div>");
 		var _sumarr = _sum.find("span");
 		var _sumimg = _sum.find("img");
 		_sumarr.eq(_index).addClass(_obj.sumsel);
-		var _border = _obj.sumborder*2 + _obj.sumh;
+		var _border = _obj.sumborder*2 + _obj.sumw;
 		var _sumwidth = (_border+_obj.sumi)*_obj.sums;
 		var _sumboxwidth = (_border+_obj.sumi)*_length;
 		_sum.css({
@@ -86,7 +87,6 @@ jQuery.ljsGlasses = {
 			"max-height":"100%",
 			"position":"relative"
 			});
-		
 		_box.append("<div style='position:relative;'><b style='display:block;'><img style='display:block;' src='' /></b><span style='position:absolute;left:0;top:0;display:none;z-index:5;'></span></div><p style='position:absolute;overflow:hidden;top:0;display:none;background-color:#fff;border:1px solid #DDD;'><img style='max-width:none;max-height:none;position:relative;left:0;top:0;' src='' /></p>");
 		var _glass = _box.find("span");
 		var _boximg = _box.find("b img");
@@ -134,6 +134,8 @@ jQuery.ljsGlasses = {
 		
 		_imgout.mousemove(function(e){
 			var _gl_w = _glass.width()/2;
+			//var h = 0.7021818;
+			var h = 1;
 			var _maxX = _imgout.width() - _gl_w;
 			var _maxY = _imgout.height() - _gl_w;
 			var _moveX = 0,_moveY = 0;
@@ -147,8 +149,8 @@ jQuery.ljsGlasses = {
 			if(_nowY >= _maxY){ _moveY = _maxY-_gl_w;}
 			_glass.css({"left":_moveX+"px","top":_moveY+"px"});
 
-			var _imgX = -_moveX*_showbox.width()/_glass.width();
-			var _imgY = -_moveY*_showbox.width()/_glass.width();
+			var _imgX = -_moveX*_showbox.width()*h/_glass.width();
+			var _imgY = -_moveY*_showbox.width()*h/_glass.width();
 			_showimg.css({"left":_imgX+"px","top":_imgY+"px"});
 	
 		});//mouse END
@@ -174,7 +176,6 @@ jQuery.ljsGlasses = {
 			_sumarr.eq(_index).addClass(_obj.sumsel).siblings().removeClass(_obj.sumsel);
 			imgPlaces();
 		};//fun END
-		
 		if(_length <= _obj.sums){
 			var _place = (_obj.sums-_length)*_border/2;
 			_sumbox.css("left",_place+"px");

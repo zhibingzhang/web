@@ -30,10 +30,10 @@ line-height: 32px;padding-left: 20px;
 }
 .jiantou{ padding-right:5px;padding-left:5px}
 .foot-right{height:100% !important; float:right; margin-right:10px;}
-.foot-right button{padding:8px 16px; background:#fff;color:#FBD956; border:2px solid #FBD956; font-weight:bold; border-radius:3px;}
+.foot-right button{padding:8px 16px; background:#fff;color:#FBD956; border:1px solid #FBD956; font-weight:bold; border-radius:3px;}
 .blk .foot-right{background-position:right bottom;}
 
-.blk .main{border:2px solid #E3E1E2;position:relative;background:#fff;}
+.blk .main{border:1px solid #E3E1E2;position:relative;background:#fff;}
 .blk .main h2{font:bold 16px "Microsoft YaHei";padding:10px 20px 2px;color:#000;}
 .blk .main ul{padding:20px;zoom:1;overflow:hidden;font-size:12px;}
 .blk .main ul li{float:left;padding-right: 10px;
@@ -61,11 +61,12 @@ min-width: 60px;text-align:center;line-height:30px;margin-bottom:10px;}
 .tukdetail_3{width:100%}
 .tukdetail_3 span{width:25%; display:inline-block; text-align:left}
 .tukdetail_4{width:100%;margin-top:10px}
-.tukdetail_4 span{width:80%; display:inline-block; text-align:left}
-.tukdetail_4 img{width:200px; display:inline-block; text-align:center}
+.tukdetail_4 span{width:80%; display:inline-block; text-align: center;
+	margin-left: 8%;}
+.tukdetail_4 img{width:180px; display:inline-block; text-align:center}
 .lbcontent{color: #000;
 	position: absolute;
-	top: 50px;
+	top: 44px;
 	left: 30px;
 	text-align: center;}
 .lbcontentspan1{ font-size:20px; color:#F9C238}
@@ -98,4 +99,16 @@ min-width: 60px;text-align:center;line-height:30px;margin-bottom:10px;}
 	border-bottom:1px solid #ccc;
 	text-align:left;
 	padding:10px 0 10px 0;
+}
+
+
+
+.BMap_pop img{
+	display: none;
+}
+.BMap_pop .tukdiv img{
+	display: block;
+}
+.BMap_pop .tukdetail img{
+	display: block;
 }

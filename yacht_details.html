@@ -19,7 +19,7 @@
     <script type="text/javascript" src="js/fd.js"></script>
     <script src="js/mootools-1.3.2.js"></script>
     <!-- <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script> -->
-    <script type="text/javascript" src="js/base.js"></script>
+    <!--<script type="text/javascript" src="js/base.js"></script>-->
     <script type="text/javascript" src="js/divselect.js"></script>
     <!--[if lte IE 8]>
     <script src="js/selectivizr.js"></script>
@@ -40,13 +40,12 @@
                 欢迎进入上海游艇O2O平台！
             </div>
             <div class="right">
-                <a class="login-btn" href="login.html">登录</a>
-                <a class="register-btn" href="regist.html">注册</a>
+                <a class="login-btn" href="login.html">登录</a><a class="register-btn" href="regist.html">注册</a>
             </div>
         </div>
     </div>
 </div>
-<div class="list-header-back">
+<div class="list-header-back2">
     <div class="index-tab">
         <div class="container2">
             <img src="img/logo.png" class="logo-img"/>
@@ -81,15 +80,6 @@
             </div>
         </div>
     </div>
-    <div class="list-header">
-        <div class="list-header-msg-wrapper">
-            <div class="container">
-                <div class="list-header-msg">
-                    汇集上海地区及全国各地最完备的游艇租赁资源，保障游艇资质齐全，服务规范，为您提供纯正的游艇驾乘感受。
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <div class="content">
@@ -99,7 +89,7 @@
     <div class="hrgray"></div>
     <div class="yacht-detail">
         <div class="yacht-name">
-            <p>海神号<span>Sea-stella46</span></p>
+            <p>海神号<span class="font-20">Sea-stella46</span></p>
             <div class="rate-num-wrapper">
                 <div id="star" class="star"></div>
                 <span class="rate-num" style="top: -2px;">9.8分<span>（969评论）</span></span>
@@ -123,9 +113,9 @@
             <div class="hrgray"></div>
 
             <p class="yacht-detail-title">详细描述</p>
-            <p class="yacht-detail-txt">豪华是Ocean Alexander游艇最基本的要求。每艘游艇不但经由至少300名人工以手工打造，其售后服务及保养更是创业界之先驱。Ocean
-                Alexander提供一系列的游艇船型，全面配合任何尊客的需要。最高规格的制造过程、极致的奢华享受，以及卓越的技术革新绝对是世界级的标杆。</p>
-            <p class="yacht-price"><span class="price-yellow">¥<span>1500</span>.00元／小时</span>起</p>
+            <p class="yacht-detail-txt limit-height">豪华是Ocean Alexander游艇最基本的要求。每艘游艇不但经由至少300名人工以手工打造，其售后服务及保养更是创业界之先驱。Ocean
+                Alexander提供一系列的游艇船型，全面配合任何尊客的需要。最高规格的制造过程、极致的奢华享受，以及卓越的技术革新绝对是世界级的标杆，以及卓越的技术革新绝对是世界级的标杆。</p>
+            <p class="yacht-price"><span class="price-yellow"><span>1500</span>.00元／小时</span>起</p>
             <div class="yacht-handle">
                 <a href="#"><img src="img/small/collect.png"/>收藏</a>
                 <a href="#"><img src="img/small/options.png"/>分享</a>
@@ -135,16 +125,17 @@
         <div id="tFocus">
             <div class="fd">
             <!--页面必要代码,img标签上请务必带上图片真实尺寸px-->
-                <div id="showbox">
-                  <img src="images/photos/img01.png" width="583" height="583" />
-                  <img src="images/photos/img02.png" width="583" height="583" />
-                  <img src="images/photos/img03.png" width="583" height="583" />
-                  <img src="images/photos/img04.png" width="583" height="583" />
-                  <img src="images/photos/img05.png" width="583" height="583" />
-                  <img src="images/photos/img06.png" width="583" height="583" />
-                  <img src="images/photos/img07.png" width="583" height="583" />
-                  <img src="images/photos/img08.png" width="583" height="583" />
-                  <img src="images/photos/img09.png" width="900" height="900" />
+                <img src="img/small/search-btn.png" class="search-btn2"/>
+                <div id="showbox" class="hide">
+                  <img src="images/photos/img01.png" width="580" height="407" />
+                  <img src="images/photos/img01.png" width="580" height="407" />
+                  <img src="images/photos/img01.png" width="580" height="407" />
+                  <img src="images/photos/img01.png" width="580" height="407" />
+                  <img src="images/photos/img01.png" width="580" height="407" />
+                  <img src="images/photos/img01.png" width="580" height="407" />
+                  <img src="images/photos/img01.png" width="580" height="407" />
+
+
                 </div><!--展示图片盒子-->
                 <div id="showsum"></div><!--展示图片里边-->
                 <p class="showpage">
@@ -177,16 +168,16 @@
                     </tr>
                     <tr>
                         <td class="bdbottom bdright">00:00～08:00</td>
-                        <td class="bdbottom bdright">¥2500.00</td>
+                        <td class="bdbottom bdright">2500.00元/小时</td>
                         <td class="bdbottom">--</td>
                     </tr>
                     <tr>
                         <td class="bdbottom bdright">08:00～12:00</td>
-                        <td class="bdbottom bdright">¥3000.00</td>
+                        <td class="bdbottom bdright">3000.00元/小时</td>
                         <td class="bdbottom">--</td>
                     </tr>
                     <td class="bdbottom bdright">13:00～00:00</td>
-                    <td class="bdbottom bdright">¥4000.00</td>
+                    <td class="bdbottom bdright">4000.00元/小时</td>
                     <td class="bdbottom">--</td>
                     </tr>
                 </table>
@@ -199,6 +190,7 @@
                             <label>
                                 <input type="datetime" class="input-time" id="date2"/>
                                 <span style="left: -136px"></span>
+                                <img src="img/small/date2.png" class="date2"/>
                             </label>
                             <p class="title-choose"><img src="img/small/time.png"/>选择时间</p>
                             <div class="choose-time-cells">
@@ -261,21 +253,31 @@
                         </div>
                     </div>
                     <div class="choose-time-right">
-                        <p class="yacht-detail-txt">已选择内容如下：</p>
+                        <p class="yacht-detail-txt2 ">已选择内容如下：</p>
                         <div class="yacht-date">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tr>
-                                    <th>预定日期</th>
-                                    <th>预定时间</th>
+                                <tbody><tr>
+                                    <td colspan="2"><span class="date-title"><img src="img/small/date.png">预定日期</span></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" class="input-time" id="dateym"/></td>
-                                    <td><input type="text" class="input-time" id="datehs" /></td>
+                                    <th>开始时间：<span class="dateym"></span>  <span id="date_hs"></span></th>
+                                    <th>结束时间：<span class="dateym"></span>  <span id="date_end"></span></th>
                                 </tr>
+                                </tbody>
                             </table>
+                            <!--<table width="100%" border="0" cellspacing="0" cellpadding="0">-->
+                                <!--<tr>-->
+                                    <!--<th>预定日期</th>-->
+                                    <!--<th>预定时间</th>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td><input type="text" class="input-time" id="dateym"/></td>-->
+                                    <!--<td><input type="text" class="input-time" id="datehs" /></td>-->
+                                <!--</tr>-->
+                            <!--</table>-->
                         </div>
                         <p class="yacht-detail-txt">已选择预定<span id="nyz">--年--月--日</span><span id="nyz_hs">--</span>小时</p>
-                        <p class="yacht-price">预计：<span class="price-yellow">¥<span>6000</span>.00元／小时</span></p>
+                        <p class="yacht-price">预计：<span class="price-yellow"><span>6000</span>.00元</span></p>
                         <div class="yacht-rent-notice">
                             <p class="title">游艇租赁相关事项：</p>
                             <p class="list">
@@ -288,11 +290,10 @@
                         </div>
                         <p class="yacht-detail-txt">
                         <div class="chk"></div>
-                        <span>我已阅读并同意</span>
+                        <span class="has-read">我已阅读并同意</span>
                         <a href="#">《游艇租赁协议》</a>
                         </p>
-                        <a type="submit" class="yacht-booking" href="purchase_service051.html"></a>
-
+                        <a type="submit" class="yacht-booking" onclick="submit()"></a>
                     </div>
                 </div>
             </div>
@@ -458,8 +459,8 @@
                             <div id="star2" class="star"></div>
                             <span class="rate-num"><span>5分</span></span>
                             <p class="discus-p">
-                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
-                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
+                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。
+                                带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
 
                             <div class="ban-p" id="demo1-p">
                                 <div class="num-p" id="ban_num1-p">
@@ -477,14 +478,14 @@
                             </div>
 
                             <div class="pop_up-p" id="demo2-p">
-                                <div class="pop_up_xx-p"><img src="images/chacha3.png" width="40" height="40" alt=""/>
+                                <div class="pop_up_xx-p"><img src="img/small/delete2.png" width="22" height="22" alt=""/>
                                 </div>
                                 <div class="pop_up2-p" id="ban_pic2-p">
                                     <div class="prev1-p" id="prev2-p">
-                                        <img src="images/index_tab_l.png" width="28" height="51" alt=""/>
+                                        <img src="img/small/left.png" width="28" alt=""/>
                                     </div>
                                     <div class="next1-p" id="next2-p">
-                                        <img src="images/index_tab_r.png" width="28" height="51" alt=""/>
+                                        <img src="img/small/right.png" width="28" alt=""/>
                                     </div>
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
@@ -524,21 +525,30 @@
                                         $('.ban-p li').removeClass('active');
                                     });
                                     var _index;
-                                    var mySwiper;
+                                    var mySwiper='';
 
                                     $('.ban-p li').click(function(e){
                                         e.preventDefault();
                                         $(this).addClass('active').siblings().removeClass('active');
                                         _index = $(this).index();
-                                        console.log(_index)
-                                        $('.pop_up-p').show()
+                                        console.log(_index);
+                                        check(_index);
+                                        $('.pop_up-p').show();
+                                        if(mySwiper!='' && _index == 0){
+                                            mySwiper.swipeTo(_index,100,false)
+
+                                        }
+                                        if(_index==0){
+//                                            $('.swiper-wrapper').css('transform','480px')
+                                        }
                                         mySwiper = new Swiper ('.swiper-container', {
                                             initialSlide : _index,
                                             onSlideChangeEnd: function(swiper){
                                               var _index = swiper.activeIndex;
                                               $('.ban-p li').eq(_index).addClass('active').siblings().removeClass('active');
+                                              check(_index);
                                             }
-                                        }) 
+                                        })
                                     })
 
                                     //按钮
@@ -567,7 +577,6 @@
                             <span class="rate-num"><span>5分</span></span>
                             <p class="discus-p">
                                 非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
-                            <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
                             <p class="discus-handle">
                                 <span class="time">2017/09/09 11:00</span>
                                 <span class="like"><img src="img/small/zan.png"/><a href="#">点赞</a>800</span>
@@ -589,8 +598,6 @@
                         <div class="discus-s">
                             <div id="star4" class="star"></div>
                             <span class="rate-num"><span>5分</span></span>
-                            <p class="discus-p">
-                                非常美好的一次行程，第一次坐邮轮，不喜欢日韩短暂航线，想着全家都没去过新马和普吉岛，又正好想尝试邮轮，于是预订了海洋水手号的新马泰巡游。事实证明，这是一次非常明智的选择。</p>
                             <p class="discus-p">带着老人，适合这种比较轻松的行程，我们是自由行，岸上的行程都在船上预订，虽然导游是英文解说，但是不影响我们观看风景。</p>
                             <p class="discus-handle">
                                 <span class="time">2017/09/09 11:00</span>
@@ -609,23 +616,23 @@
     <div class="product-wrapper">
         <div class="product-each-r">
             <img src="img/smallpic.png"/>
-            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
+            <a class="product-title" href="yacht_details.html">莱悦9号 <span>Sea-stella63</span></a>
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="yacht_details.html"><img
                     src="img/small/reserve.png"/>预定</a></div>
         </div>
         <div class="product-each-r">
             <img src="img/smallpic.png"/>
-            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
+            <a class="product-title" href="yacht_details.html">莱悦9号 <span>Sea-stella63</span></a>
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="href="yacht_details.html""><img
                     src="img/small/reserve.png"/>预定</a></div>
         </div>
         <div class="product-each0">
             <img src="img/smallpic.png"/>
-            <div class="product-title">莱悦9号 
+            <a class="product-title" href="yacht_details.html">莱悦9号
                 <span>Sea-stella63</span>
-            </div>
+            </a>
             <div class="product-price">
-                <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png"/>预定</a></div>
+                <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="yacht_details.html"><img src="img/small/reserve.png"/>预定</a></div>
         </div>
     </div>
 </div>
@@ -730,7 +737,7 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
         /*星星打分*/
-        $('.star').raty({ readOnly: true, score: 3 });
+        $('.star').raty({ readOnly: true, score: 4.9 });
         // 日期控件
         $("#date2").datetimepicker({
             format: 'yyyy-mm-dd',
@@ -742,8 +749,8 @@
             var _date = $(this).context.value;
             var myday = whichDay(_date);
             $(this).next().text(myday);
-
-            $('#dateym').val(_date+myday);
+//            $('#dateym').val(_date+myday);
+            $('.dateym').html(_date);
             var newdate = _date.split('-');
             $('#nyz').text(newdate[0]+'年'+newdate[1]+'月'+newdate[2]+'日');
            
@@ -765,6 +772,13 @@
                 $(this).addClass('active');
             }
         });
+        $('.has-read').click(function(){
+            if($('.chk').hasClass('active')){
+                $('.chk').removeClass('active');
+            }else{
+                $('.chk').addClass('active');
+            }
+        });
         //时间选择
         var star = 0;
         var end = 0;
@@ -778,35 +792,44 @@
             if(me.attr('class') === "cell-grey"){
                 console.log('不可选')
             }else if(me.attr('class') === "cell-blue"){
-                
-
+                if(star == 0 && end == 0){
+                    for(var j=0; j<=$('.time-cells a').length; j++){
+                        if($('.time-cells a').eq(j).hasClass('cell-blue')){
+                            $('.time-cells a').eq(j).addClass('cell-white').removeClass('cell-blue');
+                            me.addClass('cell-blue').removeClass('cell-white');
+                        }
+                    }
+                    end = me.index();
+                    star = end;
+                    $('#date_hs').html($('.time-cells a').eq(star).html());
+                    $('#date_end').html($('.time-cells a').eq(end).html());
+                }
 
             }else if(me.attr('class') === "cell-white"){
-                
-               
+//                me.addClass('cell-blue').removeClass('cell-white');
                 end = me.index();
                 if(star === 0){
                     star = end;
                     $('.cell-blue').addClass('cell-white').removeClass('cell-blue');
                     me.addClass('cell-blue').removeClass('cell-white');
-                     console.log( star+':'+end);
+                    $('#date_hs').html($('.time-cells a').eq(star).html());
+                    $('#date_end').html($('.time-cells a').eq(end).html());
                 }else{
-                    console.log( star+':'+end);
                     if(end < star){
                         zj = end;
                         end = star;
                         star = zj;
                     }
+                    $('#date_hs').html($('.time-cells a').eq(star).html());
+                    $('#date_end').html($('.time-cells a').eq(end).html());
                     for(var i=star; i<=end; i++){
                         $('.time-cells a').eq(i).addClass('cell-blue').removeClass('cell-white');
                     }
-                    
-                 console.log( star+':'+end);
-                 star = 0;
+                    star = 0;
+                    end = 0;
                 }
             }
             var cell_white = $('.cell-blue');
-            var date
             if(cell_white.eq(0).text() === cell_white.eq(cell_white.length-1).text()) {
                 datehs.val($('.cell-blue').eq(0).text());
             }else{
@@ -815,34 +838,41 @@
                 var date_star = cell_white.eq(0).text().split(':');
                 h = date_end[0]-date_star[0];
                 s = -(date_end[1]-date_star[1]);
+                if(s<0){
+                    s = -s;
+                }
+                if(s==30){
+                    s=5;
+                }
             }
-
-
-
-
-
-
             $('#nyz_hs').text(h+'.'+s);
-            
-            
         });
         //放大轮播图
-          var showproduct = {
-              "boxid":"showbox",
-              "sumid":"showsum",
-              "boxw":583,//宽度,该版本中请把宽高填写成一样
-              "boxh":583,//高度,该版本中请把宽高填写成一样
-              "sumw":85,//列表每个宽度,该版本中请把宽高填写成一样
-              "sumh":85,//列表每个高度,该版本中请把宽高填写成一样
-              "sumi":17,//列表间隔
-              "sums":5,//列表显示个数
-              "sumsel":"sel",
-              "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
-              "lastid":"showlast",
-              "nextid":"shownext"
-              };//参数定义    
-         $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+        $(function(){
+            var showproduct = {
+                "boxid":"showbox",
+                "sumid":"showsum",
+                "boxw":580,//宽度,该版本中请把宽高填写成一样
+                "boxh":407,//高度,该版本中请把宽高填写成一样
+                "sumw":104,//列表每个宽度,该版本中请把宽高填写成一样
+                "sumh":73,//列表每个高度,该版本中请把宽高填写成一样
+                "sumi":6,//列表间隔
+                "sums":5,//列表显示个数
+                "sumsel":"sel",
+                "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+                "lastid":"showlast",
+                "nextid":"shownext"
+            };//参数定义
+            $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+            $('#showbox').removeClass('hide');
+        });
+
     });
+    $(function(){
+        if($('#showsum p span').length<=5){
+            $('#showsum p').addClass('left0');
+        }
+    })
 
     jQuery('[placeholder]').focus(function () {
         var input = jQuery(this);
@@ -876,6 +906,26 @@
         var specialDay = new Date(t).getDay();
         var result =oneday.day[specialDay];
         return result;
+    }
+    function submit(){
+        if(!$('.chk').hasClass('active')){
+           alert('请阅读并同意《游艇租赁协议》');
+        }else{
+            window.location.href='purchase_service.html';
+        }
+    }
+    function check(_index){
+        if(_index==0){
+            $('.prev1-p img').attr('src','img/small/left.png');
+        }else{
+            $('.prev1-p img').attr('src','img/small/left2.png');
+        }
+        if(_index==$('.ban-p li').length - 1){
+            $('.next1-p img').attr('src','img/small/right2.png');
+        }else{
+            $('.next1-p img').attr('src','img/small/right.png');
+        }
+
     }
 </script>
 <script type="text/javascript" src="js/script.js"></script>

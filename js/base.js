@@ -27,7 +27,6 @@ $(function(){
 
 		var noalt='';
 		$(this).hover(function(){
-
 			var imageLeft = this.offsetLeft;
 			var imageRight = this.offsetRight;
 			var imageTop =  $(this).get(0).offsetTop;
