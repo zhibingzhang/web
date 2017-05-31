@@ -588,7 +588,7 @@
     <div class="xq_mak" id="tk_mak_xq">
         <div class="xq_box">
             <h3>退款详情</h3>
-            <i class="close"><img src="img/X.png" /></i>
+            <i class="closes"><img src="img/X.png" /></i>
             <p class="title">
                 当前订单【状态已完成】
             </p>
@@ -651,7 +651,7 @@
             </p>
             <p class="btn_dy">
                 <a href="javascript:;">打印</a>
-                <a href="javascript:;" id="qx_btn">取消</a>
+                <a href="javascript:;" class="qx_btn">取消</a>
             </p>
         </div>
     </div>
@@ -1214,6 +1214,9 @@
             $('#tk_mak_xq').hide();
             $('#fayouji').hide();
 
+        });
+        $('.closes').click(function(){
+            $('#tk_mak_xq').hide();
         });
         $('.qx_btn').click(function(){
             $('#tk_mak').hide();

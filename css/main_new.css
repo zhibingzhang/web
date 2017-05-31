@@ -1668,7 +1668,7 @@ dl dt p {
     text-align: center;
     width: 100%
 }
-.quxiaodengdan,.tk_btn,.zcgm{
+.quxiaodengdan,.tk_btn,.zcgm,#tk_xq_btn,.qx_sc{
     cursor: pointer;
 }
 .tab tbody tr td.fk_btn a.zcgm{

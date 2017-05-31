@@ -465,7 +465,7 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().remove();
 	});
 	$('.youjiquxiao').click(function(){
-		$(this).parent().parent().hide().prev().hide();
+		$(this).parent().parent().remove();
 	});
 	$(".qx_sc").click(function(){
 		$(this).parent().parent().remove();
