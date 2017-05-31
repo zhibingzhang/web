@@ -19,6 +19,11 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <style>
+        body{
+            background: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,11 +33,47 @@
                     欢迎进入上海游艇O2O平台！
                 </div>
                 <div class="right">
-                    您好，张三！   <a class="login-out">退出</a>
+                    您好，张三！   <a class="login-out" href="login.html">退出</a>
                 </div>
             </div>
         </div>
     </header>
+    <div class="list-header-back2">
+        <div class="index-tab">
+            <div class="container2">
+                <img src="img/logo.png" class="logo-img"/>
+                <div class="index-tab-list">
+                    <div class="overflow-auto">
+                        <a href="aboutus.html">关于我们</a>
+                        <a href="news.html" >媒体中心</a>
+                        <a href="train.html">驾驶培训</a>
+                        <a href="theme_type.html">主题租赁</a>
+                        <a href="yacht_list.html" class="active">游艇租赁</a>
+                        <a href="home.html">首页</a>
+                    </div>
+                </div>
+                <div class="index-input">
+                <span>
+                    <form action="" method="post">
+                        <div id="index-input-select" class="index-input-select">
+                            <a class="index-input-a">
+                                <p>游艇</p>
+                                <img src="img/down.png" class="down"/>
+                            </a>
+                            <ul>
+                                <li>主题</li>
+                                <li>游艇</li>
+                            </ul>
+                            <input name="" type="hidden" value="" id="index-input-select2"/>
+                        </div>
+                    </form>
+                </span>
+                    <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                    <img src="img/search.png" class="search"/>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="select-wrapper">
         <div class="container">
             <div class="now-position">当前位置：首页 > 游艇租赁 > <span>订单管理</span></div>
@@ -56,16 +97,18 @@
             </ul>
         </div>
     </div>
-    <div class="contact-info">
+    <div class="contact-info" >
         <div class="container">
-            <div class="conta_success">
-                <h2>
-                    <img src="img/button-check@2x.png" />
-                    <span>恭喜你，支付成功！</span>
-                </h2>
-                <p>订单编号<span>201121221</span>，您预定的开始时间为<span>2017/5/22 11:00</span></p>
-                <p>请提前半小时到场，谢谢！</p>
-                <a href="javascript:;">订单详情 ></a>
+            <div style="background: #f5f6f7;">
+                <div class="conta_success">
+                    <h2>
+                        <img src="img/button-check@2x.png" />
+                        <span>恭喜你，支付成功！</span>
+                    </h2>
+                    <p>订单编号为201704272874，您预订的开始时间为2017/05/12  11：00</p>
+                    <p>请提前半小时到场，谢谢！</p>
+                    <a href="member_center.html">订单详情 ></a>
+                </div>
             </div>
         </div>
     </div>
@@ -173,6 +216,28 @@
                 $(this).addClass('active');
             }
         });
+        jQuery('[placeholder]').focus(function () {
+            var input = jQuery(this);
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+                input.removeClass('placeholder');
+            }
+        }).blur(function () {
+            var input = jQuery(this);
+            if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                input.addClass('placeholder');
+                input.val(input.attr('placeholder'));
+            }
+        }).blur().parents('form').submit(function () {
+            jQuery(this).find('[placeholder]').each(function () {
+                var input = jQuery(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            })
+        });
     });
 </script>
+<script type="text/javascript" src="js/divselect.js"></script>
+
 </html>

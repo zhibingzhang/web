@@ -31,8 +31,7 @@
 						欢迎进入上海游艇O2O平台！
 					</div>
 					<div class="right">
-						<a class="login-btn" href="login.html">登录</a>
-						<a class="register-btn" href="regist.html">注册</a>
+						<a class="login-btn" href="login.html">登录</a><a class="register-btn" href="regist.html">注册</a>
 					</div>
 				</div>
 			</div>
@@ -43,7 +42,7 @@
 		            <img src="img/logo.png" class="logo-img"/>
 		            <div class="index-tab-list">
 		                <div class="overflow-auto">
-		                    <a href="aboutus0517.html">关于我们</a>
+		                    <a href="aboutus.html">关于我们</a>
 		                    <a href="news.html" >媒体中心</a>
 		                    <a href="train.html">驾驶培训</a>
 		                    <a href="theme_type.html" class="active">主题租赁</a>
@@ -110,6 +109,7 @@
 						<span id="has-choosed-size" class="no-border"></span>
 						<span id="has-choosed-price" class="no-border"></span>
 						<span id="has-choosed-type" class="no-border"></span>
+						<span id="has-choosed-type2" class="no-border"></span>
 					</div>
 					<div class="choose-items">
 						<div class="subject-wrapper">
@@ -154,7 +154,7 @@
 							<a>~</a> <input type="text" placeholder="输入最高价" id="price2" />
 							<a id="sure-price" class="sure-price" onclick="changePrice()">确定</a>
 						</div>
-						<div class="each-choose each-choose-add show-no" id="type2">
+						<div class="each-choose each-choose-add show-no" id="type">
 							<a>类型：</a>
 							<span class="all active">全部</span>
 							<span>机动艇</span>
@@ -164,8 +164,8 @@
 							<span>商务艇</span>
 							<span>其它</span>
 						</div>
-						<div class="each-choose each-choose-add show-no" id="type3">
-							<a>类型：</a>
+						<div class="each-choose each-choose-add show-no" id="type2">
+							<a>新增：</a>
 							<span class="all active">全部</span>
 							<span>机动艇</span>
 							<span>帆艇</span>
@@ -510,30 +510,54 @@
 					$('#has-choosed-subject').html('').addClass('no-border');
 				}
 			});
-			$('#type span').click(function() {
-				if(!$(this).hasClass('active')) {
-					if($(this).hasClass('all')) {
+			$('#type span').click(function(){
+				if(!$(this).hasClass('active')){
+					if($(this).hasClass('all')){
 						$('#type span').removeClass('active');
-					} else {
+					}else{
 						$('#type .all').removeClass('active');
 					}
 					$(this).addClass('active');
-				} else {
+				}else{
 					$(this).removeClass('active');
 				}
-				var content = '',
-					indexL = 0;
-				for(var i = 0; i < $('#type span').length; i++) {
-					if($($('#type span')[i]).hasClass('active')) {
-						content += '、' + $($('#type span')[i]).html();
+				var content = '', indexL = 0;
+				for(var i = 0; i < $('#type span').length;i++){
+					if($($('#type span')[i]).hasClass('active')){
+						content += '、'+$($('#type span')[i]).html();
 						indexL++;
 					}
 				}
-				content = content.substring(1, content.length);
-				if(!$(this).hasClass('all') && indexL > 0) {
-					$('#has-choosed-type').html('类型:' + content + '<img src="img/small/delete.png" onclick="deleteType()"/>').removeClass('no-border');
-				} else {
+				content = content.substring(1,content.length);
+				if(!$(this).hasClass('all') && indexL>0){
+					$('#has-choosed-type').html('类型:'+content+'<img src="img/small/delete.png" onclick="deleteType()"/>').removeClass('no-border');
+				}else{
 					$('#has-choosed-type').html('').addClass('no-border');
+				}
+			});
+			$('#type2 span').click(function(){
+				if(!$(this).hasClass('active')){
+					if($(this).hasClass('all')){
+						$('#type2 span').removeClass('active');
+					}else{
+						$('#type2 .all').removeClass('active');
+					}
+					$(this).addClass('active');
+				}else{
+					$(this).removeClass('active');
+				}
+				var content = '', indexL = 0;
+				for(var i = 0; i < $('#type2 span').length;i++){
+					if($($('#type2 span')[i]).hasClass('active')){
+						content += '、'+$($('#type2 span')[i]).html();
+						indexL++;
+					}
+				}
+				content = content.substring(1,content.length);
+				if(!$(this).hasClass('all') && indexL>0){
+					$('#has-choosed-type2').html('新增:'+content+'<img src="img/small/delete.png" onclick="deleteType2()"/>').removeClass('no-border');
+				}else{
+					$('#has-choosed-type2').html('').addClass('no-border');
 				}
 			});
 			$('.sort-wrapper .overflow-auto>div').click(function() {
@@ -582,8 +606,8 @@
 
 		function deletePrice() {
 			$('#price .all').click();
-			$('#price1').val('');
-			$('#price2').val('');
+			$('#price1').val('输入最低价');
+			$('#price2').val('输入最高价');
 		}
 
 		function deleteSubject() {
@@ -593,11 +617,44 @@
 		function deleteType() {
 			$('#type .all').click();
 		}
-
+		function deleteType2(){
+			$('#type2 .all').click();
+		}
+		$('#price1').keyup(function(){
+			if(isNaN($(this).val())){
+				var str = $(this).val().substring(0,$(this).val().length - 1);
+				$(this).val(str);
+			}
+		});
+		$('#price2').keyup(function(){
+			if(isNaN($(this).val())){
+				var str = $(this).val().substring(0,$(this).val().length - 1);
+				$(this).val(str);
+			}
+		});
 		function changePrice() {
-			var content = $('#price1').val() + '-' + $('#price2').val();
-			$('#price span').removeClass('active');
-			$('#has-choosed-price').html('价格:' + content + '<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+			if($('#price1').val() == '输入最低价' && $('#price2').val() == '输入最高价'){
+				return false;
+			}else if($('#price1').val() == '输入最低价' && $('#price2').val() != '输入最高价'){
+				$('#price span').removeClass('active');
+				$('#has-choosed-price').html('价格少于'+$('#price2').val()+'<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+				return false;
+			}else if($('#price1').val() != '输入最低价' && $('#price2').val() == '输入最高价'){
+				$('#price span').removeClass('active');
+				$('#has-choosed-price').html('价格大于'+$('#price1').val()+'<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+				return false;
+			}
+			else if(parseFloat($('#price1').val()) > parseFloat($('#price2').val())){
+				alert('最低价不能大于输入最高价');
+				return false;
+//            $('#price span').removeClass('active');
+//            $('#has-choosed-price').html('最低价不能大于输入最高价<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+//            return false;
+			}else{
+				var content = $('#price1').val()+'-'+$('#price2').val();
+				$('#price span').removeClass('active');
+				$('#has-choosed-price').html('价格:'+content+'<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
+			}
 		}
 
 		function openSubject() {

@@ -52,6 +52,9 @@
     font-size: 18px;
     color: #000000;
 }
+.yacht-detail-title.top-small{
+    margin-top: 30px;
+}
 .date-title{
     font-size: 16px;
     line-height: 20px;
@@ -72,6 +75,11 @@
     font-size: 13px;
     line-height: 20px;
 }
+.yacht-detail-txt.limit-height2{
+    height: 60px;
+    font-size: 13px;
+    line-height: 20px;
+}
 .yacht-detail-txt2{
     margin: 12px 0;
     font-size: 14px;
@@ -86,7 +94,7 @@
 }
 
 .yacht-price {
-    margin: 23px 0;
+    margin: 11px 0 14px 0;
     font-size: 18px;
     color: #333333;
 }
@@ -105,6 +113,7 @@
 
 .yacht-handle {
     font-size: 13px;
+    padding-top: 20px;
 }
 
 .yacht-handle img {
@@ -158,7 +167,7 @@
 
 /*评论区图片*/
 .ban-p{width: 1125px;margin-bottom:20px;overflow: hidden;float: left;}
-.num-p{ height:70px;overflow:hidden; width:100%; position:relative;float:left;}
+.num-p{ overflow:hidden; width:100%; position:relative;float:left;}
 .num-p ul{ float: left;height: 70px;  overflow: hidden;}
 .num-p ul li{float: left;  width: 60px;  height: 60px;  margin: 4px;  background: #ffffff; cursor: pointer;}
 .num-p ul li img{float: left; display: block;  width: 60px;  height: 60px; }
@@ -289,6 +298,7 @@
 }
 .yacht-tab ul{
     overflow: hidden;
+    /*padding-top: 5px;*/
 }
 #ban_num1-p ul{
     background: #fff;
@@ -512,7 +522,7 @@
     width: 16px;
     height: 16px;
     display: inline-block;
-    margin-bottom: -7px;
+    margin-bottom: -4px;
     margin-right: 10px;
 }
 
@@ -547,9 +557,14 @@
     float: left;
     margin: 5px;
     width: 80px;
-    height: 40px;
-    line-height: 40px;
+    height: 37px;
+    line-height: 37px;
     text-align: center;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
 }
 
 .cell-grey {
@@ -628,9 +643,14 @@
     height: 54px;
     border: none;
     display: block;
-    margin: 40px auto 10px auto;
+    margin: 30px auto 10px auto;
 }
-
+.yacht-booking2{
+    margin-top: 40px;
+}
+.has-choosed-date{
+    margin-top: 20px;
+}
 .hot-yacht {
     height: 64px;
     line-height: 64px;
@@ -962,7 +982,15 @@
 .star{
     width: 82px!important;
 }
-
+.star2{
+    width: 82px!important;
+    margin-left: 0;
+    float: left;
+}
+.star2 img{
+    width: 13px;
+    margin:0 -2px;
+}
 .discus-handle {
     width: 100%;
     color: #999999;
@@ -996,6 +1024,7 @@
     padding: 10px;
     width: 100%;
     background: #efeff0;
+    margin-bottom: 10px;
 }
 
 .discus-reply-p {
@@ -1080,7 +1109,7 @@
 .theme-brief-num img {
     float: left;
     margin-right: 5px;
-    margin-top: 12px;
+    margin-top: 11px;
 }
 
 .theme-brief-num .num {
@@ -1139,16 +1168,16 @@
     position: absolute;
     right: 0;
     float: right;
-    font-size: 13px;
+    font-size: 12px;
     color: #333333;
-    padding-left: 20px;
+    padding-left: 21px;
     background: url("../img/small/info 2.png") 0 center no-repeat;
 }
 
 .theme-date {
     width: 495px;
-    height: 70px;
-    padding: 20px 0 0 20px;
+    height: 84px;
+    padding: 15px 0 0 30px;
     border: 1px solid #d1d9f0;
     background: #fafbff;
 }
@@ -1160,13 +1189,14 @@
 
 .theme-date table tr td img {
     margin-right: 10px;
-    margin-top: -2px;
+    vertical-align: -3px;
 }
 
 .theme-date table tr th {
     text-align: left;
     height: 30px;
     font-size: 14px;
+    vertical-align: bottom;
 }
 
 .theme-price {
@@ -1184,8 +1214,8 @@
     height: 34px;
     line-height: 34px;
     position: absolute;
-    right: 1px;
-    top: 4px;
+    right: 0;
+    top: 6px;
     background: url("../img/small/arrowbg.png") no-repeat;
 }
 
@@ -1233,20 +1263,21 @@
 }
 
 .include-list-div .first {
-    font-size: 15px;
-    color: #333333;
+    font-size: 14px;
+    color: #000;
 }
 
 .include-list-div p {
-    font-size: 13px;
+    font-size: 12px;
     color: #666666;
-    line-height: 21px;
+    line-height: 20px;
 }
 
 .include-list-div .old-price {
-    font-size: 15px;
+    font-size: 14px;
     color: #999999;
     text-decoration: line-through;
+    margin-top: 3px;
 }
 
 /*主题列表*/
@@ -1298,7 +1329,7 @@
 }
 
 .theme-cycles {
-    font-size: 12px;
+    font-size: 14px;
     color: #999999;
     margin-bottom: 10px;
 }
@@ -1324,7 +1355,7 @@
 .theme-detail-txt {
     margin: 20px 0;
     line-height: 24px;
-    font-size: 13px;
+    font-size: 14px;
     color: #333333;
 }
 
@@ -1345,11 +1376,13 @@
     float: left;
     height: 30px;
     line-height: 30px;
-    padding: 0 20px;
+    padding: 0 16px;
     border: 1px solid #e5e6e8;
     background: #ffffff;
     border-radius: 30px;
     margin-right: 10px;
+    font-size: 14px;
+    color: #333;
 }
 
 .theme-information {
@@ -1357,26 +1390,34 @@
     height: 40px;
     line-height: 40px;
     overflow: hidden;
+
+}
+.theme-information2{
+    margin-top: -15px;
+    margin-bottom: 8px;
 }
 
 .theme-information .price {
     color: #ffcc01;
-    font-size: 18px;
+    font-size: 16px;
     float: left;
+    margin-right: 15px;
 }
 
 .theme-information .price span {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .theme-information .old-price {
     text-decoration: line-through;
     float: left;
-    margin-left: 10px;
     font-size: 14px;
     color: #999999;
+    margin-top: 3px;
 }
-
+.theme-information2 .old-price{
+    margin-top: 0;
+}
 .theme-information .booking {
     float: right;
     right: 0px;
@@ -1387,6 +1428,7 @@
     border: 1px solid #ffcc00;
     color: #ffcc00;
     line-height: 35px;
+    font-size: 18px;
 }
 
 .theme-information .booking img {
@@ -1397,13 +1439,14 @@
 
 .theme-information .booked {
     font-size: 14px !important;
-    color: #999999 !important;
-    margin-left: 120px;
-    float: left;
-    padding-left: 20px;
+    color: #333 !important;
+    float: right;
+    margin-right: 200px;
     background: url("../img/small/ic_users.png") 0 center no-repeat;
 }
-
+.theme-information2 .booked{
+    margin-right: 0;
+}
 /*订单模块*/
 .order-title {
     font-size: 20px;
@@ -1613,7 +1656,11 @@
     color: #333333;
     line-height: 30px;
 }
-.train-info-div-ul li img{width: 16px;height: 16px;margin-right: 10px;margin-top: -3px;}
+.train-info-div-ul li img{
+    width: 14px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: -3px;}
 .train-info-txt img{margin-right: 5px;margin-top: -3px;}
 
 .tb-logo{
@@ -1725,6 +1772,9 @@
 .new .date{
     font-size: 14px;
 }
+.date{
+    padding-bottom: 15px;
+}
 .new .date img{
     margin-right: 16px;
 }
@@ -1742,4 +1792,20 @@
 }
 .chk{
     vertical-align: -2px;
+}
+.font-bold{
+    font-weight: bold;
+}
+.chk-wrapper{
+    text-align: center;
+    font-size: 13px;
+}
+.chk-wrapper .chk{
+    vertical-align: -1px;
+}
+.sha-img-wrapper{
+    margin:0 6px 0 0!important;
+}
+.sha-img{
+    width: 30px;
 }

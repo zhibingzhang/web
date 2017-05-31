@@ -19,6 +19,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <script src="js/common.js"></script>
 </head>
 <body>
     <header>
@@ -143,35 +144,92 @@
                 <img src="img/small/info.png" />游艇预订信息
             </div>
             <div class="contact-info-wrapper">
-                <div class="overflow-auto overflow-txt">
-                    <div class="left">
-                        <p>预订日期：</p>
-                        <p>开始时间：2017/05/09  09：00 &nbsp;&nbsp;&nbsp;&nbsp;结束时间：2017/05/09  10：00</p>
-                        <div class="sel">
-                            <p>
-                                <span>上客码头</span>
-                                <select>
-                                    <option>浦东码头</option>
-                                </select>
-                            </p>
-                            <p>
-                                <span>下客码头</span>
-                                <select>
-                                    <option>浦东码头</option>
-                                </select>
+                <div class="top-matou">
+                    <div class="overflow-txt">
+                        <div class="left">
+                            <p>预订日期：</p>
+                            <p class="date_m">开始时间：2017/05/09  09：00 &nbsp;&nbsp;&nbsp;&nbsp;结束时间：2017/05/09  10：00</p>
+                        </div>
+                        <div class="input-span-wrapper">
+                            <p style="overflow: auto">
+                                <span>出航人数:</span>
+                            <span class="input-span">
+                                <ul>
+                                    <li>
+                                        <input type="text" class="text" onclick="beginSelect(this);" readonly value="4"/>
+                                        <img src="img/small/down.png" class="absolute-down-img"/>
+                                    </li>
+                                    <span class="absolute-person">人</span>
+                                    <li class="select">
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                        <p>3</p>
+                                    </li>
+                                </ul>
+                            </span>
                             </p>
                         </div>
                     </div>
-                    <div>
-                        <p>
-                            <span>出航人数:</span>
-                            <select>
-                                <option>4</option>
-                            </select>
-                        </p>
-                        <p>
-                            <span>免费服务:</span>
-                            <span>船长：1名（免费）</span>
+                </div>
+                <div>
+                    <div class="left-matou-wrapper">
+                        <div class="left left-matou">
+                            <div class="input-span-wrapper">
+                                <p>
+                                    <span class="matou-title">上客码头:</span>
+                                     <span class="input-span">
+                                        <ul>
+                                            <li>
+                                                <input type="text" class="text" onclick="beginSelect(this);" readonly value="浦东码头"/>
+                                                <img src="img/small/down.png" class="absolute-down-img"/>
+                                            </li>
+                                            <li class="select">
+                                                <p>浦东码头</p>
+                                                <p>浦东码头</p>
+                                                <p>浦西码头</p>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="left left-matou">
+                            <div class="input-span-wrapper">
+                                <p>
+                                    <span class="matou-title">下客码头:</span>
+                                 <span class="input-span">
+                                <ul>
+                                    <li>
+                                        <input type="text" class="text" onclick="beginSelect(this);" readonly value="浦东码头"/>
+                                        <img src="img/small/down.png" class="absolute-down-img"/>
+                                    </li>
+                                    <li class="select">
+                                        <p>浦东码头</p>
+                                        <p>浦东码头</p>
+                                        <p>浦西码头</p>
+                                    </li>
+                                </ul>
+                            </span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="service-free">
+                            <span>免费服务:</span><br/>
+                            <span>船长：1名（免费）</span><br/>
                             <span>水手：1名（免费）</span>
                         </p>
                     </div>
@@ -300,15 +358,30 @@
                 </div>
                 <div class="line"></div>
                 <h2>晚宴套餐：<span>280元/人</span><span>（6人份起订）</span></h2>
-                <p>
-                    <select>
-                        <option>6</option>
-                    </select>
-                    人
-                    <span>
-                        共<i>6</i>人，计费：<i>￥1680.00</i>
-                    </span>
-                </p>
+                <div class="day-night">
+                    <div class="input-span-wrapper">
+                        <p>
+                            <span class="input-span">
+                                <ul>
+                                    <li>
+                                        <input type="text" class="text" onclick="beginSelect(this);" readonly value="4"/>
+                                        <img src="img/small/down.png" class="absolute-down-img"/>
+                                    </li>
+                                    <span class="absolute-person">人</span>
+                                    <span class="absolute-person2">
+                                         共6人，计费：<span>￥1680.00</span>
+                                    </span>
+                                    <li class="select">
+                                        <p>3</p>
+                                        <p>4</p>
+                                        <p>5</p>
+                                        <p>6</p>
+                                    </li>
+                                </ul>
+                            </span>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="contact-title">
                 <img src="img/fp.png" />发票信息
@@ -392,12 +465,40 @@
             </div>
             <div class="contact-dd">
                 <p><i>-</i><span>使用优惠券</span></p>
-                <p>
-                    <span>优惠券：</span>
-                    <select>
-                        <option>5元优惠券</option>
-                    </select>
-                </p>
+                <div class="input-span-wrapper input-span-wrapper2">
+                    <p>
+                        <span class="matou-title">优惠券：</span>
+                         <span class="input-span">
+                            <ul>
+                                <li>
+                                    <input type="text" class="text" onclick="beginSelect(this);" readonly value="5元优惠券"/>
+                                    <img src="img/small/down.png" class="absolute-down-img"/>
+                                </li>
+                                <li class="select">
+                                    <p>5元优惠券</p>
+                                    <p>10元优惠券</p>
+                                    <p>满100减10元优惠券</p>
+                                </li>
+                            </ul>
+                        </span>
+                    </p>
+                </div>
+                    <!--<div class="input-span-wrapper">-->
+                        <!--<span class="left-youhui">优惠券:</span>-->
+                        <!--<span class="input-span">-->
+                            <!--<ul>-->
+                                <!--<li>-->
+                                    <!--<input type="text" class="text" onclick="beginSelect(this);" readonly="" value="5元优惠券">-->
+                                    <!--<img src="img/small/down.png" class="absolute-down-img">-->
+                                <!--</li>-->
+                                <!--<li class="select">-->
+                                    <!--<p>5元优惠券</p>-->
+                                    <!--<p>10元优惠券</p>-->
+                                    <!--<p>3</p>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</span>-->
+                 <!--</div>-->
                 <div class="add_cont">
                     <p>添加订单备注</p>
                     <div class="add_cont_box">
@@ -718,6 +819,26 @@
 
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
+        jQuery('[placeholder]').focus(function () {
+            var input = jQuery(this);
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+                input.removeClass('placeholder');
+            }
+        }).blur(function () {
+            var input = jQuery(this);
+            if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                input.addClass('placeholder');
+                input.val(input.attr('placeholder'));
+            }
+        }).blur().parents('form').submit(function () {
+            jQuery(this).find('[placeholder]').each(function () {
+                var input = jQuery(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            })
+        });
         $('#star').raty({
             readOnly: true, score: 4.9
         });
@@ -1038,11 +1159,18 @@ function upage(up_page,obg_val,fp_type){
     }
     
     up_page.append(html);
+
 }
-
-
-
-    
-
+$('.search').click(function(){
+    window.location.href='yacht_list.html';
+});
+function EnterPress(e){
+    var keycode=document.all?event.keyCode:e.which;
+    if(keycode==13){
+        $('.search').click();
+    }
+}
 </script>
+<script type="text/javascript" src="js/divselect.js"></script>
+
 </html>

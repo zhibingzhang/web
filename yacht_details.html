@@ -91,7 +91,7 @@
         <div class="yacht-name">
             <p>海神号<span class="font-20">Sea-stella46</span></p>
             <div class="rate-num-wrapper">
-                <div id="star" class="star"></div>
+                <div id="star" class="star2"></div>
                 <span class="rate-num" style="top: -2px;">9.8分<span>（969评论）</span></span>
             </div>
             <div class="clear"></div>
@@ -119,7 +119,10 @@
             <div class="yacht-handle">
                 <a href="#"><img src="img/small/collect.png"/>收藏</a>
                 <a href="#"><img src="img/small/options.png"/>分享</a>
-                <img src="img/small/social-pic.png"/>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc1.png" class="sha-img"/></a>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc2.png" class="sha-img"/></a>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc3.png" class="sha-img"/></a>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc4.png" class="sha-img"/></a>
             </div>
         </div>
         <div id="tFocus">
@@ -276,7 +279,7 @@
                                 <!--</tr>-->
                             <!--</table>-->
                         </div>
-                        <p class="yacht-detail-txt">已选择预定<span id="nyz">--年--月--日</span><span id="nyz_hs">--</span>小时</p>
+                        <p class="yacht-detail-txt has-choosed-date">已选择预定<span id="nyz">--年--月--日</span><span id="nyz_hs">--</span>小时</p>
                         <p class="yacht-price">预计：<span class="price-yellow"><span>6000</span>.00元</span></p>
                         <div class="yacht-rent-notice">
                             <p class="title">游艇租赁相关事项：</p>
@@ -293,7 +296,7 @@
                         <span class="has-read">我已阅读并同意</span>
                         <a href="#">《游艇租赁协议》</a>
                         </p>
-                        <a type="submit" class="yacht-booking" onclick="submit()"></a>
+                        <a type="submit" class="yacht-booking yacht-booking2" onclick="submit()"></a>
                     </div>
                 </div>
             </div>
@@ -478,8 +481,7 @@
                             </div>
 
                             <div class="pop_up-p" id="demo2-p">
-                                <div class="pop_up_xx-p"><img src="img/small/delete2.png" width="22" height="22" alt=""/>
-                                </div>
+                                <div class="pop_up_xx-p"><img src="img/small/delete2.png" width="22" height="22" alt=""/></div>
                                 <div class="pop_up2-p" id="ban_pic2-p">
                                     <div class="prev1-p" id="prev2-p">
                                         <img src="img/small/left.png" width="28" alt=""/>
@@ -623,7 +625,7 @@
         <div class="product-each-r">
             <img src="img/smallpic.png"/>
             <a class="product-title" href="yacht_details.html">莱悦9号 <span>Sea-stella63</span></a>
-            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="href="yacht_details.html""><img
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="yacht_details.html"><img
                     src="img/small/reserve.png"/>预定</a></div>
         </div>
         <div class="product-each0">
@@ -738,6 +740,7 @@
     $(document).ready(function () {
         /*星星打分*/
         $('.star').raty({ readOnly: true, score: 4.9 });
+        $('.star2').raty({ readOnly: true, score: 4.9 });
         // 日期控件
         $("#date2").datetimepicker({
             format: 'yyyy-mm-dd',

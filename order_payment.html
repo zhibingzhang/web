@@ -11,6 +11,11 @@
     <link rel="stylesheet" type="text/css" href="css/main_new.css">
     <script src="js/jquery-1.9.min.js"></script>
     <script src="js/mootools-1.3.2.js"></script>
+    <style>
+        body{
+            background: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,6 +30,42 @@
             </div>
         </div>
     </header>
+    <div class="list-header-back2">
+        <div class="index-tab">
+            <div class="container2">
+                <img src="img/logo.png" class="logo-img"/>
+                <div class="index-tab-list">
+                    <div class="overflow-auto">
+                        <a href="aboutus.html">关于我们</a>
+                        <a href="news.html" >媒体中心</a>
+                        <a href="train.html">驾驶培训</a>
+                        <a href="theme_type.html">主题租赁</a>
+                        <a href="yacht_list.html" class="active">游艇租赁</a>
+                        <a href="home.html">首页</a>
+                    </div>
+                </div>
+                <div class="index-input">
+                <span>
+                    <form action="" method="post">
+                        <div id="index-input-select" class="index-input-select">
+                            <a class="index-input-a">
+                                <p>游艇</p>
+                                <img src="img/down.png" class="down"/>
+                            </a>
+                            <ul>
+                                <li>主题</li>
+                                <li>游艇</li>
+                            </ul>
+                            <input name="" type="hidden" value="" id="index-input-select2"/>
+                        </div>
+                    </form>
+                </span>
+                    <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                    <img src="img/search.png" class="search"/>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="select-wrapper">
         <div class="container">
             <div class="now-position">当前位置：首页 > 游艇租赁 > <span>提交订单</span></div>
@@ -57,11 +98,11 @@
                             <img src="img/button-check@2x.png" />
                         </dt>
                         <dd>
-                            <p>恭喜你订单提交成功！订单号<span>21255255252</span></p>
-                            <p>请在<span>1小时</span>内填写提交哦。</p>
+                            <p>恭喜您的订单已提交成功！   订单编号为201612021233112</p>
+                            <p>请您在<span>1小时</span>内完成支付，否则订单将会被自动取消的哦~</p>
                             <div class="info">
                                 <p>
-                                    <span>游艇名称：xxx</span>
+                                    <span>游艇名称:莱悦9号 </span>
                                     <span>预定时间：2017/05/18 11:00~2017/05/18 11:00</span>
                                     <span>联系人：wang</span>
                                     <span>联系方式：15652521325</span>
@@ -93,7 +134,7 @@
                         <img src="img/zf1.png" />
                     </a> 
                 </p>
-                <a href="scheduled_success0518.html">立即支付</a>
+                <a href="scheduled_success.html">立即支付</a>
             </div>
         </div>
     </div>
@@ -207,4 +248,6 @@
         });
     });
 </script>
+<script type="text/javascript" src="js/divselect.js"></script>
+
 </html>
