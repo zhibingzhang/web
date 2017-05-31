@@ -295,7 +295,7 @@ dl dt p {
 }
 
 .item_info p.fx a {
-    margin-left: 8px
+    margin-left: 6px
 }
 
 .item_info p.fx span {
@@ -437,12 +437,20 @@ dl dt p {
 
 .share_item_info div:first-child div p img,.share_item_info div:first-child div p span {
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
+    font-size: 12px;
+    color: #666;
+}
+.share_item_info div:first-child div p img{
+    width: 14px;
+}
+.share_item_info div:first-child div p:first-child img{
+    width: auto;
 }
 
 .share_item_info div:first-child div p:first-child+p {
     font-size: 18px;
-    color: #555658;
+    color: #333;
     margin: 18px 0
 }
 
@@ -452,22 +460,24 @@ dl dt p {
 }
 
 .share_item_info div:first-child p.fx_box a img {
-    width: 23px;
-    height: 23px;
+    width: 30px;
+    height: 30px;
 }
 
 .share_item_info div:first-child p.fx_box span {
-    margin-left: 10px
+    margin-left: 5px;
+    color: #333;
 }
 
 .share_item_info div:first-child p.fx_box a {
-    margin-left: 10px
+    margin-left: 6px
 }
 
 .share_item_info div:first-child+div {
     width: 813px;
     background-color: #FFF;
-    padding: 36px
+    padding: 36px;
+    color: #333;
 }
 
 .share_item_info div:first-child+div h2 {
@@ -495,7 +505,7 @@ dl dt p {
     text-align: center
 }
 
-.share_item_info div:first-child+div a {
+.share_item_info div:first-child+div a,.zan-wrapper a {
     display: block;
     width: 67px;
     height: 25px;
@@ -503,9 +513,17 @@ dl dt p {
     color: #fff;
     text-align: center;
     margin: 50px auto;
-    padding-top: 42px
+    padding-top: 42px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
-
+.zan-wrapper{
+    float: right!important;
+    width: 885px;
+}
 .common_box {
     margin-bottom: 100px;
     overflow: hidden
@@ -2413,8 +2431,8 @@ dl dt p {
 
 #add_fq label input {
     width: 338px;
-    height: 40px;
-    line-height: 40px;
+    height: 36px;
+    line-height: 36px;
     border: 1px solid #e4e4e4;
     padding-left: 18px
 }
@@ -3010,8 +3028,8 @@ a:focus,a:hover {
 }
 
 .item_info p.fx a img {
-    width: 23px;
-    height: 23px;
+    width: 30px;
+    height: 30px;
 }
 
 .input-span{
@@ -3105,4 +3123,14 @@ a:focus,a:hover {
 }
 .login-out{
     color: #fff;
+}
+.add_box span,.mak_box span{
+    font-size: 14px!important;
+}
+.add_box input,.mak_box input{
+    font-size: 12px!important;
+}
+.add_box label span,.mak_box label span{
+    font-size: 12px!important;
+    top: 10px!important;
 }

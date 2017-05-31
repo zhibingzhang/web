@@ -177,9 +177,11 @@ body{
 #showsum {margin-top:10px;
     /*margin-left: 18px;*/
 }
-#showsum span { border:1px solid #ddd;}
+#showsum span {
+    /*border:1px solid #ddd;*/
+}
 #showsum span.sel { border:2px solid #428bca;
-    height: 71px!important;
+    height: 69px!important;
     width: 103px!important;
 }
 #showsum{
@@ -188,7 +190,7 @@ body{
 #showsum>p{
     background: none!important;
     width: auto!important;
-    margin-left: 9px;
+    margin-left: 10px;
 }
 
 #showbox>p{

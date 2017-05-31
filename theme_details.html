@@ -40,8 +40,7 @@
                 欢迎进入上海游艇O2O平台！
             </div>
             <div class="right">
-                <a class="login-btn" href="login.html">登录</a>
-                <a class="register-btn" href="regist.html">注册</a>
+                <a class="login-btn" href="login.html">登录</a><a class="register-btn" href="regist.html">注册</a>
             </div>
         </div>
     </div>
@@ -85,14 +84,14 @@
 
 <div class="content">
     <div class="txtmap">当前位置：首页 >
-        <a href="#">游艇租赁</a>
+        <a href="#">主题租赁</a>
     </div>
     <div class="hrgray"></div>
     <div class="yacht-detail new">
         <div class="yacht-name">
             <p class="hs-tit"><img src="img/small/shoot.png"><span>婚纱拍摄</span></p>
             <div class="rate-num-wrapper">
-                <div id="star" class="star"></div>
+                <div id="star" class="star2"></div>
                 <span class="rate-num" style="top: -2px;">9.8分<span>（969评论）</span></span>
             </div>
             <div class="clear"></div>
@@ -112,7 +111,7 @@
             <p class="yacht-detail-title top-small">详细描述</p>
             <p class="yacht-detail-txt limit-height2">外滩茂悦于2015年6月14日下午举办了一场别开生面的婚典，百艇汇作为特邀合作伙伴也参加了此次盛典。在丝绒般的音乐声里，缓缓拉开了舞台的序幕，仙履奇缘舞蹈秀以经典童话故事姑娘为蓝本，通过舞蹈的方式，重现了旷世爱恋的经典场景！</p>
             <p class="yacht-price"><span class="price-yellow">¥<span>1500</span>.00</span></p>
-            <p class="theme-information">
+            <p class="theme-information theme-information2">
                 <span class="old-price">原价：¥12，000</span>
                 <span class="booked">已有1200人预订</span>
             </p>
@@ -120,7 +119,10 @@
             <div class="yacht-handle">
                 <a href="#"><img src="img/small/collect.png"/>收藏</a>
                 <a href="#"><img src="img/small/options.png"/>分享</a>
-                <img src="img/small/social-pic.png"/>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc1.png" class="sha-img"/></a>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc2.png" class="sha-img"/></a>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc3.png" class="sha-img"/></a>
+                <a href="#" class="sha-img-wrapper"><img src="img/ioc4.png" class="sha-img"/></a>
             </div>
         </div>
         <div id="tFocus">
@@ -182,7 +184,7 @@
     <div class="yacht-tab" id="wraps">
         <ul id="diyas">
             <li class="current"><a class="yacht-nav1">游艇预定</a></li>
-            <li><a class="yacht-nav2">游艇介绍</a></li>
+            <li><a class="yacht-nav2">主题介绍</a></li>
             <li><a class="yacht-nav3">费用说明</a></li>
             <li><a class="yacht-nav4">预定须知</a></li>
             <li><a class="yacht-nav5">用户评论</a></li>
@@ -256,7 +258,7 @@
                         </div>
                     </div>
                     <div class="choose-time-right">
-                        <p class="yacht-detail-txt">已选择内容如下：</p>
+                        <p class="yacht-detail-txt" style="margin-top: 2px;">已选择内容如下：</p>
                         <div class="theme-date">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tbody><tr>
@@ -281,9 +283,11 @@
                             </p>
                         </div>
                         <p class="yacht-detail-txt">
-                        <div class="chk"></div>
-                        <span>我已阅读并同意</span>
-                        <a href="#">《游艇租赁协议》</a>
+                        <div class="chk-wrapper">
+                            <div class="chk"></div>
+                            <span class="has-read">我已阅读并同意</span>
+                            <a href="#">《主题租赁协议》</a>
+                        </div>
                         </p>
                         <a type="submit" class="yacht-booking" href="purchase_service.html"></a>
 
@@ -471,14 +475,13 @@
                             </div>
 
                             <div class="pop_up-p" id="demo2-p">
-                                <div class="pop_up_xx-p"><img src="images/chacha3.png" width="40" height="40" alt=""/>
-                                </div>
+                                <div class="pop_up_xx-p"><img src="img/small/delete2.png" width="22" height="22" alt=""/></div>
                                 <div class="pop_up2-p" id="ban_pic2-p">
                                     <div class="prev1-p" id="prev2-p">
-                                        <img src="images/index_tab_l.png" width="28" height="51" alt=""/>
+                                        <img src="img/small/left.png" width="28" alt=""/>
                                     </div>
                                     <div class="next1-p" id="next2-p">
-                                        <img src="images/index_tab_r.png" width="28" height="51" alt=""/>
+                                        <img src="img/small/right.png" width="28" alt=""/>
                                     </div>
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
@@ -524,17 +527,25 @@
                                         e.preventDefault();
                                         $(this).addClass('active').siblings().removeClass('active');
                                         _index = $(this).index();
-                                        console.log(_index)
-                                        $('.pop_up-p').show()
+                                        console.log(_index);
+                                        check(_index);
+                                        $('.pop_up-p').show();
+                                        if(mySwiper!='' && _index == 0){
+                                            mySwiper.swipeTo(_index,100,false)
+
+                                        }
+                                        if(_index==0){
+//                                            $('.swiper-wrapper').css('transform','480px')
+                                        }
                                         mySwiper = new Swiper ('.swiper-container', {
                                             initialSlide : _index,
                                             onSlideChangeEnd: function(swiper){
-                                              var _index = swiper.activeIndex;
-                                              $('.ban-p li').eq(_index).addClass('active').siblings().removeClass('active');
+                                                var _index = swiper.activeIndex;
+                                                $('.ban-p li').eq(_index).addClass('active').siblings().removeClass('active');
+                                                check(_index);
                                             }
-                                        }) 
+                                        })
                                     })
-
                                     //按钮
                                     $('.prev1-p').click(function(){
                                         mySwiper.swipePrev();
@@ -603,23 +614,23 @@
     <div class="product-wrapper">
         <div class="product-each-r">
             <img src="img/smallpic.png"/>
-            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
+            <a class="product-title" href="yacht_details.html">莱悦9号 <span>Sea-stella63</span></a>
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="yacht_details.html"><img
                     src="img/small/reserve.png"/>预定</a></div>
         </div>
         <div class="product-each-r">
             <img src="img/smallpic.png"/>
-            <div class="product-title">莱悦9号 <span>Sea-stella63</span></div>
-            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img
+            <a class="product-title" href="yacht_details.html">莱悦9号 <span>Sea-stella63</span></a>
+            <div class="product-price"><span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="yacht_details.html"><img
                     src="img/small/reserve.png"/>预定</a></div>
         </div>
         <div class="product-each0">
             <img src="img/smallpic.png"/>
-            <div class="product-title">莱悦9号 
+            <a class="product-title" href="yacht_details.html">莱悦9号
                 <span>Sea-stella63</span>
-            </div>
+            </a>
             <div class="product-price">
-                <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a><img src="img/small/reserve.png"/>预定</a></div>
+                <span>￥ <span class="font-bold">7800</span>.00元/小时</span> 起 <a href="yacht_details.html"><img src="img/small/reserve.png"/>预定</a></div>
         </div>
     </div>
 </div>
@@ -724,7 +735,8 @@
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
         /*星星打分*/
-        $('.star').raty({ readOnly: true, score: 3 });
+        $('.star').raty({ readOnly: true, score: 4.9 });
+        $('.star2').raty({ readOnly: true, score: 4.9 });
         // 日期控件
         $("#date2").datetimepicker({
             format: 'yyyy-mm-dd',
@@ -759,6 +771,13 @@
                 $(this).addClass('active');
             }
         });
+        $('.has-read').click(function(){
+            if($('.chk').hasClass('active')){
+                $('.chk').removeClass('active');
+            }else{
+                $('.chk').addClass('active');
+            }
+        });
         //时间选择
         var star = 0;
         var end = 0;
@@ -784,7 +803,7 @@
                 "sumid":"showsum",
                 "boxw":580,//宽度,该版本中请把宽高填写成一样
                 "boxh":407,//高度,该版本中请把宽高填写成一样
-                "sumw":104,//列表每个宽度,该版本中请把宽高填写成一样
+                "sumw":105,//列表每个宽度,该版本中请把宽高填写成一样
                 "sumh":73,//列表每个高度,该版本中请把宽高填写成一样
                 "sumi":6,//列表间隔
                 "sums":5,//列表显示个数
@@ -818,6 +837,19 @@
             }
         })
     });
+    function check(_index){
+        if(_index==0){
+            $('.prev1-p img').attr('src','img/small/left.png');
+        }else{
+            $('.prev1-p img').attr('src','img/small/left2.png');
+        }
+        if(_index==$('.ban-p li').length - 1){
+            $('.next1-p img').attr('src','img/small/right2.png');
+        }else{
+            $('.next1-p img').attr('src','img/small/right.png');
+        }
+
+    }
 </script>
 <script type="text/javascript" src="js/script.js"></script>
 </html>
