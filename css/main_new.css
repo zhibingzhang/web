@@ -50,7 +50,7 @@ dl dt p {
 }
 
 .group_textarea label textarea {
-    width: 328px;
+    width: 318px;
     height: 80px;
     border: 1px solid #e4e4e4
 }
@@ -69,7 +69,8 @@ dl dt p {
 
 .group_file>span {
     float: left;
-    padding-left: 12px
+    padding-left: 12px;
+    font-size: 14px;
 }
 
 .group_file label {
@@ -1544,7 +1545,7 @@ dl dt p {
 .member .tabs .tab_member .cont1 ul li {
     position: relative;
     float: left;
-    margin-right: 84px;
+    margin-right: 75px;
     text-align: center
 }
 
@@ -1571,11 +1572,18 @@ dl dt p {
     text-align: center;
     width: 100%
 }
-
+.quxiaodengdan,.tk_btn,.zcgm{
+    cursor: pointer;
+}
+.tab tbody tr td.fk_btn a.zcgm{
+    border: 1px solid #ccc;
+    color: #333;
+}
 .tab thead th {
     background-color: #f2f2f2;
     vertical-align: middle;
-    height: 58px
+    height: 58px;
+    text-align: center;
 }
 
 .tab tbody tr td {
@@ -1598,7 +1606,12 @@ dl dt p {
     text-align: left;
     vertical-align: middle
 }
-
+.tab tbody tr td:first-child span{
+    line-height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+}
 .tab tbody tr td:first-child dl {
     overflow: hidden
 }
@@ -1616,7 +1629,7 @@ dl dt p {
     margin-bottom: 10px
 }
 
-.tab tbody tr td.btn a {
+.tab tbody tr td.fk_btn a {
     display: block;
     width: 56px;
     height: 24px;
@@ -1624,9 +1637,14 @@ dl dt p {
     border: 1px solid #0c70b2;
     color: #0c70b2;
     margin: 0 auto;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    border-radius: 3px;
 }
-
+.tab tbody tr td a.xq_link{
+    color: #333;
+    margin-top: 6px;
+    top: 6px;
+}
 .tab tbody tr td.btn a:first-child+a {
     border-color: #e4e4e4;
     color: #333
@@ -1672,9 +1690,11 @@ dl dt p {
     left: 70px;
     width: 89px;
     height: 6px;
-    background-color: red
+    background-color: #edf2f6;
 }
-
+.ck_mak .ck_box ul li i.active{
+    background-color: #0275b4;
+}
 .ck_mak .ck_box ul li p {
     font-size: 14px;
     margin: 10px 0;
@@ -1869,12 +1889,13 @@ dl dt p {
 }
 
 .pj_mak .xin span {
-    display: inline-block;
-    vertical-align: middle
+    float: left;
 }
 
 .pj_mak .xin p {
-    margin-top: 10px
+    margin-top: 10px;
+    overflow: hidden;
+    line-height: 24px;
 }
 
 .xq_mak .xq_box {
@@ -1886,13 +1907,15 @@ dl dt p {
 
 .xq_mak .xq_box h3 {
     text-align: left;
-    margin-bottom: 36px
+    margin-bottom: 36px;
+    font-weight: bold;
 }
 
 .xq_mak .xq_box .title {
     font-size: 14px;
     margin-bottom: 16px;
-    margin-top: 46px
+    margin-top: 46px;
+    font-weight: bold;
 }
 
 .xq_mak .xq_box .bottom_line {
@@ -1946,12 +1969,12 @@ dl dt p {
 }
 
 #tk_mak .mak_box .jer i {
-    color: #f50007
+    color: #f50007;
+    left: -6px;
 }
 
 #tk_mak .mak_box .jer span {
     display: inline-block;
-    vertical-align: center
 }
 
 #tk_mak .mak_box .jer span:first-child {
@@ -1963,7 +1986,9 @@ dl dt p {
     width: 92px;
     height: 40px;
     line-height: 40px;
-    text-align: center
+    text-align: center;
+    background-color: #f2f2f2;
+    border-radius: 3px;
 }
 
 #tk_mak .mak_box .group_textarea>span {
@@ -2875,7 +2900,7 @@ dl dt p {
 
 .tab5 .tab thead th {
     font-size: 14px;
-    color: #313131
+    color: #313131;
 }
 
 #fayouji .mak_box {

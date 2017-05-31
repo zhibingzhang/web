@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <!--<meta http-equiv="x-ua-compatible" content="IE=edge">-->
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="basic/swiper/css/idangerous.swiper.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/lCalendar.css" />
+    <link rel="stylesheet" type="text/css" href="css/main_new.css" />
+    <link type="text/css" href="css/paging.css" rel="stylesheet"/>
+    <script src="js/jquery-1.9.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/mootools-1.3.2.js"></script>
+    <script src="js/divselect.js"></script>
+</head>
+<body style="background-color: #FFF;">
+    <header>
+        <div class="container">
+            <div class="overflow-auto">
+                <div class="left">
+                    欢迎进入上海游艇O2O平台！
+                </div>
+                <div class="right">
+                    <a class="login-btn" href="login.html">登录</a><a class="register-btn" href="regist.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-back">
+        <div class="index-tab index-tab2">
+            <div class="container">
+                <a href="index.html">
+                    <img src="img/logo.png" class="logo-img"/>
+                </a>
+                <div class="index-tab-list">
+                    <div class="overflow-auto">
+                        <div class="overflow-auto">
+                            <a href="aboutus0517.html">关于我们</a>
+                            <a href="news.html">媒体中心</a>
+                            <a href="train.html">驾驶培训</a>
+                            <a href="theme_type.html">主题租赁</a>
+                            <a href="yacht_list.html">游艇租赁</a>
+                            <a href="home.html">首页</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-input">
+                    <span>
+                        <form action="" method="post">
+                            <div id="index-input-select" class="index-input-select">
+                                <a class="index-input-a">
+                                    <p>游艇</p>
+                                    <img src="img/down.png" class="down"/>
+                                </a>
+                                <ul>
+                                    <li>主题</li>
+                                    <li>游艇</li>
+                                </ul>
+                                <input name="" type="hidden" value="" id="index-input-select2"/>
+                            </div>
+                        </form>
+                    </span>
+                    <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                    <img src="img/search.png" class="search"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content public_main">
+        <p class="nav_list">当前位置：首页 > <span>个人中心</span></p>
+        <div class="common_box member">
+            <div>
+                <div class="head">
+                   <p>
+                       <img src="img/personal/headl1.png" />
+                   </p>
+                   <span>Free</span>
+                   <h3>个人中心</h3>
+               </div>
+               <ul>
+                   <li>
+                       <a href="member_center.html">
+                            <img src="img/personal/ioc1.png" />
+                            <span>订单中心</span>
+                       </a>
+                       <ul>
+                            <li>
+                                <a href="member_order.html" class="tab1">
+                                    <img src="img/common_list.png" />
+                                    <span>订单管理</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="member_refund.html" class="tab2">
+                                    <img src="img/common_list.png" />
+                                    <span>退款管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="member_evaluate.html" class="tab3">
+                                    <img src="img/common_list.png" />
+                                    <span>评价管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="member_collection.html" class="tab4">
+                                    <img src="img/common_list.png" />
+                                    <span>收藏管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="member_travels.html" class="tab5">
+                                    <img src="img/common_list.png" />
+                                    <span>游记管理</span>
+                                </a>
+                            </li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="javascript:;">
+                            <img src="img/common2.png" />
+                            <span>账户管理</span>
+                       </a>
+                       <ul>
+                            <li>
+                                <a href="member_basic.html" class="tab6">
+                                    <img src="img/common_list.png" />
+                                    <span>基本资料</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="member_contacts.html" class="tab7">
+                                    <img src="img/common_list.png" />
+                                    <span>联系人管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="member_security.html" class="tab8">
+                                    <img src="img/common_list.png" />
+                                    <span>安全中心</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="member_invoice.html" class="tab9">
+                                    <img src="img/common_list.png" />
+                                    <span>发票管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="member_my.html" class="tab10">
+                                    <img src="img/common_list.png" />
+                                    <span>我的优惠券</span>
+                                </a>
+                            </li>
+                       </ul>
+                   </li>
+               </ul>  
+            </div>
+            <div class="tabs">
+                <div class="tab2">
+                    <h2>退款管理</h2>
+                    <p class="tit1">你的订单将在这里可以进行退款管理</p>
+                    <div class="item_date">
+                        <div class="group">
+                            <label>
+                                <input type="text" />
+                                <span>订单编号/商品关键词</span>
+                                <img src="img/personal/search.png">
+                            </label>
+                        </div>
+                        <div class="date_link">
+                            <a href="javascript:;" class="active">今天</a>
+                            <a href="javascript:;">最近7天</a>
+                            <a href="javascript:;">最近1个月</a>
+                            <a href="javascript:;">最近3个月</a>
+                        </div>
+                        <div class="date_s">
+                            <span>开始日期<img id="datetimepicker" src="img/personal/date.png" /></span><i>~</i>
+                            <span>结束日期<img id="datetimepicker1" src="img/personal/date.png" /></span>
+                        </div>
+                    </div>
+                    <table class="tab">
+                        <thead>
+                            <tr>
+                                <th>商品信息</th>
+                                <th>数量</th>
+                                <th>总金额<br/>（元）</th>
+                                <th>优惠</th>
+                                <th>实际金额<br/>（元）</th>
+                                <th>交易状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="dd_c">
+                                <td>
+                                    <label>
+                                        <div class="chk"></div>
+                                        <span>订单编号：2018545856325458</span>
+                                    </label>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    2017-05-18 12:00
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   <dl>
+                                       <dt>
+                                           <img src="img/personal/td_img.png" />
+                                       </dt>
+                                       <dd>
+                                            <h4>莱悦9号 Search</h4>
+                                            <p>尺寸：<span>48</span></p> 
+                                       </dd>
+                                   </dl> 
+                                </td>
+                                <td>2小时</td>
+                                <td>￥6000.00</td>
+                                <td>优惠券：<sapn>￥0.00</sapn></td>
+                                <td>
+                                    <span class="sum">
+                                        ￥<i>3600</i>.00
+                                    </span>
+                                </td>
+                                <td>
+                                    退款中
+                                </td>
+                                <td class="btn">
+                                    <a href="javascript:;">关闭申请</a>
+                                </td>
+                            </tr>
+                            <tr class="dd_c">
+                                <td>
+                                    <label>
+                                        <div class="chk"></div>
+                                        <span>订单编号：2018545856325458</span>
+                                    </label>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    2017-05-18 12:00
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   <dl>
+                                       <dt>
+                                           <img src="img/personal/td_img.png" />
+                                       </dt>
+                                       <dd>
+                                            <h4>莱悦9号 Search</h4>
+                                            <p>尺寸：<span>48</span></p> 
+                                       </dd>
+                                   </dl> 
+                                </td>
+                                <td>2小时</td>
+                                <td>￥6000.00</td>
+                                <td>优惠券：<sapn>￥0.00</sapn></td>
+                                <td>
+                                    <span class="sum">
+                                        ￥<i>3600</i>.00
+                                    </span>
+                                </td>
+                                <td>退款关闭</td>
+                                <td class="btn">
+                                    <span id="tk_xq_btn">推款详情</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="pageToo3" class="pageWrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-img">
+        <div class="bottom2">
+            <div class="bg-00086"></div>
+            <div class="container">
+                <div class="first-c">
+                    <img src="img/small/bottom1.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">权益保障</span>
+                        <br/>
+                        <span class="bottom-sub-title">平台中立资金安全</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom2.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">服务专业</span>
+                        <br/>
+                        <span class="bottom-sub-title">规范行业服务标准</span>
+                    </div>
+                </div>
+                <div class="first-c">
+                    <img src="img/small/bottom3.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">安全至上</span>
+                        <br/>
+                        <span class="bottom-sub-title">安全把控保险护航</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/small/bottom3.png" class="left"/>
+                    <div>
+                        <span class="bottom-title">行业权威</span>
+                        <br/>
+                        <span class="bottom-sub-title">国家“5A”协会主办</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bg-00060"></div>
+            <div class="container overflow-auto">
+                <div class="call-wrapper">
+                    <div class="c-wrapper">
+                        <img src="img/small/call.png" class="left"/>
+                        <div>
+                            客服中心电话：<br/><span class="big-c">400-812-1241</span>
+                        </div>
+                        <div class="small-c">工作时间：周一至周日，9：00至18：00</div>
+                    </div>
+                </div>
+                <div class="c-list-wrapper">
+                    <div class="first-div">
+                        <div>
+                            <img src="img/small/bottom01.png"/>新手指南
+                        </div>
+                        <a>注册流程</a><br/>
+                        <a>购物流程</a><br/>
+                        <a>常见问题</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom02.png"/>支付方式
+                        </div>
+                        <a>支付问题</a><br/>
+                        <a>支付方式</a><br/>
+                        <a>支付限额</a>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="img/small/bottom03.png"/>售后服务
+                        </div>
+                        <a>退换货政策</a><br/>
+                        <a>退款说明</a><br/>
+                        <a>退货流程</a>
+                    </div>
+                    <div class="code-wrapper">
+                        <img src="img/code.png" />
+                        <div>扫码关注我们</div>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <a>关于我们</a>  |  <a>联系我们</a>  |  <a>法律声明</a>  |  <a>隐私与条款</a>  |  <a>投诉与建议</a>
+                </div>
+                <div class="copy-right">2009-2010 Shanghai Port International Cruise Terminal. All Righ</div>
+            </div>
+        </div>
+    </div>
+    <!-- 评价list -->
+    <div class="pj_mak">
+        <div class="pj_box">
+            <h3>评价</h3>
+            <i id="pj_close"><img src="img/X.png" /></i>
+            <div class="pj_ti">
+                <p>
+                    <span>订单编号：2018545856325458</span>
+                    <span>2017-05-18 12:02:02</span>
+                </p>
+                <dl>
+                    <dt>
+                       <img src="img/personal/td_img.png" /> 
+                    </dt>
+                    <dd>
+                        <h4>莱悦9号 Search</h4>
+                        <p>尺寸：<span>48</span></p> 
+                    </dd>
+                </dl>
+            </div>
+            <div class="xin">
+                <p>
+                    <span>游艇满意度：</span>
+                    <span>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    <span>0分</span>
+                </p>
+                <p>
+                    <span>餐饮满意度：</span>
+                    <span>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    <span>0分</span>
+                </p>
+                <p>
+                    <span>服务满意度：</span>
+                    <span>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    <span>0分</span>
+                </p>
+            </div>
+            <div class="group_textarea">
+                <span>评价内容：</span>
+                <label>
+                    <textarea>
+                        
+                    </textarea>
+                    <span>
+                        赶快分享你的购买心得吧...
+                    </span>
+                </label>
+            </div>
+            <div class="group_file">
+                <span>上传图片：</span>
+                <label>
+                    <img src="img/personal/file.png" />
+                    <input type="file">
+                </label>
+                <p>每张图片不得超过1m</p>
+            </div>
+            <div class="btns_submit">
+                <a href="javascript:;" id="pj_tj_btn">提交</a>
+                <a href="javascript:;" class="qx_btn">取消</a>
+            </div>
+        </div>
+    </div>
+    <!-- 订单详情 -->
+    <div class="xq_mak" id="xq_mak">
+        <div class="xq_box">
+            <h3>订单详情</h3>
+            <i id="xq_close"><img src="img/X.png" /></i>
+            <p class="title">
+                当前订单【状态已完成】
+            </p>
+            <div class="tab_cont">
+                <p>
+                    <span>订单编号<i>2018545856325458</i></span>
+                    <span>订单状态<i>已完成</i></span>
+                </p> 
+                <p>
+                    <span>下单日期<i>2017-05-18 12:02:02</i></span>
+                    <span>支付方式<i>已完成</i></span>
+                </p>
+                <p>
+                    <span>备注</span>
+                </p>
+            </div>
+            <p class="title">
+                发票信息
+            </p>
+            <div class="tab_cont">
+                <p>
+                    <span>发票金额<i>￥6000.00666</i></span>
+                    <span>发票类型<i>已完成</i></span>
+                </p> 
+                <p>
+                    <span>发票内容<i>2017-05-18 12:02:02</i></span>
+                    <span>发票抬头<i>已完成</i></span>
+                </p>
+                <p>
+                    <span>收货人<i>2017-05-18 12:02:02</i></span>
+                    <span>联系方式<i>已完成</i></span>
+                </p>
+                <p>
+                    <span>收获地址<i>fsdfdsfdsfsdfsd</i></span>
+                </p>
+            </div>
+            <p class="title">
+                会员信息
+            </p>
+            <div class="tab_cont">
+                <p class="bottom_line">
+                    <span>会员名称<i>xxx</i></span>
+                    <span>会员手机号<i>15621525245</i></span>
+                </p> 
+            </div>
+            <p class="title">
+                订单商品
+            </p>
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <th>商品信息</th>
+                        <th>数量</th>
+                        <th>总金额<br/>（元）</th>
+                        <th>优惠</th>
+                        <th>实际金额<br/>（元）</th>
+                        <th>交易状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="dd_c">
+                        <td>
+                            <label>
+                                <input type="checkbox" class="k" />
+                                <span>订单编号：2018545856325458</span>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            2017-05-18 12:00
+                        </td>
+                        <td>
+                            <a href="javascript:;">
+                                <img src="img/personal/del.png" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <dl>
+                               <dt>
+                                   <img src="img/personal/td_img.png" />
+                               </dt>
+                               <dd>
+                                    <h4>莱悦9号 Search</h4>
+                                    <p>尺寸：<span>48</span></p> 
+                               </dd>
+                           </dl> 
+                        </td>
+                        <td>2小时</td>
+                        <td>￥6000.00</td>
+                        <td>优惠券：<sapn>￥0.00</sapn><br/>
+                            积分：<sapn>￥0.00</sapn>
+                        </td>
+                        <td>
+                            <span class="sum">
+                                ￥<i>3600</i>.00
+                            </span>
+                        </td>
+                        <td>已付款<br/>订单详情</td>
+                        <td class="btn">
+                            <a href="javascript:;" class="pj_btn">评价</a>
+                            <a href="javascript:;">申请退款</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="sum">
+                总价：<i>3600</i>.00
+            </p>
+            <p class="btn_dy">
+                <a href="javascript:;">打印</a>
+                <a href="javascript:;" class="qx_btn">取消</a>
+            </p>
+        </div>
+    </div>
+    <!-- 退款详情 -->
+    <div class="xq_mak" id="tk_mak_xq">
+        <div class="xq_box">
+            <h3>退款详情</h3>
+            <i class="close"><img src="img/X.png" /></i>
+            <p class="title">
+                当前订单【状态已完成】
+            </p>
+            <div class="tab_cont">
+                <p>
+                    <span>退款编号<i>2018545856325458</i></span>
+                    <span>退款金额
+                            <span class="sum">￥
+                            <i>3600</i>.00
+                            </span>
+                    </span>
+                </p> 
+                <p class="bottom_line">
+                    <span>申请日期<i>2017-05-18 12:02:02</i></span>
+                    <span>客服备注<i>已完成</i></span>
+                </p>
+            </div>
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <th>商品信息</th>
+                        <th>数量</th>
+                        <th>总金额<br/>（元）</th>
+                        <th>优惠</th>
+                        <th>实际金额<br/>（元）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                           <dl>
+                               <dt>
+                                   <img src="img/personal/td_img.png" />
+                               </dt>
+                               <dd>
+                                    <h4>莱悦9号 Search</h4>
+                                    <p>尺寸：<span>48</span></p> 
+                               </dd>
+                           </dl> 
+                        </td>
+                        <td>2小时</td>
+                        <td>￥6000.00</td>
+                        <td>优惠券：<sapn>￥0.00</sapn><br/>
+                            积分：<sapn>￥0.00</sapn>
+                        </td>
+                        <td>
+                            <span class="sum">
+                                ￥<i>3600</i>.00
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="title">
+                退款信息
+            </p>
+            <p class="tksm">
+                <span>退款说明</span>
+                <span>多拍/拍错了</span>
+            </p>
+            <p class="btn_dy">
+                <a href="javascript:;">打印</a>
+                <a href="javascript:;" id="qx_btn">取消</a>
+            </p>
+        </div>
+    </div>
+    <!-- 申请退款 -->
+    <div class="mak" id="tk_mak">
+        <div class="mak_box">
+            <h3>申请退款</h3>
+            <i class="close"><img src="img/X.png" /></i>
+            <a href="javascript:;">查看退款说明 ></a>
+            <p class="jer">
+                <span><i>*</i>退款金额：</span>
+                <span>￥6000</span>
+            </p>
+            <div class="group_textarea">
+                <span>退款说明：</span>
+                <label>
+                    <textarea>
+                        
+                    </textarea>
+                    <span>
+                        赶快分享你的购买心得吧...
+                    </span>
+                </label>
+            </div>
+            <div class="btns_submit">
+                <a href="javascript:;">提交申请</a>
+                <a href="javascript:;" class="qx_btn">取消</a>
+            </div>
+        </div>
+    </div>
+    <!-- 修改手机号码 -->
+    <div class="mak" id="xg_phone">   
+        <div class="mak_box">
+            <h3>修改手机号码</h3>
+            <i class="close"><img src="img/X.png" /></i>
+            <div class="rephone_1">
+                <ul class="jdt">
+                <li>
+                    <p class="cor">验证身份</p>
+                    <img src="img/personal/q1_c.png"/>
+                    <i></i>
+                </li>
+                <li>
+                    <p>修改已验证手机</p>
+                    <img src="img/personal/q1.png"/>
+                    <i></i>
+                </li>
+                <li>
+                    <p>完成</p>
+                    <img src="img/personal/q2.png"/>
+                </li>
+                </ul>
+                <ul class="phone_reg">
+                    <li>
+                        <span class="tit">原手机号：</span>
+                        <span>156***158</span>
+                    </li>
+                    <li>
+                        <span class="tit">验证码：</span>
+                        <label>
+                            <input type="text" name="code" class="w2" />
+                            <span>请输入验证码</span>
+                            <i></i>
+                        </label>
+                        <a href="javascript:;" class="colde">
+                            <img src="img/personal/code.png">
+                            <span>换一张</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="tit">短信验证码：</span>
+                        <label>
+                            <input type="text" name="code" class="w3" />
+                            <span>请输入短信验证码</span>
+                            <i></i>
+                        </label>
+                        <a href="javascript:;" class="yz_colde" id="yz_phone">
+                            免费获取验证码
+                        </a>
+                    </li>
+                </ul>
+                <p class="error"></p>
+                <div class="btns_submit">
+                    <a href="javascript:;" id="next_btn">下一步</a>
+                    <a href="javascript:;" class="qx_btn">取消</a>
+                </div>
+            </div>
+            <div class="rephone_2">
+                <ul class="jdt">
+                <li>
+                    <p class="cor">验证身份</p>
+                    <img src="img/personal/q2_c.png"/>
+                    <i class="cor"></i>
+                </li>
+                <li>
+                    <p class="cor">修改已验证手机</p>
+                    <img src="img/personal/q1_c.png"/>
+                    <i></i>
+                </li>
+                <li>
+                    <p>完成</p>
+                    <img src="img/personal/q2.png"/>
+                </li>
+                </ul>
+                <ul class="phone_reg">
+                    <li>
+                        <span class="tit">手机号：</span>
+                        <span>156***158</span>
+                    </li>
+                    <li>
+                        <span class="tit">新手机号：</span>
+                        <label>
+                            <input data-error="输入新手机号的格式有误！" type="text" name="newphone" class="w1" />
+                            <span>请输入新手机号</span>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="tit">验证码：</span>
+                        <label>
+                            <input type="text" name="code" class="w2" />
+                            <span>请输入验证码</span>
+                        </label>
+                        <a href="javascript:;" class="colde">
+                            <img src="img/personal/code.png">
+                            <span>换一张</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="tit">短信验证码：</span>
+                        <label>
+                            <input type="text" name="code" class="w3" />
+                            <span>请输入短信验证码</span>
+                        </label>
+                        <a href="javascript:;" class="yz_colde" id="new_phone">
+                            免费获取验证码
+                        </a>
+                    </li>
+                </ul>
+                <p class="error"></p>
+                <div class="btns_submit">
+                    <a href="javascript:;" id="prev_btn">上一步</a>
+                    <a href="javascript:;" id="submit1">确定</a>
+                </div>
+            </div>
+            <div class="rephone_3">
+                <ul class="jdt">
+                <li>
+                    <p class="cor">验证身份</p>
+                    <img src="img/personal/q2_c.png"/>
+                    <i class="cor"></i>
+                </li>
+                <li>
+                    <p class="cor">修改已验证手机</p>
+                    <img src="img/personal/q2_c.png"/>
+                    <i class="cor"></i>
+                </li>
+                <li>
+                    <p class="cor">完成</p>
+                    <img src="img/personal/q2_c.png"/>
+                </li>
+                </ul>
+                <p class="phone_cg">
+                    <img src="img/personal/cg.png" />
+                    <span>恭喜您的手机号修改成功！</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 修改密码 -->
+    <div class="mak" id="xg_pwd">   
+        <div class="mak_box">
+            <h3>修改密码</h3>
+            <i class="close"><img src="img/X.png" /></i>
+            <div class="rephone_1">
+                <ul class="jdt">
+                <li>
+                    <p class="cor">验证身份</p>
+                    <img src="img/personal/q1_c.png"/>
+                    <i></i>
+                </li>
+                <li>
+                    <p>修改密码</p>
+                    <img src="img/personal/q1.png"/>
+                    <i></i>
+                </li>
+                <li>
+                    <p>完成</p>
+                    <img src="img/personal/q2.png"/>
+                </li>
+                </ul>
+                <ul class="phone_reg">
+                    <li>
+                        <span class="tit">手机号：</span>
+                        <label>
+                            <input data-error="输入手机号的格式有误！" type="text" name="phone" class="w1" />
+                            <span>请输入手机号</span>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="tit">短信验证码：</span>
+                        <label>
+                            <input type="text" name="code" class="w3" />
+                            <span>请输入短信验证码</span>
+                        </label>
+                        <a href="javascript:;" class="yz_colde" id="yz_pwd">
+                            免费获取验证码
+                        </a>
+                    </li>
+                </ul>
+                <p class="error">ssssss</p>
+                <div class="btns_submit">
+                    <a href="javascript:;" id="next_btn_pwd">下一步</a>
+                </div>
+            </div>
+            <div class="rephone_2">
+                <ul class="jdt">
+                <li>
+                    <p class="cor">验证身份</p>
+                    <img src="img/personal/q2_c.png"/>
+                    <i class="cor"></i>
+                </li>
+                <li>
+                    <p class="cor">修改密码</p>
+                    <img src="img/personal/q1_c.png"/>
+                    <i></i>
+                </li>
+                <li>
+                    <p>完成</p>
+                    <img src="img/personal/q2.png"/>
+                </li>
+                </ul>
+                <p class="pwd_info">
+                  当您使用英文字母+数字+特殊字符的组合时，如sd8bjh*dh、sge352%ds等，系统会提示您密码的安全性级别为“安全”。当您使用英文字母+数字+特殊字符的组合时，如sd8bjh*dh、sge352%ds等，系统会提示您密码的安全性级别为“安全”。   
+                </p>
+                <ul class="phone_reg">
+                    <li>
+                        <span class="tit">原始密码：</span>
+                        <label>
+                            <input type="password" name="pwd" class="w1" />
+                            <span>请输入原始密码</span>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="tit">新密码：</span>
+                        <label>
+                            <input type="password" name="pwd1" class="w1" />
+                            <span>请输入新密码</span>
+                        </label>
+                    </li>
+                    <li>
+                        <span class="tit">确认密码：</span>
+                        <label>
+                            <input type="password" name="pwd2" class="w1" />
+                            <span>请输入确认密码</span>
+                        </label>
+                    </li>
+                </ul>
+                <p class="error"></p>
+                <div class="btns_submit">
+                    <!-- <a href="javascript:;" id="prev_btn">上一步</a> -->
+                    <a href="javascript:;" id="submit1_pwd">确定</a>
+                </div>
+            </div>
+            <div class="rephone_3">
+                <ul class="jdt">
+                <li>
+                    <p class="cor">验证身份</p>
+                    <img src="img/personal/q2_c.png"/>
+                    <i class="cor"></i>
+                </li>
+                <li>
+                    <p class="cor">修改密码</p>
+                    <img src="img/personal/q2_c.png"/>
+                    <i class="cor"></i>
+                </li>
+                <li>
+                    <p class="cor">完成</p>
+                    <img src="img/personal/q2_c.png"/>
+                </li>
+                </ul>
+                <p class="phone_cg">
+                    <img src="img/personal/cg.png" />
+                    <span>恭喜您的手机号修改成功！</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 新增发票 -->
+    <div class="mak" id="add_fq">   
+        <div class="mak_box">
+            <h3>新增发票</h3>
+            <i class="close"><img src="img/X.png" /></i>
+            <p class="title1">
+                <i>*</i>
+                <span>发票类型</span>
+            </p>
+            <p class="fp_tab">
+                <a href="javascript:;" class="inp_sty active">普通发票<img src="img/personal/jiao1.png" alt=""></a>
+                <a href="javascript:;" class="inp_sty">增值税发票<img src="img/personal/jiao1.png" alt=""></a>
+            </p>
+            <div>
+                <div class="fp_tab0">
+                    <ul>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>发票抬头</span>
+                            </p>
+                            <label>
+                                <input type="text" name="tit" class="inp_sty" />
+                                <span>请输入发票抬头</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <p class="error">ddd</p>
+                    <div class="btns_submit">
+                        <a href="javascript:;" id="paddfp_btn">确定</a>
+                        <a href="javascript:;" class="qx_btn">取消</a>
+                    </div>
+                </div>
+                <div class="fp_tab1">
+                    <ul>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>单位名称：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入单位名称</span>
+                            </label>
+                        </li>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>纳税人识别码：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入纳税人识别码</span>
+                            </label>
+                        </li>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>注册地址：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入注册地址</span>
+                            </label>
+                        </li>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>注册电话：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入注册电话</span>
+                            </label>
+                        </li>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>开户银行：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入开户银行</span>
+                            </label>
+                        </li>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>银行账户：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入银行账户</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <h4>收票人信息</h4>
+                    <ul>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>收票人姓名：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入收票人姓名</span>
+                            </label>
+                        </li>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>手机号码：</span>
+                            </p>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入手机号码</span>
+                            </label>
+                        </li>
+                        <li>
+                            <p class="title2">
+                                <i>*</i>
+                                <span>地址：</span>
+                            </p>
+                            <div class="select_item">
+                                <select>
+                                    <option>请选择...</option>
+                                    <option>北京</option>
+                                    <option>上海</option>
+                                </select>
+                                <select>
+                                    <option>请选择...</option>
+                                    <option>北京</option>
+                                    <option>上海</option>
+                                </select>
+                                <select>
+                                    <option>请选择...</option>
+                                    <option>北京</option>
+                                    <option>上海</option>
+                                </select>
+                            </div>
+                            <label>
+                                <input type="text" class="inp_sty" />
+                                <span>请输入详细地址</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <p class="error "></p>
+                    <div class="btns_submit">
+                        <a href="javascript:;" id="zaddfp_btn">确定</a>
+                        <a href="javascript:;" class="qx_btn">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 新增联系人 -->
+    <div class="mak" id="add_people">   
+        <div class="mak_box">
+            <h3>新增联系人</h3>
+            <i class="close"><img src="img/X.png" /></i>
+            <ul>
+                <li>
+                    <p class="title2">
+                        <i>*</i>
+                        <span>联系人姓名：</span>
+                    </p>
+                    <label>
+                        <input type="text" name="uname" class="inp_sty" />
+                        <span>请输入联系人姓名</span>
+                    </label>
+                </li>
+                <li>
+                    <p class="title2">
+                        <i>*</i>
+                        <span>手机号码：</span>
+                    </p>
+                    <label>
+                        <input type="text" name="Phone" data-error="输入手机号码格式有误" class="inp_sty" />
+                        <span>请输入手机号码</span>
+                    </label>
+                </li>
+                <li>
+                    <p class="title2">
+                        <i>*</i>
+                        <span>身份证号：</span>
+                    </p>
+                    <label>
+                        <input data-error="输入身份证号有误" type="text" name="ID" class="inp_sty" />
+                        <span>请输入身份证号</span>
+                    </label>
+                </li>      
+            </ul>
+            <p class="error">
+                你发撒旦
+            </p>
+            <div class="btns_submit">
+                <a href="javascript:;" id="addl_btn">确定</a>
+                <a href="javascript:;" class="qx_btn">取消</a>
+            </div>
+        </div>
+    </div>
+    <!-- 租赁提示框 -->
+    <div class="mak" id="zl_date">
+        <div class="mak_box">
+            <div class="head">
+            <i class="close"><img src="img/personal/x_c.png" /></i>
+                提示
+            </div>
+            <p class="ts">
+                <img src="img/personal/cg_y.png" />
+                <span>您最少选择一个小时的租赁时常。</span>
+            </p>
+            <p class="ts_btn">
+                <a href="javascript:;">知道了</a>
+            </p>
+        </div>
+    </div>
+</body>
+<!-- <script src="basic/swiper/js/idangerous.swiper.min.js"></script> -->
+<script type="text/javascript" src="js/query.js"></script>
+<script type="text/javascript" src="js/paging.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function(){
+        // 分页
+        $('#pageTool').Paging({pagesize:9,count:210,callback:function(page,size,count){
+            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+        }});
+        $('#pageTool1').Paging({pagesize:9,count:210,callback:function(page,size,count){
+            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+        }});
+        $('#pageTool2').Paging({pagesize:9,count:210,callback:function(page,size,count){
+            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+        }});
+        $('#pageToo3').Paging({pagesize:9,count:210,callback:function(page,size,count){
+            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+        }});
+        $('#pageToo4').Paging({pagesize:9,count:210,callback:function(page,size,count){
+            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+        }});
+        $('#pageToo5').Paging({pagesize:9,count:210,callback:function(page,size,count){
+            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+        }});
+        $('#pageTool6').Paging({pagesize:9,count:210,callback:function(page,size,count){
+            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+        }});
+        // 切换tab
+        $('.common_box>div>ul>li ul>li>a').click(function(){
+           var tab = $(this).attr('class');
+           $('.common_box>div>ul>li ul>li').removeClass('active');
+           $(this).parent().addClass('active');
+           $('.tabs .'+tab).show().siblings().hide();
+        });
+        $('.fp_tab a').click(function(){
+            $(this).removeClass('active').addClass('active').siblings().removeClass('active');
+
+            var _index = $(this).index();
+
+            $("#add_fq .fp_tab"+_index).show().siblings('div').hide();
+        });
+        // x
+        $('.close').click(function(){
+            $('#tk_mak').hide();
+            $('#xg_phone').hide();
+            $('#xg_pwd').hide();
+            $('#add_fq').hide();
+            $('#add_people').hide();
+            $('#zl_date').hide();
+            $('#tk_mak_xq').hide();
+            $('#fayouji').hide();
+
+        });
+        $('.qx_btn').click(function(){
+            $('#tk_mak').hide();
+            $('#xg_phone').hide();
+            $('#add_fq').hide();
+            $('#add_people').hide();
+            $('#tk_mak_xq').hide();
+            $('.pj_mak').hide();
+            $('#xq_mak').hide();
+        });
+        $('#ck_close').click(function(){
+            $('.ck_mak').hide();
+        });
+        $('#pj_close').click(function(){
+            $('.pj_mak').hide();
+        });
+        $('#xq_close').click(function(){
+            $('#xq_mak').hide();
+        });
+        $('#qx_btn').click(function(){
+            $('#xq_mak').hide();
+        });
+        // 查看成长值
+        $('#ck').click(function(){
+            $('.ck_mak').show();
+        });
+        $('.pj_btn').click(function(){
+            $('.pj_mak').show();
+        });
+        $('.xq_link').click(function(){
+            $('#xq_mak').show();
+        });
+        $('.tk_btn').click(function(){
+            $('#tk_mak').show();
+        });
+        $('#xg_btn').click(function(){
+            $('#xg_phone').show();
+        });
+        $('#pwd_btn').click(function(){
+            $('#xg_pwd').show();
+        });
+        $('#ad_btn').click(function(){
+            $('#add_fq').show();
+        });
+        $('#add_img_btn').click(function(){
+            $('#add_people').show();
+        });
+        $('#tk_xq_btn').click(function(){
+            $('#tk_mak_xq').show();
+        });
+        $('#fab').click(function(){
+            $('#fayouji').show();
+        });
+        //tab内容切换
+        $('.tab1 .tab_box li').click(function(){
+            var _index = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.tab1 .tab_item_box .item'+ _index).show().siblings().hide();
+        });
+        $('.tab9 .tab_box li').click(function(){
+            var _index = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.tab9 .tab_item_box .item'+ _index).show().siblings().hide();
+        });
+        $('.tab10 .tab_box li').click(function(){
+            var _index = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.tab10 .tab_item_box .item'+ _index).show().siblings().hide();
+        });
+        //监听输入
+        $('.mak label input').keyup(function(){
+            $(this).val() === ""? $(this).next().show():
+            $(this).next().hide();
+            $('#add_people .error').hide();
+            console.log($(this).val())
+        });
+
+        $('.tab6 label input').keyup(function(){
+            $(this).val() === ""? $(this).next().show():
+            $(this).next().hide();
+            console.log($(this).val())
+        });
+
+        $('.item_date input').keyup(function(){
+            $(this).val() === ""? $(this).next().show():
+            $(this).next().hide();
+            console.log($(this).val())
+        });
+        //手机号验证 下一步
+        $('#next_btn').click(function(){
+            var inp = $('#xg_phone .rephone_1 label input');
+            console.log(inp.length)
+            var error = [];
+            for(var i=0; i<inp.length; i++){
+                if(inp.eq(i).val() ===""){
+                    error.push(inp.eq(i).next().text())
+                }
+            }
+
+            if(error.length){
+
+                for(var j=0,str=""; j<error.length; j++){
+                    $('#xg_phone .error').text(error[j]).show();
+                    return false;
+                }
+            }else{
+                $('#xg_phone .rephone_2').show().siblings('div').hide();
+            }
+        });
+
+        //密码验证 下一步
+        $('#next_btn_pwd').click(function(){
+            var inp = $('#xg_pwd .rephone_1 label input');
+            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+            var error = [];
+            for(var i=0; i<inp.length; i++){
+                var t_name = inp.eq(i).attr('name');
+                var t_val = inp.eq(i).val();
+                if(inp.eq(i).val() ===""){
+                    error.push(inp.eq(i).next().text())
+                }else{
+                    if(inp.eq(i).val() !== "" && t_name === 'phone'){
+                        if(!regPhone.test(t_val)){
+                            error.push(inp.eq(i).attr('data-error'));
+                        }
+                    }
+                }
+            }
+
+            if(error.length){
+
+                for(var j=0,str=""; j<error.length; j++){
+                    $('#xg_pwd .error').text(error[j]).show();
+                    return false;
+                }
+
+                alert(str);
+            }else{
+                $('#xg_pwd .rephone_2').show().siblings('div').hide();
+            }
+        });
+        //手机号验证 上一步
+        $('#prev_btn').click(function(){
+            $('.rephone_1 label input').val('').next().show();
+            $('.rephone_1').show().siblings().hide();
+        });
+        //手机号验证 确定submit1_pwd
+        $('#submit1').click(function(){
+            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+            var inp = $('#xg_phone .rephone_2 label input');
+            var error = [];
+            var phone = $('#xg_phone .rephone_2 label input[name=newphone]');
+            var err = $('#xg_phone .rephone_2 .error');
+            for(var i=0; i<inp.length; i++){
+                var t_name = inp.eq(i).attr('name');
+                var t_val = inp.eq(i).val();
+                if(inp.eq(i).val() ===""){
+                    error.push(inp.eq(i).next().text())
+                }else{
+                    if(inp.eq(i).val() !== "" && t_name === 'newphone'){
+                        if(!regPhone.test(t_val)){
+                            error.push(inp.eq(i).attr('data-error'));
+                        }
+                    }
+                }
+            }
+
+            if(error.length){
+
+                for(var j=0,str=""; j<error.length; j++){
+                    err.text(error[j]).show();
+                }
+            }else{
+                $('#xg_phone .rephone_3').show().siblings('div').hide();
+            }
+        });
+
+        //手机号验证 确定
+        $('#submit1_pwd').click(function(){
+            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+            var inp = $('#xg_pwd .rephone_2 label input');
+            var error = [];
+            var pwd1 = $('#xg_pwd .rephone_2 label input[name=pwd1]').val();
+            var pwd2 = $('#xg_pwd .rephone_2 label input[name=pwd2]').val();
+            for(var i=0; i<inp.length; i++){
+                var t_name = inp.eq(i).attr('name');
+                var t_val = inp.eq(i).val();
+                if(inp.eq(i).val() ===""){
+                    error.push(inp.eq(i).next().text())
+                }
+            }
+            if(pwd1 !== pwd2 && pwd2 !=="" && pwd1 !==""){
+                        console.log(pwd1+':'+pwd2)
+                        error.push('新密码与确认密码不一致！');
+                    }
+
+            if(error.length){
+
+                for(var j=0,str=""; j<error.length; j++){
+
+                    $('#xg_pwd .error').text(error[j]).show();
+                }
+            }else{
+                $('#xg_pwd .rephone_3').show().siblings('div').hide();
+            }
+        });
+
+        //编辑
+        $(document).on('click','.bianji',function(){
+            $(this).parent().siblings('p').children('input').removeAttr('readonly');
+        });
+        // 删除
+        $(document).on('click','.delete',function(){
+            $(this).parent().parent().remove();
+        });
+        $('#datetimepicker').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
+        $('#datetimepicker1').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
+        $('#date1').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
+        $('#date2').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
+    })
+</script>
+<script type="text/javascript" src='js/lCalendar.min.js'></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

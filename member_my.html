@@ -33,25 +33,41 @@
         </div>
     </header>
     <div class="header-back">
-        <div class="index-tab">
+        <div class="index-tab index-tab2">
             <div class="container">
                 <a href="index.html">
                     <img src="img/logo.png" class="logo-img"/>
                 </a>
-                <div class="index-input">
-                    <span>游艇</span>
-                    <input type="text" placeholder="请输入查询的内容"/>
-                    <img src="img/search.png"/>
-                </div>
                 <div class="index-tab-list">
                     <div class="overflow-auto">
-                        <a href="aboutus0517.html">关于我们</a>
-                        <a href="news.html"  >媒体中心</a>
-                        <a href="train.html">驾驶培训</a>
-                        <a href="theme_type.html">主题租赁</a>
-                        <a href="yacht_list.html">游艇租赁</a>
-                        <a href="home.html">首页</a>
+                        <div class="overflow-auto">
+                            <a href="aboutus0517.html">关于我们</a>
+                            <a href="news.html">媒体中心</a>
+                            <a href="train.html">驾驶培训</a>
+                            <a href="theme_type.html">主题租赁</a>
+                            <a href="yacht_list.html">游艇租赁</a>
+                            <a href="home.html">首页</a>
+                        </div>
                     </div>
+                </div>
+                <div class="index-input">
+                    <span>
+                        <form action="" method="post">
+                            <div id="index-input-select" class="index-input-select">
+                                <a class="index-input-a">
+                                    <p>游艇</p>
+                                    <img src="img/down.png" class="down"/>
+                                </a>
+                                <ul>
+                                    <li>主题</li>
+                                    <li>游艇</li>
+                                </ul>
+                                <input name="" type="hidden" value="" id="index-input-select2"/>
+                            </div>
+                        </form>
+                    </span>
+                    <input type="text" placeholder="请输入查询的内容" onkeyup="EnterPress(event)"  onkeydown="EnterPress(event)" />
+                    <img src="img/search.png" class="search"/>
                 </div>
             </div>
         </div>
@@ -69,37 +85,37 @@
                </div>
                <ul>
                    <li>
-                       <a href="javascript:;">
+                       <a href="member_center.html">
                             <img src="img/personal/ioc1.png" />
                             <span>订单中心</span>
                        </a>
                        <ul>
                             <li>
-                                <a href="javascript:;" class="tab1">
+                                <a href="member_order.html" class="tab1">
                                     <img src="img/common_list.png" />
                                     <span>订单管理</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="tab2">
+                                <a href="member_refund.html" class="tab2">
                                     <img src="img/common_list.png" />
                                     <span>退款管理</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="tab3">
+                                <a href="member_evaluate.html" class="tab3">
                                     <img src="img/common_list.png" />
                                     <span>评价管理</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="tab4">
+                                <a href="member_collection.html" class="tab4">
                                     <img src="img/common_list.png" />
                                     <span>收藏管理</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="tab5">
+                                <a href="member_travels.html" class="tab5">
                                     <img src="img/common_list.png" />
                                     <span>游记管理</span>
                                 </a>
@@ -113,1259 +129,40 @@
                        </a>
                        <ul>
                             <li>
-                                <a href="javascript:;" class="tab6">
+                                <a href="member_basic.html" class="tab6">
                                     <img src="img/common_list.png" />
                                     <span>基本资料</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="tab7">
+                                <a href="member_contacts.html" class="tab7">
                                     <img src="img/common_list.png" />
                                     <span>联系人管理</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="tab8">
+                                <a href="member_security.html" class="tab8">
                                     <img src="img/common_list.png" />
                                     <span>安全中心</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="tab9">
+                                <a href="member_invoice.html" class="tab9">
                                     <img src="img/common_list.png" />
                                     <span>发票管理</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="javascript:;" class="tab10">
+                            <li class="active">
+                                <a href="member_my.html" class="tab10">
                                     <img src="img/common_list.png" />
                                     <span>我的优惠券</span>
                                 </a>
                             </li>
                        </ul>
                    </li>
-               </ul> 
+               </ul>  
             </div>
             <div class="tabs">
-                <div class="tab_member">
-                    <div class="cont">
-                        <div class="tab_member_l">
-                        <div class="head_img_txt">
-                           <img src="img/personal/headr1.png" />
-                           <a href="javascript:;">修改头像</a> 
-                        </div>
-                        <div class="head_info">
-                           <p>FREE</p> 
-                           <p>
-                               <span>
-                                   <img src="img/personal/headr2.png" />
-                                   <span>船长</span>
-                               </span>
-                               <span>当前消费金额：<i>520</i></span>
-                               <a href="javascript:;" id="ck">查看</a>
-                           </p>
-                           <p>
-                               <span>账户安全：<i><s></s></i></span>
-                               <span>较高</span>
-                           </p>
-                        </div>
-                    </div>
-                    <div class="tab_member_r">
-                        <ul>
-                            <li>
-                                <img src="img/personal/ioc4.png" />
-                                <p>我的优惠券<span>（0）</span></p>
-                            </li>
-                            <li>
-                                <img src="img/personal/ioc5.png" />
-                                <p>待付款<span>（0）</span></p>
-                            </li>
-                            <li>
-                                <img src="img/personal/ioc6.png" />
-                                <p>待评价<span>（0）</span></p>
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
-                    <div class="title">
-                        预订流程
-                    </div>
-                    <div class="cont1">
-                        <ul>
-                            <li>
-                                <p>
-                                    <img src="img/personal/ioc7.png" />
-                                    <span>挑选游艇</span> 
-                                </p>
-                                <img src="img/personal/ioc12.png" />
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="img/personal/ioc7.png" />
-                                    <span>挑选游艇</span> 
-                                </p>
-                                <img src="img/personal/ioc12.png" />
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="img/personal/ioc7.png" />
-                                    <span>挑选游艇</span> 
-                                </p>
-                                <img src="img/personal/ioc12.png" />
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="img/personal/ioc7.png" />
-                                    <span>挑选游艇</span> 
-                                </p>
-                                <img src="img/personal/ioc12.png" />
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="img/personal/ioc7.png" />
-                                    <span>挑选游艇</span> 
-                                </p>
-                                <img src="img/personal/ioc12.png" />
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="img/personal/ioc7.png" />
-                                    <span>挑选游艇</span> 
-                                </p>
-                                <img src="img/personal/ioc12.png" />
-                            </li>
-                            <li>
-                                <p>
-                                    <img src="img/personal/ioc7.png" />
-                                    <span>挑选游艇</span> 
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="title">
-                        最新订单
-                    </div>
-                    <div class="cont2">
-                        <table class="tab">
-                            <thead>
-                                <tr>
-                                    <th>商品信息</th>
-                                    <th>数量</th>
-                                    <th>总金额<br/>（元）</th>
-                                    <th>优惠</th>
-                                    <th>实际金额<br/>（元）</th>
-                                    <th>交易状态</th>
-                                    <th>操作</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="dd_c">
-                                    <td>
-                                        <label>
-                                            <div class="chk"></div>
-                                            <span>订单编号：2018545856325458</span>
-                                        </label>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        2017-05-18 12:00
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;">
-                                            <img src="img/personal/del.png" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                       <dl>
-                                           <dt>
-                                               <img src="img/personal/td_img.png" />
-                                           </dt>
-                                           <dd>
-                                                <h4>莱悦9号 Search</h4>
-                                                <p>尺寸：<span>48</span></p> 
-                                           </dd>
-                                       </dl> 
-                                    </td>
-                                    <td>2小时</td>
-                                    <td>￥6000.00</td>
-                                    <td>优惠券：<sapn>￥0.00</sapn></td>
-                                    <td>
-                                        <span class="sum">
-                                            ￥<i>3600</i>.00
-                                        </span>
-                                    </td>
-                                    <td>已付款<br/><a class="xq_link" href="javascript:;">订单详情</a></td>
-                                    <td class="btn">
-                                        <a href="javascript:;">付款</a>
-                                        <span class="quxiaodengdan">取消订单</span>
-                                    </td>
-                                </tr>
-                                <tr class="dd_c">
-                                    <td>
-                                        <label>
-                                            <div class="chk"></div>
-                                            <span>订单编号：2018545856325458</span>
-                                        </label>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        2017-05-18 12:00
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;">
-                                            <img src="img/personal/del.png" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                       <dl>
-                                           <dt>
-                                               <img src="img/personal/td_img.png" />
-                                           </dt>
-                                           <dd>
-                                                <h4>莱悦9号 Search</h4>
-                                                <p>尺寸：<span>48</span></p> 
-                                           </dd>
-                                       </dl> 
-                                    </td>
-                                    <td>2小时</td>
-                                    <td>￥6000.00</td>
-                                    <td>优惠券：<sapn>￥0.00</sapn></td>
-                                    <td>
-                                        <span class="sum">
-                                            ￥<i>3600</i>.00
-                                        </span>
-                                    </td>
-                                    <td>已付款<br/>订单详情</td>
-                                    <td class="btn">
-                                        <a href="javascript:;">付款</a>
-                                        <span class="quxiaodengdan">取消订单</span>
-                                    </td>
-                                </tr>
-                                <tr class="dd_c">
-                                    <td>
-                                        <label>
-                                            <div class="chk"></div>
-                                            <span>订单编号：2018545856325458</span>
-                                        </label>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        2017-05-18 12:00
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;">
-                                            <img src="img/personal/del.png" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                       <dl>
-                                           <dt>
-                                               <img src="img/personal/td_img.png" />
-                                           </dt>
-                                           <dd>
-                                                <h4>莱悦9号 Search</h4>
-                                                <p>尺寸：<span>48</span></p> 
-                                           </dd>
-                                       </dl> 
-                                    </td>
-                                    <td>2小时</td>
-                                    <td>￥6000.00</td>
-                                    <td>优惠券：<sapn>￥0.00</sapn></td>
-                                    <td>
-                                        <span class="sum">
-                                            ￥<i>3600</i>.00
-                                        </span>
-                                    </td>
-                                    <td>已付款<br/>订单详情</td>
-                                    <td class="btn">
-                                        <a href="javascript:;">付款</a>
-                                        <span class="quxiaodengdan">取消订单</span>
-                                    </td>
-                                </tr>
-                                <tr class="dd_c">
-                                    <td>
-                                        <label>
-                                            <div class="chk"></div>
-                                            <span>订单编号：2018545856325458</span>
-                                        </label>
-                                    </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        2017-05-18 12:00
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;">
-                                            <img src="img/personal/del.png" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                       <dl>
-                                           <dt>
-                                               <img src="img/personal/td_img.png" />
-                                           </dt>
-                                           <dd>
-                                                <h4>莱悦9号 Search</h4>
-                                                <p>尺寸：<span>48</span></p> 
-                                           </dd>
-                                       </dl> 
-                                    </td>
-                                    <td>2小时</td>
-                                    <td>￥6000.00</td>
-                                    <td>优惠券：<sapn>￥0.00</sapn></td>
-                                    <td>
-                                        <span class="sum">
-                                            ￥<i>3600</i>.00
-                                        </span>
-                                    </td>
-                                    <td>已付款<br/>订单详情</td>
-                                    <td class="btn">
-                                        <a href="javascript:;">付款</a>
-                                        <span class="quxiaodengdan">取消订单</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="tab1">
-                    <h2>订单管理</h2>
-                    <p class="tit1">你的订单将在这里可以进行管理</p>
-                    <div class="tab_box">
-                        <ul>
-                            <li class="active">
-                                <a href="javascript:;">全部</a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">待付款</a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">已付款</a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">已完成</a>
-                            </li>
-                        </ul>
-                        <a href="javascript:;">
-                            <img src="img/personal/del.png" />
-                            <span>订单回收站</span>
-                        </a>
-                        <div class="tab_item_box">
-                            <div class="item0">
-                                <div class="item_date">
-                                    <div class="group">
-                                        <label>
-                                            <input type="text" />
-                                            <span>订单编号/商品关键词</span>
-                                            <img src="img/personal/search.png">
-                                        </label>
-                                    </div>
-                                    <div class="date_link">
-                                        <a href="javascript:;" class="active">今天</a>
-                                        <a href="javascript:;">最近7天</a>
-                                        <a href="javascript:;">最近1个月</a>
-                                        <a href="javascript:;">最近3个月</a>
-                                    </div>
-                                    <div class="date_s">
-                                        <span>开始日期<img id="date1" src="img/personal/date.png" /></span><i>~</i>
-                                        <span>结束日期<img id="date2" src="img/personal/date.png" /></span>
-                                    </div>
-                                </div>
-                                <table class="tab">
-                                    <thead>
-                                        <tr>
-                                            <th>商品信息</th>
-                                            <th>数量</th>
-                                            <th>总金额<br/>（元）</th>
-                                            <th>优惠</th>
-                                            <th>实际金额<br/>（元）</th>
-                                            <th>交易状态</th>
-                                            <th>操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="dd_c">
-                                            <td>
-                                                <label>
-                                                    <div class="chk">
-                                                    </div>
-                                                    <span>订单编号：2018545856325458</span>
-                                                </label>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                2017-05-18 12:00
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;">
-                                                    <img src="img/personal/del.png" />
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                               <dl>
-                                                   <dt>
-                                                       <img src="img/personal/td_img.png" />
-                                                   </dt>
-                                                   <dd>
-                                                        <h4>莱悦9号 Search</h4>
-                                                        <p>尺寸：<span>48</span></p> 
-                                                   </dd>
-                                               </dl> 
-                                            </td>
-                                            <td>2小时</td>
-                                            <td>￥6000.00</td>
-                                            <td>优惠券：<sapn>￥0.00</sapn></td>
-                                            <td>
-                                                <span class="sum">
-                                                    ￥<i>3600</i>.00
-                                                </span>
-                                            </td>
-                                            <td>已付款<br/><a href="javascript:;" class="xq_link">订单详情</a></td>
-                                            <td class="btn">
-                                                <a href="javascript:;" class="pj_btn">评价</a>
-                                                <a href="javascript:;">再次购买</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="dd_c">
-                                            <td>
-                                                <label>
-                                                    <div class="chk">
-                                                    </div>
-                                                    <span>订单编号：2018545856325458</span>
-                                                </label>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                2017-05-18 12:00
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;">
-                                                    <img src="img/personal/del.png" />
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                               <dl>
-                                                   <dt>
-                                                       <img src="img/personal/td_img.png" />
-                                                   </dt>
-                                                   <dd>
-                                                        <h4>莱悦9号 Search</h4>
-                                                        <p>尺寸：<span>48</span></p> 
-                                                   </dd>
-                                               </dl> 
-                                            </td>
-                                            <td>2小时</td>
-                                            <td>￥6000.00</td>
-                                            <td>优惠券：<sapn>￥0.00</sapn></td>
-                                            <td>
-                                                <span class="sum">
-                                                    ￥<i>3600</i>.00
-                                                </span>
-                                            </td>
-                                            <td>已付款<br/>订单详情</td>
-                                            <td class="btn">
-                                                <span class="tk_btn">申请退款</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div id="pageTool" class="pageWrapper"></div>
-                            </div>
-                            <div class="item1">
-                                1
-                            </div>
-                            <div class="item2">
-                                2
-                            </div>
-                            <div class="item3">
-                              3  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab2">
-                    <h2>退款管理</h2>
-                    <p class="tit1">你的订单将在这里可以进行退款管理</p>
-                    <div class="item_date">
-                        <div class="group">
-                            <label>
-                                <input type="text" />
-                                <span>订单编号/商品关键词</span>
-                                <img src="img/personal/search.png">
-                            </label>
-                        </div>
-                        <div class="date_link">
-                            <a href="javascript:;" class="active">今天</a>
-                            <a href="javascript:;">最近7天</a>
-                            <a href="javascript:;">最近1个月</a>
-                            <a href="javascript:;">最近3个月</a>
-                        </div>
-                        <div class="date_s">
-                            <span>开始日期<img id="datetimepicker" src="img/personal/date.png" /></span><i>~</i>
-                            <span>结束日期<img id="datetimepicker1" src="img/personal/date.png" /></span>
-                        </div>
-                    </div>
-                    <table class="tab">
-                        <thead>
-                            <tr>
-                                <th>商品信息</th>
-                                <th>数量</th>
-                                <th>总金额<br/>（元）</th>
-                                <th>优惠</th>
-                                <th>实际金额<br/>（元）</th>
-                                <th>交易状态</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="dd_c">
-                                <td>
-                                    <label>
-                                        <div class="chk"></div>
-                                        <span>订单编号：2018545856325458</span>
-                                    </label>
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    2017-05-18 12:00
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p>尺寸：<span>48</span></p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td>2小时</td>
-                                <td>￥6000.00</td>
-                                <td>优惠券：<sapn>￥0.00</sapn></td>
-                                <td>
-                                    <span class="sum">
-                                        ￥<i>3600</i>.00
-                                    </span>
-                                </td>
-                                <td>
-                                    退款中
-                                </td>
-                                <td class="btn">
-                                    <a href="javascript:;">关闭申请</a>
-                                </td>
-                            </tr>
-                            <tr class="dd_c">
-                                <td>
-                                    <label>
-                                        <div class="chk"></div>
-                                        <span>订单编号：2018545856325458</span>
-                                    </label>
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    2017-05-18 12:00
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p>尺寸：<span>48</span></p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td>2小时</td>
-                                <td>￥6000.00</td>
-                                <td>优惠券：<sapn>￥0.00</sapn></td>
-                                <td>
-                                    <span class="sum">
-                                        ￥<i>3600</i>.00
-                                    </span>
-                                </td>
-                                <td>退款关闭</td>
-                                <td class="btn">
-                                    <span id="tk_xq_btn">推款详情</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div id="pageToo3" class="pageWrapper"></div>
-                </div>
-
-                <div class="tab3">
-                    <h2>评价管理</h2>
-                    <p class="tit1">您将在这里对你的评价管理</p>
-                    <p class="del_link">
-                        <a href="javascript:;" id="del">删除</a>
-                    </p>
-                    <table class="tab">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <div class="chk" id="chk" ></div>
-                                    <span>全选</span>
-                                </th>
-                                <th>商品评价</th>
-                                <th>评价内容</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="chk"></div>
-                                </td>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p>尺寸：<span>48</span></p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td>你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理</td>
-                                <td>
-                                    <a href="javascript:;">查看</a>
-                                    <a href="javascript:;" class="del">删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="chk"></div>
-                                </td>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p>尺寸：<span>48</span></p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td>你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理</td>
-                                <td>
-                                    <a href="javascript:;">查看</a>
-                                    <a href="javascript:;" class="del">删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="chk"></div>
-                                </td>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p>尺寸：<span>48</span></p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td>你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理你将在这里可以对基本资料进行管理</td>
-                                <td>
-                                    <a href="javascript:;">查看</a>
-                                    <a href="javascript:;" class="del">删除</a>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                    <div id="pageTool1" class="pageWrapper"></div>
-                </div>
-
-                <div class="tab4">
-                    <h2>收藏管理</h2>
-                    <p class="tit1">您将在这里对你的收藏管理</p>
-                    <p class="del_link">
-                        <a href="javascript:;" id="quxiaoshouchang">取消收藏</a>
-                    </p>
-                    <table class="tab">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <div class="chk" id="chkss"></div>
-                                    <span>全选</span>
-                                </th>
-                                <th>商品评价</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="chk"></div>
-                                </td>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p>尺寸：<span>48</span></p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td class="btn">
-                                    <a href="javascript:;" class="">立即预定</a>
-                                    <a href="javascript:;" class="qx_sc">取消收藏</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    失效
-                                </td>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p>尺寸：<span>48</span></p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td class="btn">
-                                    <span href="javascript:;" class="qx_sc">取消收藏</sapn>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div id="pageTool2" class="pageWrapper"></div>
-                </div>
-
-                <div class="tab5">
-                    <h2>游记管理</h2>
-                    <p class="tit1">你将在这里可以对基本游记进行管理</p>
-                    <p class="del_link">
-                        <a href="javascript:;" id="fab">发游记</a>
-                    </p>
-                    <table class="tab">
-                        <thead>
-                            <tr>
-                                <th>我的游记</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p class="fxs">
-                                                <span>
-                                                    <img src="img/eye.png" />
-                                                    <i>浏览人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/like.png" />
-                                                    <i>点赞人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/Clock.png" />
-                                                    <i>发表时间：</i>
-                                                    <b>2017/05/19</b>
-                                                </span>
-                                            </p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td class="btn_cor">
-                                    <a href="javascript:;">编辑</a>
-                                    <i>|</i>
-                                    <a href="javascript:;" class="youjiquxiao">取消</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p class="fxs">
-                                                <span>
-                                                    <img src="img/eye.png" />
-                                                    <i>浏览人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/like.png" />
-                                                    <i>点赞人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/Clock.png" />
-                                                    <i>发表时间：</i>
-                                                    <b>2017/05/19</b>
-                                                </span>
-                                            </p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td class="btn_cor">
-                                    <a href="javascript:;">编辑</a>
-                                    <i>|</i>
-                                    <a href="javascript:;"  class="youjiquxiao">取消</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p class="fxs">
-                                                <span>
-                                                    <img src="img/eye.png" />
-                                                    <i>浏览人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/like.png" />
-                                                    <i>点赞人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/Clock.png" />
-                                                    <i>发表时间：</i>
-                                                    <b>2017/05/19</b>
-                                                </span>
-                                            </p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td class="btn_cor">
-                                    <a href="javascript:;">编辑</a>
-                                    <i>|</i>
-                                    <a href="javascript:;"  class="youjiquxiao">取消</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <dl>
-                                       <dt>
-                                           <img src="img/personal/td_img.png" />
-                                       </dt>
-                                       <dd>
-                                            <h4>莱悦9号 Search</h4>
-                                            <p class="fxs">
-                                                <span>
-                                                    <img src="img/eye.png" />
-                                                    <i>浏览人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/like.png" />
-                                                    <i>点赞人数：</i>
-                                                    <b>1156</b>
-                                                </span>
-                                                <span>
-                                                    <img src="img/Clock.png" />
-                                                    <i>发表时间：</i>
-                                                    <b>2017/05/19</b>
-                                                </span>
-                                            </p> 
-                                       </dd>
-                                   </dl> 
-                                </td>
-                                <td class="btn_cor">
-                                    <a href="javascript:;">编辑</a>
-                                    <i>|</i>
-                                    <a href="javascript:;"  class="youjiquxiao">取消</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div id="pageTool6" class="pageWrapper"></div>
-                </div>
-
-                <div class="tab6">
-                    <h2>基本资料</h2>
-                    <p class="tit1">你将在这里可以对基本资料进行管理</p>
-                    <div class="gr_w">
-                        <ul>
-                            <li>
-                                <span>头像</span>
-                                <div class="uname_in">
-                                    <p>
-                                        <img src="img/personal/headr1.png" />
-                                    </p>
-                                    <p>
-                                        <label class="group_file">
-                                        <img src="img/personal/file1.png" />
-                                        <input type="file" />
-                                        <span style="    visibility: hidden;">请上传头像</span>
-                                        </label>
-                                        <span>头像不得大于1m</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <span>用户名</span>
-                                <label>
-                                    <input type="text" name="uname" />
-                                    <span>请输入用户名</span>
-                                </label>
-                            </li>
-                            <li>
-                                <span>手机号码</span>
-                                <label>
-                                    <input type="text" name="Phone" data-error="输入手机号码格式有误" />
-                                    <span>请输入手机号码</span>
-                                </label>
-                            </li>
-                            <li>
-                                <span>邮箱</span>
-                                <label>
-                                    <input type="text" name="email" data-error="输入邮箱有误" />
-                                    <span>请输入邮箱</span>
-                                </label>
-                            </li>
-                            <li>
-                                <span>年龄</span>
-                                <label>
-                                    <input type="text" />
-                                    <span>请输入年龄</span>
-                                </label>
-                            </li>
-                            <li>
-                                <span>职业</span>
-                                <label>
-                                    <input type="text" name="uname" />
-                                    <span>请输入职业</span>
-                                </label>
-                            </li>
-                            <li>
-                                <span>年收入</span>
-                                <select>
-                                    <option>请输入你的年收入</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <p class="error"></p>
-                        <div class="btns_submit">
-                            <a href="javascript:;" id="preservation">保存</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab7">
-                    <h2>联系人管理</h2>
-                    <p class="tit1">您将在这里对你的联系人进行管理</p>
-                    <div class="add_box">
-                        <div class="add_box_item">
-                            <div>
-                                <span>
-                                    <a href="javascript:;" class="bianji">编辑</a>
-                                    <a href="javascript:;" class="delete">删除</a>
-                                </span>
-                                <p>
-                                    <span>联系人：</span>
-                                    <input readonly="true" type="text" value="张三" />
-                                </p>
-                                <p>
-                                    <span>联系方式：</span>
-                                    <input readonly="true" type="text" value="15601604621" />
-                                </p>
-                                <p>
-                                    <span>身份证号：</span>
-                                    <input readonly="true" type="text" value="411525485698545254">
-                                </p>
-                            </div>
-                        </div>
-                        <a href="javascript:;" id="add_img_btn">
-                            <img src="img/personal/add_l.png" />
-                        </a>
-                    </div>
-                </div>
-
-                <div class="tab8">
-                    <h2>安全中心</h2>
-                    <p>您可以在这里对安全账户进行管理！</p>
-                    <div class="tab8_cont">
-                        <div class="jbg">
-                            <span class="tit">安全级别：</span>
-                            <i><b></b></i>
-                            <span class="jg"><i>较高</i>建议你启动安全设置，已保证你的资金安全</span>
-                        </div>
-                        <p class="item">
-                            <span>登录密码</span>
-                            <i class="cor">互联网账号这里更安全</i>
-                            <a href="javascript:;" id='pwd_btn'>修改</a>
-                        </p>
-                        <p class="item">
-                            <span>手机验证</span>
-                            <i>您的手机号，156854565458 是否停机已更换。</i>
-                            <a href="javascript:;" id='xg_btn'>修改</a>
-                        </p>
-                        <div class="shm">
-                            <span class="tit">为什么要进行验证</span>
-                            <p>1.保障你的用户安全，感谢的你理解和支持。</p>
-                            <p>2.遇到什么问题？<a href="javascript:;">在线客服</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab9">
-                    <h2>发票管理</h2>
-                    <p class="tit1">你的发票将在这里可以进行管理</p>
-                    <div class="tab_box">
-                        <ul>
-                            <li class="active">
-                                <a href="javascript:;">普通发票</a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">增值税发票</a>
-                            </li>
-                        </ul>
-                        <a href="javascript:;" id="ad_btn">
-                            <img src="img/personal/add.png" />
-                            <span>新增</span>
-                        </a>
-                        <div class="tab_item_box">
-                            <div class="item0">
-                                <div class="fp_group">
-                                    <p>
-                                        <span class="tit">个人</span>
-                                        <span>
-                                            <a href="javascript:;">编辑</a>
-                                            <i>|</i>
-                                            <a href="javascript:;" class="del_fp">删除</a>
-                                        </span>
-                                    </p>
-                                    <h3>售票地址</h3>
-                                    <ul>
-                                        <li>
-                                            <span>收票人姓名：</span>
-                                            <span>Free</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人手机号：</span>
-                                            <span>15625485458</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人省份：</span>
-                                            <span>上海市徐汇区</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人地址：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="fp_group">
-                                    <p>
-                                        <span class="tit">上海自由贸易有限公司</span>
-                                        <span>
-                                            <a href="javascript:;">编辑</a>
-                                            <i>|</i>
-                                            <a href="javascript:;" class="del_fp">删除</a>
-                                        </span>
-                                    </p>
-                                    <h3>售票地址</h3>
-                                    <ul>
-                                        <li>
-                                            <span>收票人姓名：</span>
-                                            <span>Free</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人手机号：</span>
-                                            <span>15625485458</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人省份：</span>
-                                            <span>上海市徐汇区</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人地址：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item1">
-                                <div class="fp_group">
-                                    <p>
-                                        <span class="tit">上海自由贸易有限公司</span>
-                                        <span>
-                                            <a href="javascript:;">编辑</a>
-                                            <i>|</i>
-                                            <a href="javascript:;" class="del_fpzz">删除</a>
-                                        </span>
-                                    </p>
-                                    <h3></h3>
-                                    <ul>
-                                        <li>
-                                            <span>单位名称：</span>
-                                            <span>上海自由贸易有限公司</span>
-                                        </li>
-                                        <li>
-                                            <span>纳税人识别码：</span>
-                                            <span>15625485458</span>
-                                        </li>
-                                        <li>
-                                            <span>注册地址：</span>
-                                            <span>上海市徐汇区</span>
-                                        </li>
-                                        <li>
-                                            <span>注册电话：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                        <li>
-                                            <span>开户银行：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                        <li>
-                                            <span>银行账户：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                    </ul>
-                                    <h3>售票地址</h3>
-                                    <ul>
-                                        <li>
-                                            <span>收票人姓名：</span>
-                                            <span>Free</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人手机号：</span>
-                                            <span>15625485458</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人省份：</span>
-                                            <span>上海市徐汇区</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人地址：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="fp_group">
-                                    <p>
-                                        <span class="tit">上海自由贸易有限公司</span>
-                                        <span>
-                                            <a href="javascript:;">编辑</a>
-                                            <i>|</i>
-                                            <a href="javascript:;" class="del_fpzz">删除</a>
-                                        </span>
-                                    </p>
-                                    <h3></h3>
-                                    <ul>
-                                        <li>
-                                            <span>单位名称：</span>
-                                            <span>上海自由贸易有限公司</span>
-                                        </li>
-                                        <li>
-                                            <span>纳税人识别码：</span>
-                                            <span>15625485458</span>
-                                        </li>
-                                        <li>
-                                            <span>注册地址：</span>
-                                            <span>上海市徐汇区</span>
-                                        </li>
-                                        <li>
-                                            <span>注册电话：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                        <li>
-                                            <span>开户银行：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                        <li>
-                                            <span>银行账户：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                    </ul>
-                                    <h3>售票地址</h3>
-                                    <ul>
-                                        <li>
-                                            <span>收票人姓名：</span>
-                                            <span>Free</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人手机号：</span>
-                                            <span>15625485458</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人省份：</span>
-                                            <span>上海市徐汇区</span>
-                                        </li>
-                                        <li>
-                                            <span>收票人地址：</span>
-                                            <span>徐汇地铁1出口</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="tab10">
                     <h2>我的优惠券</h2>
@@ -2875,6 +1672,30 @@
         $(document).on('click','.delete',function(){
             $(this).parent().parent().remove();
         });
+        $('#datetimepicker').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
+        $('#datetimepicker1').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
+        $('#date1').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
+        $('#date2').datetimepicker(
+            {
+                format: "dd MM yyyy",
+                autoclose: true
+            }
+        );
     })
 </script>
 <script type="text/javascript" src='js/lCalendar.min.js'></script>
