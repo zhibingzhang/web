@@ -994,7 +994,7 @@
             $('#has-choosed-price').html('价格大于'+$('#price1').val()+'<img src="img/small/delete.png" onclick="deletePrice()"/>').removeClass('no-border');
             return false;
         }
-        else if($('#price1').val() > $('#price2').val()){
+        else if(parseFloat($('#price1').val()) > parseFloat($('#price2').val())){
             alert('最低价不能大于输入最高价');
             return false;
 //            $('#price span').removeClass('active');

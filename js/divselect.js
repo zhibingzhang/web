@@ -90,5 +90,4 @@ function EnterPress(e){
     if(keycode==13){
         $('.search').click();
     }
-
 }
