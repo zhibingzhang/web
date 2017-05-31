@@ -108,13 +108,15 @@
                     <span>主题时间：4小时</span>
                 </p>
             </div>
-            <p class="yacht-detail-title">详细描述</p>
-            <p class="yacht-detail-txt">外滩茂悦于2015年6月14日下午举办了一场别开生面的婚典，百艇汇作为特邀合作伙伴也参加了此次盛典。在丝绒般的音乐声里，缓缓拉开了舞台的序幕，仙履奇缘舞蹈秀以经典童话故事姑娘为蓝本，通过舞蹈的方式，重现了旷世爱恋的经典场景！</p>
+            <div class="hrgray"></div>
+            <p class="yacht-detail-title top-small">详细描述</p>
+            <p class="yacht-detail-txt limit-height2">外滩茂悦于2015年6月14日下午举办了一场别开生面的婚典，百艇汇作为特邀合作伙伴也参加了此次盛典。在丝绒般的音乐声里，缓缓拉开了舞台的序幕，仙履奇缘舞蹈秀以经典童话故事姑娘为蓝本，通过舞蹈的方式，重现了旷世爱恋的经典场景！</p>
             <p class="yacht-price"><span class="price-yellow">¥<span>1500</span>.00</span></p>
             <p class="theme-information">
                 <span class="old-price">原价：¥12，000</span>
                 <span class="booked">已有1200人预订</span>
             </p>
+            <div class="hrgray"></div>
             <div class="yacht-handle">
                 <a href="#"><img src="img/small/collect.png"/>收藏</a>
                 <a href="#"><img src="img/small/options.png"/>分享</a>
@@ -124,7 +126,8 @@
         <div id="tFocus">
             <div class="fd">
             <!--页面必要代码,img标签上请务必带上图片真实尺寸px-->
-                <div id="showbox">
+                <img src="img/small/search-btn.png" class="search-btn2"/>
+                <div id="showbox" class="hide">
                     <img src="images/photos/img01.png" width="580" height="407" />
                     <img src="images/photos/img01.png" width="580" height="407" />
                     <img src="images/photos/img01.png" width="580" height="407" />
@@ -266,7 +269,7 @@
                                     </tbody></table>
                                 </div>
                         
-                        <p class="yacht-price">预计：<span class="price-yellow">¥<span>6000</span>.00元／小时</span></p>
+                        <p class="yacht-price">总计：<span class="price-yellow">¥<span>7800</span>.00</span></p>
                         <div class="yacht-rent-notice">
                             <p class="title">游艇租赁相关事项：</p>
                             <p class="list">
@@ -775,21 +778,24 @@
             }
         });
         //放大轮播图
-          var showproduct = {
-              "boxid":"showbox",
-              "sumid":"showsum",
-              "boxw":583,//宽度,该版本中请把宽高填写成一样
-              "boxh":583,//高度,该版本中请把宽高填写成一样
-              "sumw":85,//列表每个宽度,该版本中请把宽高填写成一样
-              "sumh":85,//列表每个高度,该版本中请把宽高填写成一样
-              "sumi":17,//列表间隔
-              "sums":5,//列表显示个数
-              "sumsel":"sel",
-              "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
-              "lastid":"showlast",
-              "nextid":"shownext"
-              };//参数定义    
-         $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+        $(function(){
+            var showproduct = {
+                "boxid":"showbox",
+                "sumid":"showsum",
+                "boxw":580,//宽度,该版本中请把宽高填写成一样
+                "boxh":407,//高度,该版本中请把宽高填写成一样
+                "sumw":104,//列表每个宽度,该版本中请把宽高填写成一样
+                "sumh":73,//列表每个高度,该版本中请把宽高填写成一样
+                "sumi":6,//列表间隔
+                "sums":5,//列表显示个数
+                "sumsel":"sel",
+                "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+                "lastid":"showlast",
+                "nextid":"shownext"
+            };//参数定义
+            $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+            $('#showbox').removeClass('hide');
+        });
     });
 
     jQuery('[placeholder]').focus(function () {

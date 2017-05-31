@@ -52,6 +52,9 @@
     font-size: 18px;
     color: #000000;
 }
+.yacht-detail-title.top-small{
+    margin-top: 30px;
+}
 .date-title{
     font-size: 16px;
     line-height: 20px;
@@ -72,6 +75,11 @@
     font-size: 13px;
     line-height: 20px;
 }
+.yacht-detail-txt.limit-height2{
+    height: 60px;
+    font-size: 13px;
+    line-height: 20px;
+}
 .yacht-detail-txt2{
     margin: 12px 0;
     font-size: 14px;
@@ -86,7 +94,7 @@
 }
 
 .yacht-price {
-    margin: 23px 0;
+    margin: 11px 0 14px 0;
     font-size: 18px;
     color: #333333;
 }
@@ -105,6 +113,7 @@
 
 .yacht-handle {
     font-size: 13px;
+    padding-top: 20px;
 }
 
 .yacht-handle img {
@@ -512,7 +521,7 @@
     width: 16px;
     height: 16px;
     display: inline-block;
-    margin-bottom: -7px;
+    margin-bottom: -4px;
     margin-right: 10px;
 }
 
@@ -960,7 +969,7 @@
     color: #333;
 }
 .star{
-    width: 82px!important;
+    /*width: 82px!important;*/
 }
 
 .discus-handle {
@@ -1147,8 +1156,8 @@
 
 .theme-date {
     width: 495px;
-    height: 70px;
-    padding: 20px 0 0 20px;
+    height: 105px;
+    padding: 15px 0 0 30px;
     border: 1px solid #d1d9f0;
     background: #fafbff;
 }
@@ -1160,13 +1169,14 @@
 
 .theme-date table tr td img {
     margin-right: 10px;
-    margin-top: -2px;
+    vertical-align: -3px;
 }
 
 .theme-date table tr th {
     text-align: left;
     height: 30px;
     font-size: 14px;
+    vertical-align: bottom;
 }
 
 .theme-price {
@@ -1184,8 +1194,8 @@
     height: 34px;
     line-height: 34px;
     position: absolute;
-    right: 1px;
-    top: 4px;
+    right: 0;
+    top: 6px;
     background: url("../img/small/arrowbg.png") no-repeat;
 }
 
@@ -1233,20 +1243,21 @@
 }
 
 .include-list-div .first {
-    font-size: 15px;
-    color: #333333;
+    font-size: 14px;
+    color: #000;
 }
 
 .include-list-div p {
-    font-size: 13px;
+    font-size: 12px;
     color: #666666;
-    line-height: 21px;
+    line-height: 20px;
 }
 
 .include-list-div .old-price {
-    font-size: 15px;
+    font-size: 14px;
     color: #999999;
     text-decoration: line-through;
+    margin-top: 3px;
 }
 
 /*主题列表*/
@@ -1298,7 +1309,7 @@
 }
 
 .theme-cycles {
-    font-size: 12px;
+    font-size: 14px;
     color: #999999;
     margin-bottom: 10px;
 }
@@ -1324,7 +1335,7 @@
 .theme-detail-txt {
     margin: 20px 0;
     line-height: 24px;
-    font-size: 13px;
+    font-size: 14px;
     color: #333333;
 }
 
@@ -1345,11 +1356,13 @@
     float: left;
     height: 30px;
     line-height: 30px;
-    padding: 0 20px;
+    padding: 0 16px;
     border: 1px solid #e5e6e8;
     background: #ffffff;
     border-radius: 30px;
     margin-right: 10px;
+    font-size: 14px;
+    color: #333;
 }
 
 .theme-information {
@@ -1357,22 +1370,23 @@
     height: 40px;
     line-height: 40px;
     overflow: hidden;
+    margin-top: -15px;
+    margin-bottom: 8px;
 }
 
 .theme-information .price {
     color: #ffcc01;
-    font-size: 18px;
+    font-size: 16px;
     float: left;
 }
 
 .theme-information .price span {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .theme-information .old-price {
     text-decoration: line-through;
     float: left;
-    margin-left: 10px;
     font-size: 14px;
     color: #999999;
 }
@@ -1387,6 +1401,7 @@
     border: 1px solid #ffcc00;
     color: #ffcc00;
     line-height: 35px;
+    font-size: 18px;
 }
 
 .theme-information .booking img {
@@ -1397,9 +1412,8 @@
 
 .theme-information .booked {
     font-size: 14px !important;
-    color: #999999 !important;
-    margin-left: 120px;
-    float: left;
+    color: #333 !important;
+    float: right;
     padding-left: 20px;
     background: url("../img/small/ic_users.png") 0 center no-repeat;
 }
@@ -1725,6 +1739,9 @@
 .new .date{
     font-size: 14px;
 }
+.date{
+    padding-bottom: 15px;
+}
 .new .date img{
     margin-right: 16px;
 }
@@ -1742,4 +1759,7 @@
 }
 .chk{
     vertical-align: -2px;
+}
+.font-bold{
+    font-weight: bold;
 }

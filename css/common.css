@@ -178,7 +178,10 @@ body{
     /*margin-left: 18px;*/
 }
 #showsum span { border:1px solid #ddd;}
-#showsum span.sel { border:1px solid #428bca;}
+#showsum span.sel { border:2px solid #428bca;
+    height: 71px!important;
+    width: 103px!important;
+}
 #showsum{
     width: auto!important;
 }
@@ -234,5 +237,5 @@ body{
     left: 534px;
 }
 .star{
-    width: 82px!important;
+    /*width: 82px!important;*/
 }
