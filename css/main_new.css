@@ -1898,10 +1898,11 @@ dl dt p {
 
 .tab1 .tab_item_box .item0 .item_date .group span,.tab10 .tab_item_box .item0 .item_date .group span,.tab2 .tab_item_box .item0 .item_date .group span,.tab9 .tab_item_box .item0 .item_date .group span {
     position: absolute;
-    top: 9px;
+    top: 11px;
     left: 14px;
-    color: #a8a8a8;
-    font-size: 16px
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .tab1 .tab_item_box .item0 .item_date .group img,.tab10 .tab_item_box .item0 .item_date .group img,.tab2 .tab_item_box .item0 .item_date .group img,.tab9 .tab_item_box .item0 .item_date .group img {
@@ -1993,7 +1994,10 @@ dl dt p {
     overflow: hidden;
     line-height: 24px;
 }
-
+.pj_mak .xin p span:first-child+span+span{
+    left: -30px;
+    top: 1px;
+}
 .xq_mak .xq_box {
     width: 990px;
     height: 500px;
@@ -2835,10 +2839,11 @@ dl dt p {
 
 .tab2 .item_date .group span {
     position: absolute;
-    top: 9px;
+    top: 11px;
     left: 14px;
     color: #a8a8a8;
-    font-size: 16px
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .tab2 .item_date .group img {
@@ -3046,10 +3051,19 @@ a:visited {
     text-decoration: none;
     border: none
 }
-
+.btns_type{
+    display: block;
+    width: 56px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #0c70b2;
+    color: #0c70b2;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
 a:focus,a:hover {
     text-decoration: none;
-    color: none
 }
 
 .item_info p.fx a img {

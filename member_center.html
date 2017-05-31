@@ -2519,44 +2519,7 @@
                 $(this).parent().parent().remove();
             }
         });
-        // 分页
-        $('#pageTool').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-        $('#pageTool1').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-        $('#pageTool2').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-        $('#pageToo3').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-        $('#pageToo4').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-        $('#pageToo5').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-        $('#pageTool6').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-        }});
-        // 切换tab
-        $('.common_box>div>ul>li ul>li>a').click(function(){
-           var tab = $(this).attr('class');
-           $('.common_box>div>ul>li ul>li').removeClass('active');
-           $(this).parent().addClass('active');
-           $('.tabs .'+tab).show().siblings().hide();
-        });
-        $('.fp_tab a').click(function(){
-            $(this).removeClass('active').addClass('active').siblings().removeClass('active');
-
-            var _index = $(this).index();
-
-            $("#add_fq .fp_tab"+_index).show().siblings('div').hide();
-        });
         // x
-
         $('.closes').click(function(){
             $('#tk_mak').hide();
         });
@@ -2567,10 +2530,7 @@
             $('#add_people').hide();
             $('#tk_mak_xq').hide();
             $('.pj_mak').hide();
-            $('#xq_mak').hide();
-
-
-            
+            $('#xq_mak').hide();  
         });
         $('#ck_close').click(function(){
             $('.ck_mak').hide();
@@ -2588,15 +2548,21 @@
         $('#ck').click(function(){
             $('.ck_mak').show();
         });
+        $('.tk_btn').click(function(){
+            $('#tk_mak').show();
+        });
+
+
+
+
+        
         $('.pj_btn').click(function(){
             $('.pj_mak').show();
         });
         $('.xq_link').click(function(){
             $('#xq_mak').show();
         });
-        $('.tk_btn').click(function(){
-            $('#tk_mak').show();
-        });
+        
         $('#xg_btn').click(function(){
             $('#xg_phone').show();
         });
@@ -2615,192 +2581,7 @@
         $('#fab').click(function(){
             $('#fayouji').show();
         });
-        //tab内容切换
-        $('.tab1 .tab_box li').click(function(){
-            var _index = $(this).index();
-            $(this).addClass('active').siblings().removeClass('active');
-            $('.tab1 .tab_item_box .item'+ _index).show().siblings().hide();
-        });
-        $('.tab9 .tab_box li').click(function(){
-            var _index = $(this).index();
-            $(this).addClass('active').siblings().removeClass('active');
-            $('.tab9 .tab_item_box .item'+ _index).show().siblings().hide();
-        });
-        $('.tab10 .tab_box li').click(function(){
-            var _index = $(this).index();
-            $(this).addClass('active').siblings().removeClass('active');
-            $('.tab10 .tab_item_box .item'+ _index).show().siblings().hide();
-        });
-        //监听输入
-        $('.mak label input').keyup(function(){
-            $(this).val() === ""? $(this).next().show():
-            $(this).next().hide();
-            $('#add_people .error').hide();
-            console.log($(this).val())
-        });
 
-        $('.tab6 label input').keyup(function(){
-            $(this).val() === ""? $(this).next().show():
-            $(this).next().hide();
-            console.log($(this).val())
-        });
-
-        $('.item_date input').keyup(function(){
-            $(this).val() === ""? $(this).next().show():
-            $(this).next().hide();
-            console.log($(this).val())
-        });
-        //手机号验证 下一步
-        $('#next_btn').click(function(){
-            var inp = $('#xg_phone .rephone_1 label input');
-            console.log(inp.length)
-            var error = [];
-            for(var i=0; i<inp.length; i++){
-                if(inp.eq(i).val() ===""){
-                    error.push(inp.eq(i).next().text())
-                }
-            }
-
-            if(error.length){
-
-                for(var j=0,str=""; j<error.length; j++){
-                    $('#xg_phone .error').text(error[j]).show();
-                    return false;
-                }
-            }else{
-                $('#xg_phone .rephone_2').show().siblings('div').hide();
-            }
-        });
-
-        //密码验证 下一步
-        $('#next_btn_pwd').click(function(){
-            var inp = $('#xg_pwd .rephone_1 label input');
-            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
-            var error = [];
-            for(var i=0; i<inp.length; i++){
-                var t_name = inp.eq(i).attr('name');
-                var t_val = inp.eq(i).val();
-                if(inp.eq(i).val() ===""){
-                    error.push(inp.eq(i).next().text())
-                }else{
-                    if(inp.eq(i).val() !== "" && t_name === 'phone'){
-                        if(!regPhone.test(t_val)){
-                            error.push(inp.eq(i).attr('data-error'));
-                        }
-                    }
-                }
-            }
-
-            if(error.length){
-
-                for(var j=0,str=""; j<error.length; j++){
-                    $('#xg_pwd .error').text(error[j]).show();
-                    return false;
-                }
-
-                alert(str);
-            }else{
-                $('#xg_pwd .rephone_2').show().siblings('div').hide();
-            }
-        });
-        //手机号验证 上一步
-        $('#prev_btn').click(function(){
-            $('.rephone_1 label input').val('').next().show();
-            $('.rephone_1').show().siblings().hide();
-        });
-        //手机号验证 确定submit1_pwd
-        $('#submit1').click(function(){
-            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
-            var inp = $('#xg_phone .rephone_2 label input');
-            var error = [];
-            var phone = $('#xg_phone .rephone_2 label input[name=newphone]');
-            var err = $('#xg_phone .rephone_2 .error');
-            for(var i=0; i<inp.length; i++){
-                var t_name = inp.eq(i).attr('name');
-                var t_val = inp.eq(i).val();
-                if(inp.eq(i).val() ===""){
-                    error.push(inp.eq(i).next().text())
-                }else{
-                    if(inp.eq(i).val() !== "" && t_name === 'newphone'){
-                        if(!regPhone.test(t_val)){
-                            error.push(inp.eq(i).attr('data-error'));
-                        }
-                    }
-                }
-            }
-
-            if(error.length){
-
-                for(var j=0,str=""; j<error.length; j++){
-                    err.text(error[j]).show();
-                }
-            }else{
-                $('#xg_phone .rephone_3').show().siblings('div').hide();
-            }
-        });
-
-        //手机号验证 确定
-        $('#submit1_pwd').click(function(){
-            var regPhone = /^1(3|4|5|7|8)\d{9}$/;
-            var inp = $('#xg_pwd .rephone_2 label input');
-            var error = [];
-            var pwd1 = $('#xg_pwd .rephone_2 label input[name=pwd1]').val();
-            var pwd2 = $('#xg_pwd .rephone_2 label input[name=pwd2]').val();
-            for(var i=0; i<inp.length; i++){
-                var t_name = inp.eq(i).attr('name');
-                var t_val = inp.eq(i).val();
-                if(inp.eq(i).val() ===""){
-                    error.push(inp.eq(i).next().text())
-                }
-            }
-            if(pwd1 !== pwd2 && pwd2 !=="" && pwd1 !==""){
-                        console.log(pwd1+':'+pwd2)
-                        error.push('新密码与确认密码不一致！');
-                    }
-
-            if(error.length){
-
-                for(var j=0,str=""; j<error.length; j++){
-
-                    $('#xg_pwd .error').text(error[j]).show();
-                }
-            }else{
-                $('#xg_pwd .rephone_3').show().siblings('div').hide();
-            }
-        });
-
-        //编辑
-        $(document).on('click','.bianji',function(){
-            $(this).parent().siblings('p').children('input').removeAttr('readonly');
-        });
-        // 删除
-        $(document).on('click','.delete',function(){
-            $(this).parent().parent().remove();
-        });
-        $('#datetimepicker').datetimepicker(
-            {
-                format: "dd MM yyyy",
-                autoclose: true
-            }
-        );
-        $('#datetimepicker1').datetimepicker(
-            {
-                format: "dd MM yyyy",
-                autoclose: true
-            }
-        );
-        $('#date1').datetimepicker(
-            {
-                format: "dd MM yyyy",
-                autoclose: true
-            }
-        );
-        $('#date2').datetimepicker(
-            {
-                format: "dd MM yyyy",
-                autoclose: true
-            }
-        );
     })
 </script>
 <script type="text/javascript" src='js/lCalendar.min.js'></script>

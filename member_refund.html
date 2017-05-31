@@ -201,7 +201,7 @@
                             <tr class="dd_c">
                                 <td>
                                     <label>
-                                        <div class="chk"></div>
+                                        <!-- <div class="chk"></div> -->
                                         <span>订单编号：2018545856325458</span>
                                     </label>
                                 </td>
@@ -238,14 +238,14 @@
                                 <td>
                                     退款中
                                 </td>
-                                <td class="btn">
-                                    <a href="javascript:;">关闭申请</a>
+                                <td>
+                                    <a href="javascript:;" class="btns_type del_tr">关闭申请</a>
                                 </td>
                             </tr>
                             <tr class="dd_c">
                                 <td>
                                     <label>
-                                        <div class="chk"></div>
+                                        <!-- <div class="chk"></div> -->
                                         <span>订单编号：2018545856325458</span>
                                     </label>
                                 </td>
@@ -280,7 +280,7 @@
                                     </span>
                                 </td>
                                 <td>退款关闭</td>
-                                <td class="btn">
+                                <td>
                                     <span id="tk_xq_btn">推款详情</span>
                                 </td>
                             </tr>
@@ -1162,6 +1162,11 @@
 <script type="text/javascript" src="js/paging.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
+        //关闭申请
+        $('.del_tr').click(function(){
+            $(this).parent().parent().prev().remove();
+            $(this).parent().parent().remove();
+        });
         // 分页
         $('#pageTool').Paging({pagesize:9,count:210,callback:function(page,size,count){
             console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
