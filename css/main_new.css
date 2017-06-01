@@ -103,16 +103,24 @@ dl dt p {
 
 .btns_submit {
     text-align: center;
-    margin: 36px 0
+    /*margin: 36px 0;*/
+    margin:45px 0 0 0;
+    padding-bottom: 50px;
 }
 
 .btns_submit a {
     display: inline-block;
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
+    width: 116px;
+    height: 36px;
+    line-height: 36px;
     background-color: #f2f2f2;
-    color: #323232
+    color: #323232;
+    font-size: 14px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .btns_submit a:first-child {
@@ -2234,7 +2242,8 @@ dl dt p {
 #xg_phone .mak_box .jdt,#xg_pwd .mak_box .jdt {
     text-align: center;
     overflow: hidden;
-    margin-bottom: 36px
+    margin-bottom: 36px;
+    width: 505px;
 }
 
 #xg_phone .mak_box .jdt li,#xg_pwd .mak_box .jdt li {
@@ -2252,11 +2261,11 @@ dl dt p {
 
 #xg_phone .mak_box .jdt li i,#xg_pwd .mak_box .jdt li i {
     position: absolute;
-    right: -62px;
+    right: -75px;
     top: 41px;
     height: 2px;
     background-color: #ccc;
-    width: 123px
+    width: 150px
 }
 
 #xg_phone .mak_box .jdt li i.cor,#xg_pwd .mak_box .jdt li i.cor {
@@ -2265,7 +2274,7 @@ dl dt p {
 
 #xg_phone .mak_box .tit,#xg_pwd .mak_box .tit {
     font-size: 14px;
-    width: 84px
+    width: 90px;
 }
 
 #xg_phone .mak_box label,#xg_pwd .mak_box label {
@@ -2278,7 +2287,12 @@ dl dt p {
     height: 40px;
     line-height: 40px;
     border: 1px solid #e4e4e4;
-    padding-left: 39px
+    padding-left: 39px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 #xg_phone .mak_box label i,#xg_pwd .mak_box label i {
@@ -2294,11 +2308,12 @@ dl dt p {
     position: absolute;
     top: 13px;
     left: 39px;
-    color: #9b9b9b
+    color: #999;
+    font-weight: normal;
 }
 
 #xg_phone .mak_box .phone_reg li,#xg_pwd .mak_box .phone_reg li {
-    margin-bottom: 28px
+    margin-bottom: 8px;
 }
 
 #xg_phone .mak_box .phone_reg li .yz_colde,#xg_pwd .mak_box .phone_reg li .yz_colde {
@@ -2307,7 +2322,8 @@ dl dt p {
     border: 1px solid #e4e4e4;
     color: #0874b5;
     padding: 0 20px;
-    margin-left: 10px
+    margin-left: 10px;
+    border-radius: 4px;
 }
 
 #xg_phone .mak_box .rephone_2,#xg_phone .mak_box .rephone_3,#xg_pwd .mak_box .rephone_2,#xg_pwd .mak_box .rephone_3 {
@@ -2315,15 +2331,22 @@ dl dt p {
 }
 
 #xg_phone .mak_box .rephone_2 label input,#xg_pwd .mak_box .rephone_2 label input {
-    padding-left: 18px
+    padding-left: 18px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 #xg_phone .mak_box .rephone_2 label span,#xg_pwd .mak_box .rephone_2 label span {
-    left: 18px
+    left: 18px;
+    font-weight: normal;
+    color: #999;
 }
 
 #xg_phone .mak_box .rephone_2 .btns_submit a:first-child,#xg_pwd .mak_box .rephone_2 .btns_submit a:first-child {
-    width: 80px;
+    width: 78px;
     border: 1px solid #0a73b5;
     color: #0a73b5;
     background-color: #FFF
@@ -2342,19 +2365,28 @@ dl dt p {
 
 #xg_phone .mak_box .error,#xg_pwd .mak_box .error {
     top: 0;
-    left: 86px
+    left: 80px;
 }
 
-#xg_pwd .mak_box {
-    margin-top: 26px
+#xg_pwd .mak_box ,#xg_phone .mak_box{
+    padding:0;
+    width: 560px;
+    margin-top: 70px;
+}
+.rephone_1{
+    /*padding:0 70px;*/
 }
 
 #xg_pwd .mak_box .rephone_1 label input {
-    padding-left: 18px
+    padding-left: 18px;
+    border-radius: 4px;
 }
 
 #xg_pwd .mak_box .rephone_1 label span {
-    left: 18px
+    top: 12px;
+    left: 18px;
+    color: #999;
+    font-weight: normal;
 }
 
 #xg_pwd .mak_box .rephone_2 .btns_submit a:first-child {
@@ -2366,7 +2398,8 @@ dl dt p {
 
 #xg_pwd .mak_box .rephone_2 .pwd_info {
     color: #989898;
-    margin-bottom: 20px
+    margin-bottom: 25px;
+    padding:0 80px;
 }
 
 .tab9 a,.tab9 b,.tab9 i,.tab9 img,.tab9 span {
@@ -3309,4 +3342,31 @@ a:focus,a:hover {
     margin-left: -5px;
     top: 50%;
     margin-top: 12px;
+}
+.msk-title{
+    margin-top: -26px;
+    line-height: 50px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 1px solid #EDEDED;
+}
+.phone_reg{
+    padding-left: 80px;
+}
+#xg_pwd .phone_cg,#xg_phone .phone_cg{
+    padding-bottom: 60px;
+}
+.p-first{
+    line-height: 40px;
+}
+.mak_box span.change-one{
+    color: #333;
+    font-size: 12px!important;
+}
+.close{
+    display: block!important;
+}
+.colde img{
+    width: 100px;
+    height: 30px;
 }

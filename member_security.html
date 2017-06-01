@@ -644,7 +644,7 @@
     <!-- 修改手机号码 -->
     <div class="mak" id="xg_phone">   
         <div class="mak_box">
-            <h3>修改手机号码</h3>
+            <h3 class="msk-title">修改手机号码</h3>
             <i class="close"><img src="img/X.png" /></i>
             <div class="rephone_1">
                 <ul class="jdt">
@@ -656,7 +656,7 @@
                 </li>
                 <li>
                     <p>修改已验证手机</p>
-                    <img src="img/personal/q1.png"/>
+                    <img src="img/personal/q2.png"/>
                     <i></i>
                 </li>
                 <li>
@@ -665,20 +665,20 @@
                 </li>
                 </ul>
                 <ul class="phone_reg">
-                    <li>
+                    <li class="p-first">
                         <span class="tit">原手机号：</span>
                         <span>156***158</span>
                     </li>
                     <li>
                         <span class="tit">验证码：</span>
                         <label>
-                            <input type="text" name="code" class="w2" />
+                            <input type="text" name="code" class="w2" id="code1"/>
                             <span>请输入验证码</span>
                             <i></i>
                         </label>
                         <a href="javascript:;" class="colde">
                             <img src="img/personal/code.png">
-                            <span>换一张</span>
+                            <span class="change-one">换一张</span>
                         </a>
                     </li>
                     <li>
@@ -706,7 +706,7 @@
                 </li>
                 <li>
                     <p class="cor">修改已验证手机</p>
-                    <img src="img/personal/q1_c.png"/>
+                    <img src="img/personal/q2_c.png"/>
                     <i></i>
                 </li>
                 <li>
@@ -715,8 +715,8 @@
                 </li>
                 </ul>
                 <ul class="phone_reg">
-                    <li>
-                        <span class="tit">手机号：</span>
+                    <li class="p-first">
+                        <span class="tit">原手机号：</span>
                         <span>156***158</span>
                     </li>
                     <li>
@@ -729,7 +729,7 @@
                     <li>
                         <span class="tit">验证码：</span>
                         <label>
-                            <input type="text" name="code" class="w2" />
+                            <input type="text" name="code" class="w2"  id="code2"/>
                             <span>请输入验证码</span>
                         </label>
                         <a href="javascript:;" class="colde">
@@ -740,7 +740,7 @@
                     <li>
                         <span class="tit">短信验证码：</span>
                         <label>
-                            <input type="text" name="code" class="w3" />
+                            <input type="text" name="code" class="w3"/>
                             <span>请输入短信验证码</span>
                         </label>
                         <a href="javascript:;" class="yz_colde" id="new_phone">
@@ -781,7 +781,7 @@
     <!-- 修改密码 -->
     <div class="mak" id="xg_pwd">   
         <div class="mak_box">
-            <h3>修改密码</h3>
+            <h3 class="msk-title">修改密码</h3>
             <i class="close"><img src="img/X.png" /></i>
             <div class="rephone_1">
                 <ul class="jdt">
@@ -793,7 +793,7 @@
                 </li>
                 <li>
                     <p>修改密码</p>
-                    <img src="img/personal/q1.png"/>
+                    <img src="img/personal/q2.png"/>
                     <i></i>
                 </li>
                 <li>
@@ -806,14 +806,14 @@
                         <span class="tit">手机号：</span>
                         <label>
                             <input data-error="输入手机号的格式有误！" type="text" name="phone" class="w1" />
-                            <span>请输入手机号</span>
+                            <span>请输入手机号码</span>
                         </label>
                     </li>
                     <li>
                         <span class="tit">短信验证码：</span>
                         <label>
                             <input type="text" name="code" class="w3" />
-                            <span>请输入短信验证码</span>
+                            <span>请输入验证码</span>
                         </label>
                         <a href="javascript:;" class="yz_colde" id="yz_pwd">免费获取验证码</a>
                     </li>
@@ -833,6 +833,7 @@
                 <li>
                     <p class="cor">修改密码</p>
                     <img src="img/personal/q1_c.png"/>
+                    <img src="img/personal/q1_c1.png" class="absolute-img"/>
                     <i></i>
                 </li>
                 <li>
@@ -841,7 +842,7 @@
                 </li>
                 </ul>
                 <p class="pwd_info">
-                  当您使用英文字母+数字+特殊字符的组合时，如sd8bjh*dh、sge352%ds等，系统会提示您密码的安全性级别为“安全”。当您使用英文字母+数字+特殊字符的组合时，如sd8bjh*dh、sge352%ds等，系统会提示您密码的安全性级别为“安全”。   
+                   将登录密码设置为8位以上,数字、大小写字母、特殊字符混合型是相对安全的,但通常不方便记忆,在这里我们教您一个小窍门:尝试用字母"0"代替数字零等等.同时,我们建议您每隔半年修改一次登录密码.
                 </p>
                 <ul class="phone_reg">
                     <li>
@@ -899,7 +900,7 @@
     <!-- 新增发票 -->
     <div class="mak" id="add_fq">   
         <div class="mak_box">
-            <h3>新增发票</h3>
+            <h3 class="msk-title">新增发票</h3>
             <i class="close"><img src="img/X.png" /></i>
             <p class="title1">
                 <i>*</i>
@@ -1239,9 +1240,21 @@
             $('#tk_mak').show();
         });
         $('#xg_btn').click(function(){
+            $('#xg_phone .rephone_2').hide();
+            $('#xg_phone .rephone_3').hide();
+            $('#xg_phone .rephone_1').show();
+            $('#xg_phone .error').hide();
+            $("#xg_phone label input").val('');
+            $("#xg_phone label input").siblings('span').show();
             $('#xg_phone').show();
         });
         $('#pwd_btn').click(function(){
+            $('#xg_pwd .rephone_2').hide();
+            $('#xg_pwd .rephone_3').hide();
+            $('#xg_pwd .rephone_1').show();
+            $('#xg_pwd .error').hide();
+            $("#xg_pwd label input").val('');
+            $("#xg_pwd label input").siblings('span').show();
             $('#xg_pwd').show();
         });
         $('#ad_btn').click(function(){
@@ -1294,7 +1307,7 @@
         //手机号验证 下一步
         $('#next_btn').click(function(){
             var inp = $('#xg_phone .rephone_1 label input');
-            console.log(inp.length)
+//            console.log(inp.length)
             var error = [];
             for(var i=0; i<inp.length; i++){
                 if(inp.eq(i).val() ===""){
@@ -1303,11 +1316,14 @@
             }
 
             if(error.length){
-
-                for(var j=0,str=""; j<error.length; j++){
-                    $('#xg_phone .error').text(error[j]).show();
+                if(error.length>0){
+                    $('#xg_phone .error').text(error[0]).show();
                     return false;
                 }
+//                for(var j=0,str=""; j<error.length; j++){
+//                    $('#xg_phone .error').text(error[j]).show();
+//                    return false;
+//                }
             }else{
                 $('#xg_phone .rephone_2').show().siblings('div').hide();
             }
@@ -1346,8 +1362,11 @@
         });
         //手机号验证 上一步
         $('#prev_btn').click(function(){
-            $('.rephone_1 label input').val('').next().show();
-            $('.rephone_1').show().siblings().hide();
+            //.val('')
+            $('#xg_phone .rephone_1 label span').hide();
+            $('#xg_phone .rephone_1 label input').show();
+            $('#xg_phone .rephone_1').show().siblings().hide();
+            $('.msk-title').show();
         });
         //手机号验证 确定submit1_pwd
         $('#submit1').click(function(){
@@ -1371,10 +1390,12 @@
             }
 
             if(error.length){
-
-                for(var j=0,str=""; j<error.length; j++){
-                    err.text(error[j]).show();
+                if(error.length>0){
+                    err.text(error[0]).show();
                 }
+//                for(var j=0,str=""; j<error.length; j++){
+//                    err.text(error[j]).show();
+//                }
             }else{
                 $('#xg_phone .rephone_3').show().siblings('div').hide();
             }
@@ -1401,10 +1422,13 @@
 
             if(error.length){
 
-                for(var j=0,str=""; j<error.length; j++){
-
-                    $('#xg_pwd .error').text(error[j]).show();
+                if(error.length>0){
+                    $('#xg_pwd .error').text(error[0]).show();
                 }
+//                for(var j=0,str=""; j<error.length; j++){
+//
+//                    $('#xg_pwd .error').text(error[j]).show();
+//                }
             }else{
                 $('#xg_pwd .rephone_3').show().siblings('div').hide();
             }

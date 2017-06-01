@@ -155,6 +155,10 @@ $(document).ready(function(){
 	$('#yz_phone').click(function(){
 		var time = 60;
 		var me = $(this);
+		if($('#code1').val()==""){
+			$('#xg_phone .rephone_1 .error').html($('#code1').siblings('span').html()).show();
+			return;
+		}
 		if(me.text() === "重新获取" || me.text() === "免费获取验证码"){
 			var t = setInterval(function(){
 				time --;
@@ -199,6 +203,10 @@ $(document).ready(function(){
 			return false;
 		}else{
 			error.hide();
+			if($('#code2').val()==""){
+				$('#xg_phone .rephone_2 .error').html($('#code1').siblings('span').html()).show();
+				return;
+			}
 			var t = setInterval(function(){
 				time --;
 				$(me).html('倒计时 '+time+'s').addClass('timeactive');
