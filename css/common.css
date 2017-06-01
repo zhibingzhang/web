@@ -246,3 +246,6 @@ body{
 .star{
     /*width: 82px!important;*/
 }
+.close{
+    opacity: 1!important;
+}
