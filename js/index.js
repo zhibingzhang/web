@@ -122,12 +122,12 @@ $(document).ready(function(){
 		}
 	});
 	$('#yz_pwd').click(function(){
-		
 		var phone = $('#xg_pwd .phone_reg input[name=phone]');
 		var regPhone = /^1(3|4|5|7|8)\d{9}$/;
 		var time = 60;
 		var error = $('#xg_pwd .error');
 		var me = $(this);
+		
 		if(phone.val() ===""){
 			
 			// phone.parent().addClass('error');
@@ -139,7 +139,24 @@ $(document).ready(function(){
 			// phone.parent().addClass('error');
 			return false;
 		}else{
-			error.hide();
+			console.log(me.html())
+			if(me.html() == "重新获取" || me.html() == "免费获取验证码"){
+
+				var t = setInterval(function(){
+					time --;
+					me.html('倒计时 '+time+'s').addClass('timeactive');
+					if(time === 0){
+						clearInterval(t)
+						me.html('重新获取').removeClass('timeactive');
+					}
+				},1000);
+			}
+		}
+	});
+	$('#yz_phone').click(function(){
+		var time = 60;
+		var me = $(this);
+		if(me.val() === "重新获取" || me.val() === "免费获取验证码"){
 			var t = setInterval(function(){
 				time --;
 				$(me).html('倒计时 '+time+'s').addClass('timeactive');
@@ -149,18 +166,6 @@ $(document).ready(function(){
 				}
 			},1000);
 		}
-	});
-	$('#yz_phone').click(function(){
-		var time = 60;
-		var me = $(this);
-		var t = setInterval(function(){
-				time --;
-				$(me).html('倒计时 '+time+'s').addClass('timeactive');
-				if(time === 0){
-					clearInterval(t)
-					$(me).html('重新获取').removeClass('timeactive');
-				}
-			},1000);
 	});
 
 	$("#code").click(function(){

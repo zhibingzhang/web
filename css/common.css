@@ -236,13 +236,11 @@ body{
 
 .star img{
     width: 13px;
+    height: 13px;
 }
 .search-btn2{
     position: absolute;
     bottom: 116px;
     z-index: 9999;
     left: 534px;
-}
-.star{
-    /*width: 82px!important;*/
 }
