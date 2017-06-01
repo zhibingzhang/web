@@ -817,13 +817,12 @@
             console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         // 切换tab
-        $('.common_box>div>ul>li ul>li>a').click(function(){
-           var tab = $(this).attr('class');
-           $('.common_box>div>ul>li ul>li').removeClass('active');
-           $(this).parent().addClass('active');
-           $('.tabs .'+tab).show().siblings().hide();
+        $('.tab_box ul li').click(function(){
+            var _index = $(this).index();
+
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.item'+_index).show().siblings().hide();
         });
-        
         // x
         $('.close').click(function(){
             $('#tk_mak').hide();

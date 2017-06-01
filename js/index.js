@@ -139,8 +139,7 @@ $(document).ready(function(){
 			// phone.parent().addClass('error');
 			return false;
 		}else{
-			console.log(me.html())
-			if(me.html() == "重新获取" || me.html() == "免费获取验证码"){
+			if(me.html() === "重新获取" || me.html() === "免费获取验证码"){
 
 				var t = setInterval(function(){
 					time --;
@@ -156,13 +155,13 @@ $(document).ready(function(){
 	$('#yz_phone').click(function(){
 		var time = 60;
 		var me = $(this);
-		if(me.val() === "重新获取" || me.val() === "免费获取验证码"){
+		if(me.text() === "重新获取" || me.text() === "免费获取验证码"){
 			var t = setInterval(function(){
 				time --;
-				$(me).html('倒计时 '+time+'s').addClass('timeactive');
+				me.html('倒计时 '+time+'s').addClass('timeactive');
 				if(time === 0){
 					clearInterval(t)
-					$(me).html('重新获取').removeClass('timeactive');
+					me.html('重新获取').removeClass('timeactive');
 				}
 			},1000);
 		}
