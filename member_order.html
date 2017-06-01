@@ -202,8 +202,8 @@
                                         <a href="javascript:;">最近3个月</a>
                                     </div>
                                     <div class="date_s">
-                                        <span>开始日期<img id="date1" src="img/personal/date.png" /></span><i>~</i>
-                                        <span>结束日期<img id="date2" src="img/personal/date.png" /></span>
+                                        <span>开始日期</span><img id="date1" src="img/personal/date.png" /><i>~</i>
+                                        <span>结束日期</span><img id="date2" src="img/personal/date.png" />
                                     </div>
                                 </div>
                                 <table class="tab">
@@ -898,9 +898,14 @@
         $('#date1').datetimepicker(
             {
                 format: "dd MM yyyy",
-                autoclose: true
+                autoclose: true,
+                startView: 2,  
+                minView: 2
             }
-        );
+        ).on('changeDate', function(ev){
+            console.log($(this))
+            console.log($(this).prev().text($(this).val()))
+        });
         $('#date2').datetimepicker(
             {
                 format: "dd MM yyyy",
