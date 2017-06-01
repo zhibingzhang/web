@@ -125,7 +125,7 @@ dl dt p {
 .public_main .nav_list {
     border-bottom: 1px solid #dadada;
     padding: 10px 0;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     color: #000;
 }
 
@@ -535,7 +535,7 @@ dl dt p {
 }
 
 .common_box>div:first-child {
-    width: 170px
+    width: 200px;
 }
 
 .common_box>div:first-child>ul li a {
@@ -566,19 +566,19 @@ dl dt p {
 }
 
 .common_box>div:first-child+div {
-    width: 1000px;
-    padding-left: 30px
+    width: 850px;
+    padding-left: 50px;
 }
 
 .common_box>div:first-child+div h2 {
-    font-size: 20px;
-    margin-bottom: 16px
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .common_box>div:first-child+div>div {
     width: 100%;
     padding-left: 0;
-    display: none
+    display: none;
 }
 
 .common_box>div:first-child+div>div:first-child {
@@ -1804,7 +1804,9 @@ dl dt p {
 .tit1 {
     color: #989898;
     font-size: 14px;
-    margin-bottom: 26px
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: 6px;
 }
 
 .tab1 .tab_box,.tab10 .tab_box,.tab2 .tab_box,.tab9 .tab_box {
@@ -1837,7 +1839,7 @@ dl dt p {
 
 .tab1 .tab_box>ul li a,.tab10 .tab_box>ul li a,.tab2 .tab_box>ul li a,.tab9 .tab_box>ul li a {
     display: block;
-    width: 100px;
+    width: 130px;
     height: 40px;
     line-height: 40px;
     border: 1px solid #ccc;
@@ -1845,13 +1847,15 @@ dl dt p {
     border-top-left-radius: 3px;
     text-align: center;
     color: #999;
-    font-weight: 700;
-    background-color: #FFF
+    background-color: #FFF;
+    font-size: 14px;
 }
 
 .tab1 .tab_box>ul li.active a,.tab10 .tab_box>ul li.active a,.tab2 .tab_box>ul li.active a,.tab9 .tab_box>ul li.active a {
     color: #0c70b2;
-    border-bottom-color: #FFF
+    border-bottom-color: #FFF;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .tab1 .tab_item_box,.tab10 .tab_item_box,.tab2 .tab_item_box,.tab9 .tab_item_box {
@@ -2501,8 +2505,8 @@ dl dt p {
 }
 
 .tab6 .gr_w {
-    margin-left: 160px;
-    margin-top: 70px
+    margin-left: 200px;
+    margin-top: 70px;
 }
 
 .tab6 .gr_w p.error {
@@ -2517,17 +2521,20 @@ dl dt p {
 }
 
 .tab6 .btns_submit {
-    text-align: left;
-    padding-left: 116px
+    width: 309px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 50px;
 }
 
 .tab6 .btns_submit a {
-    text-align: center
+    text-align: center;
+    margin-right: 0;
+    width: 100px;
 }
 
 .tab6 .uname_in {
     overflow: hidden;
-    margin-bottom: 28px
 }
 
 .tab6 .uname_in p {
@@ -2536,16 +2543,18 @@ dl dt p {
 
 .tab6 .uname_in p>span {
     display: block;
-    margin-top: 50px;
-    color: #999
+    margin-top: 54px;
+    margin-left: -83px;
+    color: #999;
 }
 
 .tab6 .uname_in p:first-child {
-    margin-right: 26px
+    margin-right: 20px;
+    margin-bottom: 0;
 }
 
 .tab6 ul li {
-    margin-bottom: 20px
+    margin-bottom: 15px
 }
 
 .tab6 ul li select {
@@ -2568,13 +2577,21 @@ dl dt p {
 }
 
 .tab6 ul li label input {
-    width: 238px;
-    height: 40px;
-    line-height: 40px;
+    width: 208px;
+    height: 36px;
+    line-height: 36px;
     border: 1px solid #e4e4e4;
-    padding-left: 20px
+    padding:0 15px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 13px;
 }
-
+.tab6 ul li label input.mobile-wrapper{
+    background: #f2f2f2;
+}
 .tab6 ul li label i {
     position: absolute;
     top: 13px;
@@ -2586,9 +2603,10 @@ dl dt p {
 
 .tab6 ul li label span {
     position: absolute;
-    top: 13px;
-    left: 20px;
-    color: #9b9b9b
+    top: 12px;
+    left: 15px;
+    color: #999;
+    font-weight: normal;
 }
 
 .tab6 .group_file {
@@ -2917,23 +2935,25 @@ dl dt p {
 
 .tab10 .item0 div.yh_item>div,.tab10 .item1 div.yh_item>div {
     background-color: #92c1df;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 13px;
+    margin-bottom: 18px;
     color: #FFF;
     float: left;
-    width: 216px;
-    height: 92px;
+    width: 238px;
+    height: 105px;
     border: 1px solid #93c0df;
     position: relative;
-    padding: 22px 30px
+    padding: 18px 15px 10px;
+    font-size: 14px;
 }
-
+.tab10 .item0 div.yh_item>div p, .tab10 .item1 div.yh_item>div p{
+    margin-bottom: 2px;
+}
 .tab10 .item0 div.yh_item>div img,.tab10 .item1 div.yh_item>div img {
     position: absolute;
     right: -1px;
     top: -1px
 }
-
 .tab10 .item0 div.yh_item>div i,.tab10 .item1 div.yh_item>div i {
     font-style: normal
 }
@@ -2953,12 +2973,15 @@ dl dt p {
 
 .tab10 .item0 div.yh_item>div p:first-child b,.tab10 .item1 div.yh_item>div p:first-child b {
     position: relative;
-    bottom: -6px
+    bottom: 5px;
+    vertical-align: bottom;
+    font-size: 14px;
 }
 
 .tab10 .item0 div.yh_item>div p:first-child span,.tab10 .item1 div.yh_item>div p:first-child span {
-    font-size: 36px;
-    margin-right: 24px
+    font-size: 48px;
+    line-height: 48px;
+    margin-right: 20px;
 }
 
 .tab10 .item1 div.yh_item>div {
@@ -2968,7 +2991,7 @@ dl dt p {
 
 .tab10 .item1 div.yh_item>div .gq {
     top: 36px;
-    right: 26px
+    right: 0;
 }
 
 .tab5 .del_link {
@@ -3172,4 +3195,89 @@ a:focus,a:hover {
 .add_box label span,.mak_box label span{
     font-size: 12px!important;
     top: 10px!important;
+}
+
+
+.select-ul{
+    list-style:none;
+    position:relative;
+    font-size: 14px;
+    color: #333;
+    /*margin-top: 4px;*/
+    width: auto;
+    display: inline-block;
+}
+.select-ul .span-absolute{
+    position: absolute;
+    right: -20px;
+    top: 0;
+    margin-right: 0;
+    height: 38px;
+    line-height: 37px;
+    width: 12px;
+}
+.select-ul .span-absolute img{
+    vertical-align: middle;
+}
+.select-ul li{
+    position:relative;
+    width: 208px;
+    height: 24px;
+    margin-bottom: 0!important;
+}
+.select-ul .text{
+    width:100%;
+    height:22px;
+    line-height:22px;
+    position:absolute;
+    left:0;
+    top:0;
+    border:1px solid #e4e4e4;
+    cursor:default;
+    padding:7px 15px;
+    font-size: 13px;
+    color: #333;
+}
+.select-ul .select{
+    border: 1px solid #e4e4e4;
+    width: 239px;
+    position: absolute;
+    top: 33px;
+    display: none;
+    background: #fff;
+    outline: none;
+    z-index: 999;
+    height: 96px;
+    overflow: auto;
+}
+.select-ul .select p{
+    line-height:32px;
+    font-size:13px;
+    cursor:default;
+    position:relative;
+    text-align: left;
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 32px;
+    overflow: hidden;
+}
+.select-ul .select .hover{
+    background:#005AC2;
+    color: #fff;
+}
+.tab10 .item0 div.yh_item>div p:first-child i,.tab10 .item1 div.yh_item>div p:first-child i{
+    vertical-align: bottom;
+    font-size: 20px;
+}
+.x-num{
+    font-size: 12px!important;
+    font-weight: normal!important;
+}
+.info3{
+    display: inline-block;
+    color: #0C70B2!important;
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    line-height: 40px;
 }

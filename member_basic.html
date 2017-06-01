@@ -166,7 +166,9 @@
 
                 <div class="tab6">
                     <h2>基本资料</h2>
-                    <p class="tit1">你将在这里可以对基本资料进行管理</p>
+                    <p class="tit1">
+                        你将在这里可以对基本资料进行管理
+                    </p>
                     <div class="gr_w">
                         <ul>
                             <li>
@@ -176,12 +178,14 @@
                                         <img src="img/personal/headr1.png" />
                                     </p>
                                     <p>
-                                        <label class="group_file">
-                                        <img src="img/personal/file1.png" />
-                                        <input type="file" />
-                                        <span style="    visibility: hidden;">请上传头像</span>
-                                        </label>
-                                        <span>头像不得大于1m</span>
+                                        <div class="group_file">
+                                            <img src="img/personal/file1.png" />
+                                            <input type="file" accept="image/gif, image/jpeg"/>
+                                            <span style="visibility: hidden;">请上传头像</span>
+                                        </div>
+                                    </p>
+                                    <p>
+                                        <span>附件大小为20MB以内，可以上传jpg、png、gif等格式</span>
                                     </p>
                                 </div>
                             </li>
@@ -195,8 +199,8 @@
                             <li>
                                 <span>手机号码</span>
                                 <label>
-                                    <input type="text" name="Phone" data-error="输入手机号码格式有误" />
-                                    <span>请输入手机号码</span>
+                                    <input type="text" name="Phone" data-error="输入手机号码格式有误" class="mobile-wrapper" value="180 1775 7893" readonly/>
+                                    <span></span>
                                 </label>
                             </li>
                             <li>
@@ -222,9 +226,20 @@
                             </li>
                             <li>
                                 <span>年收入</span>
-                                <select>
-                                    <option>请输入你的年收入</option>
-                                </select>
+                                <ul class="select-ul">
+                                    <li>
+                                        <input type="text" class="text" onclick="beginSelect(this);" readonly value="请选择你的年收入">
+                                        <span class="span-absolute" onmousedown="beginSelect(this)">
+                                            <img src="img/small/down3.png" class="down-img">
+                                        </span>
+                                    </li>
+                                    <li class="select">
+                                        <p>10000以下</p>
+                                        <p>10000~30000</p>
+                                        <p>30000~50000</p>
+                                        <p>50000以上</p>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                         <p class="error"></p>
@@ -1488,6 +1503,43 @@
             }
         );
     })
+    function beginSelect(elem){
+        if(elem.className == "btn"){
+            elem.className = "btn btnhover"
+            elem.onmouseup = function(){
+                this.className = "btn"
+            }
+        }
+        var ul = elem.parentNode.parentNode;
+        var li = ul.getElementsByTagName("li");
+        var selectArea = li[li.length-1];
+        if(selectArea.style.display == "block"){
+            selectArea.style.display = "none";
+        }
+        else{
+            selectArea.style.display = "block";
+            mouseoverBg(selectArea);
+        }
+    }
+    function mouseoverBg(elem1){
+        var input = elem1.parentNode.getElementsByTagName("input")[0];
+        var p = elem1.getElementsByTagName("p");
+        var pLength = p.length;
+        for(var i = 0; i < pLength; i++){
+            p[i].onmouseover = showBg;
+            p[i].onmouseout = showBg;
+            p[i].onclick = postText;
+        }
+        function showBg(){
+            this.className == "hover"?this.className = " ":this.className = "hover";
+        }
+        function postText(){
+            var selected = this.innerHTML;
+            input.setAttribute("value",selected);
+            elem1.style.display = "none";
+        }
+    }
+
 </script>
 <script type="text/javascript" src='js/lCalendar.min.js'></script>
 <script type="text/javascript" src="js/index.js"></script>

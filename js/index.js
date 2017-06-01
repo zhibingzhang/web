@@ -388,11 +388,11 @@ $(document).ready(function(){
 			var inp = $('.tab6 label input');
 			var me_mak = $('.mak');
 			var err = $('.tab6 .error');
-            error({
+            error2({
             	inp:inp,
             	me_mak:me_mak,
             	err:err
-            });  
+            });
 		});
 
 		//新增普通发票
@@ -554,6 +554,7 @@ function error(obj){
 
 	    	obg_val[_name] = _val;
 	        if(t_val !== "" && t_name === 'Phone'){
+				t_val = t_val.replace(/[ ]/g,"");
 	            if(!regPhone.test(t_val)){
 	                error.push(inp.eq(i).attr('data-error'));
 	            }
@@ -584,6 +585,59 @@ function error(obj){
 	    	err.text(error[i]).show();
 	        return false;
 	    }
+	}
+}
+function error2(obj){
+	var inp = obj.inp;
+	var up_page = obj.up_page;
+	var me_mak = obj.me_mak;
+	var err = obj.err;
+	var error = [];
+	var obg_val = {};
+	var regEmail = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+	var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+	var regSFZ15 = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+	var regSFZ18 = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+	for(var i=0; i<inp.length; i++){
+		var t_val = inp.eq(i).val();
+		var t_name = inp.eq(i).attr('name');
+		if(t_val === ""){
+			error.push(inp.eq(i).next().text());
+		}else{
+			var _name = inp.eq(i).attr('name');
+			var _val = inp.eq(i).val();
+
+			obg_val[_name] = _val;
+			if(t_val !== "" && t_name === 'Phone'){
+				t_val = t_val.replace(/[ ]/g,"");
+				if(!regPhone.test(t_val)){
+					error.push(inp.eq(i).attr('data-error'));
+				}
+			}else if(t_val !== "" && t_name === 'ID'){
+				if(!regSFZ15.test(t_val) && !regSFZ18.test(t_val)){
+					error.push(inp.eq(i).attr('data-error'));
+				}
+			}else if(t_val !== "" && t_name === 'email'){
+				if(!regEmail.test(t_val) && !regSFZ18.test(t_val)){
+					error.push(inp.eq(i).attr('data-error'));
+				}
+			}
+		}
+	}
+	if(!error.length){
+		if(up_page != undefined){
+			upage(up_page,obg_val);
+		}
+		if(me_mak != undefined){
+			me_mak.hide();
+		}
+		$('.error').hide();
+		alert('保存成功');
+	}else{
+		for(var i = 0,str=''; i<error.length; i++){
+			err.text(error[i]).show();
+			return false;
+		}
 	}
 }
 
