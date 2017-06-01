@@ -1939,7 +1939,7 @@ dl dt p {
     line-height: 40px;
     display: inline-block;
     color: #333;
-    margin-right: 30px;
+    // margin-right: 30px;
     font-size: 14px;
     padding: 0 10px
 }
@@ -1966,7 +1966,7 @@ dl dt p {
 }
 
 .tab1 .tab_item_box .item0 .item_date .date_s img,.tab10 .tab_item_box .item0 .item_date .date_s img,.tab2 .tab_item_box .item0 .item_date .date_s img,.tab9 .tab_item_box .item0 .item_date .date_s img {
-    margin-left: 20px
+    margin-left: 5px
 }
 
 .pj_mak {
