@@ -2500,6 +2500,9 @@ dl dt p {
     padding: 0;
     width: 470px;
     margin-top: 70px;
+    height: 500px;
+    overflow-y: auto;
+    padding-top: 36px;
 }
 .fq-wrapper{
     padding-left: 40px;
