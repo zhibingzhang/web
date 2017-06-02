@@ -770,7 +770,11 @@ dl dt p {
 }
 
 .error404 p:first-child+p {
-    margin-bottom: 16px
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.error404 p{
+    font-size: 16px;
 }
 
 .error404 a {
