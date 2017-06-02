@@ -250,3 +250,6 @@ body{
 .close{
     opacity: 1!important;
 }
+.body404{
+   background: #fff;
+}
