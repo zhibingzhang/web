@@ -134,7 +134,8 @@ dl dt p {
     border-bottom: 1px solid #dadada;
     padding: 10px 0;
     margin-bottom: 0;
-    color: #000;
+    color: #666;
+    font-size: 14px;
 }
 
 .public_main .nav_list span {
@@ -1439,7 +1440,7 @@ dl dt p {
 .add_mak .add_box>i,.add_mak .ck_box>i,.add_mak .info_box>i,.add_mak .mak_box>i,.add_mak .pj_box>i,.add_mak .xq_box>i,.ck_mak .add_box>i,.ck_mak .ck_box>i,.ck_mak .info_box>i,.ck_mak .mak_box>i,.ck_mak .pj_box>i,.ck_mak .xq_box>i,.info_mak .add_box>i,.info_mak .ck_box>i,.info_mak .info_box>i,.info_mak .mak_box>i,.info_mak .pj_box>i,.info_mak .xq_box>i,.mak .add_box>i,.mak .ck_box>i,.mak .info_box>i,.mak .mak_box>i,.mak .pj_box>i,.mak .xq_box>i,.pj_mak .add_box>i,.pj_mak .ck_box>i,.pj_mak .info_box>i,.pj_mak .mak_box>i,.pj_mak .pj_box>i,.pj_mak .xq_box>i,.xq_mak .add_box>i,.xq_mak .ck_box>i,.xq_mak .info_box>i,.xq_mak .mak_box>i,.xq_mak .pj_box>i,.xq_mak .xq_box>i {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 14px;
     cursor: pointer
 }
 
@@ -2373,6 +2374,14 @@ dl dt p {
     width: 560px;
     margin-top: 70px;
 }
+#add_people .mak_box{
+    padding:0;
+    width: 470px;
+    margin-top: 70px;
+}
+#add_people ul{
+    padding-left: 70px;
+}
 .rephone_1{
     /*padding:0 70px;*/
 }
@@ -2687,9 +2696,9 @@ dl dt p {
 }
 
 .tab7 .add_box>a {
-    width: 132px;
-    height: 132px;
-    line-height: 144px;
+    width: 136px;
+    height: 136px;
+    line-height: 138px;
     border: 1px solid #ccc;
     border-radius: 3px;
     float: left;
@@ -2697,16 +2706,19 @@ dl dt p {
 }
 
 .tab7 .add_box>a img {
-    display: inline-block
+    display: inline-block;
+    width: 40px;
+    height: 40px;
 }
 
 .tab7 .add_box .add_box_item>div {
     margin-right: 20px;
     float: left;
-    padding: 33px;
+    padding: 30px 30px 25px 30px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    width: 258px;
 }
 
 .tab7 .add_box .add_box_item>div p {
@@ -2753,8 +2765,8 @@ dl dt p {
 #add_people .error {
     display: none;
     height: 21px;
-    top: 25px;
-    left: 20px;
+    top: 5px;
+    left: 70px;
     padding: 0 0 5px 22px;
     font-style: normal;
     color: red;
@@ -2767,23 +2779,25 @@ dl dt p {
 }
 
 #add_people label input {
-    width: 338px;
+    width: 290px;
     height: 40px;
     line-height: 40px;
     border: 1px solid #e4e4e4;
-    padding-left: 18px
+    padding-left: 18px;
+    margin-left: 0;
 }
 
 #add_people label span {
     position: absolute;
     top: 13px;
-    left: 39px;
-    color: #9b9b9b
+    left: 18px;
+    color: #999;
+    font-weight: normal;
 }
 
 #add_people input {
     width: 340px;
-    margin-left: 20px
+    margin-left: 20px;
 }
 
 .del_link {
@@ -3369,4 +3383,39 @@ a:focus,a:hover {
 .colde img{
     width: 100px;
     height: 30px;
+}
+.list-w{
+    position: relative;
+}
+.tab7 .add_box .add_box_item>div.list-w.active{
+    border:1px solid #0e71b5;
+}
+.list-w .op1{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    margin-top: 0!important;
+    font-size: 12px!important;
+    z-index: 999;
+}
+.list-w >div{
+    margin-bottom: 10px;
+}
+.list-w >div span{
+    float: left;
+    font-size: 12px!important;
+    color: #333;
+}
+.list-w >div input{
+    border:none;
+    outline: none;
+    background: none;
+    font-size: 12px!important;
+    color: #333;
+}
+.add_box_items{
+    float: left;
+}
+.add_box_items .add_box_item{
+    float: left;
 }

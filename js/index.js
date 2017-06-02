@@ -382,16 +382,31 @@ $(document).ready(function(){
 
 	/**************联系人管理-新增-开始*************/
 		$('#addl_btn').click(function(){
-			var inp = $('#add_people label input');
-			var up_page = $('.add_box_item');
-			var me_mak = $('.mak');
-			var err = $('#add_people .error');
-            error({
-            	inp:inp,
-            	up_page:up_page,
-            	me_mak:me_mak,
-            	err:err
-            });  
+			if($('#add_people').attr('value')!=undefined && $('#add_people').attr('value')!=''){
+				var inp = $('#add_people label input');
+				var up_page = $('.add_box_item');
+				var me_mak = $('.mak');
+				var err = $('#add_people .error');
+				var id = $('#add_people').attr('value');
+				error3({
+					inp:inp,
+					up_page:up_page,
+					me_mak:me_mak,
+					err:err,
+					id: id
+				});
+			}else{
+				var inp = $('#add_people label input');
+				var up_page = $('.add_box_item');
+				var me_mak = $('.mak');
+				var err = $('#add_people .error');
+				error({
+					inp:inp,
+					up_page:up_page,
+					me_mak:me_mak,
+					err:err
+				});
+			}
 		});
 	/**************联系人管理-新增-结束*************/
 
@@ -652,7 +667,68 @@ function error2(obj){
 		}
 	}
 }
+function error3(obj){
+	var inp = obj.inp;
+	var up_page = obj.up_page;
+	var me_mak = obj.me_mak;
+	var err = obj.err;
+	var id = obj.id;
+	var error = [];
+	var obg_val = {};
+	var regEmail = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+	var regPhone = /^1(3|4|5|7|8)\d{9}$/;
+	var regSFZ15 = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+	var regSFZ18 = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+	for(var i=0; i<inp.length; i++){
+		var t_val = inp.eq(i).val();
+		var t_name = inp.eq(i).attr('name');
+		if(t_val === ""){
+			error.push(inp.eq(i).next().text());
+		}else{
+			var _name = inp.eq(i).attr('name');
+			var _val = inp.eq(i).val();
 
+			obg_val[_name] = _val;
+			if(t_val !== "" && t_name === 'Phone'){
+				t_val = t_val.replace(/[ ]/g,"");
+				if(!regPhone.test(t_val)){
+					error.push(inp.eq(i).attr('data-error'));
+				}
+			}else if(t_val !== "" && t_name === 'ID'){
+				if(!regSFZ15.test(t_val) && !regSFZ18.test(t_val)){
+					error.push(inp.eq(i).attr('data-error'));
+				}
+			}else if(t_val !== "" && t_name === 'email'){
+				if(!regEmail.test(t_val) && !regSFZ18.test(t_val)){
+					error.push(inp.eq(i).attr('data-error'));
+				}
+			}
+		}
+	}
+	if(!error.length){
+		if(up_page != undefined){
+			update(up_page,obg_val,id);
+		}
+		if(me_mak != undefined){
+			me_mak.hide();
+		}
+
+		for(var i = 0; i<inp.length; i++){
+			inp.eq(i).val('').next().show();
+		}
+	}else{
+		for(var i = 0,str=''; i<error.length; i++){
+			err.text(error[i]).show();
+			return false;
+		}
+	}
+}
+function update(up_page,obg_val,id){
+	$('#'+id).find('.l-p1').val(obg_val.uname);
+	$('#'+id).find('.l-p2').val(obg_val.Phone);
+	$('#'+id).find('.l-p3').val(obg_val.ID);
+	$('#add_people').attr('value','');
+}
 function upage(up_page,obg_val){
 	var html;
 	if(up_page.attr('class') === 'item0'){
@@ -661,10 +737,24 @@ function upage(up_page,obg_val){
 		html = '<div class="fp_group"><p><span class="tit">上海自由贸易有限公司</span><span><a href="javascript:;">编辑</a><i>|</i><a href="javascript:;" class="del_fpzz">删除</a></span></p><h3></h3><ul><li><span>单位名称：</span><span>上海自由贸易有限公司</span></li><li><span>纳税人识别码：</span><span>15625485458</span></li><li><span>注册地址：</span><span>上海市徐汇区</span></li><li><span>注册电话：</span><span>徐汇地铁1出口</span></li><li><span>开户银行：</span><span>徐汇地铁1出口</span></li><li><span>银行账户：</span><span>徐汇地铁1出口</span></li></ul><h3>售票地址</h3><ul><li><span>收票人姓名：</span><span>Free</span></li><li><span>收票人手机号：</span><span>15625485458</span></li><li<span>收票人省份：</span><span>上海市徐汇区</span></li><li><span>收票人地址：</span><span>徐汇地铁1出口</span></li></ul></div>';
 		
 	}else{
-		html = '<div><span><a href="javascript:;" class="bianji">编辑</a><a href="javascript:;" class="delete">删除</a></span><p><span>联系人：</span><input readonly="true" type="text" value="'+obg_val.uname+'" /></p><p><span>联系方式：</span><input readonly="true" type="text" value="'+obg_val.Phone+'" /></p><p><span>身份证号：</span><input readonly="true" type="text" value="'+obg_val.ID+'"></p></div>';
+		var l = $('.list-w').length;
+		var max = 0;
+		for(var i = 0; i< l;i++){
+			var t = $('.list-w')[i].id;
+			t = parseInt(t.substring(6,t.length));
+			if(t>max){
+				max = t;
+			}
+		}
+		max = max+1;
+		html = '<div class="list-w" id="list-w'+max+'"> <span class="op1"> <a href="javascript:;" class="bianji">编辑</a> <a href="javascript:;" class="delete">删除</a> </span> <div> <span>联系人：</span> <input readonly="true" type="text" class="l-p1" value="'+obg_val.uname+'"/> </div> <div> <span>联系方式：</span> <input readonly="true" type="text" class="l-p2"  value="'+obg_val.Phone+'" /> </div> <div> <span>身份证号：</span> <input readonly="true" type="text" class="l-p3" value="'+obg_val.ID+'"> </div> </div> ';
 	}
-	
 	up_page.append(html);
+	$('.list-w').hover(function(){
+		$(this).addClass('active');
+	},function(){
+		$(this).removeClass('active');
+	});
 }
 
 

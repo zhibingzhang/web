@@ -169,25 +169,43 @@
                     <p class="tit1">您将在这里对你的联系人进行管理</p>
                     <div class="add_box">
                         <div class="add_box_item">
-                            <div>
-                                <span>
+                            <div class="list-w" id="list-w1">
+                                <span class="op1">
                                     <a href="javascript:;" class="bianji">编辑</a>
                                     <a href="javascript:;" class="delete">删除</a>
                                 </span>
-                                <p>
+                                    <div>
+                                        <span>联系人：</span>
+                                        <input readonly="true" type="text" value="张三"  class="l-p1"/>
+                                    </div>
+                                    <div>
+                                        <span>联系方式：</span>
+                                        <input readonly="true" type="text" value="15601604621" class="l-p2"/>
+                                    </div>
+                                    <div>
+                                        <span>身份证号：</span>
+                                        <input readonly="true" type="text" value="411525485698545254" class="l-p3">
+                                    </div>
+                                </div>
+                            <div class="list-w" id="list-w2">
+                                <span class="op1">
+                                    <a href="javascript:;" class="bianji">编辑</a>
+                                    <a href="javascript:;" class="delete">删除</a>
+                                </span>
+                                <div>
                                     <span>联系人：</span>
-                                    <input readonly="true" type="text" value="张三" />
-                                </p>
-                                <p>
+                                    <input readonly="true" type="text" value="张三" class="l-p1"/>
+                                </div>
+                                <div>
                                     <span>联系方式：</span>
-                                    <input readonly="true" type="text" value="15601604621" />
-                                </p>
-                                <p>
+                                    <input readonly="true" type="text" value="15601604621" class="l-p2"/>
+                                </div>
+                                <div>
                                     <span>身份证号：</span>
-                                    <input readonly="true" type="text" value="411525485698545254">
-                                </p>
+                                    <input readonly="true" type="text" value="411525485698545254" class="l-p3">
+                                </div>
                             </div>
-                        </div>
+                            </div>
                         <a href="javascript:;" id="add_img_btn">
                             <img src="img/personal/add_l.png" />
                         </a>
@@ -1058,9 +1076,9 @@
         </div>
     </div>
     <!-- 新增联系人 -->
-    <div class="mak" id="add_people">   
+    <div class="mak" id="add_people">
         <div class="mak_box">
-            <h3>新增联系人</h3>
+            <h3 class="msk-title">新增联系人</h3>
             <i class="close"><img src="img/X.png" /></i>
             <ul>
                 <li>
@@ -1069,7 +1087,7 @@
                         <span>联系人姓名：</span>
                     </p>
                     <label>
-                        <input type="text" name="uname" class="inp_sty" />
+                        <input type="text" name="uname" class="inp_sty" id="l-n1"/>
                         <span>请输入联系人姓名</span>
                     </label>
                 </li>
@@ -1079,7 +1097,7 @@
                         <span>手机号码：</span>
                     </p>
                     <label>
-                        <input type="text" name="Phone" data-error="输入手机号码格式有误" class="inp_sty" />
+                        <input type="text" name="Phone" data-error="输入手机号码格式有误" class="inp_sty" id="l-n2"/>
                         <span>请输入手机号码</span>
                     </label>
                 </li>
@@ -1089,7 +1107,7 @@
                         <span>身份证号：</span>
                     </p>
                     <label>
-                        <input data-error="输入身份证号有误" type="text" name="ID" class="inp_sty" />
+                        <input data-error="输入身份证号有误" type="text" name="ID" class="inp_sty" id="l-n3"/>
                         <span>请输入身份证号</span>
                     </label>
                 </li>      
@@ -1418,7 +1436,17 @@
 
         //编辑
         $(document).on('click','.bianji',function(){
-            $(this).parent().siblings('p').children('input').removeAttr('readonly');
+            var l1 = $(this).parent().parent().find('.l-p1').val();
+            var l2 = $(this).parent().parent().find('.l-p2').val();
+            var l3 = $(this).parent().parent().find('.l-p3').val();
+            $('#l-n1').val(l1);
+            $('#l-n2').val(l2);
+            $('#l-n3').val(l3);
+            $('#l-n1').siblings('span').hide();
+            $('#l-n2').siblings('span').hide();
+            $('#l-n3').siblings('span').hide();
+            $('#add_people').attr('value',$(this).parent().parent()[0].id).show();
+
         });
         // 删除
         $(document).on('click','.delete',function(){
@@ -1448,6 +1476,11 @@
                 autoclose: true
             }
         );
+        $('.list-w').hover(function(){
+            $(this).addClass('active');
+        },function(){
+            $(this).removeClass('active');
+        });
     })
 </script>
 <script type="text/javascript" src='js/lCalendar.min.js'></script>
