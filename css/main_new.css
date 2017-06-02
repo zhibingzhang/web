@@ -2503,6 +2503,7 @@ dl dt p {
     height: 500px;
     overflow-y: auto;
     padding-top: 36px;
+    overflow-x: hidden;
 }
 .fq-wrapper{
     padding-left: 40px;
