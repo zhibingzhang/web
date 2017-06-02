@@ -181,8 +181,11 @@
                             <a href="javascript:;">最近3个月</a>
                         </div>
                         <div class="date_s">
-                            <span>开始日期<img id="datetimepicker" src="img/personal/date.png" /></span><i>~</i>
-                            <span>结束日期<img id="datetimepicker1" src="img/personal/date.png" /></span>
+                            <span>开始日期</span>
+                            <input type="text" id="date1">
+                            <i>~</i>
+                            <span>结束日期</span>
+                            <input type="text" id="date2">
                         </div>
                     </div>
                     <table class="tab">
@@ -193,7 +196,15 @@
                                 <th>总金额<br/>（元）</th>
                                 <th>优惠</th>
                                 <th>实际金额<br/>（元）</th>
-                                <th>交易状态</th>
+                                <th>交易状态
+                                    <i class="star_type"></i>
+                                    <ul class="star_tab">
+                                        <li>待付款</li>
+                                        <li>已付款</li>
+                                        <li>交易成功</li>
+                                        <li>交易关闭</li>
+                                    </ul>
+                                </th>
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -1446,16 +1457,26 @@
         );
         $('#date1').datetimepicker(
             {
-                format: "dd MM yyyy",
-                autoclose: true
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                startView: 4,
+                minView: 2
             }
-        );
+        ).on('changeDate', function(ev){
+            $(this).prev().text($(this).val());
+            $(this).remove();
+        });
         $('#date2').datetimepicker(
             {
-                format: "dd MM yyyy",
-                autoclose: true
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                startView: 4,
+                minView: 2
             }
-        );
+        ).on('changeDate', function(ev){
+            $(this).prev().text($(this).val());
+            $(this).remove();
+        });
     })
 </script>
 <script type="text/javascript" src='js/lCalendar.min.js'></script>

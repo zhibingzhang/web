@@ -1695,6 +1695,7 @@ dl dt p {
     vertical-align: middle;
     height: 58px;
     text-align: center;
+    position: relative;
 }
 
 .tab tbody tr td {
@@ -1891,7 +1892,8 @@ dl dt p {
 }
 
 .tab1 .tab_item_box .item0 .item_date,.tab10 .tab_item_box .item0 .item_date,.tab2 .tab_item_box .item0 .item_date,.tab9 .tab_item_box .item0 .item_date {
-    overflow: hidden
+    overflow: hidden;
+    width: 100%;
 }
 
 .tab1 .tab_item_box .item0 .item_date>div,.tab10 .tab_item_box .item0 .item_date>div,.tab2 .tab_item_box .item0 .item_date>div,.tab9 .tab_item_box .item0 .item_date>div {
@@ -2990,7 +2992,7 @@ dl dt p {
     line-height: 40px;
     display: inline-block;
     color: #333;
-    margin-right: 30px;
+    margin-right: 18px;
     font-size: 14px;
     padding: 0 10px
 }
@@ -3459,4 +3461,46 @@ a:focus,a:hover {
 }
 .add_box_items .add_box_item{
     float: left;
+}
+.date_s input{
+    width: 17px;
+    height: 18px;
+    background: transparent url(../img/personal/date.png) no-repeat;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+.star_type{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    width: 12px;
+    height: 7px;
+    cursor: pointer;
+    background: transparent url(../img/personal/arrowdown_u349.png) no-repeat;
+}
+
+.star_tab{
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    right: 30px;
+    height: 100px;
+    overflow-y: auto;
+    z-index: 9;
+}
+.star_tab li{
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.star_tab li:hover{
+    background-color: #0874b5;
+    color: #FFF;
+}
+.star_type.active{
+    background-image: url(../img/personal/arrowup_u351.png);  
 }

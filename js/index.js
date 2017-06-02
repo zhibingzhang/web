@@ -1,5 +1,12 @@
 // 程序入口
 $(document).ready(function(){
+	$('.star_type').click(function(){
+		if($(this).hasClass('active')){
+			$(this).removeClass('active').next().hide();
+		}else{
+			$(this).addClass('active').next().show();
+		}
+	});
 	/**************登陆开始*************/
 	$('#login_btn').click(function(){
 		var regPhone = /^1(3|4|5|7|8)\d{9}$/;

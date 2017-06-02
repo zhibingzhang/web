@@ -20,7 +20,7 @@
     <script src="js/divselect.js"></script>
 </head>
 <body style="background-color: #FFF;">
-    <header>
+    <div class="header">
         <div class="container">
             <div class="overflow-auto">
                 <div class="left">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
     <div class="header-back">
         <div class="index-tab index-tab2">
             <div class="container">
@@ -202,8 +202,11 @@
                                         <a href="javascript:;">最近3个月</a>
                                     </div>
                                     <div class="date_s">
-                                        <span>开始日期</span><img id="date1" src="img/personal/date.png" /><i>~</i>
-                                        <span>结束日期</span><img id="date2" src="img/personal/date.png" />
+                                        <span>开始日期</span>
+                                        <input type="text" id="date1">
+                                        <i>~</i>
+                                        <span>结束日期</span>
+                                        <input type="text" id="date2">
                                     </div>
                                 </div>
                                 <table class="tab">
@@ -214,7 +217,15 @@
                                     <th>总金额<br/>（元）</th>
                                     <th width="118">优惠</th>
                                     <th>实际金额<br/>（元）</th>
-                                    <th>交易状态i</th>
+                                    <th>交易状态
+                                        <i class="star_type"></i>
+                                        <ul class="star_tab">
+                                            <li>待付款</li>
+                                            <li>已付款</li>
+                                            <li>交易成功</li>
+                                            <li>交易关闭</li>
+                                        </ul>
+                                    </th>
                                     <th>操作</th>
                                 </tr>
                             </thead>
@@ -897,21 +908,26 @@
         );
         $('#date1').datetimepicker(
             {
-                format: "dd MM yyyy",
+                format: "yyyy-mm-dd",
                 autoclose: true,
-                startView: 2,  
+                startView: 4,
                 minView: 2
             }
         ).on('changeDate', function(ev){
-            console.log($(this))
-            console.log($(this).prev().text($(this).val()))
+            $(this).prev().text($(this).val());
+            $(this).remove();
         });
         $('#date2').datetimepicker(
             {
-                format: "dd MM yyyy",
-                autoclose: true
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                startView: 4,
+                minView: 2
             }
-        );
+        ).on('changeDate', function(ev){
+            $(this).prev().text($(this).val());
+            $(this).remove();
+        });
     })
 </script>
 <script type="text/javascript" src='js/lCalendar.min.js'></script>
