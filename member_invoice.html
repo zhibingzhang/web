@@ -191,7 +191,8 @@
                                             <a href="javascript:;" class="del_fp">删除</a>
                                         </span>
                                     </p>
-                                    <h3>售票地址</h3>
+                                    <div class="line-1"></div>
+                                    <h3>收票地址</h3>
                                     <ul>
                                         <li>
                                             <span>收票人姓名：</span>
@@ -220,23 +221,24 @@
                                             <a href="javascript:;" class="del_fp">删除</a>
                                         </span>
                                     </p>
-                                    <h3>售票地址</h3>
+                                    <div class="line-1"></div>
+                                    <h3>收票地址</h3>
                                     <ul>
                                         <li>
                                             <span>收票人姓名：</span>
-                                            <input type="text" value="Free">
+                                            <span>Free</span>
                                         </li>
                                         <li>
                                             <span>收票人手机号：</span>
-                                            <input type="number" value="15625485458">
+                                            <span>15625485458</span>
                                         </li>
                                         <li>
                                             <span>收票人省份：</span>
-                                            <input type="text" value="上海市徐汇区">
+                                            <span>上海市徐汇区</span>
                                         </li>
                                         <li>
                                             <span>收票人地址：</span>
-                                            <input type="text" value="徐汇地铁1出口">
+                                            <span>徐汇地铁1出口</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -278,7 +280,8 @@
                                             <span>徐汇地铁1出口</span>
                                         </li>
                                     </ul>
-                                    <h3>售票地址</h3>
+                                    <div class="line-1"></div>
+                                    <h3>收票地址</h3>
                                     <ul>
                                         <li>
                                             <span>收票人姓名：</span>
@@ -334,7 +337,8 @@
                                             <span>徐汇地铁1出口</span>
                                         </li>
                                     </ul>
-                                    <h3>售票地址</h3>
+                                    <div class="line-1"></div>
+                                    <h3>收票地址</h3>
                                     <ul>
                                         <li>
                                             <span>收票人姓名：</span>
@@ -1067,155 +1071,157 @@
         </div>
     </div>
     <!-- 新增发票 -->
-    <div class="mak" id="add_fq">   
+    <div class="mak" id="add_fq">
         <div class="mak_box">
-            <h3>新增发票</h3>
+            <h3 class="msk-title">新增发票</h3>
             <i class="close"><img src="img/X.png" /></i>
-            <p class="title1">
-                <i>*</i>
-                <span>发票类型</span>
-            </p>
-            <p class="fp_tab">
-                <a href="javascript:;" class="inp_sty active">普通发票<img src="img/personal/jiao1.png" alt=""></a>
-                <a href="javascript:;" class="inp_sty">增值税发票<img src="img/personal/jiao1.png" alt=""></a>
-            </p>
-            <div>
-                <div class="fp_tab0">
-                    <ul>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>发票抬头</span>
-                            </p>
-                            <label>
-                                <input type="text" name="tit" class="inp_sty" />
-                                <span>请输入发票抬头</span>
-                            </label>
-                        </li>
-                    </ul>
-                    <p class="error">ddd</p>
-                    <div class="btns_submit">
-                        <a href="javascript:;" id="paddfp_btn">确定</a>
-                        <a href="javascript:;" class="qx_btn">取消</a>
+            <div class="fq-wrapper">
+                <p class="title1">
+                    <i>*</i>
+                    <span>发票类型</span>
+                </p>
+                <p class="fp_tab">
+                    <a href="javascript:;" class="inp_sty active">普通发票<img src="img/personal/jiao1.png" alt=""></a>
+                    <a href="javascript:;" class="inp_sty">增值税发票<img src="img/personal/jiao1.png" alt=""></a>
+                </p>
+                <div>
+                    <div class="fp_tab0">
+                        <ul>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>发票抬头</span>
+                                </p>
+                                <label>
+                                    <input type="text" name="tit" class="inp_sty" />
+                                    <span>请输入发票抬头</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <p class="error">ddd</p>
+                        <div class="btns_submit">
+                            <a href="javascript:;" id="paddfp_btn">确定</a>
+                            <a href="javascript:;" class="qx_btn">取消</a>
+                        </div>
                     </div>
-                </div>
-                <div class="fp_tab1">
-                    <ul>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>单位名称：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入单位名称</span>
-                            </label>
-                        </li>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>纳税人识别码：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入纳税人识别码</span>
-                            </label>
-                        </li>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>注册地址：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入注册地址</span>
-                            </label>
-                        </li>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>注册电话：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入注册电话</span>
-                            </label>
-                        </li>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>开户银行：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入开户银行</span>
-                            </label>
-                        </li>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>银行账户：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入银行账户</span>
-                            </label>
-                        </li>
-                    </ul>
-                    <h4>收票人信息</h4>
-                    <ul>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>收票人姓名：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入收票人姓名</span>
-                            </label>
-                        </li>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>手机号码：</span>
-                            </p>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入手机号码</span>
-                            </label>
-                        </li>
-                        <li>
-                            <p class="title2">
-                                <i>*</i>
-                                <span>地址：</span>
-                            </p>
-                            <div class="select_item">
-                                <select>
-                                    <option>请选择...</option>
-                                    <option>北京</option>
-                                    <option>上海</option>
-                                </select>
-                                <select>
-                                    <option>请选择...</option>
-                                    <option>北京</option>
-                                    <option>上海</option>
-                                </select>
-                                <select>
-                                    <option>请选择...</option>
-                                    <option>北京</option>
-                                    <option>上海</option>
-                                </select>
-                            </div>
-                            <label>
-                                <input type="text" class="inp_sty" />
-                                <span>请输入详细地址</span>
-                            </label>
-                        </li>
-                    </ul>
-                    <p class="error "></p>
-                    <div class="btns_submit">
-                        <a href="javascript:;" id="zaddfp_btn">确定</a>
-                        <a href="javascript:;" class="qx_btn">取消</a>
+                    <div class="fp_tab1">
+                        <ul>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>单位名称：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入单位名称</span>
+                                </label>
+                            </li>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>纳税人识别码：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入纳税人识别码</span>
+                                </label>
+                            </li>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>注册地址：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入注册地址</span>
+                                </label>
+                            </li>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>注册电话：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入注册电话</span>
+                                </label>
+                            </li>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>开户银行：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入开户银行</span>
+                                </label>
+                            </li>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>银行账户：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入银行账户</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <h4>收票人信息</h4>
+                        <ul>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>收票人姓名：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入收票人姓名</span>
+                                </label>
+                            </li>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>手机号码：</span>
+                                </p>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入手机号码</span>
+                                </label>
+                            </li>
+                            <li>
+                                <p class="title2">
+                                    <i>*</i>
+                                    <span>地址：</span>
+                                </p>
+                                <div class="select_item">
+                                    <select>
+                                        <option>请选择...</option>
+                                        <option>北京</option>
+                                        <option>上海</option>
+                                    </select>
+                                    <select>
+                                        <option>请选择...</option>
+                                        <option>北京</option>
+                                        <option>上海</option>
+                                    </select>
+                                    <select>
+                                        <option>请选择...</option>
+                                        <option>北京</option>
+                                        <option>上海</option>
+                                    </select>
+                                </div>
+                                <label>
+                                    <input type="text" class="inp_sty" />
+                                    <span>请输入详细地址</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <p class="error "></p>
+                        <div class="btns_submit">
+                            <a href="javascript:;" id="zaddfp_btn">确定</a>
+                            <a href="javascript:;" class="qx_btn">取消</a>
+                        </div>
                     </div>
                 </div>
             </div>

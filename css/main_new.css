@@ -1870,7 +1870,7 @@ dl dt p {
     color: #0c70b2;
     border-bottom-color: #FFF;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .tab1 .tab_item_box,.tab10 .tab_item_box,.tab2 .tab_item_box,.tab9 .tab_item_box {
@@ -2413,29 +2413,54 @@ dl dt p {
 
 .tab9 a,.tab9 b,.tab9 i,.tab9 img,.tab9 span {
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .tab9 .tab_box>a {
-    color: #0874b5
+    color: #0874b5;
+    line-height: 40px;
+    margin-bottom: -23px;
 }
 
 .fp_group {
-    margin-left: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 380px;
+    margin: 0 10px 20px 10px;
+    padding: 13px 20px;
+    width: 362px;
     float: left;
-    border: 1px solid #CCC
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .fp_group .tit {
-    font-size: 18px
+    font-size: 16px;
+    line-height: 18px;
 }
-
+.fp_group>p{
+    /*border-bottom: 1px solid #ccc;*/
+    padding-bottom: 8px;
+}
+.tab9 .tab_item_box{
+    overflow: auto;
+}
+#ad_btn{
+    position: absolute;
+    right: 0;
+}
+.line-1{
+    width: 100%;
+    background: #e4e4e4;
+    height: 1px;
+}
 .fp_group p span:first-child+span {
     float: right;
-    color: #0c70b2
+    color: #0c70b2;
+    line-height: 18px;
 }
 
 .fp_group p span:first-child+span a {
@@ -2443,8 +2468,9 @@ dl dt p {
 }
 
 .fp_group h3 {
-    font-size: 18px;
-    margin: 48px 0 18px 0
+    font-size: 14px;
+    margin: 15px 0 12px 0;
+    font-weight: bold;
 }
 
 .fp_group ul {
@@ -2453,7 +2479,10 @@ dl dt p {
 
 .fp_group ul li {
     float: inherit;
-    margin-bottom: 6px
+    margin-bottom: 3px;
+    color: #333;
+    height: 17px;
+    overflow: hidden;
 }
 
 .inp_sty {
@@ -2468,9 +2497,12 @@ dl dt p {
 }
 
 #add_fq .mak_box {
-    margin-top: 36px;
-    height: 500px;
-    overflow-y: auto
+    padding: 0;
+    width: 470px;
+    margin-top: 70px;
+}
+.fq-wrapper{
+    padding-left: 40px;
 }
 
 #add_fq h4 {
@@ -2494,11 +2526,13 @@ dl dt p {
 }
 
 #add_fq .fp_tab {
-    padding-left: 20px
+    padding-left: 11px
 }
 
 #add_fq .fp_tab a {
-    position: relative
+    position: relative;
+    font-size: 14px;
+    margin-right: 9px;
 }
 
 #add_fq .fp_tab a img {
@@ -2527,23 +2561,26 @@ dl dt p {
 }
 
 #add_fq label input {
-    width: 338px;
-    height: 36px;
-    line-height: 36px;
+    width: 326px;
+    height: 40px;
+    line-height: 40px;
     border: 1px solid #e4e4e4;
     padding-left: 18px
 }
 
 #add_fq label span {
     position: absolute;
-    top: 13px;
-    left: 39px;
-    color: #9b9b9b
+    top: 14px!important;
+    left: 30px;
+    color: #999;
+    font-weight: normal;
 }
-
+#add_fq .error{
+    left: 11px;
+}
 #add_fq input {
     width: 340px;
-    margin-left: 20px
+    margin-left: 11px
 }
 
 #add_fq .select_item {
