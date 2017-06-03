@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="content public_main">
+    <div class="content5 public_main">
         <p class="nav_list">当前位置：首页 > <span>个人中心</span></p>
         <div class="common_box member">
             <div>
@@ -167,7 +167,7 @@
                     <h2>订单管理</h2>
                     <p class="tit1">你的订单将在这里可以进行管理</p>
                     <div class="tab_box">
-                        <ul>
+                        <ul class="order-tab">
                             <li class="active">
                                 <a href="javascript:;">全部</a>
                             </li>
@@ -182,7 +182,7 @@
                             </li>
                         </ul>
                         <a href="javascript:;" id="whole_del">
-                            <img src="img/personal/del.png" />
+                            <img src="img/personal/del2.png" />
                             <span>订单回收站</span>
                         </a>
                         <div class="tab_item_box">
@@ -202,18 +202,23 @@
                                         <a href="javascript:;">最近3个月</a>
                                     </div>
                                     <div class="date_s">
-                                        <span>开始日期</span>
-                                        <input type="text" id="date1">
+                                        <p>
+                                            <span id="start">开始日期</span>
+                                            <input type="text" id="date1" readonly>
+                                        </p>
                                         <i>~</i>
-                                        <span>结束日期</span>
-                                        <input type="text" id="date2">
+                                        <p>
+                                            <span id="end">结束日期</span>
+                                            <input type="text" id="date2" readonly>
+                                        </p>
                                     </div>
                                 </div>
-                                <table class="tab">
-                                    <thead>
+                                <div class="cont2">
+                                    <table class="tab">
+                                        <thead>
                                         <tr>
-                                            <th width="240">商品信息</th>
-                                            <th width="66">数量</th>
+                                            <th width="275">商品信息</th>
+                                            <th width="64">数量</th>
                                             <th>总金额<br/><span>（元）</span></th>
                                             <th width="118">优惠</th>
                                             <th>实际金额<span>（元）</span></th>
@@ -229,8 +234,8 @@
                                             </th>
                                             <th>操作</th>
                                         </tr>
-                                    </thead>
-                                    <tbody>
+                                        </thead>
+                                        <tbody id="order1">
                                         <tr class="dd_c">
                                             <td>
                                                 <label>
@@ -241,78 +246,8 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td colspan="2" style="text-align: right;">
-                                                2017-05-18 12:36:12
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;" class="del_img">
-                                                    <img src="img/personal/del.png" />
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="7">
-                                                <table class="tab_item">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                               <dl>
-                                                                   <dt>
-                                                                       <img src="img/personal/td_img.png" />
-                                                                   </dt>
-                                                                   <dd>
-                                                                        <h4>莱悦9号 Search</h4>
-                                                                        <p>尺寸：<span>48</span></p> 
-                                                                   </dd>
-                                                               </dl> 
-                                                            </td>
-                                                            <td>2小时</td>
-                                                            <td>￥6000.00</td>
-                                                            <td rowspan="2">优惠券：<sapn>￥0.00</sapn></td>
-                                                            <td rowspan="2">
-                                                                <span class="sum">
-                                                                    ￥<i>3600</i>.00
-                                                                </span>
-                                                            </td>
-                                                            <td rowspan="2">待付款<br/><a class="xq_link" href="javascript:;">订单详情</a></td>
-                                                            <td class="fk_btn" rowspan="2">
-                                                                <a href="purchase_service.html">付款</a>
-                                                                <span class="quxiaodengdan">取消订单</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                               <dl>
-                                                                   <dt>
-                                                                       <img src="img/personal/td_img.png" />
-                                                                   </dt>
-                                                                   <dd>
-                                                                        <h4>莱悦9号 Search</h4>
-                                                                        <p>尺寸：<span>48</span></p> 
-                                                                   </dd>
-                                                               </dl> 
-                                                            </td>
-                                                            <td>一瓶</td>
-                                                            <td>￥380.00</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr class="dd_c">
-                                            <td>
-                                                <label>
-                                                    <div class="chk"></div>
-                                                    <span>订单编号：2018545856325458</span>
-                                                </label>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td colspan="2" style="text-align: right;">
-                                                2017-05-18 12:36:12
-                                            </td>
-                                            <td>
+                                            <td colspan="3" style="text-align: right;">
+                                                <span>2017-05-18 12:36:12</span>
                                                 <a href="javascript:;" class="del_img">
                                                     <img src="img/personal/del.png" />
                                                 </a>
@@ -320,29 +255,95 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                               <dl>
-                                                   <dt>
-                                                       <img src="img/personal/td_img.png" />
-                                                   </dt>
-                                                   <dd>
+                                                <dl>
+                                                    <dt>
+                                                        <img src="img/personal/td_img.png" />
+                                                    </dt>
+                                                    <dd>
                                                         <h4>莱悦9号 Search</h4>
-                                                        <p>尺寸：<span>48</span></p> 
-                                                   </dd>
-                                               </dl> 
+                                                        <p>尺寸：<span>48</span></p>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>2小时</td>
+                                            <td>￥6000.00</td>
+                                            <td rowspan="2">优惠券：<sapn>￥0.00</sapn></td>
+                                            <td rowspan="2">
+                                        <span class="sum">
+                                            ￥<i>3600</i>.00
+                                        </span>
+                                            </td>
+                                            <td rowspan="2">待付款<br/><a class="xq_link" href="javascript:;">订单详情</a></td>
+                                            <td class="fk_btn" rowspan="2">
+                                                <a href="order_payment.html">付款</a>
+                                                <span class="quxiaodengdan" value="order1">取消订单</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bacF9">
+                                                <dl>
+                                                    <dt>
+                                                        <img src="img/personal/td_img.png" />
+                                                    </dt>
+                                                    <dd>
+                                                        <h4>2011年艾尔萨克城堡红葡萄酒</h4>
+                                                        <p>尺寸：<span>48</span></p>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td class="bacF9">一瓶</td>
+                                            <td class="bacF9">￥380.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="7" style="height: 15px;background: #fff;border:none;padding:0;"></td>
+                                        </tr>
+                                        </tbody>
+                                        <tbody>
+                                        <tr class="dd_c">
+                                            <td>
+                                                <label>
+                                                    <div class="chk"></div>
+                                                    <span>订单编号：2018545856325458</span>
+                                                </label>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td colspan="3" style="text-align: right;">
+                                                <span>2017-05-18 12:36:12</span>
+                                                <a href="javascript:;" class="del_img">
+                                                    <img src="img/personal/del.png" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <dl>
+                                                    <dt>
+                                                        <img src="img/personal/td_img.png" />
+                                                    </dt>
+                                                    <dd>
+                                                        <h4>2011年艾尔萨克城堡红葡萄酒</h4>
+                                                        <p>尺寸：<span>48</span></p>
+                                                    </dd>
+                                                </dl>
                                             </td>
                                             <td>2小时</td>
                                             <td>￥6000.00</td>
                                             <td>优惠券：<sapn>￥0.00</sapn></td>
                                             <td>
-                                                <span class="sum">
-                                                    ￥<i>3600</i>.00
-                                                </span>
+                                        <span class="sum">
+                                            ￥<i>3600</i>.00
+                                        </span>
                                             </td>
                                             <td>已付款<br/><a class="xq_link" href="javascript:;">订单详情</a></td>
                                             <td>
                                                 <span class="tk_btn">申请退款</span>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td colspan="7" style="height: 15px;background: #fff;border:none;padding:0;"></td>
+                                        </tr>
                                         <tr class="dd_c">
                                             <td>
                                                 <label>
@@ -353,10 +354,8 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td colspan="2" style="text-align: right;">
-                                                2017-05-18 12:36:12
-                                            </td>
-                                            <td>
+                                            <td colspan="3" style="text-align: right;">
+                                                <span>2017-05-18 12:36:12</span>
                                                 <a href="javascript:;" class="del_img">
                                                     <img src="img/personal/del.png" />
                                                 </a>
@@ -364,23 +363,23 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                               <dl>
-                                                   <dt>
-                                                       <img src="img/personal/td_img.png" />
-                                                   </dt>
-                                                   <dd>
+                                                <dl>
+                                                    <dt>
+                                                        <img src="img/personal/td_img.png" />
+                                                    </dt>
+                                                    <dd>
                                                         <h4>莱悦9号 Search</h4>
-                                                        <p>尺寸：<span>48</span></p> 
-                                                   </dd>
-                                               </dl> 
+                                                        <p>尺寸：<span>48</span></p>
+                                                    </dd>
+                                                </dl>
                                             </td>
                                             <td>2小时</td>
                                             <td>￥6000.00</td>
                                             <td>优惠券：<sapn>￥0.00</sapn></td>
                                             <td>
-                                                <span class="sum">
-                                                    ￥<i>3600</i>.00
-                                                </span>
+                                        <span class="sum">
+                                            ￥<i>3600</i>.00
+                                        </span>
                                             </td>
                                             <td>已完成<br/><a class="xq_link" href="javascript:;">订单详情</a></td>
                                             <td class="fk_btn">
@@ -388,19 +387,23 @@
                                                 <a href="purchase_service.html" class="zcgm">再次购买</a>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
+                                        <tr>
+                                            <td colspan="7" style="height: 15px;background: #fff;border:none;padding:0;"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <div id="pageTool" class="pageWrapper"></div>
                             </div>
-                            <div class="item1">
-                                1
-                            </div>
-                            <div class="item2">
-                                2
-                            </div>
-                            <div class="item3">
-                              3  
-                            </div>
+                            <!--<div class="item1">-->
+                                <!--1-->
+                            <!--</div>-->
+                            <!--<div class="item2">-->
+                                <!--2-->
+                            <!--</div>-->
+                            <!--<div class="item3">-->
+                              <!--3  -->
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
@@ -850,10 +853,9 @@
         }});
         // 切换tab
         $('.tab_box>ul li').click(function(){
-            var _index = $(this).index();
-
+//            var _index = $(this).index();
             $(this).addClass('active').siblings().removeClass('active');
-            $('.item'+_index).show().siblings().hide();
+//            $('.item'+_index).show().siblings().hide();
         });
         // x
         $('.close').click(function(){
@@ -915,7 +917,6 @@
         $('#fab').click(function(){
             $('#fayouji').show();
         });
-        
         $('#date1').datetimepicker(
             {
                 format: "yyyy-mm-dd",
@@ -925,7 +926,7 @@
             }
         ).on('changeDate', function(ev){
             $(this).prev().text($(this).val());
-            $(this).remove();
+            $(this).val('');
         });
         $('#date2').datetimepicker(
             {
@@ -936,7 +937,7 @@
             }
         ).on('changeDate', function(ev){
             $(this).prev().text($(this).val());
-            $(this).remove();
+            $(this).val('');
         });
     })
 </script>

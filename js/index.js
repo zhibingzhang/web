@@ -1,5 +1,8 @@
 // 程序入口
 $(document).ready(function(){
+	$('.type_txt').click(function(){
+		$('.star_type').click();
+	})
 	$('.star_type').click(function(){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active').next().hide();
@@ -492,12 +495,15 @@ $(document).ready(function(){
 		}
 	});
 	$('#quxiaoshouchang').click(function(){
-		$(this).parent().next().hide();
-		$(this).parent().next().next().hide();
-		$(this).hide();
+		for(var i = $('.tab4 .e-tbody tr').length - 1 ;i >= 0 ; i--){
+			if($($('.tab4 .e-tbody tr')[i]).find('.chk').hasClass('active')){
+				$($('.tab4 .e-tbody tr')[i]).remove();
+			}
+		}
 	});
 	$('.quxiaodengdan').click(function(){
-		$(this).parent().parent().hide().prev().hide();
+		var id = $(this).attr('value');
+		$('#'+id).remove();
 	});
 	$(document).on('click','.del_fp',function(){
 		$(this).parent().parent().parent().remove();
@@ -558,9 +564,15 @@ $(document).ready(function(){
 
 	$('.tab3 #del').click(function(){
 
-		$('.tab3 .tab').remove();
-		$('#pageTool1').remove();
-		$(this).remove();
+		//$('.tab3 .tab').remove();
+		//$('#pageTool1').remove();
+		//$(this).remove();
+		for(var i = $('.tab3 .e-tbody tr').length - 1 ;i >= 0 ; i--){
+			if($($('.tab3 .e-tbody tr')[i]).find('.chk').hasClass('active')){
+				$($('.tab3 .e-tbody tr')[i]).remove();
+			}
+		}
+
 	});
 	$('.tab3 .del').click(function(){
 		$(this).parent().parent().remove();

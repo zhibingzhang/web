@@ -78,8 +78,8 @@ dl dt p {
 .group_file label {
     float: left;
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 164px;
+    height: 110px;
     overflow: hidden
 }
 
@@ -579,6 +579,7 @@ dl dt p {
 .common_box>div:first-child+div {
     width: 850px;
     padding-left: 50px;
+    padding-bottom: 10px;
 }
 
 .common_box>div:first-child+div h2 {
@@ -594,7 +595,6 @@ dl dt p {
 
 .common_box>div:first-child+div>div:first-child {
     display: block;
-    margin-top: 10px;
 }
 
 .aboutus_box {
@@ -1543,7 +1543,7 @@ dl dt p {
 .member .title {
     font-size: 18px;
     clear: both;
-    margin: 54px 0 34px 0
+    margin: 28px 0 16px 0;
 }
 
 .member .head {
@@ -1552,6 +1552,10 @@ dl dt p {
     padding: 20px 0
 }
 
+.cont2 .tab thead tr th{
+    border:1px solid #f2f2f2;
+    border-bottom:1px solid #fff;
+}
 .member .head span {
     display: block;
     padding: 13px 0 18px 0
@@ -1570,17 +1574,26 @@ dl dt p {
 }
 
 .member .tabs .tab_member .cont {
-    overflow: hidden
+    padding-top: 15px;
+    overflow: auto;
+    border:1px solid #EDEDED;
+    border-top: none;
+}
+
+.tab_member .cont1{
+    background: #F9F9F9;
+    padding: 16px;
+    font-size: 14px;
 }
 
 .member .tabs .tab_member .tab_member_l {
     border-right: 1px solid #e4e4e4;
-    padding-right: 70px;
-    margin-right: 70px
+    width: 443px;
+    padding-left: 12px;
 }
 
 .member .tabs .tab_member .tab_member_l .head_img_txt {
-    margin-right: 23px
+    margin-right: 16px;
 }
 
 .member .tabs .tab_member .tab_member_l .head_img_txt a {
@@ -1599,11 +1612,11 @@ dl dt p {
 }
 
 .member .tabs .tab_member .tab_member_l .head_info p:first-child+p img {
-    margin-right: 8px
+    margin-right: 5px
 }
 
 .member .tabs .tab_member .tab_member_l .head_info p:first-child+p>span {
-    margin-right: 46px
+    margin-right: 8px
 }
 
 .member .tabs .tab_member .tab_member_l .head_info p:first-child+p>span i {
@@ -1627,11 +1640,13 @@ dl dt p {
 }
 
 .member .tabs .tab_member .tab_member_l .head_info p:first-child+p+p span:first-child {
-    margin-right: 50px
+    margin-right: 22px;
+    font-size: 14px;
 }
 
 .member .tabs .tab_member .tab_member_r {
-    text-align: center
+    text-align: center;
+    padding: 0 16px;
 }
 
 .member .tabs .tab_member .tab_member_r ul {
@@ -1640,13 +1655,15 @@ dl dt p {
 
 .member .tabs .tab_member .tab_member_r ul li {
     float: left;
-    margin-left: 70px
+    width: 120px;
+    text-align: center;
 }
 .member .tabs .tab_member .tab_member_r ul li:first-child{
     margin-left: 0;
 }
 .member .tabs .tab_member .tab_member_r ul li p {
-    margin-top: 8px
+    margin-top: 8px;
+    font-size: 14px;
 }
 
 .member .tabs .tab_member .tab_member_r ul li p span {
@@ -1661,14 +1678,18 @@ dl dt p {
     position: relative;
     float: left;
     margin-left: 63px;
-    text-align: center
+    text-align: center;
+    width: 62px;
 }
 .member .tabs .tab_member .cont1 ul li:first-child{
     margin-left: 0;
 }
 .member .tabs .tab_member .cont1 ul li p span {
     display: block;
-    margin-top: 15px
+    margin-top: 10px;
+    width: 130px;
+    text-align: center;
+    margin-left: -31px;
 }
 
 .member .tabs .tab_member .cont1 ul li>img {
@@ -1696,6 +1717,11 @@ dl dt p {
 .tab tbody tr td.fk_btn a.zcgm{
     border: 1px solid #ccc;
     color: #333;
+    margin-bottom: 0;
+    width: 62px;
+}
+.tab tbody tr td.fk_btn a.pj_btn{
+    margin-bottom: 3px;
 }
 .tab thead th {
     background-color: #f2f2f2;
@@ -1704,14 +1730,19 @@ dl dt p {
     text-align: center;
     position: relative;
     font-size: 14px;
+    border:1px solid #f2f2f2;
+    border-bottom: 1px solid #fff;
 }
 .tab thead th span{
     font-weight: normal;
 }
 .tab tbody tr td {
-    padding: 17px;
+    /*padding: 17px;*/
     vertical-align: middle;
     text-align: center
+}
+dl{
+    margin-bottom:0;
 }
 
 .tab tbody tr td .sum {
@@ -1721,23 +1752,48 @@ dl dt p {
 .tab tbody tr td .sum i {
     font-style: normal;
     font-size: 22px;
-    vertical-align: bottom;
+    vertical-align: baseline;
 }
-
+.bacF9{
+    background: #f9f9f9!important;
+}
 .tab tbody tr td:first-child {
     text-align: left;
-    vertical-align: middle
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+.tab tbody tr td{
+    border:1px solid #f2f2f2;
+}
+.cont2 .tab tbody{
+    margin-bottom: 15px;
 }
 .tab tbody tr td:first-child span{
     line-height: 16px;
     display: inline-block;
     vertical-align: middle;
     margin-left: 6px;
+    font-weight: normal;
 }
 .tab tbody tr td:first-child dl {
     overflow: hidden
 }
+.tab tbody tr.dd_c td{
+    padding: 8px 15px;
+}
+.tab tbody tr.dd_c td label{
+    margin-bottom: 0;
+}
+.tab tbody tr.dd_c td .chk{
+    margin-top: -1px;
+}
+table.tab{
+    border: 1px solid #f1f1f1;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom:none;
 
+}
 .tab tbody tr td:first-child dl dd,.tab tbody tr td:first-child dl dt {
     float: left
 }
@@ -1746,11 +1802,70 @@ dl dt p {
     margin-right: 10px
 }
 
-.tab tbody tr td:first-child dl dd h4 {
-    font-size: 16px;
-    margin-top: 0px;
+.tab tbody tr td:first-child dl dd h4 ,
+.tab3 tbody tr td dl dd h4{
+    font-size: 14px;
+    line-height: 19px;
+    height: 38px;
+    overflow: hidden;
+    font-weight: normal;
+    margin-top: -2px;
+    margin-bottom: 2px!important;
+    width: 160px;
+    margin-left: 0;
 }
-
+.tab4 .tab tbody tr td dl dd h4{
+    font-size: 14px;
+    line-height: 19px;
+    height: 38px;
+    overflow: hidden;
+    font-weight: normal;
+    margin-top: -2px;
+    margin-bottom: 2px!important;
+    width: 460px;
+}
+.tab5 .tab tbody tr td dl dd h4{
+    font-size: 14px;
+    line-height: 19px;
+    height: 38px;
+    overflow: hidden;
+    font-weight: normal;
+    margin-top: -2px;
+    margin-bottom: 2px!important;
+    width: 500px;
+}
+.tab3 tbody tr td dl dd h4{
+    width: 200px!important;
+}
+.tab tbody tr td:first-child dl dd p{
+    margin-bottom: 0;
+}
+.e-tbody .chk{
+    float: left;
+    margin-top: 20px;
+    margin-right: 0;
+}
+.e-tbody2 .chk{
+    margin-right: 18px;
+}
+.out-2{
+    background: #f2f2f2;
+}
+.out-1{
+    display: inline-block;
+    float: left;
+    line-height: 50px!important;
+    margin-left:0!important;
+    width: 30px!important;
+    text-align: left;
+}
+.tab3 .tab tbody tr td.cat-w{
+    font-size: 15px;
+    padding: 0 15px!important;
+}
+.tab3 .tab tbody tr td.cat-w .del{
+    float: right;
+}
 .tab tbody tr td.fk_btn a {
     display: block;
     width: 56px;
@@ -2039,15 +2154,30 @@ dl dt p {
 
 .xq_mak .xq_box h3 {
     text-align: left;
-    margin-bottom: 36px;
+    margin-bottom: 0;
     font-weight: bold;
+    font-size: 16px;
+}
+.xq_mak .xq_box h3 .cat-info{
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    color: #0873b6;
+    line-height: 17px;
+    font-weight: normal;
+    padding-right: 10px;
 }
 
 .xq_mak .xq_box .title {
     font-size: 14px;
-    margin-bottom: 16px;
-    margin-top: 46px;
+    padding:12px;
+    margin-top: 20px;
     font-weight: bold;
+    background: #f8f8f8;
+    margin-bottom: 0;
+}
+.tab_cont{
+    background: #f8f8f8;
 }
 
 .xq_mak .xq_box .bottom_line {
@@ -2055,10 +2185,27 @@ dl dt p {
 }
 
 .xq_mak .xq_box .tab_cont p {
-    padding: 16px;
-    border-top: 1px solid #e4e4e4
+    padding: 0;
+    border-top: 1px solid #e4e4e4;
+    margin-bottom: 0;
 }
+#tk_mak_xq .xq_box .tab .sum{
+    margin-left: 0;
+}
+.xq_mak .xq_box .tab_cont .order-no{
+    background: #fff;
+    line-height: 44px;
+    height: 44px;
+}
+.xq_mak .xq_box .tab_cont .order-no .no-1{
+    display: inline-block;
+    width: 110px;
+    background: #f8f8f8;
+    vertical-align: super;
+    text-align: center;
+    margin-right: 15px;
 
+}
 .xq_mak .xq_box .tab_cont p>span {
     display: inline-block;
     width: 49%
@@ -2066,7 +2213,6 @@ dl dt p {
 
 .xq_mak .xq_box .tab_cont p>span>i {
     font-style: normal;
-    margin-left: 56px
 }
 
 .xq_mak .xq_box .sum {
@@ -2077,7 +2223,7 @@ dl dt p {
 .xq_mak .xq_box .sum i {
     font-style: normal;
     font-size: 22px;
-    vertical-align: bottom;
+    vertical-align: baseline;
 }
 
 .xq_mak .xq_box .btn_dy {
@@ -2853,9 +2999,14 @@ dl dt p {
     width: 340px;
     margin-left: 20px;
 }
-
+.tit1{
+    position: relative;
+}
 .del_link {
-    text-align: right
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
 }
 
 .del_link a {
@@ -2866,7 +3017,8 @@ dl dt p {
     color: #FFF;
     text-align: center;
     background-color: #999;
-    border-radius: 3px
+    border-radius: 3px;
+    font-weight: normal;
 }
 
 .tab3 input,.tab3 span {
@@ -2980,17 +3132,17 @@ dl dt p {
 
 .tab2 .item_date .group span {
     position: absolute;
-    top: 11px;
+    top: 10px;
     left: 14px;
     color: #a8a8a8;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
 }
 
 .tab2 .item_date .group img {
     position: absolute;
     right: 7px;
-    top: 13px;
+    top: 10px;
     cursor: pointer
 }
 
@@ -3003,7 +3155,6 @@ dl dt p {
     line-height: 40px;
     display: inline-block;
     color: #333;
-    margin-right: 18px;
     font-size: 14px;
     padding: 0 10px
 }
@@ -3034,7 +3185,7 @@ dl dt p {
 }
 
 #tk_mak_xq .xq_box .sum {
-    margin-left: 48px
+    /*margin-left: 48px*/
 }
 
 #tk_mak_xq .xq_box .tab {
@@ -3044,14 +3195,19 @@ dl dt p {
 #tk_mak_xq .xq_box .tksm {
     border-top: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
-    padding: 16px;
-    margin-bottom: 20px
+    padding:0;
+    margin-bottom: 20px;
+    background: #fff;
+    line-height: 44px;
 }
 
 #tk_mak_xq .xq_box .tksm span {
-    margin-right: 56px
+    padding:0 12px;
 }
-
+#tk_mak_xq .xq_box .tksm .fit {
+    background: #f8f8f8;
+    display: inline-block;
+}
 .tab10 .item0 div.yh_item,.tab10 .item1 div.yh_item {
     overflow: hidden
 }
@@ -3118,7 +3274,7 @@ dl dt p {
 }
 
 .tab5 .del_link {
-    margin-bottom: 20px
+    margin-bottom: 0;
 }
 
 .tab5 .del_link a {
@@ -3201,12 +3357,22 @@ a:visited {
     display: block;
     width: 56px;
     height: 24px;
-    line-height: 24px;
+    line-height: 26px;
     border: 1px solid #0c70b2;
     color: #0c70b2;
     margin: 0 auto;
     margin-bottom: 10px;
     border-radius: 3px;
+    text-align: center;
+    padding:0 4px;
+}
+.qx_sc{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.btns_type.del_tr{
+    margin-bottom: 0;
 }
 a:focus,a:hover {
     text-decoration: none;
@@ -3500,7 +3666,7 @@ a:focus,a:hover {
     border: 1px solid #eee;
 }
 .tab2 .star_tab{
-    left: 25px;
+    left: 0;
 }
 .star_tab li{
     width: 80px;
@@ -3516,11 +3682,16 @@ a:focus,a:hover {
 .star_type.active{
     background-image: url(../img/personal/arrowup_u351.png);  
 }
+.del_img img{
+    padding:0 5px 0 25px;
+    vertical-align: -5px;
+}
 .tab_item{
     width: 100%;
 }
 .tab_item tbody tr td{
     padding: 0;
+    border:1px solid #f1f1f1;
 }
 .tab_item tbody tr td:first-child{
     width: 230px;
@@ -3553,9 +3724,77 @@ a:focus,a:hover {
     text-align: left;
     padding-left: 0;
 }
+.tab3 .tab tbody tr td{
+    padding: 12px!important;
+}
 .tab3 dl dd h4,.tab4 dl dd h4{
     margin-top: 0;
 }
 .tab thead th span.type_txt{
     font-weight: 700;
+    width: 62px;
+    display: inline-block;
+}
+.now-level{
+    font-size: 14px;
+    color: #333;
+}
+.now-level span{
+    font-size: 16px;
+    color: #0873b6;
+}
+.date_link a{
+    font-size: 12px!important;
+    line-height: 34px!important;
+    height: 34px!important;
+    padding:0 10px!important;
+}
+.tab1 .tab_item_box .item0 .item_date .group input,
+.tab2 .item_date .group input {
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    width: 160px;
+    border-radius: 3px;
+    padding-right: 26px;
+}
+.tab1 .tab_item_box .item0 .item_date .group img{
+    top: 10px;
+}
+.tab1 .tab_item_box .item0 .item_date .group span,.tab2 .tab_item_box .item_date .group span{
+    font-size: 12px;
+    top: 10px;
+}
+.date_s{
+    height: 32px!important;
+    line-height: 32px!important;
+}
+.date_s p{
+    border: 1px solid #ededed;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    padding:0 12px;
+    font-size: 12px!important;
+    border-radius: 4px;
+}
+.date_s p input{
+    margin-left: 30px;
+}
+.date_s p span{
+    width: 65px;
+}
+.tab1 .tab_box>ul.order-tab li a{
+    width: 98px;
+}
+#whole_del{
+    line-height: 42px;
+    margin-bottom: -30px;
+    color: #333;
+}
+#whole_del img{
+    margin-right: 5px;
+}
+#fayouji.mak{
+    z-index: 100;
 }

@@ -167,15 +167,17 @@
 
                 <div class="tab5">
                     <h2>游记管理</h2>
-                    <p class="tit1">你将在这里可以对基本游记进行管理</p>
-                    <p class="del_link">
-                        <a href="javascript:;" id="fab">发游记</a>
+                    <p class="tit1">
+                        你将在这里可以对基本游记进行管理
+                        <label class="del_link">
+                            <a href="javascript:;" id="fab">发游记</a>
+                        </label>
                     </p>
                     <table class="tab">
                         <thead>
                             <tr>
                                 <th>我的游记</th>
-                                <th>操作</th>
+                                <th width="226px">操作</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -317,7 +319,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div id="pageTool6" class="pageWrapper"></div>
+                    <div id="pageTool6" class="pageWrapper" style="margin-top: 60px;"></div>
                 </div>
             </div>
         </div>
@@ -1254,9 +1256,9 @@
                 这里写你的初始化内容
             </script>
             <div class="group_file">
-                <span>封面图：</span>
+                <div>封面图：</div>
                 <label>
-                    <img src="img/personal/file.png" />
+                    <img src="img/personal/file2.png" />
                     <input type="file">
                 </label>
             </div>
@@ -1273,11 +1275,11 @@
             <!-- 配置文件 -->
             <script type="text/javascript" src="js/utf8-php/ueditor.config.js"></script>
             <!-- 编辑器源码文件 -->
-            <script type="text/javascript" src="js/utf8-php/ueditor.all.min.js"></script>
+            <script type="text/javascript" src="js/utf8-php/ueditor.all.js"></script>
             <!-- 实例化编辑器 -->
             <script type="text/javascript" charset="utf-8" src="js/utf8-php/lang/zh-cn/zh-cn.js"></script>
             <script type="text/javascript">
-                var ue = UE.getEditor('container');
+//                var ue = UE.getEditor('container');
             </script>
         </div>
     </div>
@@ -1386,6 +1388,7 @@
         });
         $('#fab').click(function(){
             $('#fayouji').show();
+            var ue = UE.getEditor('container');
         });
         //tab内容切换
         $('.tab1 .tab_box li').click(function(){

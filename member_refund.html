@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="content public_main">
+    <div class="content5 public_main">
         <p class="nav_list">当前位置：首页 > <span>个人中心</span></p>
         <div class="common_box member">
             <div>
@@ -181,50 +181,51 @@
                             <a href="javascript:;">最近3个月</a>
                         </div>
                         <div class="date_s">
-                            <span>开始日期</span>
-                            <input type="text" id="date1">
+                            <p>
+                                <span>开始日期</span>
+                                <input type="text" id="date1">
+                            </p>
                             <i>~</i>
-                            <span>结束日期</span>
-                            <input type="text" id="date2">
+                            <p>
+                                <span>结束日期</span>
+                                <input type="text" id="date2">
+                            </p>
                         </div>
                     </div>
                     <table class="tab">
                         <thead>
-                            <tr>
-                                <th>商品信息</th>
-                                <th>数量</th>
-                                <th>总金额<br/><span>（元）</span></th>
-                                <th>优惠</th>
-                                <th>实际金额<span>（元）</span></th>
-                                <th>
-                                    <span class="type_txt">交易状态</span>
-                                    <i class="star_type"></i>
-                                    <ul class="star_tab">
-                                        <li>待付款</li>
-                                        <li>已付款</li>
-                                        <li>交易成功</li>
-                                        <li>交易关闭</li>
-                                    </ul>
-                                </th>
-                                <th>操作</th>
-                            </tr>
+                        <tr>
+                            <th width="275">商品信息</th>
+                            <th width="64">数量</th>
+                            <th>总金额<br/><span>（元）</span></th>
+                            <th width="118">优惠</th>
+                            <th>退款金额<span>（元）</span></th>
+                            <th width="100">
+                                <span class="type_txt">退款状态</span>
+                                <i class="star_type"></i>
+                                <ul class="star_tab">
+                                    <li>退款成功</li>
+                                    <li>退款失败</li>
+                                    <li>退款中</li>
+                                </ul>
+                            </th>
+                            <th>操作</th>
+                        </tr>
                         </thead>
                         <tbody>
                             <tr class="dd_c">
                                 <td>
                                     <label>
                                         <!-- <div class="chk"></div> -->
-                                        <span>订单编号：2018545856325458</span>
+                                        <span>退款编号：2018545856325458</span>
                                     </label>
                                 </td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>
-                                    2017-05-18 12:00
-                                </td>
-                                <td>
+                                <td colspan="2" style="text-align: right;">
+                                    <span>2017-05-18 12:36:12</span>
                                 </td>
                             </tr>
                             <tr>
@@ -254,21 +255,22 @@
                                     <a href="javascript:;" class="btns_type del_tr">关闭申请</a>
                                 </td>
                             </tr>
+                            <tr>
+                                <td colspan="7" style="height: 15px;background: #fff;border:none;padding:0;"></td>
+                            </tr>
                             <tr class="dd_c">
                                 <td>
                                     <label>
                                         <!-- <div class="chk"></div> -->
-                                        <span>订单编号：2018545856325458</span>
+                                        <span>退款编号：2018545856325458</span>
                                     </label>
                                 </td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>
-                                    2017-05-18 12:00
-                                </td>
-                                <td>
+                                <td colspan="2" style="text-align: right;">
+                                    <span>2017-05-18 12:36:12</span>
                                 </td>
                             </tr>
                             <tr>
@@ -293,12 +295,15 @@
                                 </td>
                                 <td>退款关闭</td>
                                 <td>
-                                    <span id="tk_xq_btn">推款详情</span>
+                                    <span id="tk_xq_btn">退款详情</span>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" style="height: 15px;background: #fff;border:none;padding:0;"></td>
                             </tr>
                         </tbody>
                     </table>
-                    <div id="pageToo3" class="pageWrapper"></div>
+                    <div id="pageToo3" class="pageWrapper" style="margin-top: 60px;"></div>
                 </div>
             </div>
         </div>
@@ -599,31 +604,33 @@
     <!-- 退款详情 -->
     <div class="xq_mak" id="tk_mak_xq">
         <div class="xq_box">
-            <h3>退款详情</h3>
+            <h3>订单详情
+                <a class="cat-info">查看退款说明 ></a>
+            </h3>
             <i class="closes"><img src="img/X.png" /></i>
             <p class="title">
-                当前订单【状态已完成】
+                当前退款【状态：已完成】
             </p>
             <div class="tab_cont">
-                <p>
-                    <span>退款编号<i>2018545856325458</i></span>
-                    <span>退款金额
-                            <span class="sum">￥
-                            <i>3600</i>.00
-                            </span>
+                <p class="order-no">
+                    <span>
+                        <span class="no-1">退款编号</span><i>2018545856325458</i>
+                    </span>
+                    <span>
+                        <span class="no-1">退款金额</span><span class="sum">￥<i>3600</i>.00</span>
                     </span>
                 </p> 
-                <p class="bottom_line">
-                    <span>申请日期<i>2017-05-18 12:02:02</i></span>
-                    <span>客服备注<i>已完成</i></span>
+                <p class="bottom_line order-no">
+                    <span><span class="no-1">申请日期</span><i>2017-05-18 12:02:02</i></span>
+                    <span><span class="no-1">客服备注</span><i>已完成</i></span>
                 </p>
             </div>
             <table class="tab">
                 <thead>
                     <tr>
                         <th>商品信息</th>
-                        <th>数量</th>
-                        <th>总金额<br/><span>（元）</span></th>
+                        <th width="95px">数量</th>
+                        <th>总金额<span>（元）</span></th>
                         <th>优惠</th>
                         <th>实际金额<span>（元）</span></th>
                     </tr>
@@ -647,8 +654,8 @@
                             积分：<sapn>￥0.00</sapn>
                         </td>
                         <td>
-                            <span class="sum">
-                                ￥<i>3600</i>.00
+                            <span>
+                                ￥3600.00
                             </span>
                         </td>
                     </tr>
@@ -658,7 +665,7 @@
                 退款信息
             </p>
             <p class="tksm">
-                <span>退款说明</span>
+                <span class="fit">退款说明</span>
                 <span>多拍/拍错了</span>
             </p>
             <p class="btn_dy">
@@ -1465,7 +1472,7 @@
             }
         ).on('changeDate', function(ev){
             $(this).prev().text($(this).val());
-            $(this).remove();
+            $(this).val('');
         });
         $('#date2').datetimepicker(
             {
@@ -1476,7 +1483,7 @@
             }
         ).on('changeDate', function(ev){
             $(this).prev().text($(this).val());
-            $(this).remove();
+            $(this).val('');
         });
     })
 </script>

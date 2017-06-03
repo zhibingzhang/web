@@ -1218,25 +1218,25 @@
     $(document).ready(function(){
         // 分页
         $('#pageTool').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+//            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         $('#pageTool1').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+//            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         $('#pageTool2').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+//            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         $('#pageToo3').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+//            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         $('#pageToo4').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+//            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         $('#pageToo5').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+//            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         $('#pageTool6').Paging({pagesize:9,count:210,callback:function(page,size,count){
-            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+//            console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
         }});
         // 切换tab
         $('.common_box>div>ul>li ul>li>a').click(function(){
@@ -1337,24 +1337,24 @@
             $(this).val() === ""? $(this).next().show():
             $(this).next().hide();
             $('#add_people .error').hide();
-            console.log($(this).val())
+//            console.log($(this).val())
         });
 
         $('.tab6 label input').keyup(function(){
             $(this).val() === ""? $(this).next().show():
             $(this).next().hide();
-            console.log($(this).val())
+//            console.log($(this).val())
         });
 
         $('.item_date input').keyup(function(){
             $(this).val() === ""? $(this).next().show():
             $(this).next().hide();
-            console.log($(this).val())
+//            console.log($(this).val())
         });
         //手机号验证 下一步
         $('#next_btn').click(function(){
             var inp = $('#xg_phone .rephone_1 label input');
-            console.log(inp.length)
+//            console.log(inp.length)
             var error = [];
             for(var i=0; i<inp.length; i++){
                 if(inp.eq(i).val() ===""){
@@ -1455,7 +1455,7 @@
                 }
             }
             if(pwd1 !== pwd2 && pwd2 !=="" && pwd1 !==""){
-                        console.log(pwd1+':'+pwd2)
+//                        console.log(pwd1+':'+pwd2)
                         error.push('新密码与确认密码不一致！');
                     }
 
