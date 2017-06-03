@@ -633,14 +633,9 @@
             <div class="group_textarea">
                 <span style="padding-left: 0">评价内容：</span>
                 <label>
-<<<<<<< HEAD
-                    <textarea>赶快分享你的购买心得吧...</textarea>
-                    <span>
-
-                    </span>
-=======
-                    <textarea placeholder="赶快分享你的购买心得吧..." style="padding:15px;"></textarea>
->>>>>>> 98b2ae5e732d267fd4770d3011bf8b0dac5c6f83
+                    <textarea class="tarea" placeholder="赶快分享你的购买心得吧..." style="padding:15px;">赶快分享你的购买心得吧...
+                        
+                    </textarea>
                 </label>
             </div>
             <div class="group_file">
@@ -1405,7 +1400,9 @@
             $('#fayouji').show();
         });
 
-
+        $('.tarea').focus(function(){
+            $(this).text('');
+        });
     })
 </script>
 <script type="text/javascript" src='js/lCalendar.min.js'></script>

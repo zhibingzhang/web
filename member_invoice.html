@@ -1194,21 +1194,12 @@
                                     <i>*</i>
                                     <span>地址：</span>
                                 </p>
-                                <div class="select_item">
-                                    <select>
-                                        <option>请选择...</option>
-                                        <option>北京</option>
-                                        <option>上海</option>
+                                <div id="target" class="select_item">
+                                    <select id="province">
                                     </select>
-                                    <select>
-                                        <option>请选择...</option>
-                                        <option>北京</option>
-                                        <option>上海</option>
+                                    <select id="city">
                                     </select>
-                                    <select>
-                                        <option>请选择...</option>
-                                        <option>北京</option>
-                                        <option>上海</option>
+                                    <select id="district">
                                     </select>
                                 </div>
                                 <label>
@@ -1330,8 +1321,15 @@
 <!-- <script src="basic/swiper/js/idangerous.swiper.min.js"></script> -->
 <script type="text/javascript" src="js/query.js"></script>
 <script type="text/javascript" src="js/paging.js"></script>
+<script type="text/javascript" src="js/distpicker.data.js"></script>
+<script type="text/javascript" src="js/distpicker.js"></script>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
+        $('#target').distpicker({
+          province: '---- 所在省 ----',
+          city: '---- 所在市 ----',
+          district: '---- 所在区 ----'
+        });
         // 分页
         $('#pageTool').Paging({pagesize:9,count:210,callback:function(page,size,count){
             console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
