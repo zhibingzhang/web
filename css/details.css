@@ -989,7 +989,8 @@
 }
 .star2 img{
     width: 13px;
-    margin:0 -2px;
+    height: 13px;
+    margin: 0 -4px 0 0;
 }
 .discus-handle {
     width: 100%;
