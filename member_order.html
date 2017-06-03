@@ -828,6 +828,13 @@
                 $(this).parent().parent().remove();
             }
         });
+        $('.item0 label input').keyup(function(){
+            if($(this).val() === ""){
+                $(this).next().show();
+            }else{
+                $(this).next().hide();
+            }
+        });
         // 订单回收站
         $('#whole_del').click(function(){
             $('.tab_item_box .item0 .tab tbody tr').remove();
