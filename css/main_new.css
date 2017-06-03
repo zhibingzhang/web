@@ -3556,3 +3556,6 @@ a:focus,a:hover {
 .tab3 dl dd h4,.tab4 dl dd h4{
     margin-top: 0;
 }
+.tab thead th span.type_txt{
+    font-weight: 700;
+}
