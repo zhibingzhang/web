@@ -568,7 +568,7 @@ dl dt p {
     font-size: 14px;
     background-color: #f3f7fa;
     text-align: left;
-    padding-left: 50px
+    padding-left: 65px
 }
 
 .common_box>div:first-child>ul li ul li.active a {
@@ -1687,7 +1687,8 @@ dl dt p {
 
 .tab {
     text-align: center;
-    width: 100%
+    width: 100%;
+    margin-top: 10px;
 }
 .quxiaodengdan,.tk_btn,.zcgm,#tk_xq_btn,.qx_sc{
     cursor: pointer;
@@ -1702,8 +1703,11 @@ dl dt p {
     height: 58px;
     text-align: center;
     position: relative;
+    font-size: 14px;
 }
-
+.tab thead th span{
+    font-weight: normal;
+}
 .tab tbody tr td {
     padding: 17px;
     vertical-align: middle;
@@ -1773,7 +1777,9 @@ dl dt p {
 }
 
 .tab tbody tr.dd_c {
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
+    color: #999;
+    font-weight: normal;
 }
 
 .ck_mak .ck_box {
@@ -1948,9 +1954,8 @@ dl dt p {
     line-height: 40px;
     display: inline-block;
     color: #333;
-    // margin-right: 30px;
     font-size: 14px;
-    padding: 0 10px
+    padding: 0 18px
 }
 
 .tab1 .tab_item_box .item0 .item_date .date_link a.active,.tab10 .tab_item_box .item0 .item_date .date_link a.active,.tab2 .tab_item_box .item0 .item_date .date_link a.active,.tab9 .tab_item_box .item0 .item_date .date_link a.active {
@@ -2072,7 +2077,7 @@ dl dt p {
 .xq_mak .xq_box .sum i {
     font-style: normal;
     font-size: 22px;
-    vertical-align: top
+    vertical-align: bottom;
 }
 
 .xq_mak .xq_box .btn_dy {
@@ -3491,10 +3496,11 @@ a:focus,a:hover {
     display: none;
     position: absolute;
     background-color: #FFF;
-    right: 30px;
-    height: 100px;
-    overflow-y: auto;
     z-index: 9;
+    border: 1px solid #eee;
+}
+.tab2 .star_tab{
+    left: 25px;
 }
 .star_tab li{
     width: 80px;
@@ -3533,4 +3539,20 @@ a:focus,a:hover {
 }
 .tab_item tbody tr td:first-child+td+td+td+td+td+td a,.tab_item tbody tr td:first-child+td+td+td+td+td+td span{
     left: 18px;
+}
+.tab3 dl,.tab4 dl{
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 0px;
+}
+.tab3 .tab tbody tr td:first-child,.tab4 .tab tbody tr td:first-child{
+    padding-right: 0;
+    text-align: center;
+}
+.tab3 .tab tbody tr td:first-child+td,.tab4 .tab tbody tr td:first-child+td{
+    text-align: left;
+    padding-left: 0;
+}
+.tab3 dl dd h4,.tab4 dl dd h4{
+    margin-top: 0;
 }

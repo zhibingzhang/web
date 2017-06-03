@@ -7,6 +7,10 @@ $(document).ready(function(){
 			$(this).addClass('active').next().show();
 		}
 	});
+	$('.star_tab li').click(function(){
+		$(this).parent().prev().prev().html($(this).html());
+		$(this).parent().hide().prev().removeClass('active');
+	});
 	/**************登陆开始*************/
 	$('#login_btn').click(function(){
 		var regPhone = /^1(3|4|5|7|8)\d{9}$/;
