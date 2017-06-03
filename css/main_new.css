@@ -20,9 +20,11 @@ dl dd,dl dt {
 
 dl dd h4 {
     font-size: 14px;
-    margin-bottom: 13px!important
+    margin-bottom: 20px!important
 }
-
+dl dd p{
+    color: #999;
+}
 dl dt {
     margin-right: 6px
 }
@@ -1715,7 +1717,7 @@ dl dt p {
 .tab tbody tr td .sum i {
     font-style: normal;
     font-size: 22px;
-    vertical-align: top
+    vertical-align: bottom;
 }
 
 .tab tbody tr td:first-child {
@@ -1742,7 +1744,7 @@ dl dt p {
 
 .tab tbody tr td:first-child dl dd h4 {
     font-size: 16px;
-    margin-bottom: 10px
+    margin-top: 0px;
 }
 
 .tab tbody tr td.fk_btn a {
@@ -3507,4 +3509,28 @@ a:focus,a:hover {
 }
 .star_type.active{
     background-image: url(../img/personal/arrowup_u351.png);  
+}
+.tab_item{
+    width: 100%;
+}
+.tab_item tbody tr td{
+    padding: 0;
+}
+.tab_item tbody tr td:first-child{
+    width: 230px;
+}
+.tab_item tbody tr td:first-child+td+td{
+    width: 108px;
+}
+.tab_item tbody tr:first-child+tr td:first-child+td+td{
+    color: #999;
+}
+.tab_item tbody tr:first-child+tr td:first-child+td{
+    color: #999;
+}
+.tab_item tbody tr td:first-child+td+td+td{
+    width: 88px;
+}
+.tab_item tbody tr td:first-child+td+td+td+td+td+td a,.tab_item tbody tr td:first-child+td+td+td+td+td+td span{
+    left: 18px;
 }
