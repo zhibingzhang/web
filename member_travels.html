@@ -1249,24 +1249,25 @@
     <!-- 发游记 -->
     <div class="mak" id="fayouji">
         <div class="mak_box">
-            <h3>发游记</h3>
+            <h2>发游记</h2>
+            <div class="youji-name">
+                <input type="text" placeholder="给游记起个名字吧~~"/>
+            </div>
             <i class="close"><img src="img/X.png" /></i>
             <!-- 加载编辑器的容器 -->
-            <script style="height: 200px;" id="container" name="content" type="text/plain">
-                这里写你的初始化内容
-            </script>
+            <script style="height: 200px;" id="container" name="content" type="text/plain">这里写你的初始化内容</script>
             <div class="group_file">
-                <div>封面图：</div>
+                <div class="f-name">封面图：</div>
                 <label>
                     <img src="img/personal/file2.png" />
                     <input type="file">
                 </label>
             </div>
-            <div class="footer">
+            <div class="footer about-you">
                 <p>
-                    <input type="checkbox" />
-                    <span>我已阅读并同意</span>
-                    <a href="javascript:;">用户游记协议</a>
+                    <img src="img/personal/chk.png" class="chb1"/>
+                    <span class="has-read">我已阅读并同意</span>
+                    <a href="javascript:;">《用户游记协议》</a>
                 </p>
                 <p class="btns_submit">
                     <a href="javascript:;">发布</a>
@@ -1279,7 +1280,7 @@
             <!-- 实例化编辑器 -->
             <script type="text/javascript" charset="utf-8" src="js/utf8-php/lang/zh-cn/zh-cn.js"></script>
             <script type="text/javascript">
-//                var ue = UE.getEditor('container');
+                var ue = UE.getEditor('container');
             </script>
         </div>
     </div>
@@ -1388,7 +1389,21 @@
         });
         $('#fab').click(function(){
             $('#fayouji').show();
-            var ue = UE.getEditor('container');
+            $('.mak_box').delegate('.chb1','click',function(){
+                setChk();
+            });
+            $('.mak_box').delegate('.has-read','click',function(){
+                setChk();
+            });
+            function setChk(){
+                if($('.chb1').hasClass('active')){
+                    $('.chb1').removeClass('active');
+                    $('.chb1').attr('src','img/personal/chk.png');
+                }else{
+                    $('.chb1').addClass('active');
+                    $('.chb1').attr('src','img/personal/chk2.png');
+                }
+            }
         });
         //tab内容切换
         $('.tab1 .tab_box li').click(function(){
