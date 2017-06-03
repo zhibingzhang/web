@@ -113,7 +113,10 @@ dl dt p {
     margin:45px 0 0 0;
     padding-bottom: 50px;
 }
-
+.pj_mak .btns_submit{
+    margin:10px 0 0 0;
+    padding-bottom: 0;
+}
 .btns_submit a {
     display: inline-block;
     width: 116px;
@@ -560,19 +563,26 @@ dl dt p {
     background-color: #e3eaf0;
     height: 50px;
     line-height: 50px;
-    text-align: center
+    text-align: left;
+    padding-left: 25px;
 }
 
 .common_box>div:first-child>ul li a img,.common_box>div:first-child>ul li a span {
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
+    margin-right: 10px;
 }
-
+.common_box>div:first-child>ul li a img{
+    width: 10px;
+}
+.common_box>div:first-child>ul li a img.t-img{
+    width: 20px;
+}
 .common_box>div:first-child>ul li ul li a {
     font-size: 14px;
     background-color: #f3f7fa;
     text-align: left;
-    padding-left: 65px
+    padding-left: 35px;
 }
 
 .common_box>div:first-child>ul li ul li.active a {
@@ -1553,7 +1563,7 @@ dl dt p {
 .member .head {
     background-color: #d1dfec;
     text-align: center;
-    padding: 20px 0
+    padding: 20px 0 14px 0;
 }
 
 .cont2 .tab thead tr th{
@@ -1562,13 +1572,17 @@ dl dt p {
 }
 .member .head span {
     display: block;
-    padding: 13px 0 18px 0
+    padding: 5px 0 14px 0;
+    font-size: 15px;
 }
 
 .member .head h3 {
-    font-size: 18px
+    font-size: 18px;
+    margin: 0;
 }
-
+.member .head h3 a{
+    color: #333;
+}
 .member .tabs .tab_member {
     overflow: hidden
 }
@@ -3222,11 +3236,11 @@ table.tab{
     margin-bottom: 18px;
     color: #FFF;
     float: left;
-    width: 238px;
+    width: 242px;
     height: 105px;
     border: 1px solid #93c0df;
     position: relative;
-    padding: 18px 15px 10px;
+    padding: 18px 13px 10px;
     font-size: 14px;
 }
 .tab10 .item0 div.yh_item>div p, .tab10 .item1 div.yh_item>div p{
