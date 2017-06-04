@@ -2203,7 +2203,8 @@ table.tab{
 }
 
 .xq_mak .xq_box .tab_cont p {
-    padding: 0;
+    padding: 10px 0;
+    padding-left: 12px;
     border-top: 1px solid #e4e4e4;
     margin-bottom: 0;
 }
